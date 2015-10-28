@@ -10,6 +10,7 @@ github_username:  termsuite
 markdown: kramdown
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+  parse_block_html: true
 
 collections:
   documentation:
