@@ -2,39 +2,56 @@
 layout: default
 ---
 
-<div class="container">
-
-  <p class="lead">{{site.description}}</p>
+<div id="home">
 
   <div class="row">
-    <div class="col-md-4 text-center">
-      <h3>Get it running !</h3>
-      <p>Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Getting started</a></p>
+    <div class="container">
+      <p class="lead">{{site.description}}</p>
     </div>
+  </div>
 
-    <div class="col-md-4 text-center">
-      <h3>Documentation</h3>
-      <p>List of all TermSuite's features, analysis engines, and configuration parameters. Java API.</p>
-      <a class="btn btn-success btn-lg" href="/documentation/10-introduction" role="button">User Manual</a>
-    </div>
 
-    <div class="col-md-4 text-center">
-      <h3>Developers</h3>
-      <p></p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Github</a></p>
+  <div class="row greyed">
+    <div class="container">
+      <div class="col-md-4 text-center">
+        <h3>Get it running !</h3>
+        <p>Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.</p>
+        <p><a class="btn btn-primary btn-lg" href="/getting-started" role="button">Getting started</a></p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <h3>Documentation</h3>
+        <p>List of all TermSuite's features, analysis engines, and configuration parameters. Java API.</p>
+        <a class="btn btn-success btn-lg" href="/documentation/introduction" role="button">User Manual</a>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <h3>Developers</h3>
+        <p></p>
+        <p><a class="btn btn-primary btn-lg" href="{{site.github}}" target="blank" role="button">Github</a></p>
+      </div>
     </div>
   </div>
 
 
 
-<div class="row">
-  <h3>Features</h3>
-<ul>
 
-</ul>
-</div>
-
-
+  <div class="row">
+    <div class="container">
+      <h2 class="text-center">Features Overview</h3>
+      <div id="features" class="">
+        <table class="table table-bordered">
+          <tbody>
+            {% for f in site.data.features %}
+              <tr>
+                <td>{{f | markdownify}}</td>
+                <td><span class="glyphicon glyphicon-ok text-ok" aria-hidden="true"></span></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+    </div>
+  </div>
 
 </div>

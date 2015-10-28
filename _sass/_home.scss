@@ -1,0 +1,15 @@
+
+#home .row {
+  padding: 50px 0;
+
+  &.greyed {
+    background-color: lighten($brand-secondary, 50%);
+  }
+
+  #features {
+    table {
+      max-width: 500px;
+      margin: auto;
+    }
+  }
+}

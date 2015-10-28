@@ -5,7 +5,7 @@ description: TermSuite is a Java UIMA-based toolbox for multilingual and efficie
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://termsuite.univ-nantes.fr" # the base hostname & protocol for your site
 github_username:  termsuite
-
+github: https://github.com/termsuite/termsuite-core
 # Build settings
 markdown: kramdown
 kramdown:
