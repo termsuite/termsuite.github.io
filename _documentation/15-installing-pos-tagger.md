@@ -47,8 +47,8 @@ $ ln -s lib models
 On Linux, you can check that TreeTagger is correctly installed by launching these two command lines:
 
 ~~~
-$ cd TreeTagger-home-directory
-$ ./bin/TreeTagger ./models/english.par
+$ cd tree-tagger-home-directory
+$ ./bin/tree-tagger ./models/english.par
 ~~~
 
 Exit the program by the keyboard short-cut Ctrl+D.
