@@ -2,22 +2,41 @@
 layout: default
 ---
 
-<div class="home">
+<div class="container">
 
-  <h1 class="page-heading">Posts</h1>
+  <p class="lead">{{site.description}}</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <h3>Get it running</h3>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Getting started</a></p>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="col-md-4 text-center">
+      <h3>Documentation</h3>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">User Manual</a></p>
+    </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="col-md-4 text-center">
+      <h3>Developers</h3>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Github</a></p>
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <h3>Features</h3>
+<ul>
+  {% for f in site.data.features %}
+    <li>{{f | markdownify}}</li>
+  {% endfor %}
+</ul>
+</div>
+
+
 
 </div>

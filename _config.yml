@@ -1,14 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: TermSuite
+email: "[firstname.lastname]@univ-nantes.fr"
+description: TermSuite is a Java UIMA-based toolbox for multilingual and efficient terminology extraction and multilingual term alignment.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://termsuite.univ-nantes.fr" # the base hostname & protocol for your site
+github_username:  termsuite
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
