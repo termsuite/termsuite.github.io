@@ -10,3 +10,8 @@ github_username:  termsuite
 markdown: kramdown
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+
+collections:
+  documentation:
+    output: true
+    permalink: /documentation/:path/
