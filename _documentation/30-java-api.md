@@ -2,6 +2,7 @@
 layout: documentation
 title: Use TermSuite's Java API
 menu: Java API
+permalink: /documentation/java-api/
 ---
 
 

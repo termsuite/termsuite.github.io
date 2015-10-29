@@ -6,6 +6,17 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://termsuite.univ-nantes.fr" # the base hostname & protocol for your site
 github_username:  termsuite
 github: https://github.com/termsuite/termsuite-core
+
+termsuite:
+  maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
+  version: "2.0"
+
+resources:
+  zip: https://github.com/termsuite/termsuite-resources/archive/master.zip
+
+corpus:
+  meteoroids: http://logiciels.lina.univ-nantes.fr/redmine/attachments/download/554/Meteoroids.zip
+
 # Build settings
 markdown: kramdown
 kramdown:
