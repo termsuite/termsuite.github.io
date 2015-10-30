@@ -5,7 +5,7 @@ menu: Getting Started
 permalink: /getting-started/
 ---
 
-This page guides you the steps to get TermSuite running and extracting the terminology of a short example corpus.
+This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.
 
 
 ### 1. Requirements
@@ -27,11 +27,14 @@ $ java -version
 
 TermSuite requires a POS Tagger and lemmatizer to run terminology extraction pipelines. In this guide, we install TreeTagger, but TermSuite also supports Mate. TreeTagger must be installed apart from TermSuite, due to license concerns.
 
-These are the steps to install TreeTagger on your OS: (See the [install instructions](/documentation/pos-tagger-lemmatizer) for details)
+To install TreeTagger on your OS: (See the [install instructions](/documentation/pos-tagger-lemmatizer) for details)
 1. Download TreeTagger from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) to `TERMSUITE_WORKSPACE` and uncompress it.
 2. Creates a subdirectory named `models` within the TreeTagger directory.
-3. Download the english `utf-8`-encoded (very important) model from the [official site](www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and rename it to `english.par`.
+3. Download the english utf-8-encoded (very important) model from the [official site](www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and rename it to `english.par`.
 
+<div class="alert alert-warning" role="alert">
+Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See [detailed instructions](/documentation/pos-tagger-lemmatizer) for all languages.  
+</div>
 
 ### 3. Download TermSuite
 
@@ -43,7 +46,7 @@ Currently : [termsuite-core-{{site.termsuite.version}}.jar]({{site.termsuite.mav
 
 Download a TermSuite resource pack to directory `TERMSUITE_WORKSPACE` and uncompress it.
 
-For example, download the one publicly available on Github : [termsuite-resources.zip]({{site.resources.zip}})
+For example, download the one publicly available on Github : [termsuite-resources.jar]({{site.resources.jar}})
 
 {% include resource_warning.md %}
 
@@ -73,24 +76,54 @@ TERMSUITE_WORKSPACE/
       english.par # Should be the `utf-8` model !
     [...]
   termsuite-core-{{site.termsuite.version}}.jar
-  termsuite-resources-master/
-    en/
-    fr/
-    [...]
+  termsuite-resources.jar
 ~~~
 
 Run the terminology extraction on the *Meteoroids* corpus and language `en`:
 
 ~~~
-$ java -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI
-  -t /tree-tagger
-  -c /Meteoroids/English/txt
-  -l en
-  -r /termsuite-resources-master
-  --tsv meteoroids-en.tsv
+$ java -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+  -t ./tree-tagger/ \
+  -c ./Meteoroids/English/txt/ \
+  -l en \
+  -r ./termsuite-resources.jar \
+  --tsv ./meteoroids-en.tsv
 ~~~
 
-### 7. Enjoy TermSuite
+### 7. Understanding the TSV output
+
+TermSuite created the file `meteoroids-en.tsv` showed below.
+* 1st column is the term id, or the base term id in case of a variant,
+* 2nd column: `T` indicates a term, `V[...]` indicates a variant (and its variant scores within `[]`),
+* 3rd column: the term pilot,
+* 4th column: the term frequency,
+* 5th column: the term specificity (weirdness ratio logarithm).
+
+<div class="alert alert-warning" role="alert">
+Once again, do not judge TermSuite on this example. You are using a truncated resource pack and this corpus is too small for variant detection.  
+</div>
+
+
+~~~
+1       T       meteorites      72      19,48
+2       T       meteor  38      18,84
+3       T       meteoric        20      18,20
+4       T       iowa county     18      18,09
+4       V[S: 0,E:66(G:50/WR:100),F:100,V:75]    d609 iowa county        1       15,20
+4       V[S: 0,E:41(G: 8/WR:81),F:100,V:56]     township iowa county    1       15,20
+5       T       meteoric stones 7       17,15
+5       V[S: 0,E:100(G:100/WR:100),F:100,V:100] porous meteoric stone   1       15,20
+6       T       cosmical        6       16,99
+7       T       terrestrial     6       16,99
+8       T       county meteorites       6       16,99
+...
+~~~
+
+This output can be configured. `tbx` and `json` are also posssible. See command line [options]({{site.production_url}}/documentation/command-line-api).
+
+### 8. Enjoy TermSuite
+
+You can now run TermSuite on your own [corpus]({{site.production_url}}/documentation/corpus).
 
 Full documentation of available features and options from the command line: [command line API]({{site.production_url}}/documentation/command-line-api).
 

@@ -6,6 +6,7 @@
 
 
 // Our variables
+$brand-primary: #00718D;
 $brand-secondary: #00ADEF;
 $ok-color:        #6AE54F;
 
@@ -24,6 +25,14 @@ $ok-color:        #6AE54F;
 
 .text-ok {
   color: $ok-color;
+}
+
+h1 {
+  color: $brand-primary;
+}
+
+h3 {
+  color: $brand-secondary;
 }
 
 

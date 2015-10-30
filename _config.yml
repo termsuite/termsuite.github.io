@@ -12,7 +12,7 @@ termsuite:
   version: "2.0"
 
 resources:
-  zip: https://github.com/termsuite/termsuite-resources/archive/master.zip
+  jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/555/termsuite-resources.jar
 
 corpus:
   meteoroids: http://logiciels.lina.univ-nantes.fr/redmine/attachments/download/554/Meteoroids.zip

@@ -5,7 +5,7 @@ menu: Corpus directory structure
 permalink: /documentation/corpus/
 ---
 
-Because TermSuite has features, like terminology alignment, that operates on multilingual corpora, all corpora must satisfy a certain directory structure.
+Because TermSuite has features like terminology alignment that operate on multilingual corpora, all corpora must satisfy a certain directory structure.
 
 TermSuite currently supports two types of corpus: `tei` and `txt`.
 

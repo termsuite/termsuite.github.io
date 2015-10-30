@@ -41,9 +41,9 @@ By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. I
 | --tbx FILENAME 	|   false   	|         	| Export extract termino to given TBX file	|
 | --profile  *(no arg)* 	|   false   	|         	|      Displays variant examples and AE profiling info |
 | --watch  STRING 	|   false   	|         	|    Displays info (freq. spec. variants, etc) about all terms matching STRING at the end of pipeline |
-| --no-logging  *(no arg)* 	|   false   	|         	|      Disables logging|
-| --info  *(no arg)* 	|   false   	|         	| Set logging level to `info` (default log level is `warn`) |
-| --debug  *(no arg)* 	|   false   	|         	| Set logging level to `debug`  (default log level is `warn`) |
+| --no-logging  *(no arg)* 	|   false   	|         	|      Disables console logging|
+| --info  *(no arg)* 	|   false   	|         	| Set logging level to `info` |
+| --debug  *(no arg)* 	|   false   	|         	| Set logging level to `debug` |
 | --nb-examples  INT 	|   false   	|         	|      The number of examples to display for each profiling hit |
 | --filter-property STRING 	|   false   	|         	|   See TermProperty.class for available values      	|
 | --filter-th INT 	|   false   	|         	| When filtering, the minimum value of for filtered property to be kept in the terminology |
@@ -67,7 +67,7 @@ You can also run a TermSuite termino pipeline on an inline string. In such case,
 ~~~
 $ java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI
             -r /path/to/termsuite-resource-pack
-            -tt /path/to/tree-tagger-home
+            -t /path/to/tree-tagger-home
             -l en
             --text "Wind energy is the energy of tomorrow."
 ~~~
@@ -75,9 +75,9 @@ $ java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSui
 ###### Inline mode from standard input
 
 ~~~
-$ cat file.txt | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI
+$ echo "My test phrase." | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI
             -r /path/to/termsuite-resource-pack
-            -tt /path/to/tree-tagger-home
+            -t /path/to/tree-tagger-home
             -l en
 ~~~
 

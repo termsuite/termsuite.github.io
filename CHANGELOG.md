@@ -4,6 +4,10 @@ Version 2.0 is a major release.
 
   IMPORTANT 1: In 2.0, there is no more the distinction between the `Spotter` and the `Indexer` phases. They have been merged into one unique highly configurable `Termino` pipeline.  
 
+#### Broken until 2.1
+
+* Graphical User Interface
+
 #### New Features
 
 * Added support for Mate POS Tagger and Lemmatizer (`en` and `fr` only) in addition to TreeTagger.
