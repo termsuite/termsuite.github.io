@@ -5,4 +5,4 @@ menu: Terminology alignment
 permalink: /documentation/alignment/
 ---
 
-TODO
+... To come

@@ -6,6 +6,10 @@ permalink: /documentation/java-api/
 ---
 
 
+### TermSuitePipeline launcher for terminology extraction
+
+#### Example
+
 {% highlight java %}
 TermSuitePipeline pipeline = TermSuitePipeline.create("en")
 			.setResourcePath("/path/to/resource/pack")
@@ -33,3 +37,7 @@ TermSuitePipeline pipeline = TermSuitePipeline.create("en")
 			.run();
 
 {% endhighlight %}
+
+#### Javadoc
+
+To see what you can do with  `TermSuitePipeline`, check the [Javadoc](http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}).

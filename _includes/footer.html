@@ -1,33 +1,45 @@
 <footer>
 <hr />
-<div class="container">
+  <div class="container">
 
-  <div class="row">
-    <div class="col-sm-3">
-      <h4>About</h4>
-      <p>{{ site.description }}</p>
-      <p class="text-muted">© University of Nantes 2015</p>
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>About</h4>
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>Contact</h4>
+        <ul>
+          {% for a in site.data.authors %}
+            <li>{{a | markdownify}}</li>
+          {% endfor %}
 
+        </ul>
+        {{ site.email }}
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="{{site.github}}">Github</a>
+          </li>
+          <li>
+            <a href="{{site.github}}/issues">Github issues</a>          
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/{{site.termsuite.version}}/">Maven</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-4">
-      <h4>Contact</h4>
-      <ul>
-        {% for a in site.data.authors %}
-          <li>{{a | markdownify}}</li>
-        {% endfor %}
 
-      </ul>
-      {{ site.email }}
-    </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-3">
-      <h4>Links</h4>
-      <ul>
-        <li>Github</li>
-        <li>Github Issues</li>
-        <li>Travis</li>
-      </ul>
+    <div id="copyright" class="row">
+      <p class="text-center">© University of Nantes 2015</p>
     </div>
   </div>
 </footer>

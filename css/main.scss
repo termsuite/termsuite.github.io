@@ -35,6 +35,10 @@ h3 {
   color: $brand-secondary;
 }
 
+h4 {
+  color: lighten(black, 50%);
+}
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
