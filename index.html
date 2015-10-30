@@ -11,8 +11,12 @@ layout: default
         <p class="lead">{{site.description}}</p>
       </div>
       <div class="col-md-2"></div>
-      <div class="col-md-4"></div>
-      <div class="col-md-1"></div>
+      <div class="col-md-4 text-center">
+        <h3>Download</h3>
+        <p>Download last stable version of TermSuite.</p>
+        <p><a class="btn btn-success btn-lg" href="{{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar" target="blank" role="button">termsuite-core-{{site.termsuite.version}}.jar</a></p>
+      </div>
+<div class="col-md-1"></div>
 
 
     </div>
@@ -24,22 +28,23 @@ layout: default
       <div class="col-md-4 text-center">
         <h3>Get it running !</h3>
         <p>Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.</p>
-        <p><a class="btn btn-primary btn-lg" href="/getting-started" role="button">Getting started</a></p>
+        <p><a class="btn btn-danger btn-lg" href="/getting-started" role="button">Getting started</a></p>
       </div>
-
-      <div class="col-md-4 text-center">
-        <h3>Get TermSuite</h3>
-        <p>Download last stable version of TermSuite ({{site.termsuite.version}}), build it from source with Gradle, or use it as a maven dependency.</p>
-        <p><a class="btn btn-success btn-lg" href="{{site.github}}" target="blank" role="button">Download</a></p>
-      </div>
-
 
       <div class="col-md-4 text-center">
         <h3>Documentation</h3>
         <p>List of all TermSuite's features, analysis engines, and configuration parameters. Java API.</p>
-        <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button">User Manual</a>
+        <p>
+          <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button">User Manual</a>
+          <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}/" role="button">Javadoc</a>
+        </p>
       </div>
 
+      <div class="col-md-4 text-center">
+        <h3>Developers</h3>
+        <p>Build it from sources with Gradle, or use it as a maven dependency.</p>
+        <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">View on Github</a><a class="btn" href="/documentation/developers/" role="button">Maven / Gradle</a></p>
+      </div>
     </div>
   </div>
 
