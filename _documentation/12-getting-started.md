@@ -1,7 +1,7 @@
 ---
 layout: documentation
-title: Getting Started
-menu: Getting Started
+title: "Tutorial: Getting Started"
+menu: "Getting Started [Tutorial]"
 permalink: /getting-started/
 ---
 

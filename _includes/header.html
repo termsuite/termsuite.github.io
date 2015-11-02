@@ -20,7 +20,18 @@
         <ul class="nav navbar-nav">
           <li class="{% if "/getting-started/" == page.permalink %}active{% endif %}"><a href="/getting-started">Getting Started</a></li>
           <li class="{% if "/getting-started/" != page.permalink && "documentation" == page.layout %}active{% endif %}"><a href="/documentation/introduction/" >Documentation</a></li>
-          <li><a href="/about" target="blank">About</a></li>
+          <li id="about" class="dropdown">
+            <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/changelog">Change log</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/documentation/support">Support</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="{{site.github}}" target="blank">View on Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/about">About TermSuite</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/blog">Blog</a></li>

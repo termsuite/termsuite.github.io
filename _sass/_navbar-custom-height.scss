@@ -1,9 +1,17 @@
 
-.navbar-brand,
-.navbar-nav li a {
+.navbar-brand, .navbar-nav li a {
   height: 110px;
 }
-.navbar-nav li a {
-  padding-top:70px;
-  font-size: 16px;
+.navbar-nav {
+  li a {
+    padding-top:70px;
+    font-size: 16px;
+  }
+  #about {
+     li a {
+       height: 45px;
+       font-size: 16px;
+       padding-top:10px;
+     }
+  }
 }

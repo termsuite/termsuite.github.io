@@ -12,7 +12,7 @@
         <h4>Contact</h4>
         <ul>
           {% for a in site.data.authors %}
-            <li>{{a | markdownify}}</li>
+            <li>{{a.name | markdownify}}</li>
           {% endfor %}
 
         </ul>

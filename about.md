@@ -5,3 +5,5 @@ permalink: /about/
 ---
 
 {% include about.md %}
+
+{% include logos.html %}

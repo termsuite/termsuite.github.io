@@ -5,7 +5,8 @@ menu: Introduction
 permalink: /documentation/introduction/
 ---
 
-{{site.termsuite}}
+This user manual guides you the 
+
+### About Termsuite
 
 {% include about.md %}
-This user manual

@@ -1,8 +1,16 @@
-## Version 2.0-beta
+---
+layout: page
+title: Changelog
+permalink: /changelog/
+---
+
+## Version 2.0
 
 Version 2.0 is a major release.
 
+<div class="alert alert-warning" role="alert">
   IMPORTANT 1: In 2.0, there is no more the distinction between the `Spotter` and the `Indexer` phases. They have been merged into one unique highly configurable `Termino` pipeline.  
+</div>
 
 #### Broken until 2.1
 
@@ -17,7 +25,6 @@ Version 2.0 is a major release.
 * Splitted the huge TermSuite's Gradle multi-project config into separate and independant Github/Maven projects.
 * Published TermSuite and all its dependant subprojects as Maven artefacts.
 * Moved source code and documentation to Github and Github's wiki.
-* Swing UI removed. Migrated to the new [TermSuite Web UI](https://github.com/termsuite/termsuite-ui).
 * Added AE primary occurrence detector.
 * Added AE for term class grouping.
 * Added AE for producing tsv variant evaluation files.
@@ -32,7 +39,9 @@ Version 2.0 is a major release.
 
 ## Version 1.6
 
-IMPORTANT : The new default encoding for TreeTagger resource interpretation in TermSuite is UTF-8. Please make sure that all your TreeTagger models are UTF-8 encoded.
+<div class="alert alert-warning" role="alert">
+  IMPORTANT : The new default encoding for TreeTagger resource interpretation in TermSuite is UTF-8. Please make sure that all your TreeTagger models are UTF-8 encoded.
+</div>
 
 #### New features
 
@@ -46,6 +55,7 @@ IMPORTANT : The new default encoding for TreeTagger resource interpretation in T
 More stats and examples about term spotting and gathering in TermSuite's logs.
 
 #### Bug fixes/enhancements
+
 ###### Spotter
 
 * Integration of uimaFit : all spotter AE refactored into uimaFit + uimaFit launcher for launcher
@@ -115,13 +125,15 @@ More stats and examples about term spotting and gathering in TermSuite's logs.
 
 #### Bug fixes/enhancements
 
-###### Indexer
+###### Indexer
+
 
 * Added the Chinese general lexicon required for specificity calculation
 * Enhanced MWT recognition rules for Ru/Lv/Es
 * Enhanced MWT conflation rules for Ru/Lv/Es
 
 ## Version 1.3
+
 #### New features
 
 * langSet identifier added in the XMI files

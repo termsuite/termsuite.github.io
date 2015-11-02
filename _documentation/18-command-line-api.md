@@ -5,29 +5,20 @@ menu: Command line API
 permalink: /documentation/command-line-api/
 ---
 
-# Command Line termino
-
 TermSuite comes with a command line runner for terminology extraction.
 
-## Getting Started
-
-1. Meet TermSuite's [requirements](https://github.com/termsuite/termsuite-core/blob/master/README.md#requirements),
-2. Get TermSuite's jar, (see [Readme](https://github.com/termsuite/termsuite-core/blob/master/README.md) for available methods)
-3. Run:
-
 ~~~
-$ java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI
-            -r /path/to/termsuite-resource-pack
-            -t /path/to/tagger-home-dir
-            -c /path/to/corpus/English/txt
+$ java -Xms1g -Xmx2g -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+            -r /path/to/termsuite-resource-pack \
+            -t /path/to/tagger-home-dir \
+            -c /path/to/corpus/English/txt \
             -l en
 ~~~
 
 By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. If you need to use Mate instead, add the option `--mate` to command line (see below).
 
 
-
-## Options
+### Options
 
 |                	| Mandatory 	| Default 	| Comment 	|
 | -r PATH   	|    true   	|         	|      Path to TermSuite's resource pack (a jar or a directory)   	|
@@ -87,7 +78,7 @@ $ echo "My test phrase." | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.proj
 ###### Extract terminology from `txt` corpus and export top 100 most frequent term to `tsv` and `json`:
 
 Say we have :
-* a [valid corpus](TermSuiteCollection) at `/home/me/corpora/mycorpus`,
+* a [valid corpus](/documentation/corpus) at `/home/me/corpora/mycorpus`,
 * Tree Tagger installed at `/home/me/apps/TreeTagger`,
 * Our resource pack at `/home/me/data/termsuite-resources.jar`
 
