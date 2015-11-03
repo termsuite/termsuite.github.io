@@ -1,10 +1,12 @@
 ---
 layout: documentation
-title: Use TermSuite's Java API
+title: Run terminology extraction using Java API
 menu: Java API
 permalink: /documentation/java-api/
 ---
 
+* TOC
+{:toc}
 
 ### TermSuitePipeline launcher for terminology extraction
 

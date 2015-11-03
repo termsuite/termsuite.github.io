@@ -2,6 +2,7 @@
 layout: documentation
 title: Corpus directory structure for TermSuite
 menu: Corpus directory structure
+menu_cat: root
 permalink: /documentation/corpus/
 ---
 

@@ -5,6 +5,8 @@ menu: Developers (Gradle / Maven)
 permalink: /documentation/developers/
 ---
 
+* TOC
+{:toc}
 
 ### Build TermSuite from source with Git and Gradle
 

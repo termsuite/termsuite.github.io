@@ -1,11 +1,14 @@
 ---
 layout: documentation
-title: Command line API
-menu: Command line API
+title: Run terminology extraction from command line API
+menu: Terminology
 permalink: /documentation/command-line-api/
 ---
 
 TermSuite comes with a command line runner for terminology extraction.
+
+* TOC
+{:toc}
 
 ~~~
 $ java -Xms1g -Xmx2g -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
@@ -16,7 +19,6 @@ $ java -Xms1g -Xmx2g -cp termsuite-core-{{site.termsuite.version}}.jar eu.projec
 ~~~
 
 By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. If you need to use Mate instead, add the option `--mate` to command line (see below).
-
 
 ### Options
 

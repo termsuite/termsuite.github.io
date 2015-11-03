@@ -6,6 +6,9 @@ status: draft
 permalink: /documentation/data-model/
 ---
 
+* TOC
+{:toc}
+
 # TermSuite UIMA Type System
 
 There are three types in TermSuite's type system :

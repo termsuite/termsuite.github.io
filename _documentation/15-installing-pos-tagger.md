@@ -11,6 +11,9 @@ There are currently two POS Taggers and lemmatizers supported by TermSuite:
 * `TreeTagger` (recommended): supports `fr`, `en`, `es`, `de`, `ru`, `da`
 * `Mate`: supports `fr`, `en` (better POS tagging performances but slower)
 
+* TOC
+{:toc}
+
 ### Option 1 (recommended): Installing TreeTagger and its models
 
 [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) is a very fast POS tagger and lemmatizer having very acceptable performances on all TermSuite languages. Unfortunately, its [license](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/Tagger-Licence) does not allow to ship it with TermSuite as a 3rd party dependency and needs to be install manually by end users.
