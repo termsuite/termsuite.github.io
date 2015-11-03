@@ -80,13 +80,20 @@ See class [Lang]({{site.javadoc}}) for defaults.
 | `--graphical-similarity-th` FLOAT 	|   false   	|         	|      The similarity threshold (a value between 0 and 1, 0.9 advised) for graphical variant gathering.   	|
 {: class="table table-striped"}
 
-#### Export specific options
+#### Export options
 {:id="export"}
 
-| --tsv FILENAME 	| Export extract termino to given TSV file |
-| --json FILENAME 	| Export extract termino to given Json file |
-| --tbx FILENAME 	| Export extract termino to given TBX file	|
+| `--json` FILENAME 	| Export extract termino to given Json file |
+| `--tbx` FILENAME 	| Export extract termino to given TBX file	|
+| `--tsv` FILENAME 	| Export extract termino to given TSV file |
+| `--tsv-properties` PROPERTIES [="pilot,frequency"]	| `,`-separated list of term properties to export as a column in TSV file. |
 {: class="table table-striped"}
+
+Possible values option `--tsv-properties` are: (see [examples](#examples) for an illustration)
+
+{% for p in site.data.filtering-properties %}
+  * **{{p.name}}:** {{p.description}}
+{% endfor %}
 
 #### Examples
 {:id="termino-examples"}
@@ -111,6 +118,7 @@ $ java -Xms1g -Xmx2g -cp termsuite-core-{{site.termsuite.version}}.jar eu.projec
             --filter-property "frequency" \
             --filter-top-n 100 \
             --tsv "mytermino.tsv" \
+            --tsv-properties "pattern,pilot,wrLog,frequency"
             --json "mytermino.json"
 ~~~
 
