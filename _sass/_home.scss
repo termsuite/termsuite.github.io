@@ -6,7 +6,17 @@
     background-color: lighten($brand-secondary, 50%);
   }
 
-  #features {
+  .row.languages {
+      padding: 0;
+      div {
+        line-height: 48px;
+        img {
+          width: 48px;
+        }
+      }
+  }
+
+  #features-block {
     table {
       max-width: 500px;
       margin: auto;
