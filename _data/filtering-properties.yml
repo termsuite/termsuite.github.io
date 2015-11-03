@@ -1,0 +1,15 @@
+- name: frequency
+  description: the number of occurrences of a term
+  filter: true
+- name: wr
+  description: the weirdness ratio (the specificity)
+  filter: true
+- name: wrLog
+  description: the log of weirdness ratio
+  filter: true
+- name: wrLogZScore
+  description: the z-score of weirdness ratio (i.e. normalized wr)
+  filter: true
+- name: termClassFrequency
+  description: the frequency of the term class
+  filter: true
