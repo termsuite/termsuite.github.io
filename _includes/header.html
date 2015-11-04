@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="{% if "/getting-started/" == page.permalink %}active{% endif %}"><a href="/getting-started">Getting Started</a></li>
-          <li class="{% if "/getting-started/" != page.permalink && "documentation" == page.layout %}active{% endif %}"><a href="/documentation/introduction/" >Documentation</a></li>
+          <li class="{% if '/getting-started/' != page.permalink and page.layout == 'documentation' %}active{% endif %}"><a href="/documentation/introduction/" >Documentation</a></li>
           <li id="about" class="dropdown">
             <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
             <ul class="dropdown-menu">
