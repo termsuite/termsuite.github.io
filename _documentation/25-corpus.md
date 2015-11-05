@@ -10,7 +10,8 @@ Because TermSuite has features like terminology alignment that operate on multil
 
 TermSuite currently supports two types of corpus: `tei` and `txt`.
 
-A valid TermSuite corpus is a directory having the following directory structure :
+A valid TermSuite corpus is a directory having the following directory structure:
+
  * first level : the corpus's root directory (the corpus name),
  * second level : the language-specific directory (full language name, with first letter capitalized),
  * third level : the collection type (currently `tei` or `txt`).

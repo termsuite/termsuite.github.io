@@ -13,6 +13,7 @@ termsuite:
 
 resources:
   jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/555/termsuite-resources.jar
+  filename: termsuite-resources.jar
 
 corpus:
   meteoroids: http://logiciels.lina.univ-nantes.fr/redmine/attachments/download/554/Meteoroids.zip

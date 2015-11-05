@@ -119,7 +119,90 @@ TermIndex myTerminology = JSONTermIndexIO.load(
 				false);
 {% endhighlight %}
 
-### multilingual term alignment
+### Multilingual term alignment
+
+For multilingual term alignment, you need:
+
+ * two TermSuite terminologies (as `json` files, the source termino and the target termino). Such terminologies are the outputs of TermSuite [terminology extraction pipelines](/documentation/command-line-api/#termino) processed on domain-specific comparable [corpora](/documentation/corpus/),
+ * a [bilingual dictionary](/documentation/resources/#dictionary).
+
+#### Produce valid TermSuite terminologies for alignment
+
+In order to run the alignment from a *source terminology* to a *source terminology*, you need to extract these two terminologies with a context vector for each term. To do that, you have to add the *Contextualizer* AE (`aeContextualizer()`) at the end of your terminology extraction pipeline, right before the export AEs:   
 
 {% highlight java %}
+TermSuitePipeline pipeline = TermSuitePipeline.create("en")
+			.setResourcePath("/path/to/resource/pack")
+			.setCollection(
+					TermSuiteCollection.TXT,
+					"/path/to/corpus", "UTF-8")
+			.aeWordTokenizer()
+			.setTreeTaggerHome("/path/to/treetagger")
+			.aeTreeTagger()
+			.aeUrlFilter()
+			.aeStemmer()
+			.aeRegexSpotter()
+			.aeSpecificityComputer()
+			.aeCompostSplitter()
+			.aeSyntacticVariantGatherer()
+			.aeGraphicalVariantGatherer()
+			.aeContextualizer(5, true) // computes scope-5 contexts for all terms, including multi-word terms
+			.setExportJsonWithContext(true)
+			.setExportJsonWithOccurrences(true) // expensive in disk size, but mandatory
+			.haeJsonExporter("terminology.json")
+			.run();
 {% endhighlight %}
+
+Note that in the pipeline above, you must specifically declare that you want the context vectors you just computed to be store in the json file. If you want to save the termino apart from the pipeline :
+
+{% highlight java %}
+JSONTermIndexIO.save(
+		new FileWriter(""),
+		myTermino,
+		true, 	// store all occurrences
+		true); // store term contexts
+{% endhighlight %}
+
+#### Run bilingual alignment: `BilingualAligner`
+
+A bilingual aligner can be easily created from the two terminologies and the dictionary, thanks, to the builder class `BilingualAligner` (see [Javadoc]({{site.javadoc}}) for more details). One the aligner is created, you performe the alignment by invoking the `align()` method, as follows:
+
+{% highlight java %}
+// Load terminologies from json files
+TermIndex sourceTermino = JSONTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
+TermIndex targetTermino = JSONTermIndexIO.load(new FileReader("wwind-energy-en.json"), true);
+
+
+BilingualAligner aligner = TermSuiteAlignerBuilder.start()
+		.setTargetTerminology(targetTermino)
+		.setDicoPath("my-dico.fr")
+		.setDistance(DISTANCE)
+		.create();
+
+
+/*
+ * Align the french term "hydroélectrique" with english corpus
+ * and retrieve 10 candidates. Force the candidates to occur
+ * at least 2 times in the target termino.
+ */
+List<TranslationCandidate> results = aligner.align(
+		sourceTermino.getTermByGroupingKey("a: hydroélectrique"),
+		10,
+		2);
+
+//
+int i = 0;
+for (BilingualAligner.TranslationCandidate r : results) {
+	i++;
+	System.out.format("%2d [%.2f] %-15s %s\n",
+			i,
+			r.getScore(),
+			r.getTerm().getLemma(),
+			r.getExplanation()
+		);
+}
+{% endhighlight %}
+
+#### Explanation
+
+It is important to note that you can also
