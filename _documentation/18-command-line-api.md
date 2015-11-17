@@ -46,12 +46,13 @@ By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. I
 
 #### Term filtering options
 
-| `--filter-property` STRING 	| See [TermProperty]({{site.javadoc}}) for available values      	|
-| `--filter-th` INT [=1]	|  When filtering, the minimum value of for filtered property to be kept in the terminology |
+| `--filter-property` STRING [=wrLog]	| See [TermProperty]({{site.javadoc}}) for available values      	|
+| `--filter-th` INT [=2]	|  When filtering, the minimum value of for filtered property to be kept in the terminology |
 | `--filter-top-n` INT 	| When filtering, the number of terms to keep in terminology after terms are sorted by `--filter-property` desc.         	|
+| `--filter-variants` *(no arg)* 	| Also filters variants  |
 {: class="table table-striped"}
 
-To perform a term filtering, you need to provide the `--filter-property` option, and one of `--filter-th` or `--filter--top-n`. Allowed vlaues for `--filter-property` are : (See [Javadoc]({{site.javadoc}}) for an up-to-date list)
+To perform a term filtering, you need to provide the `--filter-property` option, and one of `--filter-th` or `--filter--top-n`. Allowed values for `--filter-property` are : (See [Javadoc]({{site.javadoc}}) for an up-to-date list)
 
 {% for p in site.data.filtering-properties %}
   {% if p.filter %}
@@ -59,7 +60,9 @@ To perform a term filtering, you need to provide the `--filter-property` option,
   {% endif %}
 {% endfor %}
 
-See [examples](#termino-examples) for an illustration. These options are not mandatory. By default, the terms are not filtered.
+By default, the terms are filtered on property **wrLog** with a **threshhold value of 2**.
+
+See [examples](#termino-examples) for an illustration. These options are not mandatory.
 
 #### Compost options (morphosyntactic analysis)
 
@@ -86,7 +89,8 @@ See class [Lang]({{site.javadoc}}) for defaults.
 | `--json` FILENAME 	| Export extract termino to given Json file |
 | `--tbx` FILENAME 	| Export extract termino to given TBX file	|
 | `--tsv` FILENAME 	| Export extract termino to given TSV file |
-| `--tsv-properties` PROPERTIES [="pilot,frequency"]	| `,`-separated list of term properties to export as a column in TSV file. |
+| `--tsv-properties` PROPERTIES [="pilot,frequency"]	| `,`-separated list of term properties to export as a column in TSV file |
+| `--tsv-show-scores` *(no arg)* | Show terms and variants' scores and subscores used by term ranking in tsv file |
 {: class="table table-striped"}
 
 Possible values option `--tsv-properties` are: (see [examples](#examples) for an illustration)
@@ -157,3 +161,25 @@ $ echo "My test phrase." | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar \ eu.pr
 
 ### Multilingual term alignment
 {:id="term-alignment"}
+
+The `TermSuiteAlignerCLI` script takes as input:
+
+ * the two  terminologies (the *source* and the *target* terminologies extracted by TermSuite on two comparable [corpora](/documentation/corpus)),
+ * the [bilingual dictionary](/documentation/resources/#dictionary),
+ * the list of terms to be translated.
+
+#### The input list of words
+
+The list of terms to be translated comes as a `txt` file, one **lemmatized** term per line:
+
+#### The `TermSuiteAlignerCLI` script
+
+
+
+~~~
+$ java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+            -d bilingual-dictionary.tsv\
+            -s source-termino.json \
+            -t target-termino.json \
+            --words word-list.txt
+~~~
