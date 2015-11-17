@@ -16,9 +16,6 @@
 - name: wrLog
   description: the log of weirdness ratio
   filter: true
-- name: wrLogZScore
-  description: the z-score of weirdness ratio (i.e. normalized wr)
-  filter: true
 - name: pattern
   description: the syntactic pattern of the term
   filter: false

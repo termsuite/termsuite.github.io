@@ -16,7 +16,8 @@ resources:
   filename: termsuite-resources.jar
 
 corpus:
-  meteoroids: http://logiciels.lina.univ-nantes.fr/redmine/attachments/download/554/Meteoroids.zip
+  we: http://www.lina.univ-nantes.fr/taln/maven/wind-energy.tgz
+  mobile: http://www.lina.univ-nantes.fr/taln/maven/mobile-technology.tar.gz
 
 # Build settings
 markdown: kramdown

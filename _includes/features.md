@@ -10,6 +10,6 @@
 * Term semantic variants detection (to come),
 * Term morphology extraction,
 * Term morphosyntactic variants detection,
-* Term specificity (Weirdness Ratio) computing and other term measures: WR log, Z-score, term frequency, etc,
+* Term specificity (Weirdness Ratio) computing and other term measures: WR log, term frequency, etc,
 * Term alignment (distributional and compositional, multilingual and monolingual),
 * Terminology export in multiple formats: `json`, `tsv`, `tbx`.
