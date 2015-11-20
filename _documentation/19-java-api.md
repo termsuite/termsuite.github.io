@@ -170,7 +170,7 @@ A bilingual aligner can be easily created from the two terminologies and the dic
 {% highlight java %}
 // Load terminologies from json files
 TermIndex sourceTermino = JSONTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
-TermIndex targetTermino = JSONTermIndexIO.load(new FileReader("wwind-energy-en.json"), true);
+TermIndex targetTermino = JSONTermIndexIO.load(new FileReader("wind-energy-en.json"), true);
 
 
 BilingualAligner aligner = TermSuiteAlignerBuilder.start()

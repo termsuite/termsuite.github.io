@@ -173,13 +173,92 @@ The `TermSuiteAlignerCLI` script takes as input:
 The list of terms to be translated comes as a `txt` file, one **lemmatized** term per line:
 
 #### The `TermSuiteAlignerCLI` script
+{:id="aligner"}
 
+The aligner takes as input :
 
+ * two terminologies extracted by TermSuite from a multilingual comparable corpus, one in the *source language*, the other one in the *target language*,
+ * a *source-to-target* bilingual dictionary, (See [/documentation/resources/](TermSuite Resources documentation))
+ * a term, or list of term to align.
 
 ~~~
-$ java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
-            -d bilingual-dictionary.tsv\
-            -s source-termino.json \
-            -t target-termino.json \
-            --words word-list.txt
+$ java -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+        --source-termino termino-fr.json \
+        --target-termino termino-en.json \
+        --dictionary dico.txt \
+        --term "hydroélectricité"
+~~~
+
+#### Options
+{:id="aligner-options"}
+
+##### Mandatory options
+
+| `--source-termino` FILENAME 	| Export extract termino to given Json file |
+| `--target-termino` FILENAME 	| Export extract termino to given TBX file	|
+| `--dictionary` FILENAME 	| Export extract termino to given TSV file (See [/documentation/resources/](TermSuite Resources documentation)) |
+
+One of :
+
+| `--term` STRING 	| The term to align |
+| `--term-list` FILENAME 	| A file containing the list of terms to align. One per line. |
+{: class="table table-striped"}
+
+##### Other options
+
+| `-n` INT 	| The number of translation candidates to display |
+| `--distance` [cosine,jaccard] 	| The similarity measure used to compute the distance between two vectors |
+| `--show-explation` *(no args)* 	| Also show the most influencial co-terms with the translation candidates |
+
+#### Examples
+
+The following aligns the french term *hydroélectricité* from the terminologies in french and in english of the corpus *Wind Energy*:
+
+~~~
+$ java -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+        --source-termino wind-energy-fr.json \
+        --target-termino wind-energy-en.json \
+        --dictionary FR-EN.txt \
+        --term "hydroélectricité"
+~~~
+
+This commands outputs:
+
+~~~
+n: hydropower	0,524
+n: source	0,066
+n: roadmap	0,061
+n: target	0,058
+n: consumption	0,049
+n: energy	0,049
+a: renewable	0,049
+a: grid-connected	0,048
+n: undertaking	0,048
+n: fight	0,048
+~~~
+
+What takes time for `TermSuiteAlignerCLI` is to load both terminologies. I you need to align several terms, it is better to have them in a file as follows:
+
+~~~
+rotor
+éolienne
+éolien
+pale
+turbine
+dimensionnement
+moyeu
+calage
+écoulement
+générateur
+nacelle
+~~~
+
+And run the aligner script on this file:
+
+~~~
+$ java -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+        --source-termino wind-energy-fr.json \
+        --target-termino wind-energy-en.json \
+        --dictionary FR-EN.txt \
+        --term-list list.txt
 ~~~
