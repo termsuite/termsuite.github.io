@@ -168,10 +168,6 @@ The `TermSuiteAlignerCLI` script takes as input:
  * the [bilingual dictionary](/documentation/resources/#dictionary),
  * the list of terms to be translated.
 
-#### The input list of words
-
-The list of terms to be translated comes as a `txt` file, one **lemmatized** term per line:
-
 #### The `TermSuiteAlignerCLI` script
 {:id="aligner"}
 
