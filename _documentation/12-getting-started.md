@@ -50,8 +50,6 @@ Download a TermSuite resource pack to directory `TERMSUITE_WORKSPACE` and uncomp
 
 For example, download the one publicly available on Github : [termsuite-resources.jar]({{site.resources.jar}})
 
-{% include resource_warning.md %}
-
 ### 5. Prepare your corpus
 
 Download the example multilingual corpus [Wind Energy]({{site.corpus.we}}) to `TERMSUITE_WORKSPACE` and uncompress it.
@@ -104,40 +102,57 @@ TermSuite created the file `wind-energy-en.tsv` showed below.
 * 4th column: the term frequency,
 * 5th column: the term specificity (weirdness ratio logarithm).
 
-<div class="alert alert-warning" role="alert">
-**Important warning!**
-
-Once again, do not judge TermSuite on this example. You are using a truncated resource pack and this corpus is too small for variant detection.
-
-For example, with the full resource pack, you would get :
-
- * the wrong variant *axis wind turbine* disappear from the extracted list (while given as variant with partial resource pack, see below).
- * the terms *horizontal axis wind turbine* and *vertical axis wind turbine* appear as variants of the term *wind turbine*,
- * all morphosyntactic variants of the term *wind turbine*, like *windpack turbine*     
-</div>
-
-
 ~~~
-baseId  type    p       pilot   wrlog   f
-1       T       N N     wind turbine    5,16    1852
-1       V       N N     wind tubine     1,90    1
-1       V       N N N   axis wind turbine       3,87    95
-1       V       A N N   offshore wind turbines  3,55    46
-2       T       N       rotor   4,82    848
-3       T       N N     wind energy     4,51    414
-3       V       N P N   energy of the wind      1,90    1
-3       V       A N N   offshore wind energy    3,56    47
-3       V       A N N   european wind energy    3,25    23
-4       T       N N     wind speed      4,41    331
-4       V       N P N   speed of the wind       2,50    4
-4       V       A N N   average wind speed      3,29    25
-5       T       N N     wind power      4,34    278
-5       V       N P N   power of the wind       2,97    12
-5       V       A N N   high-performance wind power     3,34    28
-6       T       A N     offshore wind   4,27    241
-6       V       A A N   future offshore wind    2,89    10
-7       T       N       airfoil 4,26    236
-8       T       N       voltage 4,22    214
+baseId	type	p	pilot	wrlog	f
+1	T	N N	wind turbine	5,16	1852
+1	V	N N N	horizontal-axis wind turbines	3,52	42
+1	V	A N N N	horizontal axis wind turbine	3,50	41
+1	V	A N N N	vertical axis wind turbines	3,62	53
+1	V	A N N N	modern horizontal-axis wind turbines	2,59	5
+1	V	A N N	smaller-scale wind turbines	2,20	2
+1	V	A N N	on-shore wind turbines	1,90	1
+1	V	A N N	pre-manufactured wind turbine	1,90	1
+1	V	A N N	repowred wind turbines	1,90	1
+1	V	A N N N	conventional horizontal-axis wind turbines	1,90	1
+1	V	A N N N	potential campus wind turbines	1,90	1
+1	V	A N N N	typical horizontal-axis wind turbine	1,90	1
+1	V	A N N N	unconventional horizontal-axis wind turbines	1,90	1
+1	V	N N N N	hawts horizontal-axis wind turbines	1,90	1
+1	V	N N N N	utility scale wind turbine	1,90	1
+1	V	N N N N	lift type wind turbines	1,90	1
+1	V	A N N	domestic wind turbines	3,35	29
+1	V	N N N	wind turbine syndrome	3,21	21
+[...]
+2	T	N	rotor	4,82	848
+3	T	N N	wind energy	4,51	414
+3	V	A N N	californian wind energy	1,90	1
+3	V	A N N	offshore wind energy	3,56	47
+3	V	N N N	wind energy conversion	3,32	27
+3	V	N N N	wind energy conf	2,59	5
+3	V	A N N N	significant contribution wind energy	1,90	1
+3	V	N N N N	activity plan wind energy	1,90	1
+3	V	N N N N	title ge wind energy	1,90	1
+3	V	N N N	wind energy easements	1,90	1
+4	T	N N	wind speed	4,41	331
+4	V	N P N	speed of the wind	2,50	4
+4	V	N C N P N	speed and direction of the wind	1,90	1
+4	V	N N N	integer wind speed	1,90	1
+4	V	A N N	average wind speed	3,29	25
+4	V	A N N	undisturbed wind speed	2,59	5
+4	V	N N N	cutoff wind speed	2,37	3
+4	V	N N N N	terrain score wind speed	1,90	1
+4	V	N N N	wind speed cutoff	2,20	2
+4	V	N N N	cut-out wind speed	2,50	4
+4	V	N N N	cut-off wind speeds	1,90	1
+4	V	N N N	incision wind speed	1,90	1
+5	T	N N	wind power	4,34	278
+5	V	N P N	power of the wind	2,97	12
+5	V	N N N	wind turbine power	2,89	10
+5	V	N N N	wind power plant	3,76	74
+5	V	A N N	developable wind power	1,90	1
+5	V	A N N N	environmental engineering wind power	1,90	1
+5	V	N N N	wind power stations	3,27	24
+6	T	N	airfoil	4,26	236
 ...
 ~~~
 

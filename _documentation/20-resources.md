@@ -16,8 +16,6 @@ For Terminology extraction, you need several different resources for each langua
 (See warning below !)
 {:class="text-center"}
 
-{% include resource_warning.md  %}
-
 See more information about TermSuite resources on Github project [termsuite-resources](https://github.com/termsuite/termsuite-resources).
 
 ### Multilingual term alignment
