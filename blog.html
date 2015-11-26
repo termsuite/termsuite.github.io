@@ -1,5 +1,19 @@
 ---
 layout: page
-title: News about TermSuite
+title: Blog & News
 permalink: /blog/
 ---
+
+<div id="blog" class="container">
+
+{% for p in site.posts %}
+
+
+<article>
+  <span class="date">{{p.date | date_to_string}}</span>
+  <a class="lead" href="{{p.permalink}}" alt="{{p.title}}">{{p.title}}</a>
+</article >
+
+{% endfor %}
+
+</div>
