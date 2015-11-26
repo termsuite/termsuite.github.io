@@ -4,6 +4,15 @@
 - name: frequency
   description: the number of occurrences of a term
   filter: true
+- name: fnorm
+  description: the normalized frequency
+  filter: true
+- name: generalFnorm
+  description: the general normalized frequency
+  filter: true
+- name: dfreq
+  description: the number of document in corpus that contain the term
+  filter: true
 - name: lemma
   description: the concatenation of word lemmas
   filter: false

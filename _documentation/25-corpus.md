@@ -28,8 +28,8 @@ MyCorpus/
       file3.txt
   German/
     txt/
-    file1.txt
-    file2.txt
+      file1.txt
+      file2.txt
   English/
     tei/
       file1.tei

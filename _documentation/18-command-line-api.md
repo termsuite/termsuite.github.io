@@ -60,9 +60,7 @@ To perform a term filtering, you need to provide the `--filter-property` option,
   {% endif %}
 {% endfor %}
 
-By default, the terms are filtered on property **wrLog** with a **threshhold value of 2**.
-
-See [examples](#termino-examples) for an illustration. These options are not mandatory.
+By default, the terms are filtered on property **wrLog** with a **threshhold value of 2**. See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr). See also [examples](#termino-examples) for an illustration. These options are not mandatory.
 
 #### Compost options (morphosyntactic analysis)
 
@@ -98,6 +96,8 @@ Possible values option `--tsv-properties` are: (see [examples](#examples) for an
 {% for p in site.data.filtering-properties %}
   * **{{p.name}}:** {{p.description}}
 {% endfor %}
+
+See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr). 
 
 #### Examples
 {:id="termino-examples"}
