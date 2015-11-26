@@ -13,8 +13,12 @@ termsuite:
   version: "2.0"
 
 resources:
-  jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/555/termsuite-resources.jar
+  jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/561/termsuite-resources.jar
   filename: termsuite-resources.jar
+
+dicos:
+  zip: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/128/BilingualDicosForTermSuiteAligner.zip
+  filename: BilingualDicosForTermSuiteAligner.zip
 
 corpus:
   we: http://www.lina.univ-nantes.fr/taln/maven/wind-energy.tgz

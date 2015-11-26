@@ -13,7 +13,6 @@ permalink: /documentation/resources/
 For Terminology extraction, you need several different resources for each language. Fortunately, these resources can all be downloaded at once as a single TermSuite resource pack :
 
 <a href="{{site.resources.jar}}" class="btn btn-success" role="button">{{site.resources.filename}}</a>
-(See warning below !)
 {:class="text-center"}
 
 See more information about TermSuite resources on Github project [termsuite-resources](https://github.com/termsuite/termsuite-resources).
@@ -27,6 +26,9 @@ For multilingual term alignment, you need:
 
 #### The bilingual dictionary
 {:id="dictionary"}
+
+<a href="{{site.dicos.zip}}" class="btn btn-success" role="button">Download dicos</a>
+{:class="text-center"}
 
 Such a bilingual dictionary is a simple list of tab-separated source-target words. Words do not need to be lemmatized :
 
