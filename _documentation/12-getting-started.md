@@ -32,7 +32,7 @@ TermSuite requires a POS Tagger and lemmatizer to run terminology extraction pip
 To install TreeTagger on your OS: (See the [install instructions](/documentation/pos-tagger-lemmatizer) for details)
 1. Download TreeTagger from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) to `TERMSUITE_WORKSPACE` and uncompress it.
 2. Creates a subdirectory named `models` within the TreeTagger directory.
-3. Download the english utf-8-encoded (very important) model from the [official site](www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and rename it to `english.par`.
+3. Download the english utf-8-encoded (very important) model from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and rename it to `english.par`.
 
 <div class="alert alert-warning" role="alert">
 Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See [detailed instructions](/documentation/pos-tagger-lemmatizer) for all languages.  
