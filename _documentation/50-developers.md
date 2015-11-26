@@ -14,7 +14,7 @@ permalink: /documentation/developers/
 ~~~
 $ git clone git@github.com:termsuite/termsuite-core.git
 $ cd termsuite-core
-$ gradle
+$ gradle jcasgen build
 ~~~
 
 The jar will then be found under ./build/libs.
