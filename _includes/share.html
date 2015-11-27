@@ -11,12 +11,9 @@
       href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google"></span>
     </a>
     <a class="btn btn-social-icon btn-linkedin"
-      href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
-    </a>
-    <a class="btn btn-social-icon btn-github"
-      href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Github"><span class="fa fa-github"></span>
+      href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title | cgi_escape }}&summary={% if page.excerpt %}{{ page.excerpt | cgi_escape }}{% endif %}&source={{ site.url }}" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
     </a>
     <a class="btn btn-social-icon btn-reddit"
-      href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
+      href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | cgi_escape  }}" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
     </a>
 </div>
