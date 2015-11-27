@@ -3,7 +3,7 @@ layout: page
 title: Blog & News
 permalink: /blog/
 excerpt: >
-  Latest news about TermSuite 
+  Latest news about TermSuite
 ---
 
 <div id="blog" class="container">
@@ -12,7 +12,7 @@ excerpt: >
 
 
 <article>
-  <span class="date">{{p.date | date_to_string}}</span>
+  <span class="date">{{p.date | date: '%e %B %Y'}}</span>
   <a class="lead" href="{{p.url}}" alt="{{p.title}}">{{p.title}}</a>
 </article >
 
