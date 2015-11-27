@@ -165,5 +165,3 @@ You can now run TermSuite on your own [corpus]({{site.production_url}}/documenta
 Full documentation of available features and options from the command line: [command line API]({{site.production_url}}/documentation/command-line-api).
 
 Embed TermSuite directly to your Java project: [Java API](/documentation/command-line-api).
-
-Terminology alignment: [here](/documentation/alignment).
