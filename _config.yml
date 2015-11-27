@@ -9,11 +9,11 @@ github: https://github.com/termsuite/termsuite-core
 
 termsuite:
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
-  snapshot: https://oss.sonatype.org/content/repositories/snapshots/fr/univ-nantes/termsuite/termsuite-core/2.0-SNAPSHOT/
+  snapshot: https://oss.sonatype.org/content/repositories/snapshots/fr/univ-nantes/termsuite/termsuite-core/2.1-SNAPSHOT/
   version: "2.0"
 
 resources:
-  jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/561/termsuite-resources.jar
+  jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/562/termsuite-resources.jar
   filename: termsuite-resources.jar
 
 dicos:
