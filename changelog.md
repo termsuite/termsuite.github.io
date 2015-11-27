@@ -2,6 +2,8 @@
 layout: page
 title: Changelog
 permalink: /changelog/
+excerpt: >
+  Changelog, new features, and bug fixes of TermSuite 
 ---
 
 ## Version 2.0

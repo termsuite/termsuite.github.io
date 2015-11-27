@@ -2,6 +2,7 @@
 layout: page
 title: About TermSuite
 permalink: /about/
+excerpt: ""
 ---
 
 {% include about.md %}
