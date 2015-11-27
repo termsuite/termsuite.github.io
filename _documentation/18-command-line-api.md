@@ -3,6 +3,9 @@ layout: documentation
 title: Run terminology extraction from command line API
 menu: Command line API
 permalink: /documentation/command-line-api/
+excerpt: >
+  Documentation on running TermSuite terminology extraction and bilingual
+  alignment from command line.
 ---
 
 TermSuite comes with two command line runners. One for [terminology extraction](#termino), one for [multilingual term alignment](#term-alignment).
@@ -97,7 +100,7 @@ Possible values option `--tsv-properties` are: (see [examples](#examples) for an
   * **{{p.name}}:** {{p.description}}
 {% endfor %}
 
-See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr). 
+See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr).
 
 #### Examples
 {:id="termino-examples"}

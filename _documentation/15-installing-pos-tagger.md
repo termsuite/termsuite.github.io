@@ -3,6 +3,8 @@ layout: documentation
 title: Installing the POS tagger and lemmatizer
 menu: Installing  a POS Tagger
 permalink: /documentation/pos-tagger-lemmatizer/
+excerpt: >
+  Documentation on installing TreeTagger or Mate POS tagger for TermSuite.
 ---
 
 You need to install a 3rd-party Part-Of-Speech tagger and lemmatizer when you run TermSuite for extracting the terminology of a corpus.

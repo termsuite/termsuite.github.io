@@ -3,6 +3,9 @@ layout: documentation
 title: Introduction
 menu: Introduction
 permalink: /documentation/introduction/
+excerpt: >
+  User manual and technical documentation for TermSuite : terminology extraction
+  and bilingual alignment.
 
 ---
 

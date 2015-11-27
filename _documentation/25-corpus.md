@@ -4,6 +4,8 @@ title: Corpus directory structure for TermSuite
 menu: Corpus directory structure
 menu_cat: root
 permalink: /documentation/corpus/
+excerpt: >
+  Documentation on preparing your corpus for TermSuite.
 ---
 
 Because TermSuite has features like terminology alignment that operate on multilingual corpora, all corpora must satisfy a certain directory structure.

@@ -3,6 +3,10 @@ layout: documentation
 title: TermSuite Java API
 menu: Java API
 permalink: /documentation/java-api/
+excerpt: >
+  Documentation on running TermSuite terminology extraction and bilingual
+  alignment from Java API.
+
 ---
 
 TermSuite offers a convenient way of running terminology extraction and multilingual terminology alignment from its Java API. As expected, this way of running TermSuite allows a deeper control over the components than the [command line API](/documentation/command-line-api/) and the [graphical UI]().
