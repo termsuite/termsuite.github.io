@@ -1,0 +1,32 @@
+.share-page {
+  margin-top: 20px;
+  .btn {
+    color: #FFF;
+    font-size: 16px;
+  }
+  .btn-twitter {
+      background-color: #55ACEE;
+      border-color: rgba(0, 0, 0, 0.2);
+  }
+  .btn-google {
+    background-color: #DD4B39;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  .btn-facebook {
+    background-color: #3B5998;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  .btn-linkedin {
+      background-color: #007BB6;
+      border-color: rgba(0, 0, 0, 0.2);
+  }
+  .btn-github {
+      background-color: #444;
+      border-color: rgba(0, 0, 0, 0.2);
+  }
+  .btn-reddit {
+      color: #000;
+      background-color: #EFF7FF;
+      border-color: rgba(0, 0, 0, 0.2);
+  }
+}
