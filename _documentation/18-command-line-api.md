@@ -41,9 +41,7 @@ By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. I
 | `--no-logging`  *(no arg)* 	| Disables console logging|
 | `--info`  *(no arg)* 	|   Set logging level to `info` |
 | `--debug`  *(no arg)* 	| Set logging level to `debug` |
-| `--profile`  *(no arg)* 	|  Displays variant examples and AE profiling info |
 | `--watch`  STRING 	|  Displays info (freq. spec. variants, etc) about all terms matching STRING at the end of pipeline |
-| `--nb-examples`  INT 	[=5] |  The number of examples to display for each profiling hit |
 | `--tags` *(no arg)* | Show POS tags in the output (works in inline mode only) |
 {: class="table table-striped"}
 

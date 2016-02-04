@@ -3,8 +3,15 @@ layout: page
 title: Changelog
 permalink: /changelog/
 excerpt: >
-  Changelog, new features, and bug fixes of TermSuite 
+  Changelog, new features, and bug fixes of TermSuite
 ---
+
+## Version 2.1
+ * Observable pipelines
+ * uima profiler dependency removed
+ * exportable annotations to JSON
+ * support for compositional and semi-distributional aligner back
+ * Morphosyntactic analysis: added lemmatization of components
 
 ## Version 2.0
 
