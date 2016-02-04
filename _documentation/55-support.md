@@ -7,5 +7,4 @@ excerpt: >
   You need help with TermSuite ?
 
 ---
-
-{% include support.md %}
+{% translate_file support.md %}

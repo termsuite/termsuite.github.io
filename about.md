@@ -5,7 +5,7 @@ permalink: /about/
 excerpt: ""
 ---
 
-{% include about.md %}
+{% translate_file about.md %}
 
 {::options parse_block_html="false" /}
 {% include logos.html %}

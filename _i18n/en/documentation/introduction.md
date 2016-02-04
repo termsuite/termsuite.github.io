@@ -1,0 +1,1 @@
+This user manual guides you through the main features and configuration of TermSuite. Please see the [Javadoc]({{site.javadoc}}) for additional information about TermSuite, or clone the [source repository]({{site.github}}).

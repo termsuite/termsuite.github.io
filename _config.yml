@@ -1,7 +1,5 @@
 # Site settings
 title: TermSuite
-email: "[firstname.lastname]@univ-nantes.fr"
-description: TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://termsuite.github.io" # the base hostname & protocol for your site
 github_username:  termsuite
@@ -35,3 +33,6 @@ collections:
   documentation:
     output: true
     permalink: /documentation/:path/
+
+languages: ["en", "fr"]
+exclude_from_localizations: ["fonts", "js", "img", "css"]

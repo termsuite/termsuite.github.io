@@ -8,14 +8,12 @@ excerpt: >
   and bilingual alignment.
 
 ---
-
-This user manual guides you through the main features and configuration of TermSuite. Please see the [Javadoc]({{site.javadoc}}) for additional information about TermSuite, or clone the [source repository]({{site.github}}).
-
+{% translate_file documentation/introduction.md %}
 
 ### About Termsuite
 
-{% include about.md %}
+{% translate_file about.md %}
 
 ### Support
 
-{% include support.md %}
+{% translate_file support.md %}
