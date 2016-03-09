@@ -37,6 +37,8 @@ By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. I
 
 #### Term filtering options
 
+(See also [Periodic filtering options](#periodic-filtering-options))
+
 | `--filter-property` STRING [=wrLog]	| See [TermProperty]({{site.javadoc}}) for available values      	|
 | `--filter-th` INT [=2]	|  When filtering, the minimum value of for filtered property to be kept in the terminology |
 | `--filter-top-n` INT 	| When filtering, the number of terms to keep in terminology after terms are sorted by `--filter-property` desc.         	|
@@ -52,6 +54,16 @@ To perform a term filtering, you need to provide the `--filter-property` option,
 {% endfor %}
 
 By default, the terms are filtered on property **wrLog** with a **threshhold value of 2**. See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr). See also [examples](#termino-examples) for an illustration. These options are not mandatory.
+
+#### Periodic filtering options
+
+It is also possible to cap the on-going terminology size in order to avoid memory issues (recommended
+for big corpus). To activate the periodic filtering (terminology capping), you need to set the
+following two options.
+
+| `--periodic-filter-property` STRING	| See [TermProperty]({{site.javadoc}}) for available values      	|
+| `--periodic-filter-max-size` INT	| When filtering, the minimum value of for filtered property to be kept in the terminology |
+{: class="table table-striped"}
 
 #### Compost options (morphosyntactic analysis)
 

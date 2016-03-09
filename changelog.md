@@ -12,6 +12,7 @@ excerpt: >
  * exportable annotations to JSON
  * support for compositional and semi-distributional aligner back
  * Morphosyntactic analysis: added lemmatization of components
+ * Allow the capping of terminology from TermSuiteTerminoCLI with options `periodic-filter-property` `periodic-filter-max-size`.
 
 ## Version 2.0
 
