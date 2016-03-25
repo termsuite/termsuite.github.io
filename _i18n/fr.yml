@@ -1,2 +1,58 @@
 email: "[prenom.nom]@univ-nantes.fr"
 description: "TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>."
+
+authors:
+  dcram:
+    description: "Ingénieur de Recherche - Université de Nantes - Project ISTEX"
+    role: "Ingénieur"
+    link_type: "Github"
+  bdaille:
+    description: "Professeur des Universités - Université de Nantes - Project ISTEX"
+    role: "Chercheur"
+    link_type: "Personal Page"
+
+global:
+  french: Français
+  english: Anglais
+
+titles:
+  blog: "Blog & Actualités"
+  introduction: Introduction à TermSuite
+  getting-started: "Débuter avec TermSuite [Tutoriel]"
+  postagger: Installer l'étiquetteur grammatical et le lemmatiseur
+  command-line-api: Executer l'extraction de terminologies en ligne de commande API
+  java-api: API Java de TermSuite
+  resources: Charger les ressources langagières de TermSuite
+  corpus: Arborescence d'un corpus TermSuite
+  term-properties: Liste des propriétés de terme disponibles dans TermSuite.
+  developers: Instructions pour les développeurs (Gradle / Maven)
+  support: Assistance
+  data-model: Modèle de données de TermSuite
+
+menus:
+  blog:
+  introduction: Introduction
+  getting-started: "Débuter avec TermSuite [Tutoriel]"
+  postagger: Installer un étiquetteur grammatical
+  command-line-api: API ligne de commande
+  java-api: API Java
+  resources: Ressources
+  corpus: Arborescence corpus
+  term-properties: Propriétés de terme
+  developers: Développeurs (Gradle / Maven)
+  data-model: Modèle de données
+
+
+excerpts:
+  blog:
+  introduction: "Manuel d'utilisation et documentation technique pour TermSuite : terminologie de l'extraction et alignement bilingue."
+  getting-started: Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire la terminologie d'un petit corpus.
+  postagger: Documentation pour l'installation de l'étiqueteur arboré (TreeTagger) ou de l'étiquetteur grammatical Mate (POS tagger) pour TermSuite.
+  command-line-api: Documentation concernant l'execution de l'extraction, et l'alignement bilingue en ligne de commande.
+  java-api: Documentation et execution de l'extraction de terminologie, et de l'alignement bilingue depuis l'API Java.
+  resources: Liste et documentation des ressources linguistiques nécessaires pour TermSuite.
+  corpus: "Documentation pour préparer votre corpus à TermSuite."
+  term-properties: Liste des propriétés de terme disponibles dans TermSuite.
+  developers: "Informations pour les développeurs : Gradle, Github, Maven..."
+  support:
+  data-model:

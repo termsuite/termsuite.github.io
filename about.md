@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About TermSuite
+title: titles.about
 permalink: /about/
 excerpt: ""
 ---

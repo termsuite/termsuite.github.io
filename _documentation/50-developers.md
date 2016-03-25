@@ -1,10 +1,9 @@
 ---
 layout: documentation
-title: Developers instructions (Gradle / Maven)
-menu: Developers (Gradle / Maven)
+title: titles.developers
+menu: menus.developers
+excerpt: excerpts.developers
 permalink: /documentation/developers/
-excerpt: >
-  Information about TermSuite for developers: Gradle, Github, Maven...
-
 ---
+
 {% translate_file documentation/developers.md %}

@@ -1,0 +1,32 @@
+fr:
+  name: French
+  path: /img/flags/France.png
+  support: good
+en:
+  name: English
+  path: /img/flags/United-Kingdom.png
+  support: good
+ru:
+  name: Russian
+  path: /img/flags/Russia.png
+  support: good
+de:
+  name: German
+  path: /img/flags/Germany.png
+  support: good
+es:
+  name: Spanish
+  path: /img/flags/Spain.png
+  support: good
+da:
+  name: Danish
+  path: /img/flags/Denmark.png
+  support: poor
+zh:
+  name: Chinese
+  path: /img/flags/China.png
+  support: poor
+lv:
+  name: Latvian
+  path: /img/flags/Latvia.png
+  support: poor

@@ -18,8 +18,8 @@ layout: default
           {% if doc.status != 'draft' %}
             <a title="{{doc.title}}"
             class="list-group-item {% if doc.url == page.url %}active{% endif %}"
-            href="{{site.production_url}}{{ doc.url }}">
-              {{doc.menu | markdownify}}
+            href="{{site.baseurl}}{{ doc.url }}">
+              {% t doc.menu %}
             </a>
           {% endif %}
         {% endfor %}

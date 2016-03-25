@@ -1,2 +1,60 @@
 email: "[firstname.lastname]@univ-nantes.fr"
 description: TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
+
+
+authors:
+  dcram:
+    description: "CNRS Research Engineer - University of Nantes - Project ISTEX"
+    role: "Engineer"
+    link_type: "Github"
+  bdaille:
+    description: "CNRS Research Engineer - University of Nantes - Project ISTEX"
+    role: "Researcher"
+    link_type: "Personal Page"
+
+global:
+  french: French
+  english: English
+
+titles:
+  blog: Blog & News
+  introduction: Introduction
+  getting-started: "Tutorial: Getting Started"
+  postagger: "Installing the POS tagger and lemmatizer"
+  command-line-api: Run terminology extraction from command line API
+  java-api: TermSuite Java API
+  resources: Language resources for TermSuite
+  corpus: Corpus directory structure for TermSuite
+  term-properties: Term Properties
+  developers: Developers instructions (Gradle / Maven)
+  support: Support
+  data-model: Terminology data model of TermSuite
+
+
+menus:
+  blog:
+  introduction: Introduction
+  getting-started: Getting Started [Tutorial]
+  postagger: Installing a POS Tagger
+  command-line-api: Command line API
+  java-api: Java API
+  resources: Resources (resource pack, dictionaries)
+  corpus: Corpus directory structure
+  term-properties: Term Properties
+  developers: Developers (Gradle / Maven)
+  support: Support
+  data-model: Terminology data model
+
+excerpts:
+  blog:
+  introduction: "User manual and technical documentation for TermSuite : terminology extraction and bilingual alignment."
+  getting-started: "This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus."
+  postagger: "Documentation on installing TreeTagger or Mate POS tagger for TermSuite."
+  command-line-api: Documentation on running TermSuite terminology extraction and bilingual alignment from command line.
+  java-api: Documentation on running TermSuite terminology extraction and bilingual alignment from Java API.
+  resources: List and documentation of linguistics resources needed by TermSuite.
+  corpus: Documentation on preparing your corpus for TermSuite.
+  term-properties: This page lists and explains the most important term properties in TermSuite, and how they are used in the terminology extraction process.
+  developers: "Information about TermSuite for developers: Gradle, Github, Maven..."
+  support: You need help with TermSuite ?
+  data-model: Terminology data model

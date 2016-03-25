@@ -1,12 +1,9 @@
 ---
 layout: documentation
-title: Introduction
-menu: Introduction
+title: titles.introduction
+menu: menus.introduction
+excerpt: excerpts.introduction
 permalink: /documentation/introduction/
-excerpt: >
-  User manual and technical documentation for TermSuite : terminology extraction
-  and bilingual alignment.
-
 ---
 {% translate_file documentation/introduction.md %}
 

@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: Language resources for TermSuite
-menu: Resources (resource pack, dictionaries)
+title: titles.resources
+menu: menus.resources
+excerpt: excerpts.resources
 permalink: /documentation/resources/
-excerpt: >
-  List and documentation of linguistics resources needed by TermSuite.
 ---
+
 {% translate_file documentation/resources.md %}

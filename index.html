@@ -3,6 +3,17 @@ layout: default
 ---
 
 <div id="home">
+<p>Lang: {{site.lang}}<p>
+  <p>
+
+    {% if site.lang == "fr" %}
+      {% capture link1 %}{{ site.baseurl_root }}{% endcapture %}
+      <a href="{{ link1 }}" >{% t global.english %}</a>
+    {% else if site.lang == "en" %}
+      {% capture link2 %}{{ site.baseurl_root }}fr/{% endcapture %}
+      <a href="{{ link2 }}" >{% t global.french %}</a>
+    {% endif %}
+  </p>
 
   <div class="row">
     <div class="container">

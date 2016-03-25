@@ -76,6 +76,26 @@ See class [Lang]({{site.javadoc}}) for defaults.
 | `--compost-min-component-size` INT 	|   The minimum size allowed for a component	|
 {: class="table table-striped"}
 
+#### Use 3rd party MongoDB store
+{:id="mongodb"}
+
+Sometimes when your corpus gets big (> 30 million words), you need to provide TermSuite
+with an off-memory option so as to compute the complete corpus without memory error.
+TermSuite supports MongoDB. You need to install MongoDB on your local system.
+
+See the official [MongoDB install guide](https://docs.mongodb.org/manual/installation/). The installation of MongoDB is usually easy.
+
+To activate the use of MongoDB as 3rd party storage, use the option:
+
+| `--mongodb-store` String  |  The mongodb connection string to your database	|
+{: class="table table-striped"}
+
+By default, MongoDB is started after install and runs on port `27017`. So, the MongoDB connection
+string is usually something like `mongodb://localhost:27017/nameofmydb`. This will create the MongoDB
+database `nameofmydb` unless it already exists. See the full documentation of MongoDB [connection strings](https://docs.mongodb.org/manual/reference/connection-string/)
+if you have chosen of more sophisticated installation configuration.
+
+
 #### Other options (encoding, corpus, tagger, etc)
 
 | `--encoding` ENCODING  [=UTF-8]|   Encoding of the corpus files      	|
@@ -88,6 +108,7 @@ See class [Lang]({{site.javadoc}}) for defaults.
 {:id="export"}
 
 | `--json` FILENAME 	| Export extract termino to given Json file |
+| `--json-mongodb-soft-link`  *(no arg)*	| Use it only if option `--mongo-store` is set (see [3rd-party MongoDB](#mongodb)) in order to deactivate the occurrence serialization within the json (for big corpus) |
 | `--tbx` FILENAME 	| Export extract termino to given TBX file	|
 | `--tsv` FILENAME 	| Export extract termino to given TSV file |
 | `--tsv-properties` PROPERTIES [="pilot,frequency"]	| `,`-separated list of term properties to export as a column in TSV file |

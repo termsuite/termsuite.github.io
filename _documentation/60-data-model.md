@@ -1,8 +1,10 @@
 ---
 layout: documentation
-title: Termonilogy data model of TermSuite
-menu: Termonilogy data model
+title: titles.data-model
+menu: menus.data-model
+excerpt: excerpts.data-model
 status: draft
 permalink: /documentation/data-model/
 ---
+
 {% translate_file documentation/data-model.md %}
