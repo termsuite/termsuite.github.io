@@ -13,7 +13,9 @@ excerpt: >
  * support for compositional and semi-distributional aligner back
  * Morphosyntactic analysis: added lemmatization of components
  * Allow the capping of terminology from TermSuiteTerminoCLI with options `periodic-filter-property` `periodic-filter-max-size`.
-
+ * scalabilty : can now handle big corpus with MongoDB
+ * Changed the IO API. See JSONTermIndexIO class
+ 
 ## Version 2.0
 
 Version 2.0 is a major release.
