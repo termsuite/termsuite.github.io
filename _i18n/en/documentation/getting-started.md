@@ -1,3 +1,5 @@
+
+
 This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.
 
 * TOC
