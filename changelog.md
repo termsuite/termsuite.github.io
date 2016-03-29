@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Changelog
+title: global.changelog
 permalink: /changelog/
-excerpt: >
-  Changelog, new features, and bug fixes of TermSuite
+excerpt: excerpts.changelog
 ---
 
 ## Version 2.1
@@ -15,7 +14,7 @@ excerpt: >
  * Allow the capping of terminology from TermSuiteTerminoCLI with options `periodic-filter-property` `periodic-filter-max-size`.
  * scalabilty : can now handle big corpus with MongoDB
  * Changed the IO API. See JSONTermIndexIO class
- 
+
 ## Version 2.0
 
 Version 2.0 is a major release.

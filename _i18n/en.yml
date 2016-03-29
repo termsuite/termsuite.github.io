@@ -1,6 +1,7 @@
 site:
   email: "[firstname.lastname]@univ-nantes.fr"
   description: TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
+  title: TermSuite
 
 authors:
   dcram:
@@ -105,9 +106,9 @@ titles:
   developers: Developers instructions (Gradle / Maven)
   support: Support
   data-model: Terminology data model of TermSuite
+  about: À propos de TermSuite
 
 menus:
-  blog:
   introduction: Introduction
   getting-started: Getting Started [Tutorial]
   postagger: Installing a POS Tagger
@@ -121,7 +122,7 @@ menus:
   data-model: Terminology data model
 
 excerpts:
-  blog:
+  blog: Latest news about TermSuite
   introduction: "User manual and technical documentation for TermSuite : terminology extraction and bilingual alignment."
   getting-started: "This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus."
   postagger: "Documentation on installing TreeTagger or Mate POS tagger for TermSuite."
@@ -133,6 +134,8 @@ excerpts:
   developers: "Information about TermSuite for developers: Gradle, Github, Maven..."
   support: You need help with TermSuite ?
   data-model: Terminology data model
+  changelog: "Changelog, new features, and bug fixes of TermSuite"
+  contact: "Contact information of TermSuite contributors."
 
 authors:
   dc:
