@@ -6,6 +6,9 @@ github_username:  termsuite
 github: https://github.com/termsuite/termsuite-core
 permalink: none
 
+description: site.description
+email: site.email
+
 termsuite:
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
   snapshot: https://oss.sonatype.org/content/repositories/snapshots/fr/univ-nantes/termsuite/termsuite-core/2.1-SNAPSHOT/

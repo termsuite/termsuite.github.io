@@ -1,32 +1,32 @@
 fr:
-  name: French
+  name: global.french
   path: /img/flags/France.png
-  support: good
+  support: global.good
 en:
-  name: English
+  name: global.english
   path: /img/flags/United-Kingdom.png
-  support: good
+  support: global.good
 ru:
-  name: Russian
+  name: global.russian
   path: /img/flags/Russia.png
-  support: good
+  support: global.good
 de:
-  name: German
+  name: global.german
   path: /img/flags/Germany.png
-  support: good
+  support: global.good
 es:
-  name: Spanish
+  name: global.spanish
   path: /img/flags/Spain.png
-  support: good
+  support: global.good
 da:
-  name: Danish
+  name: global.danish
   path: /img/flags/Denmark.png
-  support: poor
+  support: global.poor
 zh:
-  name: Chinese
+  name: global.chinese
   path: /img/flags/China.png
-  support: poor
+  support: global.poor
 lv:
-  name: Latvian
+  name: global.latvian
   path: /img/flags/Latvia.png
-  support: poor
+  support: global.poor

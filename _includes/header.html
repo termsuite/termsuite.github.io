@@ -36,11 +36,17 @@
               <li><a href="{{site.github}}" target="blank">View on Github</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="/about">About TermSuite</a></li>
+              <li><a href="/blog">Blog</a></li>
             </ul>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/blog">Blog</a></li>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="{% if "en" == site.lang %}active{% endif %}" ><a href="{{site.baseurl_root}}{{ page.url }}" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="{% if "fr" == site.lang %}active{% endif %}" ><a href="{{site.baseurl_root}}/fr{{ page.url }}" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

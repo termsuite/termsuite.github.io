@@ -1,5 +1,6 @@
-email: "[prenom.nom]@univ-nantes.fr"
-description: "TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>."
+site:
+  email: "[prenom.nom]@univ-nantes.fr"
+  description: "TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>."
 
 authors:
   dcram:
@@ -14,6 +15,18 @@ authors:
 global:
   french: Français
   english: Anglais
+  latvian: Letton
+  russian: Russe
+  german: Allemand
+  spanish: Espagnol
+  danish: Danois
+  chinese: Chinois
+  poor: Faible
+  good: Bon
+
+index:
+  good_support: Bon support
+  partial_support: Support partiel
 
 titles:
   blog: "Blog & Actualités"
@@ -41,6 +54,7 @@ menus:
   term-properties: Propriétés de terme
   developers: Développeurs (Gradle / Maven)
   data-model: Modèle de données
+  support: Assistance
 
 
 excerpts:
@@ -54,5 +68,15 @@ excerpts:
   corpus: "Documentation pour préparer votre corpus à TermSuite."
   term-properties: Liste des propriétés de terme disponibles dans TermSuite.
   developers: "Informations pour les développeurs : Gradle, Github, Maven..."
-  support:
+  support: Obtenir de l'aide avec TermSuite
   data-model:
+
+authors:
+  dc:
+    description: Ingénieur de Recherche CNRS - Université de Nantes - Projet ISTEX
+    role: Conception / Développement
+    link_type: Github
+  bd:
+    description: Professeur des universités - Université de Nantes - France
+    role: Recherche
+    link_type: Page personnelle

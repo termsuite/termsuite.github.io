@@ -1,14 +1,14 @@
-- Word tokenization
-- "POS Tagging (3rd party: with TreeTagger or Mate)"
-- "Lemmatization (3rd party: with TreeTagger or Mate)"
-- Stemming (Snowball)
-- Terminology extraction
-- Efficient multiword term detection
-- Term syntactic variants detection
-- Term graphic variants detection
-- Term semantic variants detection (to come)
-- Term morphology extraction
-- Term morphosyntactic variants detection
-- "Term specificity (Weirdness Ratio) computing and other term measures: WR log, term frequency, etc"
-- Term alignment (distributional and compositional, multilingual and monolingual)
-- "Terminology export in multiple formats: `json`, `tsv`, `tbx`"
+- features.word_tokenization
+- features.postagging
+- features.lemmatization
+- features.stemming
+- features.terminology_extraction
+- features.mwt_detection
+- features.syntactic_variant_detection
+- features.graphical_variant_detection
+- features.semantic_variant_detection
+- features.morphology
+- features.morphosyntactic_variant_detection
+- features.specificity
+- features.alignment
+- features.export

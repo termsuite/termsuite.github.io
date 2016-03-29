@@ -1,14 +1,14 @@
 - name: Damien Cram
   status: active
-  description: "CNRS Research Engineer - University of Nantes - Project ISTEX"
+  description: authors.dc.description
   link: "https://github.com/pompadour"
-  link_type: "Github"
-  role: Engineer
+  link_type: authors.dc.link_type
+  role: authors.dc.role
   mail: "[firstname.lastname]@univ-nantes.fr"
 - name: Béatrice Daille
   status: active
-  description: "Professor in  Computer Sciences at the University of Nantes - France"
+  description: authors.bd.description
   link: "http://bdaille.com/"
-  role: Researcher
-  link_type: "Personal page"
+  role: authors.bd.role
+  link_type: authors.bd.link_type
   mail: "[firstname.lastname]@univ-nantes.fr"

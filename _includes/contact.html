@@ -3,10 +3,10 @@ TermSuite is a research project.
 <div class="container">
 {% for a in site.data.authors | where "status", "active"  %}
   <div class="author">
-      <h3>{{a.name}} <small>{{ a.role }}</small></h3>
-      <p>{{a.description}}</p>
+      <h3>{{a.name}} <small>{%t a.role %}</small></h3>
+      <p>{%t a.description %}</p>
       <p><strong>Mail: </strong>{{a.mail}}</a>
-      <p><strong>Link: </strong><a href="{{a.link}}">{{a.link_type}}</a></p>
+      <p><strong>Link: </strong><a href="{{a.link}}">{%t a.link_type %}</a></p>
   </div>
 {% endfor %}
 </div>

@@ -1,48 +1,35 @@
 ---
 layout: default
 ---
-
 <div id="home">
-<p>Lang: {{site.lang}}<p>
-  <p>
-
-    {% if site.lang == "fr" %}
-      {% capture link1 %}{{ site.baseurl_root }}{% endcapture %}
-      <a href="{{ link1 }}" >{% t global.english %}</a>
-    {% else if site.lang == "en" %}
-      {% capture link2 %}{{ site.baseurl_root }}fr/{% endcapture %}
-      <a href="{{ link2 }}" >{% t global.french %}</a>
-    {% endif %}
-  </p>
-
   <div class="row">
     <div class="container">
       <div class="col-md-5">
-        <p class="lead">{{ site.description }} </p>
+        <p class="lead">{%t site.description %} </p>
 
         <p>
-          Multiword and compound term detection, morphosyntactic analysis, term variant detection, term specificity computation, etc. <small><a href="#features">See features</a></small>
+          {%t index.main_features %}
         </p>
         <div class="row languages">
           <div class="col-md-4">
-            Good support:
+            {%t index.good_support%}:
           </div>
           <div class="col-md-8">
             {% for l in site.data.languages %}
-              {% if l[1].support == 'good' %}
-                <img src="{{l[1].path}}" alt="{{l[1].name}}" title="{{l[1].name}}">
+              {% if l[1].support == 'global.good' %}
+                <img src="{{l[1].path}}" alt="{%t l[1].name %}" title="{%t l[1].name %}">
               {% endif %}
             {% endfor %}
           </div>
         </div>
         <div class="row languages">
           <div class="col-md-4">
-            Partial support:
+            {%t index.partial_support %}:
           </div>
           <div class="col-md-8">
             {% for l in site.data.languages %}
-              {% if l[1].support == 'poor' %}
-                <img  src="{{l[1].path}}" alt="{{l[1].name}}" title="{{l[1].name}}">
+              {% if l[1].support == 'global.poor' %}
+                <img  src="{{l[1].path}}" alt="{%t l[1].name %}" title="{%t l[1].name %}">
               {% endif %}
             {% endfor %}
           </div>
@@ -50,8 +37,8 @@ layout: default
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-4 text-center">
-        <h3>Download</h3>
-        <p>Download last stable version of TermSuite. <a href="/changelog">See Changelog</a>
+        <h3>{%t index.download %}</h3>
+        <p>{%t index.download_last_stable %} <a href="/changelog">{%t index.see_changelog %}</a>
         </p>
         <p>
           <a class="btn btn-success btn-lg"
@@ -62,7 +49,7 @@ layout: default
 
       </p>
       <p>
-        or download last development snapshot of <a class="btn btn-lg"
+        {%t index.download_last_snapshot %}: <a class="btn btn-lg"
           href="{{site.termsuite.snapshot}}"
           target="blank" role="button">
           termsuite-core-SNAPSHOT.jar
@@ -78,37 +65,37 @@ layout: default
   <div class="row greyed">
     <div class="container">
       <div class="col-md-4 text-center">
-        <h3>Get it running !</h3>
-        <p>Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.</p>
-        <p><a class="btn btn-danger btn-lg" href="/getting-started" role="button">Getting started</a></p>
+        <h3>{%t index.get_it_running %} !</h3>
+        <p>{%t index.get_it_running_desc %}</p>
+        <p><a class="btn btn-danger btn-lg" href="/getting-started" role="button">{%t global.getting_started %}</a></p>
       </div>
 
       <div class="col-md-4 text-center">
-        <h3>Documentation</h3>
-        <p>List of all TermSuite's features, analysis engines, and configuration parameters. Java API.</p>
+        <h3>{%t global.documentation %}</h3>
+        <p>{%t index.documentation_desc %}</p>
         <p>
-          <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button">User Manual</a>
+          <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button"></a>
           <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}/" role="button">Javadoc</a>
         </p>
       </div>
 
       <div class="col-md-4 text-center">
-        <h3>Developers</h3>
-        <p>Build it from sources with Gradle, or use it as a maven dependency.</p>
-        <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">View on Github</a><a class="btn" href="/documentation/developers/" role="button">Maven / Gradle</a></p>
+        <h3>{%t global.developers %}</h3>
+        <p>{%t index.developers_desc %}</p>
+        <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">{%t global.view_on_github %}</a><a class="btn" href="/documentation/developers/" role="button">Maven / Gradle</a></p>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class="container">
-      <h2 id="features" class="text-center">Features Overview</h2>
+      <h2 id="features" class="text-center">{%t index.features_overview %}</h2>
       <div id="features-block" class="">
         <table class="table table-bordered">
           <tbody>
             {% for f in site.data.features %}
               <tr>
-                <td>{{f | markdownify}}</td>
+                <td>{%t f %}</td>
                 <td><span class="glyphicon glyphicon-ok text-ok" aria-hidden="true"></span></td>
               </tr>
             {% endfor %}

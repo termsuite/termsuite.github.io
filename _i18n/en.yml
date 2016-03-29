@@ -1,6 +1,6 @@
-email: "[firstname.lastname]@univ-nantes.fr"
-description: TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
-
+site:
+  email: "[firstname.lastname]@univ-nantes.fr"
+  description: TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
 
 authors:
   dcram:
@@ -12,9 +12,57 @@ authors:
     role: "Researcher"
     link_type: "Personal Page"
 
+
 global:
   french: French
   english: English
+  latvian: Latvian
+  russian: Russian
+  german: German
+  spanish: Spanish
+  danish: Danish
+  chinese: Chinese
+  poor: Poor
+  good: Good
+  download: Download
+  getting_started: Getting Started
+  documentation: Documentation
+  developers: Developers
+  user_manual: User Manual
+  view_on_github: View on Github
+
+index:
+  good_support: Good support
+  partial_support: Partial support
+  main_features: >
+    Multiword and compound term detection, morphosyntactic analysis, term variant detection,
+     term specificity computation, etc. <small><a href="#features">See features</a></small>
+
+  download_last_stable: Download last stable version of TermSuite.
+  see_changelog: See Changelog
+  download_last_snapshot: or download last development snapshot
+  get_it_running: Get it running
+  get_it_running_desc: Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.
+  documentation_desc: List of all TermSuite's features, analysis engines, and configuration parameters. Java API.
+  developers_desc: Build it from sources with Gradle, or use it as a maven dependency.
+  features_overview: Features Overview
+
+features:
+  word_tokenization: Word tokenization
+  postagging: "POS Tagging (3rd party: with TreeTagger or Mate)"
+  lemmatization: "Lemmatization (3rd party: with TreeTagger or Mate)"
+  stemming: Stemming (Snowball)
+  terminology_extraction: Terminology extraction
+  mwt_detection: Efficient multiword term detection
+  syntactic_variant_detection: Term syntactic variants detection
+  graphical_variant_detection: Term graphic variants detection
+  semantic_variant_detection: Term semantic variants detection (to come in 2.2)
+  morphology: Term morphology extraction
+  morphosyntactic_variant_detection: Term morphosyntactic variants detection
+  specificity: "Term specificity (Weirdness Ratio) computing and other term measures: WR log, term frequency, etc"
+  alignment: Term alignment (distributional and compositional, multilingual and monolingual)
+  export: "Terminology export in multiple formats: `json`, `tsv`, `tbx`"
+
 
 titles:
   blog: Blog & News
@@ -58,3 +106,13 @@ excerpts:
   developers: "Information about TermSuite for developers: Gradle, Github, Maven..."
   support: You need help with TermSuite ?
   data-model: Terminology data model
+
+authors:
+  dc:
+    description: "CNRS Research Engineer - University of Nantes - Project ISTEX"
+    role: Engineer
+    link_type: Github
+  bd:
+    description: Professor in  Computer Sciences at the University of Nantes - France
+    role: Researcher
+    link_type: Personal page
