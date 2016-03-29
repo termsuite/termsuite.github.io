@@ -25,11 +25,21 @@ global:
   poor: Poor
   good: Good
   download: Download
+  changelog: Change log
   getting_started: Getting Started
   documentation: Documentation
   developers: Developers
   user_manual: User Manual
   view_on_github: View on Github
+  about: About
+  about_termsuite: About TermSuite
+  blog: Blog
+  contact: Contact
+  support: Support
+  links: Links
+  university_of_nantes: University of Nantes
+  fork_termsuite_on_github: Fork TermSuite on GitHub.
+  toggle_nav: Toggle navigation
 
 index:
   good_support: Good support
@@ -46,6 +56,9 @@ index:
   documentation_desc: List of all TermSuite's features, analysis engines, and configuration parameters. Java API.
   developers_desc: Build it from sources with Gradle, or use it as a maven dependency.
   features_overview: Features Overview
+
+contact:
+  description: TermSuite is a research project.
 
 features:
   word_tokenization: Word tokenization

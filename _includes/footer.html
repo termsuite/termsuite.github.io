@@ -4,23 +4,23 @@
 
     <div class="row">
       <div class="col-sm-3">
-        <h4>About</h4>
-        <p>{{ site.description }}</p>
+        <h4>{%t global.about %}</h4>
+        <p>{%t site.description %}</p>
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-4">
-        <h4>Contact</h4>
+        <h4>{%t global.contact %}</h4>
         <ul>
           {% for a in site.data.authors %}
             <li>{{a.name | markdownify}}</li>
           {% endfor %}
 
         </ul>
-        {{ site.email }}
+        {%t site.email %}
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-3">
-        <h4>Links</h4>
+        <h4>{%t global.links %}</h4>
         <ul>
           <li>
             <a href="{{site.github}}">Github</a>
@@ -39,7 +39,7 @@
     </div>
 
     <div id="copyright" class="row">
-      <p class="text-center">© University of Nantes 2015</p>
+      <p class="text-center">© {%t global.university_of_nantes %} 2015-2016</p>
     </div>
   </div>
 </footer>
