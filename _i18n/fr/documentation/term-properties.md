@@ -121,5 +121,5 @@ term.getDocumentFrequency();
 La liste exhaustive des propriété est :
 
 {% for p in site.data.filtering-properties %}
-  * **{{p.name}}:** {{p.description}}
+  * **{{p.name}}:** {%t p.description %}
 {% endfor %}

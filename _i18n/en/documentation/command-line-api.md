@@ -49,7 +49,7 @@ To perform a term filtering, you need to provide the `--filter-property` option,
 
 {% for p in site.data.filtering-properties %}
   {% if p.filter %}
-  * **{{p.name}}:** {{p.description}}
+  * **{{p.name}}:** {%t p.description %}
   {% endif %}
 {% endfor %}
 
@@ -118,7 +118,7 @@ if you have chosen of more sophisticated installation configuration.
 Possible values option `--tsv-properties` are: (see [examples](#examples) for an illustration)
 
 {% for p in site.data.filtering-properties %}
-  * **{{p.name}}:** {{p.description}}
+  * **{{p.name}}:** {%t p.description %}
 {% endfor %}
 
 See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr).

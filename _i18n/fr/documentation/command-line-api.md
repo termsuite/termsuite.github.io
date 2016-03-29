@@ -1,4 +1,4 @@
-TermSuite offre deux executeurs de lignes de commande. Un pour l' [extraction de terminologie](#termino), et un autre pour [l'alignement multilingue](#term-alignment). 
+TermSuite offre deux executeurs de lignes de commande. Un pour l' [extraction de terminologie](#termino), et un autre pour [l'alignement multilingue](#term-alignment).
 
 * TOC
 {:toc}
@@ -49,7 +49,7 @@ Les différentes valeurs figurent sur : (documentation [Javadoc]({{site.javadoc}
 
 {% for p in site.data.filtering-properties %}
   {% if p.filter %}
-  * **{{p.name}}:** {{p.description}}
+  * **{{p.name}}:** {%t p.description %}
   {% endif %}
 {% endfor %}
 
@@ -92,7 +92,7 @@ Voir la classe [Lang]({{site.javadoc}}) pour les réglages par défaut.
 Les possibles valeurs de l'option '--tsv-properties' sont : (illustrées [ici](#exemples))
 
 {% for p in site.data.filtering-properties %}
-  * **{{p.name}}:** {{p.description}}
+  * **{{p.name}}:** {%t p.description %}
 {% endfor %}
 
 Voir les [Propriétés des Termes](/documentation/fr/term-properties/) pour plus de détails, particulièrement [wrLog](/documentation/fr/term-properties/#wr).
