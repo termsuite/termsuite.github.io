@@ -61,20 +61,19 @@ layout: default
     </div>
   </div>
 
-
   <div class="row greyed">
     <div class="container">
       <div class="col-md-4 text-center">
         <h3>{%t index.get_it_running %} !</h3>
         <p>{%t index.get_it_running_desc %}</p>
-        <p><a class="btn btn-danger btn-lg" href="/getting-started" role="button">{%t global.getting_started %}</a></p>
+        <p><a class="btn btn-danger btn-lg" href="{{site.baseurl}}/getting-started" role="button">{%t global.getting_started %}</a></p>
       </div>
 
       <div class="col-md-4 text-center">
         <h3>{%t global.documentation %}</h3>
         <p>{%t index.documentation_desc %}</p>
         <p>
-          <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button">{%t global.user_manual %}</a>
+          <a class="btn btn-primary btn-lg" href="{{site.baseurl}}/documentation/introduction" role="button">{%t global.user_manual %}</a>
           <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}/" role="button">Javadoc</a>
         </p>
       </div>
@@ -82,7 +81,7 @@ layout: default
       <div class="col-md-4 text-center">
         <h3>{%t global.developers %}</h3>
         <p>{%t index.developers_desc %}</p>
-        <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">{%t global.view_on_github %}</a><a class="btn" href="/documentation/developers/" role="button">Maven / Gradle</a></p>
+        <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">{%t global.view_on_github %}</a><a class="btn" href="{{site.baseurl}}/documentation/developers/" role="button">Maven / Gradle</a></p>
       </div>
     </div>
   </div>

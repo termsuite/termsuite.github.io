@@ -24,42 +24,42 @@ global:
   chinese: Chinois
   poor: Faible
   good: Bon
-  download: Download
-  changelog: Change log
-  getting_started: Getting Started
+  download: Télécharger
+  changelog: Journal des mises à jour
+  getting_started: Guide de démarrage
   documentation: Documentation
-  developers: Developers
-  user_manual: User Manual
-  view_on_github: View on Github
-  about: About
-  about_termsuite: About TermSuite
+  developers: Développeurs
+  user_manual: Manuel utilisateur
+  view_on_github: Voir sur Github
+  about: À propos
+  about_termsuite: À propos de TermSuite
   blog: Blog
   contact: Contact
-  support: Support
-  links: Links
-  university_of_nantes: University of Nantes
-  fork_termsuite_on_github: Fork TermSuite on GitHub.
+  support: Assistance
+  links: Liens
+  university_of_nantes: Université de Nantes
+  fork_termsuite_on_github: Cloner TermSuite sur GitHub.
   toggle_nav: Toggle navigation
-  share_on: Share on
+  share_on: Partager sur
 
 index:
   good_support: Bon support
   partial_support: Support partiel
   main_features: >
-    Multiword and compound term detection, morphosyntactic analysis, term variant detection,
-     term specificity computation, etc. <small><a href="#features">See features</a></small>
+    Détection des termes composés et à plusieurs mots, analyse morphosyntaxique, détection des variantes,
+    Tri des termes par spécificité, etc. <small><a href="#features">Voir les fonctionalités</a></small>
 
-  download_last_stable: Download last stable version of TermSuite.
-  see_changelog: See Changelog
-  download_last_snapshot: or download last development snapshot
-  get_it_running: Get it running
-  get_it_running_desc: Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.
-  documentation_desc: List of all TermSuite's features, analysis engines, and configuration parameters. Java API.
-  developers_desc: Build it from sources with Gradle, or use it as a maven dependency.
-  features_overview: Features Overview
+  download_last_stable: Télécharger la dernière version stable de TermSuite.
+  see_changelog: Voir le journal des mises à jour
+  download_last_snapshot: ou télécharger la dernière version de développement
+  get_it_running: Faites fonctionner TermSuite
+  get_it_running_desc: Préparer son système pour TermSuite, le télécharger, l'installer et le faire fonctionner rapidement sur un corpus exemple.
+  documentation_desc: Liste des fonctionalités de TermSuite, de ses composants et des paramètres de configuration. API Java.
+  developers_desc: Construire TermSuite à partir des sources avec Gradle ou développer avec TermSuite grâce à la dépendance Maven.
+  features_overview: Aperçu des fonctionalités
 
 contact:
-  description: TermSuite is a research project.
+  description: TermSuite est un projet de recherche.
 
 features:
   word_tokenization: Word tokenization

@@ -25,19 +25,19 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="{% if "/getting-started/" == page.permalink %}active{% endif %}"><a href="/getting-started">{%t global.getting_started %}</a></li>
-          <li class="{% if '/getting-started/' != page.permalink and page.layout == 'documentation' %}active{% endif %}"><a href="/documentation/introduction/" >{%t global.documentation %}</a></li>
+          <li class="{% if "{{site.baseurl}}/getting-started/" == page.permalink %}active{% endif %}"><a href="{{site.baseurl}}/getting-started">{%t global.getting_started %}</a></li>
+          <li class="{% if '{{site.baseurl}}/getting-started/' != page.permalink and page.layout == 'documentation' %}active{% endif %}"><a href="{{site.baseurl}}/documentation/introduction/" >{%t global.documentation %}</a></li>
           <li id="about" class="dropdown">
-            <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <a href="{{site.baseurl}}/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{%t global.about %} <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="/changelog">{%t global.changelog %}</a></li>
-              <li><a href="/contact">{%t global.contact %}</a></li>
-              <li><a href="/documentation/support">{%t global.support %}</a></li>
+              <li><a href="{{site.baseurl}}/changelog">{%t global.changelog %}</a></li>
+              <li><a href="{{site.baseurl}}/contact">{%t global.contact %}</a></li>
+              <li><a href="{{site.baseurl}}/documentation/support">{%t global.support %}</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="{{site.github}}" target="blank">{%t global.view_on_github %}</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/about">{%t global.about_termsuite %}</a></li>
-              <li><a href="/blog">{%t global.blog %}</a></li>
+              <li><a href="{{site.baseurl}}/about">{%t global.about_termsuite %}</a></li>
+              <li><a href="{{site.baseurl}}/blog">{%t global.blog %}</a></li>
             </ul>
           </li>
         </ul>
