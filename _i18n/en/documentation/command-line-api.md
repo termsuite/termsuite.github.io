@@ -76,6 +76,14 @@ See class [Lang]({{site.javadoc}}) for defaults.
 | `--compost-min-component-size` INT 	|   The minimum size allowed for a component	|
 {: class="table table-striped"}
 
+#### Contextualizer options
+
+| `--contextualize` *(no arg)* 	|  Computes context vectors for all single-word terms.  	|
+| `--contextualize-all-terms` *(no arg)* 	|  Computes context vectors for ALL terms (single-word and multi-word terms).  	|
+| `--allow-mwts-in-contexts` *(no arg)* 	|  Allow to set multi-word terms as co-occurrences in context vectors.  	|
+| `--context-scope` INT 	|   The window size when capturing each term's context.    	|
+{: class="table table-striped"}
+
 #### Use 3rd party MongoDB store
 {:id="mongodb"}
 

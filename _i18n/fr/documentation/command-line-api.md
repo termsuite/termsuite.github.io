@@ -70,6 +70,13 @@ Voir la classe [Lang]({{site.javadoc}}) pour les réglages par défaut.
 																						La taille minimum allouée à un composant
 {: class="table table-striped"}
 
+#### Options du contextualiseur
+
+| `--contextualize` *(no arg)* 	|  Computes context vectors for all single-word terms.  	|
+| `--contextualize-all-terms` *(no arg)* 	|  Computes context vectors for ALL terms (single-word and multi-word terms).  	|
+| `--allow-mwts-in-contexts` *(no arg)* 	|  Allow to set multi-word terms as co-occurrences in context vectors.  	|
+| `--context-scope` INT 	|   The window size when capturing each term's context.    	|
+{: class="table table-striped"}
 
 #### Autres options (encodage, corpus, étiquetteur, etc)
 
