@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Débuter avec TermSuite [Tutoriel]</title>
+
+    <meta name="description" content="excerpts.getting-started" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/getting-started/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Cloner TermSuite sur GitHub."
+    src="/img/forkme.png"
+    alt="Cloner TermSuite sur GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/fr/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/fr/getting-started">Guide de démarrage</a></li>
+          <li class=""><a href="/fr/documentation/introduction/" >Documentation</a></li>
+          <li id="about" class="dropdown">
+            <a href="/fr/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/fr/changelog">Journal des mises à jour</a></li>
+              <li><a href="/fr/contact">Contact</a></li>
+              <li><a href="/fr/documentation/support">Assistance</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">Voir sur Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/fr/about">À propos de TermSuite</a></li>
+              <li><a href="/fr/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="" ><a href="/getting-started/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="active" ><a href="/fr/getting-started/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8">
+    <header class="page-header">
+      <h1>Documentation <small>Débuter avec TermSuite [Tutoriel]</small></h1>
+    </header>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=titles.getting-started&url=http://termsuite.github.io/getting-started/&via=&related="
+        rel="nofollow" target="_blank" title="Partager sur Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/getting-started/" rel="nofollow" target="_blank" title="Partager sur Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/getting-started/" rel="nofollow" target="_blank" title="Partager sur Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/getting-started/&title=titles.getting-started&summary=excerpts.getting-started&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Partager sur LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/getting-started/&title=titles.getting-started" rel="nofollow" target="_blank" title="Partager sur Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+  </div>
+  <div class="row">
+    <div class="list-group col-md-3">
+
+        
+          
+            <a title="titles.introduction"
+            class="list-group-item "
+            href="/fr/documentation/introduction/">
+              Introduction
+            </a>
+          
+        
+          
+            <a title="titles.getting-started"
+            class="list-group-item active"
+            href="/fr/getting-started/">
+              Débuter avec TermSuite [Tutoriel]
+            </a>
+          
+        
+          
+            <a title="titles.postagger"
+            class="list-group-item "
+            href="/fr/documentation/pos-tagger-lemmatizer/">
+              Installer un étiquetteur grammatical
+            </a>
+          
+        
+          
+            <a title="titles.command-line-api"
+            class="list-group-item "
+            href="/fr/documentation/command-line-api/">
+              API ligne de commande
+            </a>
+          
+        
+          
+            <a title="titles.java-api"
+            class="list-group-item "
+            href="/fr/documentation/java-api/">
+              API Java
+            </a>
+          
+        
+          
+            <a title="titles.resources"
+            class="list-group-item "
+            href="/fr/documentation/resources/">
+              Ressources
+            </a>
+          
+        
+          
+            <a title="titles.corpus"
+            class="list-group-item "
+            href="/fr/documentation/corpus/">
+              Arborescence corpus
+            </a>
+          
+        
+          
+            <a title="titles.term-properties"
+            class="list-group-item "
+            href="/fr/documentation/term-properties/">
+              Propriétés de terme
+            </a>
+          
+        
+          
+            <a title="titles.developers"
+            class="list-group-item "
+            href="/fr/documentation/developers/">
+              Développeurs (Gradle / Maven)
+            </a>
+          
+        
+          
+            <a title="titles.support"
+            class="list-group-item "
+            href="/fr/documentation/support/">
+              Assistance
+            </a>
+          
+        
+          
+        
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8">
+
+      <article class="doc-content">
+        <p>Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire la terminologie d’un petit corpus.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#pr-requis">1. Pré-requis</a>    <ul>
+      <li><a href="#java">Java</a></li>
+    </ul>
+  </li>
+  <li><a href="#installation-de-treetagger">2. Installation de TreeTagger</a></li>
+  <li><a href="#tlchargez-termsuite">3. Téléchargez TermSuite</a></li>
+  <li><a href="#tlchargez--ou-crez-un-pack-de-langue-pour-termsuite">4. Téléchargez  (ou créez) un pack de langue pour TermSuite</a></li>
+  <li><a href="#prparez-votre-corpus">5. Préparez votre corpus</a></li>
+  <li><a href="#executez-lextraction-de-terminologie">6. Executez l’extraction de terminologie</a></li>
+  <li><a href="#comprendre-la-sortie-tsv-tsv-output">7. Comprendre la sortie TSV (TSV output)</a></li>
+  <li><a href="#profitez-de-termsuite">8. Profitez de TermSuite</a></li>
+</ul>
+
+<h3 id="pr-requis">1. Pré-requis</h3>
+
+<p>Pour plus de simplicité, créez un répertoire où vous téléchargerez tous les fichiers requis par TermSuite. Dans les sections qui suivent, nous nous réfererons à ce répertoire comme étant “TERMSUITE_WORKSPACE”.       </p>
+
+<h4 id="java">Java</h4>
+
+<p>Assurez-vous que Java est installé sur votre système d’exploitation (version 1.7 minimum), ou bien suivez les <a href="https://www.java.com/fr/download/">instructions officielles d’installation</a>..</p>
+
+<p>Pour vérifier si Java est installé correctement, et vérifier votre version, ouvrez une interface en ligne de commandes et tapez :</p>
+
+<pre><code>$ java -version
+</code></pre>
+
+<h3 id="installation-de-treetagger">2. Installation de TreeTagger</h3>
+
+<p>TermSuite a besoin d’un étiquetteur grammatical (POS Tagger) et d’un lemmatiseur pour executer les chaînes de traitement (pipelines). Dans ce manuel, nous installons TreeTagger, mais TermSuite peut également gérer Mate. TreeTagger doit être installé séparément de TermSuite, du fait de leurs licences.</p>
+
+<p>Pour installer TreeTagger sur votre système d’exploitation : (Voir les <a href="/documentation/fr/pos-tagger-lemmatizer">Instructions d’installation</a>).</p>
+
+<ol>
+  <li>Téléchargez TreeTagger depuis le [site officiel]((http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) vers “TERMSUITE_WORKSPACE” et décompressez-le.</li>
+  <li>Créez un sous-répertoire nommé “models” dans le répertoire TreeTagger.</li>
+  <li>Téléchargez le modèle anglais utf-8-encoded (très important) depuis le <a href="(http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/)">site officiel</a> et renommez-le par “english.par”.</li>
+</ol>
+
+<div class="alert alert-warning" role="alert">
+  <p>Enconder et nommer les modèles de TreeTagger est important pour le bon fonctionnement de TermSuite. Voir les [instructions détaillées] (/documentation/fr/pos-tagger-lemmatizer) pour toutes les langues.</p>
+</div>
+
+<h3 id="tlchargez-termsuite">3. Téléchargez TermSuite</h3>
+
+<p>Téléchargez la dernière version stable du projet “termsuite-core” depuis <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/">Maven Central</a> vers le répertoire “TERMSUITE_WORKSPACE”.</p>
+
+<p>Actuellement : <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/2.0/termsuite-core-2.0.jar">termsuite-core-2.0.jar</a></p>
+
+<h3 id="tlchargez--ou-crez-un-pack-de-langue-pour-termsuite">4. Téléchargez  (ou créez) un pack de langue pour TermSuite</h3>
+<p>Téléchargez un paquet de ressources vers le répertoire “TERMSUITE_WORSPACE” et décompressez le.  <br />
+Par exemple, téléchargez le paquet public sur Github : <a href="https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/562/termsuite-resources.jar">termsuite-resources.jar</a></p>
+
+<h3 id="prparez-votre-corpus">5. Préparez votre corpus</h3>
+
+<p>Téléchargez le corpus multilingue exemple <a href="http://www.lina.univ-nantes.fr/taln/maven/wind-energy.tgz">Wind Energy</a> dans “TERMSUITE_WORKSPACE” et décompressez-le.</p>
+
+<h3 id="executez-lextraction-de-terminologie">6. Executez l’extraction de terminologie</h3>
+<p>Maintenant, votre ‘TERMSUITE_WORKSPACE’ devrait ressembler à ceci : (non exhaustif)</p>
+
+<pre><code>TERMSUITE_WORKSPACE/
+  wind-energy/
+    README.txt
+    English/
+      txt/
+        file1.txt
+        file3.txt
+        [...]
+        file38.txt
+    French/
+    [...]
+  tree-tagger/
+    bin/
+      [...]
+    lib/
+      [...]
+    models/
+      english.par # Should be the `utf-8` model !
+    [...]
+  termsuite-core-2.0.jar
+  termsuite-resources.jar
+</code></pre>
+
+<p>Executez l’extraction de terminologie sur le corpus <em>Wind Energy</em> en langue “en” :</p>
+
+<pre><code>$ java -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+  -t ./tree-tagger/ \
+  -c ./wind-energy/English/txt/ \
+  -l en \
+  -r ./termsuite-resources.jar \
+  --tsv ./wind-energy-en.tsv
+</code></pre>
+
+<h3 id="comprendre-la-sortie-tsv-tsv-output">7. Comprendre la sortie TSV (TSV output)</h3>
+
+<p>TermSuite a créé le fichier ‘wind-energy-en.tsv’ montré plus bas.<br />
+* 1ère colonne : correspond à l’identification du term, ou la base de son identifiant s’il s’agit d’une variante.<br />
+* 2ème colonne : ‘T’ indique un terme, ‘V’ indique une variante.<br />
+* 3ème colonne : le terme pilote.<br />
+* 4ème colonne : la fréquence du terme.<br />
+* 5ème colonne : la spécificité du terme.</p>
+
+<pre><code>baseId	type	p	pilot	wrlog	f
+1	T	N N	wind turbine	5,16	1852
+1	V	N N N	horizontal-axis wind turbines	3,52	42
+1	V	A N N N	horizontal axis wind turbine	3,50	41
+1	V	A N N N	vertical axis wind turbines	3,62	53
+1	V	A N N N	modern horizontal-axis wind turbines	2,59	5
+1	V	A N N	smaller-scale wind turbines	2,20	2
+1	V	A N N	on-shore wind turbines	1,90	1
+1	V	A N N	pre-manufactured wind turbine	1,90	1
+1	V	A N N	repowred wind turbines	1,90	1
+1	V	A N N N	conventional horizontal-axis wind turbines	1,90	1
+1	V	A N N N	potential campus wind turbines	1,90	1
+1	V	A N N N	typical horizontal-axis wind turbine	1,90	1
+1	V	A N N N	unconventional horizontal-axis wind turbines	1,90	1
+1	V	N N N N	hawts horizontal-axis wind turbines	1,90	1
+1	V	N N N N	utility scale wind turbine	1,90	1
+1	V	N N N N	lift type wind turbines	1,90	1
+1	V	A N N	domestic wind turbines	3,35	29
+1	V	N N N	wind turbine syndrome	3,21	21
+[...]
+2	T	N	rotor	4,82	848
+3	T	N N	wind energy	4,51	414
+3	V	A N N	californian wind energy	1,90	1
+3	V	A N N	offshore wind energy	3,56	47
+3	V	N N N	wind energy conversion	3,32	27
+3	V	N N N	wind energy conf	2,59	5
+3	V	A N N N	significant contribution wind energy	1,90	1
+3	V	N N N N	activity plan wind energy	1,90	1
+3	V	N N N N	title ge wind energy	1,90	1
+3	V	N N N	wind energy easements	1,90	1
+4	T	N N	wind speed	4,41	331
+4	V	N P N	speed of the wind	2,50	4
+4	V	N C N P N	speed and direction of the wind	1,90	1
+4	V	N N N	integer wind speed	1,90	1
+4	V	A N N	average wind speed	3,29	25
+4	V	A N N	undisturbed wind speed	2,59	5
+4	V	N N N	cutoff wind speed	2,37	3
+4	V	N N N N	terrain score wind speed	1,90	1
+4	V	N N N	wind speed cutoff	2,20	2
+4	V	N N N	cut-out wind speed	2,50	4
+4	V	N N N	cut-off wind speeds	1,90	1
+4	V	N N N	incision wind speed	1,90	1
+5	T	N N	wind power	4,34	278
+5	V	N P N	power of the wind	2,97	12
+5	V	N N N	wind turbine power	2,89	10
+5	V	N N N	wind power plant	3,76	74
+5	V	A N N	developable wind power	1,90	1
+5	V	A N N N	environmental engineering wind power	1,90	1
+5	V	N N N	wind power stations	3,27	24
+6	T	N	airfoil	4,26	236
+...
+</code></pre>
+
+<p>Ce format de sortie peut être configuré. ‘tbx’ et ‘json’ sont également possibles. Voir la ligne de commande <a href="/documentation/fr/command-line-api">options</a>.</p>
+
+<h3 id="profitez-de-termsuite">8. Profitez de TermSuite</h3>
+
+<p>Vous pouvez désormais executer TermSuite sur votre propre <a href="/documentation/fr/corpus">corpus</a>.<br />
+La documentation complète des options et possibilités des lignes de commandes :<a href="/documentation/fr/command-line-api">command line API</a>.</p>
+
+<p>Pour intégrer TermSuite directement à votre projet Java: <a href="/documentation/fr/command-line-api">Java API</a>.</p>
+
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>À propos</h4>
+        <p>TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>Contact</h4>
+        <ul>
+          
+            <li><p>Damien Cram</p>
+</li>
+          
+            <li><p>Béatrice Daille</p>
+</li>
+          
+
+        </ul>
+        [prenom.nom]@univ-nantes.fr
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Liens</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.0/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.0/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© Université de Nantes 2015-2016</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>

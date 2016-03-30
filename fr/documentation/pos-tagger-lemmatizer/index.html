@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Installer l'étiquetteur grammatical et le lemmatiseur</title>
+
+    <meta name="description" content="excerpts.postagger" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/documentation/pos-tagger-lemmatizer/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Cloner TermSuite sur GitHub."
+    src="/img/forkme.png"
+    alt="Cloner TermSuite sur GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/fr/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/fr/getting-started">Guide de démarrage</a></li>
+          <li class="active"><a href="/fr/documentation/introduction/" >Documentation</a></li>
+          <li id="about" class="dropdown">
+            <a href="/fr/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/fr/changelog">Journal des mises à jour</a></li>
+              <li><a href="/fr/contact">Contact</a></li>
+              <li><a href="/fr/documentation/support">Assistance</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">Voir sur Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/fr/about">À propos de TermSuite</a></li>
+              <li><a href="/fr/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="" ><a href="/documentation/pos-tagger-lemmatizer/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="active" ><a href="/fr/documentation/pos-tagger-lemmatizer/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8">
+    <header class="page-header">
+      <h1>Documentation <small>Installer l'étiquetteur grammatical et le lemmatiseur</small></h1>
+    </header>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=titles.postagger&url=http://termsuite.github.io/documentation/pos-tagger-lemmatizer/&via=&related="
+        rel="nofollow" target="_blank" title="Partager sur Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/documentation/pos-tagger-lemmatizer/" rel="nofollow" target="_blank" title="Partager sur Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/documentation/pos-tagger-lemmatizer/" rel="nofollow" target="_blank" title="Partager sur Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/documentation/pos-tagger-lemmatizer/&title=titles.postagger&summary=excerpts.postagger&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Partager sur LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/documentation/pos-tagger-lemmatizer/&title=titles.postagger" rel="nofollow" target="_blank" title="Partager sur Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+  </div>
+  <div class="row">
+    <div class="list-group col-md-3">
+
+        
+          
+            <a title="titles.introduction"
+            class="list-group-item "
+            href="/fr/documentation/introduction/">
+              Introduction
+            </a>
+          
+        
+          
+            <a title="titles.getting-started"
+            class="list-group-item "
+            href="/fr/getting-started/">
+              Débuter avec TermSuite [Tutoriel]
+            </a>
+          
+        
+          
+            <a title="titles.postagger"
+            class="list-group-item active"
+            href="/fr/documentation/pos-tagger-lemmatizer/">
+              Installer un étiquetteur grammatical
+            </a>
+          
+        
+          
+            <a title="titles.command-line-api"
+            class="list-group-item "
+            href="/fr/documentation/command-line-api/">
+              API ligne de commande
+            </a>
+          
+        
+          
+            <a title="titles.java-api"
+            class="list-group-item "
+            href="/fr/documentation/java-api/">
+              API Java
+            </a>
+          
+        
+          
+            <a title="titles.resources"
+            class="list-group-item "
+            href="/fr/documentation/resources/">
+              Ressources
+            </a>
+          
+        
+          
+            <a title="titles.corpus"
+            class="list-group-item "
+            href="/fr/documentation/corpus/">
+              Arborescence corpus
+            </a>
+          
+        
+          
+            <a title="titles.term-properties"
+            class="list-group-item "
+            href="/fr/documentation/term-properties/">
+              Propriétés de terme
+            </a>
+          
+        
+          
+            <a title="titles.developers"
+            class="list-group-item "
+            href="/fr/documentation/developers/">
+              Développeurs (Gradle / Maven)
+            </a>
+          
+        
+          
+            <a title="titles.support"
+            class="list-group-item "
+            href="/fr/documentation/support/">
+              Assistance
+            </a>
+          
+        
+          
+        
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8">
+
+      <article class="doc-content">
+        <p>Lorsque vous lancerez TermSuite pour l’extraction de la terminologie d’un corpus, vous aurez besoin d’installer un étiqueteur grammatical et un lemmatiseur tierces.</p>
+
+<p>Il y a actuellement deux étiqueteurs et lemmatiseurs supportés par TermSuite:</p>
+
+<ul id="markdown-toc">
+  <li><a href="#option-1-recommande-installer-treetagger-et-ses-modles">Option 1 (recommandée): Installer TreeTagger et ses modèles.</a></li>
+  <li><a href="#option-2-installer-les-modles-mate">Option 2: Installer les modèles Mate</a></li>
+</ul>
+
+<h3 id="option-1-recommande-installer-treetagger-et-ses-modles">Option 1 (recommandée): Installer TreeTagger et ses modèles.</h3>
+
+<p><a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/">TreeTagger</a> est un étiqueteur grammatical (POS) très rapide, avec un lemmatiseur aux bonnes performances, et ce dans tous les langages TermSuite. Malheureusement, sa <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/Tagger-Licence">licence</a> n’autorise pas son envoi conjoint à TermSuite en tant que tierce partie dépendante. De plus, TreeTagger a besoin d’être installé manuellement.</p>
+
+<p>Téléchargez et installez TreeTagger sur votre système d’exploitation en suivant les <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/">instructions officielles</a><br />
+Le répertoire principal de TreeTagger contient trois sous-répertoires : ‘bin’, ‘models’, et ‘lib’. Le programme executable TreeTagger devrait être dans votre sous-répertoire ‘bin’. Notez que cet executable est appelé ‘tree-tagger’ sous Linux, et ‘tree-tagger.exe’ sous Windows.</p>
+
+<p>Les fichiers paramétrant la langue doivent être placés dans le sous-répertoire ‘models’.<br />
+Si les fichiers de paramètres sont dans le sous-répertoire ‘lib’, créez un lien symbolique vers le répertoire nommé ‘models’ comme suit :</p>
+
+<pre><code>$ cd /path/to/tree-tagger-home-directory
+$ ln -s lib models
+</code></pre>
+
+<div class="alert alert-danger" role="alert">
+
+  <p><strong>Attention aux noms des fichiers des paramètres et à l’encodement !</strong>
+Dans le répertoire ‘models’, TermSuite attend un fichier spécifiquement nommé pour chaque fichier paramétrant la langue. Nommez vos dossiers de paramètres comme suit, et faites en sorte qu’ils soient tous encodés en ‘utf-8’ :</p>
+
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="text-align: left">Language</th>
+      <th style="text-align: left">Parameter File</th>
+      <th style="text-align: center">Encoding</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">English</td>
+      <td style="text-align: left">english.par</td>
+      <td style="text-align: center">utf-8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">French</td>
+      <td style="text-align: left">french.par</td>
+      <td style="text-align: center">utf-8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Spanish</td>
+      <td style="text-align: left">spanish.par</td>
+      <td style="text-align: center">utf-8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">German</td>
+      <td style="text-align: left">german.par</td>
+      <td style="text-align: center">utf-8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Russian</td>
+      <td style="text-align: left">russian.par</td>
+      <td style="text-align: center">utf-8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Danish</td>
+      <td style="text-align: left">danish.par</td>
+      <td style="text-align: center">utf-8</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Sous Linux, vous pouvez vérifier que TreeTagger est correctement installé en lançant ces deux lignes de commande :</p>
+
+<pre><code>$ cd tree-tagger-home-directory
+$ ./bin/tree-tagger ./models/english.par
+</code></pre>
+
+<p>Quittez le programme avec le raccourci-clavier Ctrl+D.</p>
+
+<h3 id="option-2-installer-les-modles-mate">Option 2: Installer les modèles Mate</h3>
+
+<p>Mate est légèrement plus performant dans l’étiquetage grammatical que TreeTagger, surtout pour une procédure d’extraction de terminologie. Mais il a aussi quelques inconvénients :<br />
+* seuls trois modèles de langue sont publics : ‘en’, ‘de’, et ‘fr’,<br />
+* l’analyse grammaticale (parsing) des modèles de langue est très lent, et les résultats sont assez longs à obtenir,<br />
+* le marquage (tagging) et la lemmatisation de texte brut sont aussi très lents comparé à ce que propose TreeTagger.</p>
+
+<p>L’avantage principal de Mate est qu’il est intégré à TermSuite.<br />
+Vous n’avez pas besoin de l’installer sur votre système d’exploitation. Vous avez simplement besoin de télécharger (ou d’entraîner) les modèles langagiers nécessaires.<br />
+Voir la <a href="https://code.google.com/p/mate-tools/wiki/ParserAndModels">page officielle</a> pour les modèles de ces trois langues :  <code>en</code>, <code>de</code>, et <code>fr</code>.</p>
+
+<p>Mate a besoin de modèles différents pour chaque langue. Le modèle <em>analyse+étiquetage</em> (<em>parser+tagger</em>) et le modèle <em>lemmatiseur</em>.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p><strong>Attention aux noms des fichiers</strong>
+  TermSuite attend un nom spécifique pour chaque modèle Mate. Suivez le schéma de nominalisation ci-dessous.</p>
+
+</div>
+
+<p>Les modèles doivent suivre ces schémas : (où ‘xx’ est la langue de code à deux lettres)</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th style="text-align: left">File name pattern</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">parser+tagger</td>
+      <td style="text-align: left"><code>mate-pos-xx.model</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lemmatizer</td>
+      <td style="text-align: left"><code>mate-lemma-xx.model</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>À propos</h4>
+        <p>TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>Contact</h4>
+        <ul>
+          
+            <li><p>Damien Cram</p>
+</li>
+          
+            <li><p>Béatrice Daille</p>
+</li>
+          
+
+        </ul>
+        [prenom.nom]@univ-nantes.fr
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Liens</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.0/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.0/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© Université de Nantes 2015-2016</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>
