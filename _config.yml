@@ -8,7 +8,7 @@ url: "http://termsuite.github.io" # the base hostname & protocol for your site
 github_username:  termsuite
 github: https://github.com/termsuite/termsuite-core
 permalink: none
-
+exclude: ['deploy.sh', 'Gemfile.lock', 'Gemfile']
 
 termsuite:
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
