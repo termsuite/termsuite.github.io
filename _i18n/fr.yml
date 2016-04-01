@@ -41,6 +41,8 @@ global:
   fork_termsuite_on_github: Cloner TermSuite sur GitHub.
   toggle_nav: Toggle navigation
   share_on: Partager sur
+  library: Bibliothèque
+  graphical_ui: Interface graphique
 
 index:
   good_support: Bon support

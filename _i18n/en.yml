@@ -42,6 +42,9 @@ global:
   fork_termsuite_on_github: Fork TermSuite on GitHub.
   toggle_nav: Toggle navigation
   share_on: Share on
+  library: Library
+  graphical_ui: Graphical UI
+
 
 index:
   good_support: Good support

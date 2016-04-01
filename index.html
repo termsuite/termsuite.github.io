@@ -35,26 +35,42 @@ layout: default
           </div>
         </div>
       </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-4 text-center">
+      <div class="col-md-1"></div>
+      <div class="col-md-5 text-center">
         <h3>{%t global.download %}</h3>
-        <p>{%t index.download_last_stable %} <a href="/changelog">{%t index.see_changelog %}</a>
-        </p>
-        <p>
-          <a class="btn btn-success btn-lg"
-            href="{{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar"
-            target="blank" role="button">
-            termsuite-core-{{site.termsuite.version}}.jar
-          </a>
+        <a href="/changelog">{%t index.see_changelog %}</a>
+        <div class="row">
 
-      </p>
-      <p>
-        {%t index.download_last_snapshot %}: <a class="btn btn-lg"
-          href="{{site.termsuite.snapshot}}"
-          target="blank" role="button">
-          termsuite-core-SNAPSHOT.jar
-        </a>
-      </p>
+            <div class="col-md-6">
+              <h4>{%t global.library %}</h4>
+              <p class="text-left">
+              <a class="btn btn-success"
+                href="{{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar"
+                target="blank" role="button">
+                termsuite-core-{{site.termsuite.version}}.jar
+              </a>
+              </p>
+              <p  class="text-left">
+              <a class="btn btn-info"
+                  href="{{site.termsuite.snapshot}}"
+                  target="blank" role="button">
+                  termsuite-core-SNAPSHOT.jar
+                </a>
+              </p>
+            </div>
+
+            <div class="col-md-6">
+              <h4>{%t global.graphical_ui %}</h4>
+              <p  class="text-left">
+                <a class="btn btn-success"
+                  href="{{site.termsuite.ui.filex}}"
+                  target="blank" role="button">
+                  termsuite-ui-2.1-beta.tar.gz
+                </a>
+              </p>
+            </div>
+      </div>
+
 
       </div>
       <div class="col-md-1"></div>
