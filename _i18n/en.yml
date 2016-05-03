@@ -47,6 +47,7 @@ global:
 
 
 index:
+  current_version: "Current version of TermSuite is"
   good_support: Good support
   partial_support: Partial support
   main_features: >

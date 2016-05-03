@@ -45,6 +45,7 @@ global:
   graphical_ui: Interface graphique
 
 index:
+  current_version: "La version actuelle de TermSuite est"
   good_support: Bon support
   partial_support: Support partiel
   main_features: >
