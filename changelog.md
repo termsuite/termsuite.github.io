@@ -6,14 +6,22 @@ excerpt: excerpts.changelog
 ---
 
 ## Version 2.1
+ * Graphical User Interface
  * Observable pipelines
  * uima profiler dependency removed
- * exportable annotations to JSON
- * support for compositional and semi-distributional aligner back
+ * Added a streaming-API (beta)
+ * Exportable annotations to JSON
+ * Support for compositional and semi-distributional aligner back
  * Morphosyntactic analysis: added lemmatization of components
  * Allow the capping of terminology from TermSuiteTerminoCLI with options `periodic-filter-property` `periodic-filter-max-size`.
- * scalabilty : can now handle big corpus with MongoDB
+ * Scalabilty : can now handle big corpus with MongoDB
  * Changed the IO API. See JSONTermIndexIO class
+ * Removed term index measures
+ * Added `specificity` term property
+ * Added `rank` term property
+ * Added ranker AE
+ * Added Merger AE
+ * Added Scorer AE (scores variations)
 
 ## Version 2.0
 

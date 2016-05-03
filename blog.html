@@ -9,13 +9,18 @@ excerpt: excerpts.blog
 <div id="blog" class="container">
 
 {% for p in site.posts %}
-
-
-<article>
-  <span class="date">{{p.date | date: '%e %B %Y'}}</span>
-  <a class="lead" href="{{p.url}}" alt="{{p.title}}">{{p.title}}</a>
-</article >
-
+  {% if "draft" != p.status %}
+    <article>
+      <span class="date">{{p.date | date: '%e %B %Y'}}</span>
+      <h3>{{p.title}}</h3>
+      <p>
+        {{p.excerpt}}
+      </p>
+      <p>
+        <a href="{{p.url}}" alt="{{p.title}}">Read more »</a>
+      </p>
+    </article >
+  {% endif %}
 {% endfor %}
 
 </div>

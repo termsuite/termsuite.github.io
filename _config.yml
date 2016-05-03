@@ -12,10 +12,11 @@ exclude: ['deploy.sh', 'Gemfile.lock', 'Gemfile']
 
 termsuite:
   ui:
-    filex: http://filex.univ-nantes.fr/get?k=S5iO0LSGt4dO0TbNxnV 
+    bintray: https://bintray.com/termsuite/generic/termsuite-ui/2.1.0/view#files
+    filex: http://filex.univ-nantes.fr/get?k=S5iO0LSGt4dO0TbNxnV
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
-  snapshot: https://oss.sonatype.org/content/repositories/snapshots/fr/univ-nantes/termsuite/termsuite-core/2.1-SNAPSHOT/
-  version: "2.0"
+  snapshot: https://oss.sonatype.org/content/repositories/snapshots/fr/univ-nantes/termsuite/termsuite-core/2.2-SNAPSHOT/
+  version: "2.1"
 
 resources:
   jar: https://logiciels.lina.univ-nantes.fr/redmine/attachments/download/562/termsuite-resources.jar
