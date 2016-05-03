@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title></title>
+
+    <meta name="description" content="Wish list of evolutions for TermSuite in 3.x architecture.
+" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Fork TermSuite on GitHub."
+    src="/img/forkme.png"
+    alt="Fork TermSuite on GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/getting-started">Getting Started</a></li>
+          <li class=""><a href="/documentation/introduction/" >Documentation</a></li>
+          <li id="about" class="dropdown">
+            <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/changelog">Change log</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/documentation/support">Support</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">View on Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/about">About TermSuite</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="active" ><a href="/_i18n/en/news/need-for-refactoring.html" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="" ><a href="/fr/_i18n/en/news/need-for-refactoring.html" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container ">
+  <div class="col-sm-2" ></div>
+  <div class="col-sm-8" >
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=Need for TermSuite 3.0&url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html&via=&related="
+        rel="nofollow" target="_blank" title="Share on Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html" rel="nofollow" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html&title=Need+for+TermSuite+3.0&summary=Wish+list+of+evolutions+for+TermSuite+in+3.x+architecture.%0A&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html&title=Need+for+TermSuite+3.0" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+
+    <header class="page-header">
+      <h1>Blog <small>Need for TermSuite 3.0</small></h1>
+
+      <p class="date">19 April 2016 • Damien Cram</p>
+    </header>
+
+
+    <article  >
+      <h1 id="termsuite-2x-limitations">TermSuite 2.x limitations</h1>
+
+<h2 id="lots-of-useless-ae">Lots of useless AE</h2>
+
+<p>primary occurrence detector, term class, etc</p>
+
+<h2 id="needs-for-multi-threading-during-uima-pipeline">Needs for multi-threading during UIMA pipeline</h2>
+
+<h2 id="separate-service-methods-from-data-model">Separate service methods from data model</h2>
+
+<p>Needs Java beans in model</p>
+
+<p>Ex: Term#addTermVariation</p>
+
+<h2 id="export-and-import-term-indexes-without-needing-a-uima-ae">Export and import term indexes without needing a UIMA AE</h2>
+
+<h2 id="separate-token-spotting-uima-from-terminology-extraction">Separate Token spotting (UIMA) from terminology extraction</h2>
+
+<p>Needs to create a separate framework for Terminology processing.</p>
+
+<h1 id="new-features-and-service-required-in-3x">New features and service required in 3.x</h1>
+
+<h2 id="specification-of-terminology-data-model-emf-">Specification of Terminology data model (EMF ?)</h2>
+
+<h2 id="specification-of-modular-service-oeriented-architecture">Specification of modular service-oeriented architecture</h2>
+
+<ul>
+  <li>Model service and maybe some core service to edit the term index</li>
+  <li>all termino AE must be a separate plugin, contributing to the pipeline</li>
+</ul>
+
+<h2 id="easy-io-from-xmi-and-json-for-uima-tokens">Easy I/O from xmi and json for UIMA tokens</h2>
+
+<h2 id="easy-io-json-for-tbx-for-terminologies">Easy I/O json for tbx for terminologies</h2>
+
+<h2 id="needs-for-ability-to-work-with-persitant-termindex-mongodb">Needs for ability to work with persitant TermIndex (MongoDB)</h2>
+
+<h2 id="needs-for-ability-to-have-only-incremental-ae-in-the-termino-pipeline">Needs for ability to have only incremental AE in the Termino Pipeline</h2>
+
+<h2 id="needs-for-a-complete-end-user-api-for-loading-corpus-and-documents-to-the-pipeline">Needs for a complete end-user API for loading corpus and documents to the pipeline.</h2>
+
+<h2 id="allow-easy-term-refiltering-and-ranking">Allow easy term refiltering and ranking</h2>
+
+<p>Needs an API for multiple successive filtering/ranking with a #getRank method<br />
+Needs the concept of TerminologyView</p>
+
+
+    </article>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=Need for TermSuite 3.0&url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html&via=&related="
+        rel="nofollow" target="_blank" title="Share on Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html" rel="nofollow" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html&title=Need+for+TermSuite+3.0&summary=Wish+list+of+evolutions+for+TermSuite+in+3.x+architecture.%0A&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html&title=Need+for+TermSuite+3.0" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+
+  </div>
+
+  <div class="col-sm-2" ></div>
+
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>About</h4>
+        <p>TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>Contact</h4>
+        <ul>
+          
+            <li><p>Damien Cram</p>
+</li>
+          
+            <li><p>Béatrice Daille</p>
+</li>
+          
+
+        </ul>
+        [firstname.lastname]@univ-nantes.fr
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.1/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.1/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© University of Nantes 2015-2016</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>

@@ -255,7 +255,7 @@
 
 <p>Extraire la terminologie d’un corpus spécifique à un domaine et <a href="#export">l’exporter</a> vers les formats ‘tsv’, ‘tbx’ ou ‘json’.</p>
 
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.1.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
             -r /path/to/termsuite-resource-pack \
             -t /path/to/tagger-home-dir \
             -c /path/to/corpus/English/txt \
@@ -512,7 +512,7 @@ Les différentes valeurs figurent sur : (documentation <a href="">Javadoc</a>).<
 
 <p>Les commandes suivantes extraient la terminologie du corpus <em>mycorpus</em> en anglais, en utilisant TreeTagger, en sélectionnant les 100 termes les plus fréquents, et en les exportant en ‘.tsv’ et ‘.json’ :</p>
 
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.1.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
             -r /home/me/data/termsuite-resources.jar \
             -t /home/me/apps/TreeTagger \
             -c /home/me/corpora/mycorpus/English/txt \
@@ -567,7 +567,7 @@ $ echo “My test phrase.” | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar \ e
  * les deux terminologies extraites par TermSuite depuis un corpus multilngue comparable, l’un est dans la <em>langue source</em>, l’autre dans la <em>langue cible</em><br />
  * un terme, ou une liste de termes à aligner<br />
 ~~~<br />
-$ java -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &lt;br /&gt;
+$ java -cp termsuite-core-2.1.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &lt;br /&gt;
         –source-termino termino-fr.json &lt;br /&gt;
         –target-termino termino-en.json &lt;br /&gt;
         –dictionary dico.txt &lt;br /&gt;
@@ -633,7 +633,7 @@ $ java -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &
 
 <p>Ce qui suit aligne le terme français <em>hydroéléctricité</em> depuis les terminologies en français, et le corpus <em>Wind Energy</em> en anglais :</p>
 
-<pre><code>$ java -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.1.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino wind-energy-fr.json \
         --target-termino wind-energy-en.json \
         --dictionary FR-EN.txt \
@@ -668,7 +668,7 @@ nacelle<br />
 ~~~<br />
 Et d’executer le script d’alignement sur ce fichier :<br />
 ~~~<br />
-$ java -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &lt;br /&gt;
+$ java -cp termsuite-core-2.1.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &lt;br /&gt;
         –source-termino wind-energy-fr.json &lt;br /&gt;
         –target-termino wind-energy-en.json &lt;br /&gt;
         –dictionary FR-EN.txt &lt;br /&gt;
@@ -720,10 +720,10 @@ $ java -cp termsuite-core-2.0.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.0/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.1/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.0/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.1/">Maven</a>
           </li>
         </ul>
       </div>

@@ -5,9 +5,226 @@
     <description>site.description</description>
     <link>http://termsuite.github.io/</link>
     <atom:link href="http://termsuite.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 01 Apr 2016 16:07:18 +0200</pubDate>
-    <lastBuildDate>Fri, 01 Apr 2016 16:07:18 +0200</lastBuildDate>
+    <pubDate>Tue, 03 May 2016 14:12:26 +0200</pubDate>
+    <lastBuildDate>Tue, 03 May 2016 14:12:26 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Release : TermSuite 2.1</title>
+        <description>&lt;p&gt;TermSuite 2.1 has been released. Major enhancement of 2.1 is the new Graphical User Interface. See the demo screencast:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Qc9ZkYZVP_0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;changelog&quot;&gt;Changelog&lt;/h3&gt;
+
+&lt;p&gt;Main features introduced in TermSuite 2.1 are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Graphical User Interface&lt;/li&gt;
+  &lt;li&gt;Observable pipelines&lt;/li&gt;
+  &lt;li&gt;uima profiler dependency removed&lt;/li&gt;
+  &lt;li&gt;Added a streaming-API (beta)&lt;/li&gt;
+  &lt;li&gt;Exportable annotations to JSON&lt;/li&gt;
+  &lt;li&gt;Support for compositional and semi-distributional aligner back&lt;/li&gt;
+  &lt;li&gt;Morphosyntactic analysis: added lemmatization of components&lt;/li&gt;
+  &lt;li&gt;Allow the capping of terminology from TermSuiteTerminoCLI with options &lt;code&gt;periodic-filter-property&lt;/code&gt; &lt;code&gt;periodic-filter-max-size&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Scalabilty : can now handle big corpus with MongoDB&lt;/li&gt;
+  &lt;li&gt;Changed the IO API. See JSONTermIndexIO class&lt;/li&gt;
+  &lt;li&gt;Removed term index measures&lt;/li&gt;
+  &lt;li&gt;Added &lt;code&gt;specificity&lt;/code&gt; term property&lt;/li&gt;
+  &lt;li&gt;Added &lt;code&gt;rank&lt;/code&gt; term property&lt;/li&gt;
+  &lt;li&gt;Added ranker AE&lt;/li&gt;
+  &lt;li&gt;Added Merger AE&lt;/li&gt;
+  &lt;li&gt;Added Scorer AE (scores variations)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/changelog/&quot;&gt;TermSuite Changelog&lt;/a&gt; for an exhaustive list of changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;public-access-github-maven&quot;&gt;Public access, Github, Maven&lt;/h3&gt;
+
+&lt;p&gt;TermSuite’s sources are available at &lt;a href=&quot;https://github.com/termsuite/termsuite-core&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also use TermSuite as a Maven dependency :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;fr.univ-nantes.termsuite&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;termsuite-core&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;using-the-graphical-user-interface&quot;&gt;Using the Graphical User Interface&lt;/h3&gt;
+
+&lt;p&gt;You can download the &lt;a href=&quot;&quot;&gt;graphical user interface&lt;/a&gt;. Using the GUI still requires an &lt;a href=&quot;&quot;&gt;external POS tagger&lt;/a&gt; to be installed on your system. &lt;/p&gt;
+
+&lt;h3 id=&quot;support&quot;&gt;Support&lt;/h3&gt;
+
+&lt;p&gt;If you encounter a problem with TermSuite or have any question, please leave an issue on &lt;a href=&quot;https://github.com/termsuite/termsuite-core/issues&quot;&gt;Github Issues&lt;/a&gt; or address your message directly to Damien Cram or Béatrice Daille (firstname.lastname@univ-nantes.fr).&lt;/p&gt;
+
+&lt;h3 id=&quot;agenda-termsuite-22&quot;&gt;Agenda: TermSuite 2.2&lt;/h3&gt;
+
+&lt;p&gt;TermSuite 2.2 is planned for september 2016. TermSuite 2.2 will implement:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;derivational variant detection,&lt;/li&gt;
+  &lt;li&gt;compositional alignment (bilingual translation + semantical).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 03 Jun 2016 00:00:00 +0200</pubDate>
+        <link>http://termsuite.github.io/_i18n/en/news/release-2-1.html</link>
+        <guid isPermaLink="true">http://termsuite.github.io/_i18n/en/news/release-2-1.html</guid>
+        
+        
+        <category>_i18n</category>
+        
+        <category>en</category>
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>Need for TermSuite 3.0</title>
+        <description>&lt;h1 id=&quot;termsuite-2x-limitations&quot;&gt;TermSuite 2.x limitations&lt;/h1&gt;
+
+&lt;h2 id=&quot;lots-of-useless-ae&quot;&gt;Lots of useless AE&lt;/h2&gt;
+
+&lt;p&gt;primary occurrence detector, term class, etc&lt;/p&gt;
+
+&lt;h2 id=&quot;needs-for-multi-threading-during-uima-pipeline&quot;&gt;Needs for multi-threading during UIMA pipeline&lt;/h2&gt;
+
+&lt;h2 id=&quot;separate-service-methods-from-data-model&quot;&gt;Separate service methods from data model&lt;/h2&gt;
+
+&lt;p&gt;Needs Java beans in model&lt;/p&gt;
+
+&lt;p&gt;Ex: Term#addTermVariation&lt;/p&gt;
+
+&lt;h2 id=&quot;export-and-import-term-indexes-without-needing-a-uima-ae&quot;&gt;Export and import term indexes without needing a UIMA AE&lt;/h2&gt;
+
+&lt;h2 id=&quot;separate-token-spotting-uima-from-terminology-extraction&quot;&gt;Separate Token spotting (UIMA) from terminology extraction&lt;/h2&gt;
+
+&lt;p&gt;Needs to create a separate framework for Terminology processing.&lt;/p&gt;
+
+&lt;h1 id=&quot;new-features-and-service-required-in-3x&quot;&gt;New features and service required in 3.x&lt;/h1&gt;
+
+&lt;h2 id=&quot;specification-of-terminology-data-model-emf-&quot;&gt;Specification of Terminology data model (EMF ?)&lt;/h2&gt;
+
+&lt;h2 id=&quot;specification-of-modular-service-oeriented-architecture&quot;&gt;Specification of modular service-oeriented architecture&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Model service and maybe some core service to edit the term index&lt;/li&gt;
+  &lt;li&gt;all termino AE must be a separate plugin, contributing to the pipeline&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;easy-io-from-xmi-and-json-for-uima-tokens&quot;&gt;Easy I/O from xmi and json for UIMA tokens&lt;/h2&gt;
+
+&lt;h2 id=&quot;easy-io-json-for-tbx-for-terminologies&quot;&gt;Easy I/O json for tbx for terminologies&lt;/h2&gt;
+
+&lt;h2 id=&quot;needs-for-ability-to-work-with-persitant-termindex-mongodb&quot;&gt;Needs for ability to work with persitant TermIndex (MongoDB)&lt;/h2&gt;
+
+&lt;h2 id=&quot;needs-for-ability-to-have-only-incremental-ae-in-the-termino-pipeline&quot;&gt;Needs for ability to have only incremental AE in the Termino Pipeline&lt;/h2&gt;
+
+&lt;h2 id=&quot;needs-for-a-complete-end-user-api-for-loading-corpus-and-documents-to-the-pipeline&quot;&gt;Needs for a complete end-user API for loading corpus and documents to the pipeline.&lt;/h2&gt;
+
+&lt;h2 id=&quot;allow-easy-term-refiltering-and-ranking&quot;&gt;Allow easy term refiltering and ranking&lt;/h2&gt;
+
+&lt;p&gt;Needs an API for multiple successive filtering/ranking with a #getRank method&lt;br /&gt;
+Needs the concept of TerminologyView&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 19 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html</link>
+        <guid isPermaLink="true">http://termsuite.github.io/_i18n/en/news/need-for-refactoring.html</guid>
+        
+        
+        <category>_i18n</category>
+        
+        <category>en</category>
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>TermSuite 2.0 is out !</title>
+        <description>&lt;p&gt;TermSuite 2.0 has been released. 2.0 is a major version of TermSuite. TermSuite is now supported by project &lt;a href=&quot;http://www.istex.fr/&quot;&gt;ISTEX&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;refactoring-of-termsuite-15-and-16&quot;&gt;Refactoring of TermSuite 1.5 and 1.6&lt;/h3&gt;
+
+&lt;p&gt;Last version of TermSuite (1.6) was a very partial refactoring of TermSuite 1.5, i.e the final version as the end of project TTC. The version 2.0 is a full refactoring of internal data model, Java API and command line API. TermSuite is now completely based on UIMAfit and has no XML component configuration file anymore.&lt;/p&gt;
+
+&lt;p&gt;TermSuite 1.x used to come with three aggregate engines: the spotter, the indexer, and the aligner. Now in 2.0, &lt;strong&gt;the spotter and the indexer have been merged into a single AE, the terminology extractor&lt;/strong&gt;. As a consequence, the two main components of TermSuite left are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;a href=&quot;/documentation/java-api/#terminology-extraction&quot;&gt;terminology extraction&lt;/a&gt;,&lt;/li&gt;
+  &lt;li&gt;the &lt;a href=&quot;/documentation/java-api/#run-bilingual-alignment-bilingualaligner&quot;&gt;multilingual alignment&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TermSuite supports five languages with good performances: french, english, german, spanish, and russian. Partial support for latvian, chinese and danish is inherited from TermSuite 1.5 and project TTC. TermSuite 2.0 refactoring improved quantitative performances thanks to its new data model. Qualitative performances have also inscreased due to the new.&lt;/p&gt;
+
+&lt;h3 id=&quot;new-features&quot;&gt;New features&lt;/h3&gt;
+
+&lt;p&gt;Main features introduced in TermSuite 2.0 are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Morphology analysis and morphosyntactic variant detection (&lt;em&gt;chemotherapy&lt;/em&gt; and &lt;em&gt;chemohormonal therapy&lt;/em&gt;),&lt;/li&gt;
+  &lt;li&gt;Graphical variant gathering now supports multiword terms,&lt;/li&gt;
+  &lt;li&gt;Convenient &lt;a href=&quot;/documentation/java-api/&quot;&gt;Java API&lt;/a&gt; with class &lt;code&gt;TermSuitePipeline&lt;/code&gt;,&lt;/li&gt;
+  &lt;li&gt;TermSuite’s resources are now packages in a different file, (see &lt;a href=&quot;/documentation/resources/&quot;&gt;Resource documentation&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Significant linguistic improvements for syntactic and morphosyntactic variant gathering in five languages: &lt;code&gt;fr&lt;/code&gt;, &lt;code&gt;en&lt;/code&gt;, &lt;code&gt;de&lt;/code&gt;, &lt;code&gt;ru&lt;/code&gt;, and &lt;code&gt;es&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Configurable TSV export for terminologies, (see &lt;a href=&quot;/documentation/command-line-api/#export&quot;&gt;export options&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;New human readable format for syntactic and morphosyntactic variant resources,&lt;/li&gt;
+  &lt;li&gt;Exportation/importation to/from human readable json (TermSuite’s new native serialization format for terminologies).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/changelog/&quot;&gt;TermSuite Changelog&lt;/a&gt; for an exhaustive list of changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;public-access-github-maven&quot;&gt;Public access, Github, Maven&lt;/h3&gt;
+
+&lt;p&gt;TermSuite 2.0 now has a &lt;a href=&quot;/&quot;&gt;public website&lt;/a&gt; with an &lt;a href=&quot;/documentation&quot;&gt;online documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;TermSuite’s source code has moved to &lt;a href=&quot;https://github.com/termsuite/termsuite-core&quot;&gt;Github&lt;/a&gt; in order to make contributions to TermSuite easier. It is also now possible to embed TermSuite in your application thanks to its Maven dependency:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;fr.univ-nantes.termsuite&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;termsuite-core&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;graphical-user-interface&quot;&gt;Graphical User Interface&lt;/h3&gt;
+
+&lt;p&gt;Due to the refactoring of the data model. The old TermSuite GUI is now broken. A new GUI based on Eclipse RCP is under development and will be released with TermSuite 2.1.&lt;/p&gt;
+
+&lt;h3 id=&quot;support&quot;&gt;Support&lt;/h3&gt;
+
+&lt;p&gt;If you encounter a problem with TermSuite or have any question, please leave an issue on &lt;a href=&quot;https://github.com/termsuite/termsuite-core/issues&quot;&gt;Github Issues&lt;/a&gt; or address your message directly to Damien Cram or Béatrice Daille (firstname.lastname@univ-nantes.fr).&lt;/p&gt;
+
+&lt;h3 id=&quot;agenda-termsuite-21&quot;&gt;Agenda: TermSuite 2.1&lt;/h3&gt;
+
+&lt;p&gt;TermSuite 2.1 is planned for mars 2016. TermSuite 2.1 will implement:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;derivational variant detection,&lt;/li&gt;
+  &lt;li&gt;graphical user Interface,&lt;/li&gt;
+  &lt;li&gt;compositional alignment (bilingual translation + semantical),&lt;/li&gt;
+  &lt;li&gt;improved post-processing of extracted terminology.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 27 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://termsuite.github.io/_i18n/en/news/release-2.html</link>
+        <guid isPermaLink="true">http://termsuite.github.io/_i18n/en/news/release-2.html</guid>
+        
+        
+        <category>_i18n</category>
+        
+        <category>en</category>
+        
+        <category>news</category>
+        
+      </item>
     
   </channel>
 </rss>

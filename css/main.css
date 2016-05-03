@@ -206,14 +206,7 @@ h4 {
   padding: 50px; }
   #blog article .date {
     display: inline-block;
-    min-width: 120px;
     color: #999999; }
-
-.date {
-  display: inline-block;
-  text-align: right;
-  min-width: 120px;
-  color: #999999; }
 
 #home .row {
   padding: 80px 0; }
@@ -228,6 +221,9 @@ h4 {
   #home .row #features-block table {
     max-width: 500px;
     margin: auto; }
+
+#home .row.downloads {
+  padding: 25px 0; }
 
 .doc-content #markdown-toc {
   background-color: #F5F5F5;
