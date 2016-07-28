@@ -75,7 +75,7 @@ features:
   mwt_detection: Efficient multiword term detection
   syntactic_variant_detection: Term syntactic variants detection
   graphical_variant_detection: Term graphic variants detection
-  semantic_variant_detection: Term semantic variants detection (to come in 2.2)
+  semantic_variant_detection: Term semantic variants detection (to come in 3.0)
   morphology: Term morphology extraction
   morphosyntactic_variant_detection: Term morphosyntactic variants detection
   specificity: "Term specificity (Weirdness Ratio) computing and other term measures: WR log, term frequency, etc"

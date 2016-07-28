@@ -5,7 +5,40 @@ permalink: /changelog/
 excerpt: excerpts.changelog
 ---
 
+## Next version (3.0)
+
+
+ * TermSuite will now require Java 8
+ * Detection of synonimic variations
+ * Improve multilingual alignment results for complex terms and compounds
+ * Extension of linguistic specification for derivates and prefix variation to `en` and all languages
+
+## Version 2.2
+
+TermSuite 2.2 is the last version supporting Java 7. Next TermSuite version will require Java 8.
+
+ * [#51](https://github.com/termsuite/termsuite-core/issues/51) Reorganized TermSuite resources (see [TermSuite Resources](https://github.com/termsuite/termsuite-resources) on Github)
+ * [#48](https://github.com/termsuite/termsuite-core/issues/48) Support detection of derivative variations
+ * [#49](https://github.com/termsuite/termsuite-core/issues/49) Implement prefix exceptions in prefix splitting
+ * [#54](https://github.com/termsuite/termsuite-core/issues/54) Update variation rules with prefix detection and derivatives detection
+ * [#46](https://github.com/termsuite/termsuite-core/issues/46) Possibility to add custom UIMA AE and CollectionReader to TermSuitePipeline
+ * [#41](https://github.com/termsuite/termsuite-core/issues/41) Serialize and deserialize TermSuite tokens (the UIMA CAS) to `json` (thanks to Simon Méoni)
+ * [#42](https://github.com/termsuite/termsuite-core/issues/42) Fixed expression detection
+ * [#43](https://github.com/termsuite/termsuite-core/issues/43) Added support for [ISTEX API](https://api.istex.fr/documentation/) as a collection reader.
+ * [#71](https://github.com/termsuite/termsuite-core/issues/71) Improved morphosyntactic analysis performances
+  * Several bug fixes. See [issues](https://github.com/termsuite/termsuite-core/milestone/2?closed=1) on Github.
+
+In TermSuite GUI:
+
+ * Some bug fixes and minor UI improvements [issues](https://github.com/termsuite/termsuite-ui/issues?q=is%3Aissue+is%3Aclosed)
+ * Improved alignment performances (improved response time and support for multi-word terms and compounds)
+
+### Warnings
+
+ * Version 2.2 has abandonned support of TEI corpus, due to [issue #24](https://github.com/termsuite/termsuite-core/issues/24)
+
 ## Version 2.1
+
  * Graphical User Interface
  * Observable pipelines
  * uima profiler dependency removed

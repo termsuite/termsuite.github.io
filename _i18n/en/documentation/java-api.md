@@ -10,30 +10,34 @@ TermSuite offers a convenient way of running terminology extraction and multilin
 All features and configuration you need to run a terminology extraction pipeline with the Java API is provided by the `TermSuitePipeline` class. The typical terminology extraction pipeline using is configured and run as follows:
 
 {% highlight java %}
-TermSuitePipeline pipeline = TermSuitePipeline.create("en")
-			.setResourcePath("/path/to/resource/pack")
-			.setCollection(
-					TermSuiteCollection.TXT,
-					"/path/to/corpus", "UTF-8")
-			.aeWordTokenizer()
-			.setTreeTaggerHome("/path/to/treetagger")
-			.aeTreeTagger()
-			.aeUrlFilter()
-			.aeStemmer()
-			.aeRegexSpotter()
-			.aeSpecificityComputer()
-			.aeCompostSplitter() // morphological analysis
-			.aeSyntacticVariantGatherer()
-			.aeGraphicalVariantGatherer()
-			.aeTermClassifier(TermProperty.FREQUENCY)
-			.setTsvExportProperties(
-					TermProperty.PILOT,
-					TermProperty.FREQUENCY,
-					TermProperty.WR
-				)
-			.haeTsvExporter("terminology.tsv")
-			.haeJsonExporter("terminology.json")
-			.run();
+TermIndex termIndex = TermSuitePipeline.create("en")
+		.setResourceFilePath("/path/to/termsuite-resources.jar")
+		.setCollection(TermSuiteCollection.TXT, "/path/to/corpus", "UTF-8")
+		.aeWordTokenizer()
+		.setTreeTaggerHome("/path/to/tree-tagger")
+		.aeTreeTagger()
+		.aeUrlFilter()
+		.aeStemmer()
+		.aeRegexSpotter()
+		.aeSpecificityComputer()
+		.aeCompostSplitter()
+		.aePrefixSplitter()
+		.aeSuffixDerivationDetector()
+		.aeSyntacticVariantGatherer()
+		.aeGraphicalVariantGatherer()
+		.aeExtensionDetector()
+		.aeScorer()
+		.aeThresholdCleaner(TermProperty.FREQUENCY, 2)
+		.setTsvShowScores(false)
+		.setTsvShowHeaders(true)
+		.setTsvExportProperties(
+				TermProperty.GROUPING_KEY,
+				TermProperty.FREQUENCY
+			)
+		.haeTsvExporter("termino.tsv")
+		.haeJsonExporter("termino.json")
+		.run()
+		.getTermIndex();
 {% endhighlight %}
 
 A pipeline object is created by invoking the method :
@@ -124,26 +128,30 @@ For multilingual term alignment, you need:
 In order to run the alignment from a *source terminology* to a *source terminology*, you need to extract these two terminologies with a context vector for each term. To do that, you have to add the *Contextualizer* AE (`aeContextualizer()`) at the end of your terminology extraction pipeline, right before the export AEs:   
 
 {% highlight java %}
-TermSuitePipeline pipeline = TermSuitePipeline.create("en")
-			.setResourcePath("/path/to/resource/pack")
-			.setCollection(
-					TermSuiteCollection.TXT,
-					"/path/to/corpus", "UTF-8")
-			.aeWordTokenizer()
-			.setTreeTaggerHome("/path/to/treetagger")
-			.aeTreeTagger()
-			.aeUrlFilter()
-			.aeStemmer()
-			.aeRegexSpotter()
-			.aeSpecificityComputer()
-			.aeCompostSplitter()
-			.aeSyntacticVariantGatherer()
-			.aeGraphicalVariantGatherer()
-			.aeContextualizer(5, true) // computes scope-5 contexts for all terms, including multi-word terms
-			.setExportJsonWithContext(true)
-			.setExportJsonWithOccurrences(true) // expensive in disk size, but mandatory
-			.haeJsonExporter("terminology.json")
-			.run();
+TermIndex termIndex = TermSuitePipeline.create("en")
+		.setResourceFilePath("/path/to/termsuite-resources.jar")
+		.setCollection(TermSuiteCollection.TXT, "/path/to/corpus", "UTF-8")
+		.aeWordTokenizer()
+		.setTreeTaggerHome("/path/to/tree-tagger")
+		.aeTreeTagger()
+		.aeUrlFilter()
+		.aeStemmer()
+		.aeRegexSpotter()
+		.aeSpecificityComputer()
+		.aeCompostSplitter()
+		.aePrefixSplitter()
+		.aeSuffixDerivationDetector()
+		.aeSyntacticVariantGatherer()
+		.aeGraphicalVariantGatherer()
+		.aeContextualizer(5, true) // computes scope-5 contexts for all terms, including multi-word terms
+		.aeExtensionDetector()
+		.aeScorer()
+		.aeThresholdCleaner(TermProperty.FREQUENCY, 2)
+		.setExportJsonWithContext(true)
+		.setExportJsonWithOccurrences(true) // expensive in disk size, but mandatory
+		.haeJsonExporter("termino.json")
+		.run()
+		.getTermIndex();
 {% endhighlight %}
 
 Note that in the pipeline above, you must specifically declare that you want the context vectors you just computed to be store in the json file. If you want to save the termino apart from the pipeline :
@@ -162,14 +170,15 @@ A bilingual aligner can be easily created from the two terminologies and the dic
 
 {% highlight java %}
 // Load terminologies from json files
-TermIndex sourceTermino = JSONTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
-TermIndex targetTermino = JSONTermIndexIO.load(new FileReader("wind-energy-en.json"), true);
+TermIndex terminoEN = JSONTermIndexIO.load(new FileReader("wind-energy-en.json"), true);
+TermIndex terminoFR = JSONTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
 
 
 BilingualAligner aligner = TermSuiteAlignerBuilder.start()
-		.setTargetTerminology(targetTermino)
-		.setDicoPath("my-dico.fr")
-		.setDistance(DISTANCE)
+		.setSourceTerminology(terminoEN)
+		.setTargetTerminology(terminoFR)
+		.setDicoPath("dico-EN-FR.txt")
+		.setDistance(new Cosine())
 		.create();
 
 
@@ -178,24 +187,14 @@ BilingualAligner aligner = TermSuiteAlignerBuilder.start()
  * and retrieve 10 candidates. Force the candidates to occur
  * at least 2 times in the target termino.
  */
-List<TranslationCandidate> results = aligner.align(
-		sourceTermino.getTermByGroupingKey("a: hydroélectrique"),
-		10,
-		2);
-
-//
-int i = 0;
-for (BilingualAligner.TranslationCandidate r : results) {
-	i++;
-	System.out.format("%2d [%.2f] %-15s %s\n",
-			i,
-			r.getScore(),
-			r.getTerm().getLemma(),
-			r.getExplanation()
-		);
-}
+ List<TranslationCandidate> results = aligner.align(source, 10, 2);
+ int i = 0;
+ for (BilingualAligner.TranslationCandidate r : results) {
+	 System.out.format("%2d %-10s [%.2f] %-15s%n",
+			 i,
+			 r.getMethod().getShortName(),
+			 r.getScore(),
+			 r.getTerm().getGroupingKey()
+		 );
+ }
 {% endhighlight %}
-
-#### Explanation
-
-It is important to note that you can also
