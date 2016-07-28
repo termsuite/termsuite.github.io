@@ -104,6 +104,7 @@
   <div class="col-md-8">
     <header class="page-header">
       <h1>Documentation <small>TermSuite Java API</small></h1>
+      
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -237,7 +238,6 @@
   <li><a href="#multilingual-term-alignment">Multilingual term alignment</a>    <ul>
       <li><a href="#produce-valid-termsuite-terminologies-for-alignment">Produce valid TermSuite terminologies for alignment</a></li>
       <li><a href="#run-bilingual-alignment-bilingualaligner">Run bilingual alignment: <code>BilingualAligner</code></a></li>
-      <li><a href="#explanation">Explanation</a></li>
     </ul>
   </li>
 </ul>
@@ -249,30 +249,34 @@
 <p>All features and configuration you need to run a terminology extraction pipeline with the Java API is provided by the <code>TermSuitePipeline</code> class. The typical terminology extraction pipeline using is configured and run as follows:</p>
 
 <div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermSuitePipeline</span> <span class="n">pipeline</span> <span class="o">=</span> <span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="s">&quot;en&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setResourcePath</span><span class="o">(</span><span class="s">&quot;/path/to/resource/pack&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setCollection</span><span class="o">(</span>
-					<span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span>
-					<span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeWordTokenizer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/treetagger&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeUrlFilter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeStemmer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeRegexSpotter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeSpecificityComputer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeCompostSplitter</span><span class="o">()</span> <span class="c1">// morphological analysis</span>
-			<span class="o">.</span><span class="na">aeSyntacticVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeGraphicalVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeTermClassifier</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setTsvExportProperties</span><span class="o">(</span>
-					<span class="n">TermProperty</span><span class="o">.</span><span class="na">PILOT</span><span class="o">,</span>
-					<span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">,</span>
-					<span class="n">TermProperty</span><span class="o">.</span><span class="na">WR</span>
-				<span class="o">)</span>
-			<span class="o">.</span><span class="na">haeTsvExporter</span><span class="o">(</span><span class="s">&quot;terminology.tsv&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">haeJsonExporter</span><span class="o">(</span><span class="s">&quot;terminology.json&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">run</span><span class="o">();</span></code></pre>
+  <pre><code class="language-java" data-lang="java"><span class="n">TermIndex</span> <span class="n">termIndex</span> <span class="o">=</span> <span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="s">&quot;en&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setResourceFilePath</span><span class="o">(</span><span class="s">&quot;/path/to/termsuite-resources.jar&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setCollection</span><span class="o">(</span><span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span> <span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">aeWordTokenizer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/tree-tagger&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeUrlFilter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeStemmer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeRegexSpotter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeSpecificityComputer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeCompostSplitter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aePrefixSplitter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeSuffixDerivationDetector</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeSyntacticVariantGatherer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeGraphicalVariantGatherer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeExtensionDetector</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeScorer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeThresholdCleaner</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setTsvShowScores</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setTsvShowHeaders</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setTsvExportProperties</span><span class="o">(</span>
+				<span class="n">TermProperty</span><span class="o">.</span><span class="na">GROUPING_KEY</span><span class="o">,</span>
+				<span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span>
+			<span class="o">)</span>
+		<span class="o">.</span><span class="na">haeTsvExporter</span><span class="o">(</span><span class="s">&quot;termino.tsv&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">haeJsonExporter</span><span class="o">(</span><span class="s">&quot;termino.json&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">run</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">getTermIndex</span><span class="o">();</span></code></pre>
 </div>
 
 <p>A pipeline object is created by invoking the method :</p>
@@ -320,7 +324,7 @@
 
 <h4 id="full-list-of-analysis-engines-and-configurations">Full list of Analysis Engines and configurations</h4>
 
-<p>IDE auto-completion will assist you in finding available methods to build your own pipelines. Otherwise, to see what you can do with  <code>TermSuitePipeline</code>, see the <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.1">Javadoc</a>.</p>
+<p>IDE auto-completion will assist you in finding available methods to build your own pipelines. Otherwise, to see what you can do with  <code>TermSuitePipeline</code>, see the <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2">Javadoc</a>.</p>
 
 <h3 id="exportimport-json-terminologies">Export/Import <code>json</code> terminologies</h3>
 
@@ -362,26 +366,30 @@
 <p>In order to run the alignment from a <em>source terminology</em> to a <em>source terminology</em>, you need to extract these two terminologies with a context vector for each term. To do that, you have to add the <em>Contextualizer</em> AE (<code>aeContextualizer()</code>) at the end of your terminology extraction pipeline, right before the export AEs:   </p>
 
 <div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermSuitePipeline</span> <span class="n">pipeline</span> <span class="o">=</span> <span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="s">&quot;en&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setResourcePath</span><span class="o">(</span><span class="s">&quot;/path/to/resource/pack&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setCollection</span><span class="o">(</span>
-					<span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span>
-					<span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeWordTokenizer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/treetagger&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeUrlFilter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeStemmer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeRegexSpotter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeSpecificityComputer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeCompostSplitter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeSyntacticVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeGraphicalVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeContextualizer</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span> <span class="c1">// computes scope-5 contexts for all terms, including multi-word terms</span>
-			<span class="o">.</span><span class="na">setExportJsonWithContext</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setExportJsonWithOccurrences</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="c1">// expensive in disk size, but mandatory</span>
-			<span class="o">.</span><span class="na">haeJsonExporter</span><span class="o">(</span><span class="s">&quot;terminology.json&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">run</span><span class="o">();</span></code></pre>
+  <pre><code class="language-java" data-lang="java"><span class="n">TermIndex</span> <span class="n">termIndex</span> <span class="o">=</span> <span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="s">&quot;en&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setResourceFilePath</span><span class="o">(</span><span class="s">&quot;/path/to/termsuite-resources.jar&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setCollection</span><span class="o">(</span><span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span> <span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">aeWordTokenizer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/tree-tagger&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeUrlFilter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeStemmer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeRegexSpotter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeSpecificityComputer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeCompostSplitter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aePrefixSplitter</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeSuffixDerivationDetector</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeSyntacticVariantGatherer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeGraphicalVariantGatherer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeContextualizer</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span> <span class="c1">// computes scope-5 contexts for all terms, including multi-word terms</span>
+		<span class="o">.</span><span class="na">aeExtensionDetector</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeScorer</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">aeThresholdCleaner</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setExportJsonWithContext</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setExportJsonWithOccurrences</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="c1">// expensive in disk size, but mandatory</span>
+		<span class="o">.</span><span class="na">haeJsonExporter</span><span class="o">(</span><span class="s">&quot;termino.json&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">run</span><span class="o">()</span>
+		<span class="o">.</span><span class="na">getTermIndex</span><span class="o">();</span></code></pre>
 </div>
 
 <p>Note that in the pipeline above, you must specifically declare that you want the context vectors you just computed to be store in the json file. If you want to save the termino apart from the pipeline :</p>
@@ -400,14 +408,15 @@
 
 <div class="highlight">
   <pre><code class="language-java" data-lang="java"><span class="c1">// Load terminologies from json files</span>
-<span class="n">TermIndex</span> <span class="n">sourceTermino</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;wind-energy-fr.json&quot;</span><span class="o">),</span> <span class="kc">true</span><span class="o">);</span>
-<span class="n">TermIndex</span> <span class="n">targetTermino</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;wind-energy-en.json&quot;</span><span class="o">),</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">TermIndex</span> <span class="n">terminoEN</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;wind-energy-en.json&quot;</span><span class="o">),</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">TermIndex</span> <span class="n">terminoFR</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;wind-energy-fr.json&quot;</span><span class="o">),</span> <span class="kc">true</span><span class="o">);</span>
 
 
 <span class="n">BilingualAligner</span> <span class="n">aligner</span> <span class="o">=</span> <span class="n">TermSuiteAlignerBuilder</span><span class="o">.</span><span class="na">start</span><span class="o">()</span>
-		<span class="o">.</span><span class="na">setTargetTerminology</span><span class="o">(</span><span class="n">targetTermino</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">setDicoPath</span><span class="o">(</span><span class="s">&quot;my-dico.fr&quot;</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">setDistance</span><span class="o">(</span><span class="n">DISTANCE</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setSourceTerminology</span><span class="o">(</span><span class="n">terminoEN</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setTargetTerminology</span><span class="o">(</span><span class="n">terminoFR</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setDicoPath</span><span class="o">(</span><span class="s">&quot;dico-EN-FR.txt&quot;</span><span class="o">)</span>
+		<span class="o">.</span><span class="na">setDistance</span><span class="o">(</span><span class="k">new</span> <span class="nf">Cosine</span><span class="o">())</span>
 		<span class="o">.</span><span class="na">create</span><span class="o">();</span>
 
 
@@ -416,27 +425,17 @@
 <span class="cm"> * and retrieve 10 candidates. Force the candidates to occur</span>
 <span class="cm"> * at least 2 times in the target termino.</span>
 <span class="cm"> */</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">TranslationCandidate</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">aligner</span><span class="o">.</span><span class="na">align</span><span class="o">(</span>
-		<span class="n">sourceTermino</span><span class="o">.</span><span class="na">getTermByGroupingKey</span><span class="o">(</span><span class="s">&quot;a: hydroélectrique&quot;</span><span class="o">),</span>
-		<span class="mi">10</span><span class="o">,</span>
-		<span class="mi">2</span><span class="o">);</span>
-
-<span class="c1">//</span>
-<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="k">for</span> <span class="o">(</span><span class="n">BilingualAligner</span><span class="o">.</span><span class="na">TranslationCandidate</span> <span class="n">r</span> <span class="o">:</span> <span class="n">results</span><span class="o">)</span> <span class="o">{</span>
-	<span class="n">i</span><span class="o">++;</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%2d [%.2f] %-15s %s\n&quot;</span><span class="o">,</span>
-			<span class="n">i</span><span class="o">,</span>
-			<span class="n">r</span><span class="o">.</span><span class="na">getScore</span><span class="o">(),</span>
-			<span class="n">r</span><span class="o">.</span><span class="na">getTerm</span><span class="o">().</span><span class="na">getLemma</span><span class="o">(),</span>
-			<span class="n">r</span><span class="o">.</span><span class="na">getExplanation</span><span class="o">()</span>
-		<span class="o">);</span>
-<span class="o">}</span></code></pre>
+ <span class="n">List</span><span class="o">&lt;</span><span class="n">TranslationCandidate</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">aligner</span><span class="o">.</span><span class="na">align</span><span class="o">(</span><span class="n">source</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+ <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+ <span class="k">for</span> <span class="o">(</span><span class="n">BilingualAligner</span><span class="o">.</span><span class="na">TranslationCandidate</span> <span class="n">r</span> <span class="o">:</span> <span class="n">results</span><span class="o">)</span> <span class="o">{</span>
+	 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%2d %-10s [%.2f] %-15s%n&quot;</span><span class="o">,</span>
+			 <span class="n">i</span><span class="o">,</span>
+			 <span class="n">r</span><span class="o">.</span><span class="na">getMethod</span><span class="o">().</span><span class="na">getShortName</span><span class="o">(),</span>
+			 <span class="n">r</span><span class="o">.</span><span class="na">getScore</span><span class="o">(),</span>
+			 <span class="n">r</span><span class="o">.</span><span class="na">getTerm</span><span class="o">().</span><span class="na">getGroupingKey</span><span class="o">()</span>
+		 <span class="o">);</span>
+ <span class="o">}</span></code></pre>
 </div>
-
-<h4 id="explanation">Explanation</h4>
-
-<p>It is important to note that you can also</p>
 
 
       </article>
@@ -483,10 +482,10 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.1/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.1/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
           </li>
         </ul>
       </div>

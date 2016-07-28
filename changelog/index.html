@@ -104,7 +104,47 @@
   </header>
 
   <article class="post-content">
-    <h2 id="version-21">Version 2.1</h2>
+    <h2 id="next-version-30">Next version (3.0)</h2>
+
+<ul>
+  <li>TermSuite will now require Java 8</li>
+  <li>Detection of synonimic variations</li>
+  <li>Improve multilingual alignment results for complex terms and compounds</li>
+  <li>Extension of linguistic specification for derivates and prefix variation to <code>en</code> and all languages</li>
+</ul>
+
+<h2 id="version-22">Version 2.2</h2>
+
+<p>TermSuite 2.2 is the last version supporting Java 7. Next TermSuite version will require Java 8.</p>
+
+<ul>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/51">#51</a> Reorganized TermSuite resources (see <a href="https://github.com/termsuite/termsuite-resources">TermSuite Resources</a> on Github)</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/48">#48</a> Support detection of derivative variations</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/49">#49</a> Implement prefix exceptions in prefix splitting</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/54">#54</a> Update variation rules with prefix detection and derivatives detection</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/46">#46</a> Possibility to add custom UIMA AE and CollectionReader to TermSuitePipeline</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/41">#41</a> Serialize and deserialize TermSuite tokens (the UIMA CAS) to <code>json</code> (thanks to Simon Méoni)</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/42">#42</a> Fixed expression detection</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/43">#43</a> Added support for <a href="https://api.istex.fr/documentation/">ISTEX API</a> as a collection reader.</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/71">#71</a> Improved morphosyntactic analysis performances</li>
+  <li>Several bug fixes. See <a href="https://github.com/termsuite/termsuite-core/milestone/2?closed=1">issues</a> on Github.</li>
+</ul>
+
+<p>In TermSuite GUI:</p>
+
+<ul>
+  <li>Some bug fixes and minor UI improvements <a href="https://github.com/termsuite/termsuite-ui/issues?q=is%3Aissue+is%3Aclosed">issues</a></li>
+  <li>Improved alignment performances (improved response time and support for multi-word terms and compounds)</li>
+</ul>
+
+<h3 id="warnings">Warnings</h3>
+
+<ul>
+  <li>Version 2.2 has abandonned support of TEI corpus, due to <a href="https://github.com/termsuite/termsuite-core/issues/24">issue #24</a></li>
+</ul>
+
+<h2 id="version-21">Version 2.1</h2>
+
 <ul>
   <li>Graphical User Interface</li>
   <li>Observable pipelines</li>
@@ -486,10 +526,10 @@ More stats and examples about term spotting and gathering in TermSuite’s logs.
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.1/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.1/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
           </li>
         </ul>
       </div>
