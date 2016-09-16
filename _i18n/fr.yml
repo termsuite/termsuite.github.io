@@ -26,7 +26,7 @@ global:
   good: Bon
   download: Télécharger
   changelog: Journal des mises à jour
-  getting_started: Guide de démarrage
+  getting_started: Démarrer
   documentation: Documentation
   developers: Développeurs
   user_manual: Manuel utilisateur
@@ -45,6 +45,7 @@ global:
   graphical_ui: Interface graphique
 
 index:
+  publications: Publications
   current_version: "La version actuelle de TermSuite est"
   good_support: Bon support
   partial_support: Support partiel

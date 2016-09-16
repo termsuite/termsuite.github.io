@@ -28,6 +28,7 @@
         <ul class="nav navbar-nav">
           <li class="{% if page.getting_started %}active{% endif %}"><a href="{{site.baseurl}}/getting-started">{%t global.getting_started %}</a></li>
           <li class="{% if page.getting_started != true and page.layout == 'documentation' %}active{% endif %}"><a href="{{site.baseurl}}/documentation/introduction/" >{%t global.documentation %}</a></li>
+          <li class=""><a href="{{site.baseurl}}/#publications" >Publications</a></li>
           <li id="about" class="dropdown">
             <a href="{{site.baseurl}}/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{%t global.about %} <span class="caret"></span></a>
             <ul class="dropdown-menu">

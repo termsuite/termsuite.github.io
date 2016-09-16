@@ -1,0 +1,13 @@
+- id: ACL2016
+  authors: Damien Cram and Béatrice Daille
+  title: Terminology Extraction with Term Variant Detection
+  date: 2016
+  proceedings: Proceedings of ACL-2016 System Demonstrations
+  pdf: https://aclweb.org/anthology/P/P16/P16-4003.pdf
+- id: IJCNLP2011
+  authors: Jérôme Rocheteau and Béatrice Daille
+  title: "TTC TermSuite: A UIMA Application for Multilingual Terminology Extraction from Comparable Corpora"
+  date: 2011
+  proceedings: Proceedings of the 5th International Joint Conference on Natural Language Processing
+  pdf: https://hal.archives-ouvertes.fr/hal-00819025/document
+  

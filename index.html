@@ -100,6 +100,46 @@ layout: default
     </div>
   </div>
 
+  <div id="publications" class="row">
+    <div class="container">
+      <div class="col-md-2 text-center">
+        <img alt="academics" width="200" src="/img/academics.png">
+      </div>
+
+      <div class="col-md-1 text-center"></div>
+      <div class="col-md-9">
+        <div>
+          <h2 >Publications</h2>
+
+          <table class="table">
+            <tbody>
+
+              {% for p in site.data.publications %}
+              <tr>
+                <td class="lead">{{p.id}}</td>
+                <td>
+                  <p>
+                    <span>{{p.authors}}.</span><br>
+                    <span class=""><em>{{p.title}}.</em></span><br>
+                    <span>{{p.proceedings}}.</span><br>
+                    <a href="{{p.pdf}}" >
+                    <span class="lead glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF
+                    </a>
+                  </p>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <hr />
   <div class="row">
     <div class="container">
       <h2 id="features" class="text-center">{%t index.features_overview %}</h2>
