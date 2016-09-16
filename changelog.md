@@ -13,6 +13,17 @@ excerpt: excerpts.changelog
  * Improve multilingual alignment results for complex terms and compounds
  * Extension of linguistic specification for derivates and prefix variation to `en` and all languages
 
+## Version 2.3
+
+Version 2.3 focuses on migrating to Java 8 and facilitation the use of TermSuite by simplifying the
+Java API and improving the documentation of TermSuite in french and english.
+
+ * Require Java 8,
+ * Added a preprocessor script,
+ * New Java API wrapper,
+ * Linguistic resources are embedded by default.
+
+
 ## Version 2.2
 
 TermSuite 2.2 is the last version supporting Java 7. Next TermSuite version will require Java 8.

@@ -9,6 +9,7 @@ github_username:  termsuite
 github: https://github.com/termsuite/termsuite-core
 permalink: none
 exclude: ['deploy.sh', 'Gemfile.lock', 'Gemfile']
+bintray: https://bintray.com/termsuite/generic/termsuite-ui
 
 termsuite:
   ui:

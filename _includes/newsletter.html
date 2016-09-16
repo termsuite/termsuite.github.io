@@ -1,0 +1,26 @@
+<h1>{% t global.newsletter %}</h1>
+
+<div class="container">
+    <div class="row">
+  <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">{% t newsletter.subscribe %}</h3>
+                </div>
+                <div class="panel-body">
+                    <p>{% t newsletter.desc %}</p>
+                    <hr>
+                    <div class="form-group">
+                      <input id="personalemail" type="text" class="form-control" placeholder="{% t newsletter.email %}">
+                    </div>
+                    <a
+                      id="subscribe"
+                      href="mailto:termsuite@univ-nantes.fr?subject=subscribe your@email.com&body="
+                      data-body="{% t newsletter.email_body %}"
+                      type="submit"
+                      class="btn btn-primary">{% t newsletter.submit %}</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

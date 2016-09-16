@@ -14,6 +14,7 @@ authors:
     link_type: "Personal Page"
 
 global:
+  newsletter: Lettre d'information
   french: Français
   english: Anglais
   latvian: Letton
@@ -44,6 +45,15 @@ global:
   library: Bibliothèque
   graphical_ui: Interface graphique
 
+
+newsletter:
+  subscribe: S'inscrire à la lettre d'information
+  desc: "Tenez-vous informés des dernières actualités de TermSuite :"
+  submit: s'inscrire
+  email: votre@email.com
+  email_body: Envoyez ce courrier tel quel et vous serez inscrit à la lettre d'information de TermSuite très prochainement.
+
+
 index:
   publications: Publications
   current_version: "La version actuelle de TermSuite est"
@@ -64,6 +74,11 @@ index:
 
 contact:
   description: TermSuite est un projet de recherche.
+  address: Adresse de contact
+  address_description: Pour toute question relative à TermSuite, écrivez-nous à cette adresse.
+  members: Équipe
+  members_description: Vous pouvez également contacter directement l'un des membres de notre équipe.
+
 
 features:
   word_tokenization: Word tokenization

@@ -1,9 +1,34 @@
-{% t contact.description %}
+<h1>{% t global.contact %}</h1>
+
+<p>{% t contact.address_description %}</p>
+
+<div class="container">
+    <div class="row">
+  <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">{% t contact.address %}</h3>
+                </div>
+                <div class="panel-body">
+                  <p class="lead text-center">
+                    <a  href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+                  <p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+
+<h3>{% t contact.members %}</h3>
+
+<p>{% t contact.members_description %}</p>
 
 <div class="container">
 {% for a in site.data.authors | where "status", "active"  %}
   <div class="author">
-      <h3>{{a.name}} <small>{%t a.role %}</small></h3>
+      <h4>{{a.name}} <small>{%t a.role %}</small></h4>
       <p>{%t a.description %}</p>
       <p><strong>Mail: </strong>{{a.mail}}</a>
       <p><strong>Link: </strong><a href="{{a.link}}">{%t a.link_type %}</a></p>

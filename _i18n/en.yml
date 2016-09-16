@@ -23,6 +23,7 @@ global:
   spanish: Spanish
   danish: Danish
   chinese: Chinese
+  newsletter: Newsletter
   poor: Poor
   good: Good
   download: Download
@@ -45,6 +46,12 @@ global:
   library: Library
   graphical_ui: Graphical UI
 
+newsletter:
+  subscribe: Subscribe to Newsletter
+  desc: "Sign up and receive the latest news about TermSuite:"
+  submit: submit
+  email: your@email.com
+  email_body: Sending this email as it is will make you subscribe to TermSuite newsletter within hours.
 
 index:
   current_version: "Current version of TermSuite is"
@@ -65,6 +72,11 @@ index:
 
 contact:
   description: TermSuite is a research project.
+  address: Email
+  address_description: Please contact us at the following address for any question about TermSuite
+  members: Team
+  members_description: Vous pouvez également contacter directement l'un des membres de notre équipe.
+
 
 features:
   word_tokenization: Word tokenization
