@@ -5,7 +5,6 @@ $(document).ready(function(){
           + $("#personalemail").val()
           + '&body='
           + $("#subscribe").data("body");
-      alert(encodeURI(link));
     $("#subscribe").attr("href", encodeURI(link));
   });
 });
