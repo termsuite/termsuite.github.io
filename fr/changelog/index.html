@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Journal des mises à jour</title>
+
+    <meta name="description" content="excerpts.changelog" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/changelog/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Cloner TermSuite sur GitHub."
+    src="/img/forkme.png"
+    alt="Cloner TermSuite sur GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <ul  class="nav navbar-nav navbar-right navright">
+        <li class="" >
+          <a class="" href="/fr/contact">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Lettre d'information
+          </a>
+        </li>
+    </ul>
+
+
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/fr/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/fr/getting-started">Démarrer</a></li>
+          <li class=""><a href="/fr/documentation/introduction/" >Documentation</a></li>
+          <li class=""><a href="/fr/#publications" >Publications</a></li>
+          <li id="about" class="dropdown">
+            <a href="/fr/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/fr/changelog">Journal des mises à jour</a></li>
+              <li><a href="/fr/contact">Contact</a></li>
+              <li><a href="/fr/documentation/support">Assistance</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">Voir sur Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/fr/about">À propos de TermSuite</a></li>
+              <li><a href="/fr/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="" ><a href="/changelog/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="active" ><a href="/fr/changelog/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <header class="post-header">
+    <h1 class="post-title">Journal des mises à jour</h1>
+  </header>
+
+  <article class="post-content">
+    <h2 id="next-version-30">Next version (3.0)</h2>
+
+<ul>
+  <li>TermSuite will now require Java 8</li>
+  <li>Detection of synonimic variations</li>
+  <li>Improve multilingual alignment results for complex terms and compounds</li>
+  <li>Extension of linguistic specification for derivates and prefix variation to <code>en</code> and all languages</li>
+</ul>
+
+<h2 id="version-23">Version 2.3</h2>
+
+<p>Version 2.3 focuses on migrating to Java 8 and facilitation the use of TermSuite by simplifying the<br />
+Java API and improving the documentation of TermSuite in french and english.</p>
+
+<ul>
+  <li>Require Java 8,</li>
+  <li>Added a preprocessor script,</li>
+  <li>New Java API wrapper,</li>
+  <li>Linguistic resources are embedded by default.</li>
+</ul>
+
+<h2 id="version-22">Version 2.2</h2>
+
+<p>TermSuite 2.2 is the last version supporting Java 7. Next TermSuite version will require Java 8.</p>
+
+<ul>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/51">#51</a> Reorganized TermSuite resources (see <a href="https://github.com/termsuite/termsuite-resources">TermSuite Resources</a> on Github)</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/48">#48</a> Support detection of derivative variations</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/49">#49</a> Implement prefix exceptions in prefix splitting</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/54">#54</a> Update variation rules with prefix detection and derivatives detection</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/46">#46</a> Possibility to add custom UIMA AE and CollectionReader to TermSuitePipeline</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/41">#41</a> Serialize and deserialize TermSuite tokens (the UIMA CAS) to <code>json</code> (thanks to Simon Méoni)</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/42">#42</a> Fixed expression detection</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/43">#43</a> Added support for <a href="https://api.istex.fr/documentation/">ISTEX API</a> as a collection reader.</li>
+  <li><a href="https://github.com/termsuite/termsuite-core/issues/71">#71</a> Improved morphosyntactic analysis performances</li>
+  <li>Several bug fixes. See <a href="https://github.com/termsuite/termsuite-core/milestone/2?closed=1">issues</a> on Github.</li>
+</ul>
+
+<p>In TermSuite GUI:</p>
+
+<ul>
+  <li>Some bug fixes and minor UI improvements <a href="https://github.com/termsuite/termsuite-ui/issues?q=is%3Aissue+is%3Aclosed">issues</a></li>
+  <li>Improved alignment performances (improved response time and support for multi-word terms and compounds)</li>
+</ul>
+
+<h3 id="warnings">Warnings</h3>
+
+<ul>
+  <li>Version 2.2 has abandonned support of TEI corpus, due to <a href="https://github.com/termsuite/termsuite-core/issues/24">issue #24</a></li>
+</ul>
+
+<h2 id="version-21">Version 2.1</h2>
+
+<ul>
+  <li>Graphical User Interface</li>
+  <li>Observable pipelines</li>
+  <li>uima profiler dependency removed</li>
+  <li>Added a streaming-API (beta)</li>
+  <li>Exportable annotations to JSON</li>
+  <li>Support for compositional and semi-distributional aligner back</li>
+  <li>Morphosyntactic analysis: added lemmatization of components</li>
+  <li>Allow the capping of terminology from TermSuiteTerminoCLI with options <code>periodic-filter-property</code> <code>periodic-filter-max-size</code>.</li>
+  <li>Scalabilty : can now handle big corpus with MongoDB</li>
+  <li>Changed the IO API. See JSONTermIndexIO class</li>
+  <li>Removed term index measures</li>
+  <li>Added <code>specificity</code> term property</li>
+  <li>Added <code>rank</code> term property</li>
+  <li>Added ranker AE</li>
+  <li>Added Merger AE</li>
+  <li>Added Scorer AE (scores variations)</li>
+</ul>
+
+<h2 id="version-20">Version 2.0</h2>
+
+<p>Version 2.0 is a major release.</p>
+
+<div class="alert alert-warning" role="alert">
+  <p>IMPORTANT 1: In 2.0, there is no more the distinction between the <code>Spotter</code> and the <code>Indexer</code> phases. They have been merged into one unique highly configurable <code>Termino</code> pipeline.  </p>
+</div>
+
+<h4 id="broken-until-21">Broken until 2.1</h4>
+
+<ul>
+  <li>Graphical User Interface</li>
+</ul>
+
+<h4 id="new-features">New Features</h4>
+
+<ul>
+  <li>Added support for Mate POS Tagger and Lemmatizer (<code>en</code> and <code>fr</code> only) in addition to TreeTagger.</li>
+  <li>Major refactoring of TermSuite’s data model. See [[TermSuiteDataModel]]</li>
+  <li>Simplified TermSuite Type system (see [[TermSuiteDataModel]] for details)</li>
+  <li>Dropped all UIMA XML resource description. Moved to uimaFit completely.</li>
+  <li>Splitted the huge TermSuite’s Gradle multi-project config into separate and independant Github/Maven projects.</li>
+  <li>Published TermSuite and all its dependant subprojects as Maven artefacts.</li>
+  <li>Moved source code and documentation to Github and Github’s wiki.</li>
+  <li>Added AE primary occurrence detector.</li>
+  <li>Added AE for term class grouping.</li>
+  <li>Added AE for producing tsv variant evaluation files.</li>
+  <li>TSV Export AE made configurable. (you can select the Term properties you want to get in your TSV)</li>
+  <li>Added Morphology analysis. (with CompostAE)</li>
+  <li>Improved syntactic variant resources + supportfor morphosyntactic variants detection.</li>
+  <li>Improved and debugged Weirdness Ratio (old specificity) computing (<code>GeneralLanguage.*</code> resources being retrained on larger corpus with new TermSuite standards)</li>
+  <li>Migrated syntactic variant resources from <code>*.groovy</code> to <code>*.yaml</code> (beatter readability + improved rule indexing and more efficient rule matching detection)</li>
+  <li>Added JSON Serializing for terminologies. Now terminologies can be saved into <code>*.json</code> and loaded from <code>*.JSON</code>.</li>
+  <li>Terminology export in <code>*.xmi</code> format in not supported anymore. (<code>*.xmi</code> terminology files were too big, not human readable, and Exporter/Parser were too slow)</li>
+  <li>Added several <code>JUnit</code> tests for several AEs and intelligent helper methods.</li>
+</ul>
+
+<h2 id="version-16">Version 1.6</h2>
+
+<div class="alert alert-warning" role="alert">
+  <p>IMPORTANT : The new default encoding for TreeTagger resource interpretation in TermSuite is UTF-8. Please make sure that all your TreeTagger models are UTF-8 encoded.</p>
+</div>
+
+<h4 id="new-features-1">New features</h4>
+
+<ul>
+  <li>Clean UIMA multi-word terms based on a per-leanguage allowed characters list</li>
+  <li>New UIMA AE for rule-based pattern detection : UIMA Tokens Regex (with tests and doc)</li>
+  <li>New UIMA AE for term gathering : GroovyMultiWordGatherer</li>
+  <li>Add script TermSuiteTerminoCLI for terminology extraction in TermSuite (with spotting and gathering rules as parameter)</li>
+  <li>ADD CollectionReader and SimplePipeline TermSuite launchers.</li>
+  <li>Debugged Txt collection reading : some annoying characters are replaced (annoying apostrophes, annoying unsual whitespaces, etc)</li>
+  <li>ADD 2 collection readers : StringCollectionReader (for inline TerminoCLI) and TEI CollectionReader (for corpora in tei format)<br />
+More stats and examples about term spotting and gathering in TermSuite’s logs.</li>
+</ul>
+
+<h4 id="bug-fixesenhancements">Bug fixes/enhancements</h4>
+
+<h6 id="spotter">Spotter</h6>
+
+<ul>
+  <li>Integration of uimaFit : all spotter AE refactored into uimaFit + uimaFit launcher for launcher</li>
+  <li>Faster and multi-word term spotting with UIMA Tokens Regex for 4 languages : fr, en, de, ru</li>
+  <li>Easier definition of multi-word term rules with UIMA Tokens Regex for 4 languages : fr, en, de, ru</li>
+  <li>Faster AE for single word term spotting : eu.project.ttc.engines.SingleWordTermSpotter for all languages</li>
+  <li>Easier definition of singler-word term rules with eu.project.ttc.engines.SingleWordTermSpotter for all languages</li>
+</ul>
+
+<h6 id="indexer">Indexer</h6>
+
+<ul>
+  <li>Faster and multi-word term gathering with UIMA Tokens Regex for two languages : fr, en</li>
+  <li>Easier definition of multi-word term rules with UIMA Tokens Regex for two languages : fr, en</li>
+</ul>
+
+<h6 id="aligner">Aligner</h6>
+
+<ul>
+  <li>Debugged script TermSuiteAlignerCLI</li>
+</ul>
+
+<h2 id="version-15">Version 1.5</h2>
+
+<p>2014/03/17: Updated of the UserGuide TermSuite 1.5</p>
+
+<h4 id="new-features-2">New features</h4>
+
+<ul>
+  <li>New GUI, improved wording and software architecture.</li>
+  <li>Improved scalabilty, TermSuite can handle large corpora of several millions of words.</li>
+  <li>Moved to gradle build tool.</li>
+  <li>Moved to git based repository.</li>
+</ul>
+
+<h6 id="spotter-1">Spotter</h6>
+
+<ul>
+  <li>Added TSV output as an option</li>
+  <li>List of occurrences with frequencies in TBX output</li>
+  <li>Added menu for loading existing processed data on the spotter results view.</li>
+</ul>
+
+<h4 id="bug-fixesenhancements-1">Bug fixes/enhancements</h4>
+
+<ul>
+  <li>Several small bugfixes and enhancements.</li>
+  <li>New tabbed menus for parameters.</li>
+</ul>
+
+<h6 id="indexer-1">Indexer</h6>
+
+<ul>
+  <li>Several menus to distinguish between different parameters</li>
+  <li>Variant detection parameters were separated for better comprehension</li>
+</ul>
+
+<h6 id="aligner-1">Aligner</h6>
+
+<ul>
+  <li>Separation of parameters in basic and advanced options.</li>
+  <li>The different alignment methods were clearly separated in different options.</li>
+</ul>
+
+<h2 id="version-14">Version 1.4</h2>
+
+<h4 id="new-features-3">New features</h4>
+
+<ul>
+  <li>TSV output for spotter, indexer, aligner</li>
+  <li>File parameters for input of CLI</li>
+  <li>User manual (pdf format) to be downloaded</li>
+  <li>Java program to prepare the directory of terms to be translated as input of the Aligner</li>
+</ul>
+
+<h6 id="indexer-2">Indexer</h6>
+
+<ul>
+  <li>Pilot form in TBX output</li>
+  <li>List of occurrences with frequencies in TBX output</li>
+</ul>
+
+<h6 id="aligner-2">Aligner</h6>
+
+<ul>
+  <li>compositional and semi-compositional methods added for MWT alignment</li>
+</ul>
+
+<h4 id="bug-fixesenhancements-2">Bug fixes/enhancements</h4>
+
+<h6 id="indexer-3">Indexer</h6>
+
+<ul>
+  <li>Added the Chinese general lexicon required for specificity calculation</li>
+  <li>Enhanced MWT recognition rules for Ru/Lv/Es</li>
+  <li>Enhanced MWT conflation rules for Ru/Lv/Es</li>
+</ul>
+
+<h2 id="version-13">Version 1.3</h2>
+
+<h4 id="new-features-4">New features</h4>
+
+<ul>
+  <li>langSet identifier added in the XMI files</li>
+</ul>
+
+<h6 id="indexer-4">Indexer</h6>
+
+<ul>
+  <li>Dissociation of XMI files (input of the aligner) and TBX files (output of the monolingual terminology extraction)</li>
+  <li>Detection of graphic variants for MWTs (Ignore Diacritics in Conflation settings)</li>
+  <li>New diacritics-insensitive edit distance in Conflation settings</li>
+  <li>Specifity score in TBX output</li>
+  <li>Verbs and other categories removed from TBX output (unless Keep verbs and others is specified)</li>
+  <li>Statistical filtering of monolingual candidates: by cut-off rank (e.g. top-100, top-250, etc.) or threshold.</li>
+  <li>TBX candidates are ranked according to the filter criteria, or alphabetically if no filtering is done.</li>
+</ul>
+
+<h6 id="aligner-3">Aligner</h6>
+
+<ul>
+  <li>Bilingual TBX output following specifications</li>
+  <li>Cut-off rank for translation candidates in bilingual output</li>
+</ul>
+
+<h4 id="bug-fixesenhancements-3">Bug fixes/enhancements</h4>
+
+<ul>
+  <li>Progress bar color forced to green</li>
+  <li>Windows shell CLI fixed</li>
+</ul>
+
+<h6 id="indexer-5">Indexer</h6>
+
+<ul>
+  <li>Parameter group support for indexer settings (Advanced settings/TBX settings)</li>
+  <li>Added the Latvian and Spanish general lexicons required for specificity calculation (the Latvian lexicon needs to be cleaned)</li>
+  <li>Enhanced MWT recognition rules for En/Fr/De</li>
+  <li>Enhanced MWT conflation rules for En/Fr/De</li>
+  <li>Fail-fast edit distances</li>
+</ul>
+
+<h2 id="version-12">Version 1.2</h2>
+
+<ul>
+  <li>graphical interface improved</li>
+  <li>Latvian processing improved</li>
+  <li>Chinese processing improved</li>
+</ul>
+
+<h2 id="version-11">Version 1.1</h2>
+
+<ul>
+  <li>compound and multi-word alignment compositional method improved</li>
+  <li>term conflation improved (no more extensions)</li>
+  <li>result displays refactorized in tabbed panels</li>
+</ul>
+
+<h2 id="version-10">Version 1.0</h2>
+
+<ul>
+  <li>no more CPE and CR, only AE</li>
+  <li>reshaping in Spotter, Indexer and Aligner</li>
+</ul>
+
+<h2 id="version-10-rc9">Version 1.0-rc9</h2>
+
+<ul>
+  <li>added Relater for computing similarity distances between context vectors of a monolingual contextual terminology</li>
+  <li>fixed issue 7</li>
+</ul>
+
+<h2 id="version-10-rc8">Version 1.0-rc8</h2>
+
+<ul>
+  <li>Danish support for Tagger and Termer</li>
+  <li>XML format for resources (tokenizer, tree-tagger, stop-word, rule-based term detection)</li>
+  <li>neoclassical compound alignment</li>
+</ul>
+
+<h2 id="version-10-rc7">Version 1.0-rc7</h2>
+
+<ul>
+  <li>refactoring taggers: a tagger button and one tagger engine per tab</li>
+  <li>refactoring converters: a converter button and one converter engine per tab</li>
+</ul>
+
+<h2 id="version-10-rc6">Version 1.0-rc6</h2>
+
+<ul>
+  <li>bug fix: the Indexer annotator was running as many times as there are index listeners and not only once</li>
+  <li>bug fix: removing hapax both by filtering raw terms and by filtering their lemma</li>
+  <li>bug fix: enabling term indexation according to their annotation types</li>
+</ul>
+
+<h2 id="version-10-rc5">Version 1.0-rc5</h2>
+
+<ul>
+  <li>adding a Converter launcher for converting XMI files into other formats e.g. TSV</li>
+  <li>sorting the terminology view of the Termer tool by frequencies</li>
+</ul>
+
+<h2 id="version-10-rc4">Version 1.0-rc4</h2>
+
+<ul>
+  <li>adding a Stemmer for English, French, German, Russian and Spanish into the TreeTagger analysis engine</li>
+</ul>
+
+<h2 id="version-10-rc3">Version 1.0-rc3</h2>
+
+<ul>
+  <li>adding Tilde Tagger for processing Latvian</li>
+  <li>adding a term context result viewer for the Contextualizer tool</li>
+</ul>
+
+<h2 id="version-10-rc2">Version 1.0-rc2</h2>
+
+<ul>
+  <li>splitting Ziggurat in 2 tools: Contextualizer and Aligner</li>
+  <li>renaming Acabit in Termer</li>
+</ul>
+
+<h2 id="version-10-rc1">Version 1.0-rc1</h2>
+
+<ul>
+  <li>CPE workflow split into 3 respectively called TreeTagger, Acabit and Ziggurat</li>
+  <li>GUI refactoring: 1 tool by CPE</li>
+  <li>version presented at IJCNLP</li>
+</ul>
+
+<h2 id="version-091">Version 0.9.1</h2>
+
+<ul>
+  <li>TBX export bug fix</li>
+</ul>
+
+<h2 id="version-090">Version 0.9.0</h2>
+
+<ul>
+  <li>Term Bank XMI serialization and deserialization removed after a “out of memory” exception thrown.</li>
+  <li>Term Bank binary serialization and deserialization added instead.</li>
+</ul>
+
+<h2 id="version-082">Version 0.8.2</h2>
+
+<ul>
+  <li>Term Context Indexer added.</li>
+</ul>
+
+<h2 id="version-081">Version 0.8.1</h2>
+
+<ul>
+  <li>multi-word rules for Spanish, Latvian and Russian added.</li>
+</ul>
+
+<h2 id="version-080">Version 0.8.0</h2>
+
+<ul>
+  <li>initial release of the new TTC TermSuite GUI and CLI interfaces</li>
+</ul>
+
+  </article>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>À propos</h4>
+        <p>TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>
+          <a href="/fr/contact">Contact</a>
+        </h4>
+        <p class="text-center">
+            <a href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+        </p>
+        Équipe
+        <ul>
+
+          
+            <li><a href="https://github.com/pompadour"><p>Damien Cram</p>
+</a></li>
+          
+            <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>
+</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Liens</h4>
+        <ul>
+          <li>
+            <a href="/fr/contact">Lettre d'information</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://bintray.com/termsuite/generic/termsuite-ui">Bintray</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© Université de Nantes 2015-2016</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>
