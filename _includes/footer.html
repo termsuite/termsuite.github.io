@@ -9,19 +9,27 @@
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-4">
-        <h4>{%t global.contact %}</h4>
+        <h4>
+          <a href="{{site.baseurl}}/contact">{% t global.contact %}</a>
+        </h4>
+        <p class="text-center">
+            <a href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+        </p>
+        {% t contact.members %}
         <ul>
-          {% for a in site.data.authors %}
-            <li>{{a.name | markdownify}}</li>
-          {% endfor %}
 
+          {% for a in site.data.authors %}
+            <li><a href="{{a.link}}">{{a.name | markdownify}}</a></li>
+          {% endfor %}
         </ul>
-        {%t site.email %}
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-3">
         <h4>{%t global.links %}</h4>
         <ul>
+          <li>
+            <a href="{{site.baseurl}}/contact">{% t global.newsletter %}</a>
+          </li>
           <li>
             <a href="{{site.github}}">Github</a>
           </li>
