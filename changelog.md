@@ -7,11 +7,9 @@ excerpt: excerpts.changelog
 
 ## Next version (3.0)
 
-
  * TermSuite will now require Java 8
  * Detection of synonimic variations
  * Improve multilingual alignment results for complex terms and compounds
- * Extension of linguistic specification for derivates and prefix variation to `en` and all languages
 
 ## Version 2.3
 
@@ -19,9 +17,11 @@ Version 2.3 focuses on migrating to Java 8 and facilitation the use of TermSuite
 Java API and improving the documentation of TermSuite in french and english.
 
  * Require Java 8,
- * Added a preprocessor script,
- * New Java API wrapper,
- * Linguistic resources are embedded by default.
+ * Possibility to use TermSuite only as text preprocessor (tokenizer, tagger, lemmatizer, stemmer, filters),
+ * New simplified Java API,
+ * Linguistic resources are embedded by default,
+ * Improved test coverage,
+ * Extension of linguistic specification for derivates and prefix variation to `en`.
 
 
 ## Version 2.2

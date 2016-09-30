@@ -1,3 +1,9 @@
+# Install
+
+
+
+# Valid TermSuite format for multilingual corpus
+
 Because TermSuite has features like terminology alignment that operate on multilingual corpora, all corpora must satisfy a certain directory structure.
 
 TermSuite currently supports two types of corpus: `tei` and `txt`.

@@ -5,11 +5,11 @@ Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire 
 
 ### 1. Pré-requis
 
-Pour plus de simplicité, créez un répertoire où vous téléchargerez tous les fichiers requis par TermSuite. Dans les sections qui suivent, nous nous réfererons à ce répertoire comme étant "TERMSUITE_WORKSPACE".       
+Pour plus de simplicité, créez un répertoire où vous téléchargerez tous les fichiers requis par TermSuite. Dans les sections qui suivent, nous nous réfererons à ce répertoire comme étant `TERMSUITE_WORKSPACE`.       
 
 #### Java
 
-Assurez-vous que Java est installé sur votre système d'exploitation (version 1.7 minimum), ou bien suivez les [instructions officielles d'installation](https://www.java.com/fr/download/)..
+Assurez-vous que Java est installé sur votre système d'exploitation (version 8 minimum), ou bien suivez les [instructions officielles d'installation](https://www.java.com/fr/download/)..
 
 Pour vérifier si Java est installé correctement, et vérifier votre version, ouvrez une interface en ligne de commandes et tapez :
 
@@ -36,10 +36,6 @@ Enconder et nommer les modèles de TreeTagger est important pour le bon fonction
 Téléchargez la dernière version stable du projet "termsuite-core" depuis [Maven Central]({{site.termsuite.maven}}) vers le répertoire "TERMSUITE_WORKSPACE".
 
 Actuellement : [termsuite-core-{{site.termsuite.version}}.jar]({{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar)
-
-### 4. Téléchargez  (ou créez) un pack de langue pour TermSuite
-Téléchargez un paquet de ressources vers le répertoire "TERMSUITE_WORSPACE" et décompressez le.  
-Par exemple, téléchargez le paquet public sur Github : [termsuite-resources.jar]({{site.resources.jar}})
 
 ### 5. Préparez votre corpus
 
@@ -69,7 +65,6 @@ TERMSUITE_WORKSPACE/
       english.par # Should be the `utf-8` model !
     [...]
   termsuite-core-{{site.termsuite.version}}.jar
-  termsuite-resources.jar
 ~~~
 
 Executez l'extraction de terminologie sur le corpus *Wind Energy* en langue "en" :
@@ -79,7 +74,6 @@ $ java -cp termsuite-core-{{site.termsuite.version}}.jar eu.project.ttc.tools.cl
   -t ./tree-tagger/ \
   -c ./wind-energy/English/txt/ \
   -l en \
-  -r ./termsuite-resources.jar \
   --tsv ./wind-energy-en.tsv
 ~~~
 

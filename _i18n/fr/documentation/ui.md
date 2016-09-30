@@ -1,3 +1,9 @@
+# Installation
+
+
+
+# Les corpus TermSuite
+
 Parce que TermSuite propose des fonctionnalités telles que l'alignement de la terminologie sur des corpora multilingue, tous les corpora doivent satisfaire une certaine structure.
 Because TermSuite has features like terminology alignment that operate on multilingual corpora, all corpora must satisfy a certain directory structure.
 

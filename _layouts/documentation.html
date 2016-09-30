@@ -8,12 +8,6 @@ layout: default
   <div class="col-md-8">
     <header class="page-header">
       <h1>{% t global.documentation %} <small>{%t page.title %}</small></h1>
-      {% if "fr" == site.lang %}
-      <div class="alert alert-danger" role="alert">
-        <strong>ATTENTION: </strong>La traduction française de la documentation de TermSuite risque d'être incomplète et obsolète. Nous vous conseillons de
-        vous référer à la <a href="{{ page.url }}"> version anglaise </a> tant que possible.
-      </div>
-      {% endif %}
     </header>
     {% include share.html %}
   </div>

@@ -45,7 +45,7 @@ By default, the POS tagger (and lemmatizer) used by this script is TreeTagger. I
 | `--filter-variants` *(no arg)* 	| Also filters variants  |
 {: class="table table-striped"}
 
-To perform a term filtering, you need to provide the `--filter-property` option, and one of `--filter-th` or `--filter--top-n`. Allowed values for `--filter-property` are : (See [Javadoc]({{site.javadoc}}) for an up-to-date list)
+To perform a term filtering, you need to provide the `--filter-property` option, and one of `--filter-th` or `--filter-top-n`. Allowed values for `--filter-property` are : (See [Javadoc]({{site.javadoc}}) for an up-to-date list)
 
 {% for p in site.data.filtering-properties %}
   {% if p.filter %}
@@ -236,7 +236,7 @@ One of :
 
 | `-n` INT 	| The number of translation candidates to display |
 | `--distance` [cosine,jaccard] 	| The similarity measure used to compute the distance between two vectors |
-| `--show-explation` *(no args)* 	| Also show the most influencial co-terms with the translation candidates |
+| `--explain` *(no args)* 	| Also show the most influencial co-terms with the translation candidates |
 
 #### Examples
 
