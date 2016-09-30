@@ -3,11 +3,221 @@ TermSuite offers a convenient way of running terminology extraction and multilin
 * TOC
 {:toc}
 
-### Terminology extraction
+### The data model
 
-#### The `TermSuitePipeline` helper class
+In TermSuite, a terminology can be seen as a graph where nodes are terms and edges are term variations.
 
-All features and configuration you need to run a terminology extraction pipeline with the Java API is provided by the `TermSuitePipeline` class. The typical terminology extraction pipeline using is configured and run as follows:
+#### The `TermIndex` class (the terminology)
+
+#### The `Term` class
+
+#### Term properties
+{:id="term-properties"}
+
+In Java code, you can access the property object via the TermProperty enum, e.g. `TermProperty.FREQUENCY`.
+
+This is the list of all term properties currently supported by TermSuite:
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Java constant</th>
+			<th>Name</th>
+			<th>Shortname</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for p in site.data.filtering-properties %}
+	<tr>
+		<td>	{{p.java}}	</td>
+		<td>	{{p.name}}	</td>
+		<td>	{{p.shortname}}	</td>
+		<td>	{%t p.description %}	</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+
+#### The `TermVariation` class
+
+
+### Navigating terminologies
+
+#### `TermIndex#getTerms()` (very basic)
+
+Use the `TermIndex#getTerms()` method  (the terminology) to retrieve all
+of terms of the terminology and do your processing manually with the collection api.
+
+{% highlight java %}
+
+List<Term> terms = new ArrayList<Term>(myTermIndex.getTerm());
+Collections.sort(terms, TermProperty.SPECIFICITY.getComparator(true));
+
+{% endhighlight %}
+
+#### The `Traverser` class
+
+<div class="alert alert-warning" role="alert">
+<strong>Note: </strong> The traverser mechanism is TermSuite is still in its embryonic form. Expect
+substantial changes in the next versions of the API.
+</div>
+
+The `Traverser` class is inspired from [Neo4j's traversal framework](https://neo4j.com/docs/java-reference/current/#tutorial-traversal).
+It aims at:
+
+ 1. navigating easily the terms of a terminology
+ 2. navigating the variants of a term (Not yet supported)
+
+A traverser is initiated by invoking the `Traverser#by` method. It makes uses of [term property names](#term-properties).
+
+##### Example 1: navigating the terms by specificity
+
+{% highlight java %}
+Traverser.by("sp desc").stream(myTermIndex).forEach(term -> {
+		System.out.println(term.getGroupingKey());
+});
+{% endhighlight %}
+
+##### Example 2: navigating the terms by document frequency
+
+{% highlight java %}
+Traverser.by("dfreq desc,sp desc").stream(myTermIndex).forEach(term -> {
+		System.out.println(term.getGroupingKey());
+});
+{% endhighlight %}
+
+##### Example 3: navigating the variations of a term (to come)
+
+<div class="alert alert-warning" role="alert">
+Not yet implemented. To come in the next version of TermSuite.
+</div>
+
+### Preprocessing files: `TermSuitePreprocessor`
+{:id="termsuite-preprocessor"}
+
+**Note:** Explore `TermSuitePreprocessor` javadoc and discover all capabilities of this launcher class.
+
+The `TermSuitePreprocessor` launcher allows to apply on a corpus only the preprocessings
+ available in TermSuite. Preprocessed corpus can then be reused either for terminology extraction
+ within TermSuite or for a completely different external use.
+
+The preprocessing steps by applied `TermSuitePreprocessor` are:
+
+  * tokenization,
+	* POS-tagging with TreeTagger,
+	* lemmatization with TreeTagger,
+	* stemming,
+	* and multi-word term spotting.
+
+Preprocessing outputs are available as UIMA CASes (Common Analysis System), either as
+`xmi` files, as `json` files, or as Java `JCas` instance if using the Java 8 streaming API.
+
+The following subsections give the laucnher code for each of these three cases.
+
+#### Outputs as `json` files
+
+{% highlight java %}
+TermSuitePreprocessor
+		.fromTxtCorpus(lang, "/path/to/corpus")
+		.setTreeTaggerHome("/path/to/treetagger")
+		.toJson("/path/to/output/files", "UTF-8")
+		.execute();
+{% endhighlight %}
+
+#### Outputs as `xmi` files
+
+{% highlight java %}
+TermSuitePreprocessor
+		.fromTxtCorpus(lang, "/path/to/corpus")
+		.setTreeTaggerHome("/path/to/treetagger")
+		.toXmi("/path/to/output/files", "UTF-8")
+		.execute();
+{% endhighlight %}
+
+#### Outputs as UIMA `JCas` instances stream
+
+{% highlight java %}
+TermSuitePreprocessor
+		.fromTxtCorpus(lang, "/path/to/corpus")
+		.setTreeTaggerHome("/path/to/treetagger")
+		.stream().forEach(jCas -> {
+				/*
+				 * Iterate over UIMA anotations...
+				 */  
+		});
+{% endhighlight %}
+
+### Terminology extraction: `TerminoExtractor` (Simple)
+{:id="termino-extractor"}
+
+**Note:** Explore `TerminoExtractor` javadoc and discover all capabilities of this launcher class.
+
+#### Extract terminology from text files
+
+The minimal terminology extraction launcher is coded as:
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+		.fromTxtCorpus(Lang.FR, "/path/to/root/dir", "UTF-8")
+		.setTreeTaggerHome("/path/to/tree/tagger")
+		.execute();
+{% endhighlight %}
+
+This launcher code above analyzes all `**/*.txt` files within the directory `/path/to/root/dir` and produces the returned terminology as a `TermIndex` instance. Use wildcards to refer to text files with other extensions:
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+		.fromTxtCorpus(Lang.FR, "/path/to/root/dir", "**/*.{txt,data}", "UTF-8")
+		.setTreeTaggerHome("/path/to/tree/tagger")
+		.execute();
+{% endhighlight %}
+
+
+#### Extract terminology from preprocessed files (`xmi` or `json`)
+
+Instead of text files, it is also possible to start a terminology extraction pipeline from a set of preprocessed `xmi` or `json` files. (See [`TermSuitePreprocessor`](#termsuite-preprocessor) for details on preprocessing)
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+		.fromPreprocessedXmiFiles(Lang.FR, "/path/to/preprocessed/xmi/files")
+		.setTreeTaggerHome(FunctionalTests.getTaggerPath())
+		.execute();
+{% endhighlight %}
+
+
+#### Extract terminology from a Java `Document` instances stream
+
+{% highlight java %}
+List<Document> documents = Lists.newArrayList();
+Document document1 = new Document(lang, "url1", "L'énergie éolienne est l'énergie de demain.");
+documents.add(document1);
+Document document2 = new Document(lang, "url2", "Une éolienne produit de l'énergie.");
+documents.add(document2);
+
+TermIndex termIndex = TerminoExtractor.fromDocumentStream(Lang.FR, documents.stream(), 2)
+	.setTreeTaggerHome("/path/to/treetagger")
+	.execute();
+
+{% endhighlight %}
+
+
+#### Extract terminology from a Java `String`
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+	.fromTextString(Lang.FR, "L'énergie éolienne est une énergie d'avenir.")
+	.setTreeTaggerHome("/path/to/treetagger")
+	.execute();
+{% endhighlight %}
+
+### Terminology extraction: `TermSuitePipeline` (Advanced)
+{:id="termsuite-pipeline"}
+
+All features and configuration you need to run a terminology extraction pipeline with the Java API is provided by the `TermSuitePipeline` class. `TerminoExtractor` and `TermSuitePreprocessor` are just wrappers of this class.
+
+ The typical terminology extraction pipeline using is configured and run as follows:
 
 {% highlight java %}
 TermIndex termIndex = TermSuitePipeline.create("en")
@@ -70,25 +280,27 @@ Finally, the method `run` starts the pipeline processing of the corpus. At the e
 TermIndex terminology = pipeline.getTermIndex();
 {% endhighlight %}
 
-#### Run a pipeline from an existing terminology
 
-`TermSuitePipeline` also allows you to run a pipeline from an existing Terminology. To do that, pass an existing terminology to the method `TermSuitePipeline.create()`, invoke `emptyCollection()`, and invoke the AE you want.
-
-For example the following lines filter from the terminology all terms that occur less than twice:
-
-{% highlight java %}
-TermSuitePipeline.create(myTerminology)
-		.emptyCollection()
-		.aeThresholdCleaner(TermProperty.FREQUENCY, 2)
-		.run();
-{% endhighlight %}
-
-
-#### Full list of Analysis Engines and configurations
+#### Exhaustive list of Analysis Engines and configurations
 
 IDE auto-completion will assist you in finding available methods to build your own pipelines. Otherwise, to see what you can do with  `TermSuitePipeline`, see the [Javadoc](http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}).
 
-### Export/Import `json` terminologies
+
+
+### Filtering terminologies: `TerminoFilterer`
+
+#### Example 1: keep terms that occur at least 10 times
+
+{% highlight java %}
+TerminoFilterer.create(myTermIndex)
+	.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(10))
+	.execute();
+{% endhighlight %}
+
+
+
+
+### Export/Import of a terminology
 
 #### Export
 
@@ -115,6 +327,9 @@ TermIndex myTerminology = JSONTermIndexIO.load(
 				new FileReader("myterminology.json"),
 				false);
 {% endhighlight %}
+
+
+### TermSuite Preprocessing
 
 ### Multilingual term alignment
 

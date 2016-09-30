@@ -95,19 +95,19 @@ features:
   export: "Terminology export in multiple formats: `json`, `tsv`, `tbx`"
 
 filtering_properties:
+  rank: the rank of the term after the terminology has been scored and sort by specificity
   pilot: the most frequent form of term
   frequency: the number of occurrences of a term
   fnorm: the normalized frequency
   generalFnorm: the general normalized frequency
   dfreq: the number of document in corpus that contain the term
   lemma: the concatenation of word lemmas
-  groupingKey: the term grouping key, i.e. the term *id* (pattern + lemma)
+  groupingKey: the term grouping key, i.e. the term <emph>id</emph> (pattern + lemma)
   wr: the weirdness ratio (the specificity)
   wrLog: the log of weirdness ratio
+  specificity: the specificity of a term, i.e. the log of its weirness ratio
   pattern: the syntactic pattern of the term
-  spottingRule: the *UIMA Tokens Regex* rule name that spotted the term
-  termClassHead: the class the term belongs to
-  termClassFrequency: the frequency of the term class
+  spottingRule: the <emph>UIMA Tokens Regex</emph> rule name that spotted the term
 
 titles:
   blog: Blog & News

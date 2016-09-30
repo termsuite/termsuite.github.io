@@ -1,39 +1,55 @@
+- name: rank
+  description: filtering_properties.rank
+  filter: false
+  shortname: "#"
+  java: RANK
 - name: pilot
   description: filtering_properties.pilot
   filter: false
+  shortname: pilot
+  java: PILOT
 - name: frequency
   description: filtering_properties.frequency
   filter: true
-- name: fnorm
+  shortname: f
+  java: FREQUENCY
+- name: frequencyNorm
   description: filtering_properties.fnorm
   filter: true
-- name: generalFnorm
+  shortname: fnorm
+  java: FREQUENCY_NORM
+- name: generalFrequencyNorm
   description: filtering_properties.generalFnorm
   filter: true
-- name: dfreq
+  shortname: generalFnorm
+  java: GENERAL_FREQUENCY_NORM
+- name: documentFrequency
   description: filtering_properties.dfreq
   filter: true
+  shortname: dfreq
+  java: DOCUMENT_FREQUENCY
 - name: lemma
   description: filtering_properties.lemma
   filter: false
+  shortname: lm
+  java: LEMMA
 - name: groupingKey
   description: filtering_properties.groupingKey
   filter: false
-- name: wr
-  description: filtering_properties.wr
+  shortname: gKey
+  java: GROUPING_KEY
+- name: specificity
+  description: filtering_properties.specificity
   filter: true
-- name: wrLog
-  description: filtering_properties.wrLog
-  filter: true
+  shortname: sp
+  java: SPECIFICITY
 - name: pattern
   description: filtering_properties.pattern
   filter: false
+  shortname: p
+  java: PATTERN
 - name: spottingRule
   description: filtering_properties.spottingRule
   filter: false
-- name: termClassHead
-  description: filtering_properties.termClassHead
-  filter: false
-- name: termClassFrequency
-  description: filtering_properties.termClassFrequency
-  filter: true
+  shortname: rule
+  java: SPOTTING_RULE
