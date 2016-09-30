@@ -46,7 +46,7 @@ A pipeline object is created by invoking the method :
  `TermSuitePipeline.create(langCode)`
 {% endhighlight %}
 
-Then you need to invoke the mandatory configuration, i.e. the corpus path  (the root of a valid multilingual [TermSuite corpus](/documentation/corpus/)), type, and encoding, and the resource path:
+Then you need to invoke the mandatory configuration, i.e. the corpus path  (the root of a  corpus), type, and encoding, and the resource path:
 
 {% highlight java %}
  .setResourcePath("/path/to/resource/pack")
@@ -120,7 +120,7 @@ TermIndex myTerminology = JSONTermIndexIO.load(
 
 For multilingual term alignment, you need:
 
- * two TermSuite terminologies (as `json` files, the source termino and the target termino). Such terminologies are the outputs of TermSuite [terminology extraction pipelines](/documentation/command-line-api/#termino) processed on domain-specific comparable [corpora](/documentation/corpus/),
+ * two TermSuite terminologies (as `json` files, the source termino and the target termino). Such terminologies are the outputs of TermSuite [terminology extraction pipelines](/documentation/command-line-api/#termino) processed on domain-specific comparable corpora,
  * a [bilingual dictionary](/documentation/resources/#dictionary).
 
 #### Produce valid TermSuite terminologies for alignment

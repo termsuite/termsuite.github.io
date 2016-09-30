@@ -14,7 +14,7 @@ See more information about TermSuite resources on Github project [termsuite-reso
 
 For multilingual term alignment, you need:
 
- * two TermSuite terminologies (as `json` files, the source termino and the target termino). Such terminologies are the outputs of TermSuite [terminology extraction pipelines](/documentation/command-line-api/#termino) processed on domain-specific [corpora](/documentation/corpus/),
+ * two TermSuite terminologies (as `json` files, the source termino and the target termino). Such terminologies are the outputs of TermSuite [terminology extraction pipelines](/documentation/command-line-api/#termino) processed on domain-specific corpora,
  * a bilingual dictionary.
 
 #### The bilingual dictionary

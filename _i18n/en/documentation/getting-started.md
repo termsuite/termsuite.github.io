@@ -145,7 +145,7 @@ This output can be configured. `tbx` and `json` are also posssible. See command 
 
 ### 8. Enjoy TermSuite
 
-You can now run TermSuite on your own [corpus]({{site.production_url}}/documentation/corpus).
+You can now run TermSuite on your own corpus.
 
 Full documentation of available features and options from the command line: [command line API]({{site.production_url}}/documentation/command-line-api).
 

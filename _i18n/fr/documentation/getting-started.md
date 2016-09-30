@@ -144,7 +144,8 @@ Ce format de sortie peut être configuré. 'tbx' et 'json' sont également possi
 
 ### 8. Profitez de TermSuite
 
-Vous pouvez désormais executer TermSuite sur votre propre [corpus]({{site.production_url}}/documentation/fr/corpus).
+Vous pouvez désormais executer TermSuite sur votre propre corpus.
+
 La documentation complète des options et possibilités des lignes de commandes :[command line API]({{site.production_url}}/documentation/fr/command-line-api).
 
 Pour intégrer TermSuite directement à votre projet Java: [Java API](/documentation/fr/command-line-api).

@@ -139,7 +139,7 @@ See [Term Properties](/documentation/term-properties/) for specific information 
 
 Say we have :
 
- * a [valid corpus](/documentation/corpus) at `/home/me/corpora/mycorpus`,
+ * a corpus of `txt` files at `/home/me/corpora/mycorpus`,
  * Tree Tagger installed at `/home/me/apps/TreeTagger`,
  * Our resource pack at `/home/me/data/termsuite-resources.jar`
 
@@ -196,7 +196,7 @@ $ echo "My test phrase." | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar \ eu.pr
 
 The `TermSuiteAlignerCLI` script takes as input:
 
- * the two  terminologies (the *source* and the *target* terminologies extracted by TermSuite on two comparable [corpora](/documentation/corpus)),
+ * the two  terminologies (the *source* and the *target* terminologies extracted by TermSuite on two comparable corpora),
  * the [bilingual dictionary](/documentation/resources/#dictionary),
  * the list of terms to be translated.
 
