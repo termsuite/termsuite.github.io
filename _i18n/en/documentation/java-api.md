@@ -9,12 +9,48 @@ In TermSuite, a terminology can be seen as a graph where nodes are terms and edg
 
 #### The `TermIndex` class (the terminology)
 
-#### The `Term` class
+A terminology is an instance of the class `TermIndex`, i.e. a collection of `Term` instances linked to each other by relations of type `TermVariation`.
+
+Inside a given TermIndex, each term is uniquely identified by its words' syntactic labels and lemmas. The identifier property of a term is `groupingKey`. The groupingKey built by concatenating:
+
+ 1. its words' syntactic labels,
+ 2. a colons `:`,
+ 3. its lemmas.
+
+Example of groupingKey: "npan: production of electric power"
+
+See section [Navigating Terminologies](#navigating-terminologies) to see how to access terms from a TermIndex object.
+
+#### `Term` and `Word` classes
+
+A term is an instance of the class `Term`. A term is composed of *1* to *n* `TermWord` instances, each TermWord instance being a pointer to a TermIndex-unique `Word` instance wrapped with a syntactic label, as illustrated by class diagram below.
+
+
+![Class diagram of TermIndex, Term, TermWord, and Word classes]({{site.baseurl_root}}/img/datamodel1.png)
+
+
+##### Example
+
+The term having `npan: production of electric power` as groupingKey is composed of four TermWord instances:
+
+ 1. TermWord{syntacticLabel=N, word=*[pointer to word "production"]*}
+ 1. TermWord{syntacticLabel=P, word=*[pointer to word "of"]*}
+ 1. TermWord{syntacticLabel=A, word=*[pointer to word "electric"]*}
+ 1. TermWord{syntacticLabel=N, word=*[pointer to word "power"]*}
 
 #### Term properties
 {:id="term-properties"}
 
-In Java code, you can access the property object via the TermProperty enum, e.g. `TermProperty.FREQUENCY`.
+In Java code, all properties of a java term can you can be accessed by both its Java Bean method `#get*PropertyName*()` and by its property object `TermProperty.PROPERTY_NAME` (via the TermProperty enum class):
+
+{% highlight java %}
+
+Term term =  myTermIndex.getTermByGroupingKey("npan: production of electric power");
+System.out.println("Frequency: " + TermProperty.FREQUENCY.getValue(term));
+System.out.println("Frequency: " + term.getFrequency());
+
+{% endhighlight %}
+
 
 This is the list of all term properties currently supported by TermSuite:
 
@@ -42,8 +78,64 @@ This is the list of all term properties currently supported by TermSuite:
 
 #### The `TermVariation` class
 
+One of the most interesting features of TermSuite is its ability to detect and extract term variations. This is reified in the data model with the `TermVariation` class.
+
+A TermVariation instance is a directed link that binds two Term instances, the `base` and the `variant`. (In the case of a variation of type VariationType.GRAPHICAL, the TermVariation instance must be interpreted as a bidirectional relation)
+
+All variations (resp. bases) of a term are accessed via the method `Term#getVariations()` (resp. Term#getBases()):
+
+{% highlight java %}
+Term term =  myTermIndex.getTermByGroupingKey("nn: wind turbine");
+for(TermVariation variation:term.getVariations()) {
+	System.out.format("%s --%s--> %s %n",
+			variation.getBase(),
+			variation.getVariationType(),
+			variation.getVariant()
+			);
+}
+{% endhighlight %}
+
+This is the current list of all variation types supported by TermSuite:
+
+<table class="table table-striped">
+	<thead>
+		<tr><th>Java constant</th><th>Description</th></tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>	SYNTACTIC	</td> <td> A syntagmatic variation between two terms (e.g. from <i>nn: wind power</i> to <i>nnn: wind turbine power</i>)</td>
+	</tr>
+	<tr>
+		<td>	MORPHOLOGICAL	</td> <td> A morphological variation between two terms (e.g. from <i>n: chemotherapy</i> to <i>an: chemohormonal therapy</i>)</td>
+		</tr>
+		<tr>
+		<td>	GRAPHICAL	</td> <td>[Bidirectional]	A small orthographic variation between two terms (most probably a mistake)</td>
+		</tr>
+		<tr>
+		<td>	DERIVES_INTO	</td> <td> (for single-word terms only)	A derivation between two words (e.g. from <i>n: behavior</i> to <i>a: behavioral</i>)</td>
+		</tr>
+		<tr>
+		<td>	IS_PREFIX_OF	</td> <td> (for single-word terms only) A word prefixing (e.g. from <i>n: biodiversity</i> to <i>n: diversity</i>)</td>
+	</tr>
+	</tbody>
+</table>
+
+
 
 ### Navigating terminologies
+{:id="navigating-terminologies"}
+
+#### `TermIndex#getTermByGroupingKey()`
+
+Any term with a TermIndex can be accessed via the method `#getTermByGroupingKey()`.
+
+{% highlight java %}
+
+Term t =  myTermIndex.getTermByGroupingKey("npan: production of electric power");
+System.out.println(t.getFrequency());
+
+{% endhighlight %}
+
 
 #### `TermIndex#getTerms()` (very basic)
 
@@ -91,7 +183,7 @@ Traverser.by("dfreq desc,sp desc").stream(myTermIndex).forEach(term -> {
 ##### Example 3: navigating the variations of a term (to come)
 
 <div class="alert alert-warning" role="alert">
-Not yet implemented. To come in the next version of TermSuite.
+Not yet implemented. To come in the next version of TermSuite. Use Term#getVariations() in the meantime.
 </div>
 
 ### Preprocessing files: `TermSuitePreprocessor`
@@ -212,6 +304,51 @@ TermIndex termIndex = TerminoExtractor
 	.execute();
 {% endhighlight %}
 
+#### Important: optimize terminology extraction with filtering
+
+The term variant detection phase of the terminology extraction pipeline has a polynomial complexity. As a consequence, when input corpus are too big, the extraction phase may tend to be too long.
+
+##### `TerminoExtractor#preFilter` (not advised)
+
+One way to overcome this issue is to reduce the number of terms contained in the TermIndex before the term variant detection by placing a [term filterer](#filtering-terminologies) in the TerminoExtractor, as illustrated below:
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+	.fromTextString(Lang.FR, "L'énergie éolienne est une énergie d'avenir.")
+	.setTreeTaggerHome("/path/to/treetagger")
+  .preFilter(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(2))
+	.execute();
+{% endhighlight %}
+
+
+##### `TerminoExtractor#dynamicMaxSizeFilter` (advised)
+
+The best way to overcome this issue is to filter the TermIndex dynamically during the term spotting phase by setting a maximum number of terms allowed in memory:
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+	.fromTextString(Lang.FR, "L'énergie éolienne est une énergie d'avenir.")
+	.setTreeTaggerHome("/path/to/treetagger")
+  .dynamicMaxSizeFilter(500000)
+	.execute();
+{% endhighlight %}
+
+The TermIndex will then be cleaned by frequency every time the in-memory number of terms exceeds the parameter limit.
+
+
+#### Cleaning the output terminology with `TerminoExtractor#postFilter`
+
+An instance of `TerminoFilterConfig` (see Section [filtering terminologies](#filtering-terminologies)) can also be passed to TerminoExtractor by mean of the method `#postFilter` to clean the extracted terminology at the end of the pipeline: (Equivalent to using [TerminoFilterer#execute()](#filtering-terminologies) on the extracted terminology)
+
+{% highlight java %}
+TermIndex termIndex = TerminoExtractor
+	.fromTextString(Lang.FR, "L'énergie éolienne est une énergie d'avenir.")
+	.setTreeTaggerHome("/path/to/treetagger")
+  .postFilter(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(2))
+	.execute();
+{% endhighlight %}
+
+
 ### Terminology extraction: `TermSuitePipeline` (Advanced)
 {:id="termsuite-pipeline"}
 
@@ -274,7 +411,7 @@ Methods starting with `set` or `enable` help configure the analysis engines. In 
 .aeTreeTagger()
 {% endhighlight %}
 
-Finally, the method `run` starts the pipeline processing of the corpus. At the end of the process, you can get the Java terminology (an object of class `TermIndex`) extracted with the method `getTermIndex()`:
+Finally, the method `#run()` starts the pipeline processing of the corpus. At the end of the process, you can get the Java terminology (an object of class `TermIndex`) extracted with the method `#getTermIndex()`:
 
 {% highlight java %}
 TermIndex terminology = pipeline.getTermIndex();
@@ -285,18 +422,45 @@ TermIndex terminology = pipeline.getTermIndex();
 
 IDE auto-completion will assist you in finding available methods to build your own pipelines. Otherwise, to see what you can do with  `TermSuitePipeline`, see the [Javadoc](http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}).
 
-
-
 ### Filtering terminologies: `TerminoFilterer`
+{:id= "filtering-terminologies"}
 
-#### Example 1: keep terms that occur at least 10 times
+Cleaning and filtering terminologies (i.e. TermIndex instances) can be done with the `TerminoFilterer` launcher class. As showed by examples below, the main purpose of this class is to allow to pass a `TerminoFilterConfig` instance by mean of method `TerminoFilterer#configure`.
+
+It is also possible, and often advised, to operate a filtering during the terminology extraction process by passing an instance of TerminoFilterConfig to `TerminoExtractor#preFilter` and `TerminoExtractor#postFilter`. See section [TerminoExtractor](#termino-extractor) for more details.
+
+#### Configuring the filter with `TerminoFilterConfig`
+
+There are two distinct mode of filtering in TermSuite:
+
+ 1. filtering by threshhold, (method `#keepOverTh`)
+ 1. filtering by keeping first-n terms. (method `#keepTopN`)
+
+ Both modes imply specifying a TermProperty on which the filter is based. This property is set by invoking method `#by`.
+
+It is also possible to configure wether term variants must be filtered when they do not pass the filter.
+
+##### Example 1: keep terms that occur at least 10 times
 
 {% highlight java %}
 TerminoFilterer.create(myTermIndex)
-	.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(10))
+	.configure(new TerminoFilterConfig()
+									.by(TermProperty.FREQUENCY)
+									.keepOverTh(10))
 	.execute();
 {% endhighlight %}
 
+
+##### Example 2: keep the 500 most specific terms and their variants
+
+{% highlight java %}
+TerminoFilterer.create(myTermIndex)
+	.configure(new TerminoFilterConfig()
+									.by(TermProperty.SPECIFICITY)
+									.keepTopN(500)
+									.keepVariants())
+	.execute();
+{% endhighlight %}
 
 
 
@@ -328,8 +492,6 @@ TermIndex myTerminology = JSONTermIndexIO.load(
 				false);
 {% endhighlight %}
 
-
-### TermSuite Preprocessing
 
 ### Multilingual term alignment
 

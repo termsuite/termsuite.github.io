@@ -25,6 +25,18 @@ $code-border: #CCCCCC;
     }
 }
 
+.figure {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .caption {
+    text-align: center;
+    font-style: italic;
+  }
+}
+
 .text-ok {
   color: $ok-color;
 }
