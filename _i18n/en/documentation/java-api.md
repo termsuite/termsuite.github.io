@@ -511,7 +511,6 @@ The `JsonOptions` class configures the json export. Its parameters are:
 
 {% highlight java %}
 TermIndex termIndex = TermIndexIO.fromJson(
-  myTermIndex,
   "my-termino.json",
   new JsonOptions()
 );
@@ -567,79 +566,73 @@ The `TsvOptions` class configures the TSV export. Its parameters are:
 	</tbody>
 </table>
 
-### Multilingual term alignment
+### Bilingual term alignment
 {:id="alignment"}
 
-For multilingual term alignment, you need:
+Requirements:
 
- * two TermSuite terminologies (as `json` files, the source termino and the target termino). Such terminologies are the outputs of TermSuite [terminology extraction pipelines](/documentation/command-line-api/#termino) processed on domain-specific comparable corpora,
+ * a source terminology with context vectors computed,
+ * a target terminology with context vectors computed,
  * a [bilingual dictionary](/documentation/resources/#dictionary).
 
-#### Produce valid TermSuite terminologies for alignment
+#### Producing terminologies with context vectors
 
-In order to run the alignment from a *source terminology* to a *source terminology*, you need to extract these two terminologies with a context vector for each term. To do that, you have to add the *Contextualizer* AE (`aeContextualizer()`) at the end of your terminology extraction pipeline, right before the export AEs:   
+In order to run aligner successfully, you need to extract the terminologies with a context vector for each term:
 
 {% highlight java %}
-TermIndex termIndex = TermSuitePipeline.create("en")
-		.setResourceFilePath("/path/to/termsuite-resources.jar")
-		.setCollection(TermSuiteCollection.TXT, "/path/to/corpus", "UTF-8")
-		.aeWordTokenizer()
-		.setTreeTaggerHome("/path/to/tree-tagger")
-		.aeTreeTagger()
-		.aeUrlFilter()
-		.aeStemmer()
-		.aeRegexSpotter()
-		.aeSpecificityComputer()
-		.aeCompostSplitter()
-		.aePrefixSplitter()
-		.aeSuffixDerivationDetector()
-		.aeSyntacticVariantGatherer()
-		.aeGraphicalVariantGatherer()
-		.aeContextualizer(5, true) // computes scope-5 contexts for all terms, including multi-word terms
-		.aeExtensionDetector()
-		.aeScorer()
-		.aeThresholdCleaner(TermProperty.FREQUENCY, 2)
-		.setExportJsonWithContext(true)
-		.setExportJsonWithOccurrences(true) // expensive in disk size, but mandatory
-		.haeJsonExporter("termino.json")
-		.run()
-		.getTermIndex();
+TermIndex termIndex = TerminoExtractor
+    .fromTxtCorpus(Lang.EN, "/path/to/my/corpus", "**/*.txt", "UTF-8")
+    .useContextualizer(3, ContextualizerMode.ON_SWT_TERMS)
+    .setTreeTaggerHome("/path/to/treetagger")
+    .execute();
 {% endhighlight %}
 
-Note that in the pipeline above, you must specifically declare that you want the context vectors you just computed to be store in the json file. If you want to save the termino apart from the pipeline :
+And if you need to store extracted terminologies, the serialization of context vectors must be declared explicitely:
 
 {% highlight java %}
-JsonTermIndexIO.save(
-		new FileWriter(""),
-		myTermino,
-		true, 	// store all occurrences
-		true); // store term contexts
+TermIndexIO.toJson(
+  sourceTermino,
+  new FileWriter("source-termino.json"),
+  new JsonOptions().withContexts(true)
+);
 {% endhighlight %}
 
-#### Run bilingual alignment: `BilingualAligner`
-
-A bilingual aligner can be easily created from the two terminologies and the dictionary, thanks, to the builder class `BilingualAligner` (see [Javadoc]({{site.javadoc}}) for more details). One the aligner is created, you performe the alignment by invoking the `align()` method, as follows:
+And also at deserialization step:
 
 {% highlight java %}
-// Load terminologies from json files
-TermIndex terminoEN = JsonTermIndexIO.load(new FileReader("wind-energy-en.json"), true);
-TermIndex terminoFR = JsonTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
+TermIndex sourceTermino = TermIndexIO.fromJson(
+  "source-termino.json",
+  new JsonOptions().withContexts(true)
+);
+{% endhighlight %}
 
 
-BilingualAligner aligner = TermSuiteAlignerBuilder.start()
-		.setSourceTerminology(terminoEN)
-		.setTargetTerminology(terminoFR)
-		.setDicoPath("dico-EN-FR.txt")
-		.setDistance(new Cosine())
-		.create();
+#### Running the aligner: `BilingualAligner`
 
+`BilingualAligner` is the launcher class for bilingual alignment. Use it as follows:
+
+{% highlight java %}
 
 /*
- * Align the french term "hydroélectrique" with english corpus
- * and retrieve 10 candidates. Force the candidates to occur
+ * Create an aligner for the source and target terminologies.
+ */
+BilingualAligner aligner = TermSuiteAlignerBuilder.start()
+		.setSourceTerminology(terminoEn)
+		.setTargetTerminology(terminoFr)
+		.setDicoPath("dico-EN-FR.txt")
+		.create();
+
+/*
+ * The term to align.
+ */
+Term sourceTerm = terminoEn.getTermByGroupingKey("nn: wind power")
+
+/*
+ * Align the english term "nn: wind power" with english corpus
+ * and retrieve 10 candidates. Force the co-terms to occur
  * at least 2 times in the target termino.
  */
- List<TranslationCandidate> results = aligner.align(source, 10, 2);
+ List<TranslationCandidate> results = aligner.align(sourceTerm, 10, 2);
  int i = 0;
  for (BilingualAligner.TranslationCandidate r : results) {
 	 System.out.format("%2d %-10s [%.2f] %-15s%n",
