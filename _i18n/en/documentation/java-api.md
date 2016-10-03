@@ -445,8 +445,8 @@ It is also possible to configure wether term variants must be filtered when they
 {% highlight java %}
 TerminoFilterer.create(myTermIndex)
 	.configure(new TerminoFilterConfig()
-									.by(TermProperty.FREQUENCY)
-									.keepOverTh(10))
+		.by(TermProperty.FREQUENCY)
+		.keepOverTh(10))
 	.execute();
 {% endhighlight %}
 
@@ -456,44 +456,119 @@ TerminoFilterer.create(myTermIndex)
 {% highlight java %}
 TerminoFilterer.create(myTermIndex)
 	.configure(new TerminoFilterConfig()
-									.by(TermProperty.SPECIFICITY)
-									.keepTopN(500)
-									.keepVariants())
+    .by(TermProperty.SPECIFICITY)
+		.keepTopN(500)
+		.keepVariants())
 	.execute();
 {% endhighlight %}
 
-
-
 ### Export/Import of a terminology
 
-#### Export
+#### Export to `json`
+{:id="export-json"}
 
-Terminologies can be exported directly from the pipeline by invoking the `jsonExporter()` AE. Other exporters (`tbx` and `tsv`) are also available from the pipeline, but they cannot be reimported afterwards. Only `json` terminologies can be imported.
-
-You can also export a terminology object (instance of class `TermIndex`) in one line as follows:
+`json` is the native format of TermSuite, .i. the only format from which terminology can be reimported.
 
 {% highlight java %}
-JSONTermIndexIO.save(
-		new FileWriter(""),
-		myTermino,
-		true, 	// store all occurrences
-		false); // do not store term contexts (very expensive)
+TermIndexIO.toJson(
+  myTermIndex,
+  new FileWriter("my-termino.json"),
+  new JsonOptions()
+);
 
 {% endhighlight %}
 
-#### Import
+The `JsonOptions` class configures the json export. Its parameters are:
 
+<table class="table table-striped">
+	<tbody>
+  	<tr>
+  		<td> withOccurrences </td>
+  		<td> (default: <i>true</i>) wether to store occurrences of each term (very space-greedy) </td>
+  	</tr>
+    <tr>
+  		<td> withContext </td>
+  		<td> (default: <i>false</i>) wether to store context vectors of each term (extremely space-greedy, to use only in the case of [term alignment](#alignment)) </td>
+  	</tr>
+    <tr>
+  		<td> metadataOnly </td>
+  		<td> (default: <i>false</i>) wether to read only the metadata of the terminology </td>
+  	</tr>
+    <tr>
+  		<td> embeddedOccurrences </td>
+  		<td> (default: <i>true</i>) wether to store term occurrences in memory (`true`) or in an external [MongoDB](https://www.mongodb.com/) store (`false`, to use then in conjunction with `mongoDBOccStoreURI`)</td>
+  	</tr>
+    <tr>
+  		<td> mongoDBOccStoreURI </td>
+  		<td> (no default) the [MongoDB connection string](https://docs.mongodb.com/manual/reference/connection-string/) of the store where to write or read term occurrences</td>
+  	</tr>
+	</tbody>
+</table>
 
-It is also possible to load terminologies that have been previously computed, in one line:
+#### Import from `json`
+
+`json` is the only format from which Terminologies can be reimported into TermSuite.
 
 {% highlight java %}
-TermIndex myTerminology = JSONTermIndexIO.load(
-				new FileReader("myterminology.json"),
-				false);
+TermIndex termIndex = TermIndexIO.fromJson(
+  myTermIndex,
+  "my-termino.json",
+  new JsonOptions()
+);
 {% endhighlight %}
 
+See the [Export to json](#export-json) section to see what are the `JsonOptions` parameters available.
+
+#### Export to `tbx`
+
+TermSuite Terminologies can be exported to [TBX](http://www.tbxinfo.net/) format (TermBase eXchange).
+
+{% highlight java %}
+TbxExporter.export(
+  myTermIndex,
+  new FileWriter("my-termino.tbx")
+);
+{% endhighlight %}
+
+#### Export to `tsv`
+
+TermSuite Terminologies can be exported to TSV (Tab-Separated Values) format. This format is very convenient because it can be imported in spreadsheet softwares like *Excel* and *Calc*. It is also a very human readable format in itself.
+
+Terminologies are exported to tsv as follows:
+
+{% highlight java %}
+TsvExporter.export(
+  myTermIndex,
+  new FileWriter("my-termino.tsv"),
+  new TsvOptions()
+);
+{% endhighlight %}
+
+The `TsvOptions` class configures the TSV export. Its parameters are:
+
+<table class="table table-striped">
+	<tbody>
+  	<tr>
+  		<td> showHeaders </td>
+  		<td> (default: <i>true</i>) print headers </td>
+  	</tr>
+    <tr>
+  		<td> showScores </td>
+  		<td> (default: <i>false</i>) print variation scores </td>
+  	</tr>
+    <tr>
+  		<td> showVariants </td>
+  		<td> (default: <i>true</i>) print term variants right after terms</td>
+  	</tr>
+    <tr>
+  		<td> properties </td>
+  		<td> (default: <i>groupingKey,frequency</i>) the columns of the output tsv file </td>
+  	</tr>
+	</tbody>
+</table>
 
 ### Multilingual term alignment
+{:id="alignment"}
 
 For multilingual term alignment, you need:
 
@@ -534,7 +609,7 @@ TermIndex termIndex = TermSuitePipeline.create("en")
 Note that in the pipeline above, you must specifically declare that you want the context vectors you just computed to be store in the json file. If you want to save the termino apart from the pipeline :
 
 {% highlight java %}
-JSONTermIndexIO.save(
+JsonTermIndexIO.save(
 		new FileWriter(""),
 		myTermino,
 		true, 	// store all occurrences
@@ -547,8 +622,8 @@ A bilingual aligner can be easily created from the two terminologies and the dic
 
 {% highlight java %}
 // Load terminologies from json files
-TermIndex terminoEN = JSONTermIndexIO.load(new FileReader("wind-energy-en.json"), true);
-TermIndex terminoFR = JSONTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
+TermIndex terminoEN = JsonTermIndexIO.load(new FileReader("wind-energy-en.json"), true);
+TermIndex terminoFR = JsonTermIndexIO.load(new FileReader("wind-energy-fr.json"), true);
 
 
 BilingualAligner aligner = TermSuiteAlignerBuilder.start()

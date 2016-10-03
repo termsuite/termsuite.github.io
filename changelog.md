@@ -59,7 +59,7 @@ In TermSuite GUI:
  * Morphosyntactic analysis: added lemmatization of components
  * Allow the capping of terminology from TermSuiteTerminoCLI with options `periodic-filter-property` `periodic-filter-max-size`.
  * Scalabilty : can now handle big corpus with MongoDB
- * Changed the IO API. See JSONTermIndexIO class
+ * Changed the IO API. See JsonTermIndexIO class
  * Removed term index measures
  * Added `specificity` term property
  * Added `rank` term property
