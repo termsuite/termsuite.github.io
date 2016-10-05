@@ -27,7 +27,7 @@ $ ln -s lib models
 
 <div class="alert alert-danger" role="alert">
 
-  **Attention aux noms des fichiers des paramètres et à l'encodement !**
+**Attention aux noms des fichiers et à leur encodage !**
 Dans le répertoire 'models', TermSuite attend un fichier spécifiquement nommé pour chaque fichier paramétrant la langue. Nommez vos dossiers de paramètres comme suit, et faites en sorte qu'ils soient tous encodés en 'utf-8' :
 
 </div>

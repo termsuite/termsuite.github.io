@@ -8,7 +8,7 @@ permalink: /documentation/java-api/
 
 {% if "fr" == site.lang %}
 <div class="alert alert-warning" role="alert">
-  <strong>ATTENTION: </strong>Désolé, cette page n'existe pas en langue française. Veuillez vous référer à la <a href="{{ page.url }}"> version anglaise</a>.
+<strong>Désolé ! </strong>Cette page n'existe pas en langue française. Veuillez vous référer à la <a href="{{ page.url }}"> version anglaise</a>.
 </div>
 {% else %}
   {% translate_file documentation/java-api.md %}
