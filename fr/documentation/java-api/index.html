@@ -115,12 +115,6 @@
   <div class="col-md-8">
     <header class="page-header">
       <h1>Documentation <small>API Java de TermSuite</small></h1>
-      
-      <div class="alert alert-danger" role="alert">
-        <strong>ATTENTION: </strong>La traduction française de la documentation de TermSuite risque d'être incomplète et obsolète. Nous vous conseillons de
-        vous référer à la <a href="/documentation/java-api/"> version anglaise </a> tant que possible.
-      </div>
-      
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -156,10 +150,18 @@
           
         
           
-            <a title="titles.getting-started"
+            <a title="titles.getting-started-cmd"
             class="list-group-item "
             href="/fr/getting-started/">
               Débuter avec TermSuite [Tutoriel]
+            </a>
+          
+        
+          
+            <a title="titles.gui"
+            class="list-group-item "
+            href="/fr/gui/">
+              Guide de l'interface graphique [Tutoriel]
             </a>
           
         
@@ -192,14 +194,6 @@
             class="list-group-item "
             href="/fr/documentation/resources/">
               Ressources
-            </a>
-          
-        
-          
-            <a title="titles.corpus"
-            class="list-group-item "
-            href="/fr/documentation/corpus/">
-              Arborescence corpus
             </a>
           
         
@@ -237,229 +231,10 @@
     <div class="col-md-8">
 
       <article class="doc-content">
-        <p>TermSuite offre un bon moyen d’executer l’extraction de terminologie et l’alignement de terminologies multilingues depuis ses API Java. <br />
-Comme on peut s’y attendre, ce moyen d’executer TermSuite permet un meilleur contrôle que la <a href="/documentation/fr/command-line-api/">ligne de commande API</a> et le <a href="">UI graphique</a>.</p>
-
-<ul id="markdown-toc">
-  <li><a href="#extraction-de-terminologie">Extraction de terminologie</a>    <ul>
-      <li><a href="#la-classe-utilitaire-termsuitepipeline">La classe utilitaire* <code>TermSuitePipeline</code></a></li>
-      <li><a href="#executer-une-chane-de-traitement-depuis-un-terminologie-existante">Executer une chaîne de traitement depuis un terminologie existante</a></li>
-      <li><a href="#la-liste-complte-des-moteurs-danalyse-et-leurs-configurations">La liste complète des Moteurs d’Analyse et leurs configurations</a></li>
-    </ul>
-  </li>
-  <li><a href="#exporter--importer-des-terminologies-json">Exporter / Importer des terminologies ‘json’</a>    <ul>
-      <li><a href="#exporter">Exporter</a></li>
-      <li><a href="#importer">Importer</a></li>
-    </ul>
-  </li>
-  <li><a href="#alignement-de-termes-multilingues">Alignement de termes multilingues</a>    <ul>
-      <li><a href="#produire-des-terminologies-termsuite-valables-pour-lalignement">Produire des terminologies TermSuite valables pour l’alignement</a></li>
-      <li><a href="#executer-lalignement-bilingue--biliguaaligner">Executer l’alignement bilingue : ‘BiliguaAligner’</a></li>
-      <li><a href="#explication">Explication</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="extraction-de-terminologie">Extraction de terminologie</h3>
-
-<h4 id="la-classe-utilitaire-termsuitepipeline">La classe utilitaire* <code>TermSuitePipeline</code></h4>
-
-<p>Toutes les fonctions et configurations dont vous avez besoin pour executer la chaîne de traitement d’exctraction de terminologie avec l’API Java est fourni par la classe “TermSuitePipeline”. La chaîne d’extraction type est utilisé et executé comme ceci :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermSuitePipeline</span> <span class="n">pipeline</span> <span class="o">=</span> <span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="s">&quot;en&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setResourcePath</span><span class="o">(</span><span class="s">&quot;/path/to/resource/pack&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setCollection</span><span class="o">(</span>
-					<span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span>
-					<span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeWordTokenizer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/treetagger&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeUrlFilter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeStemmer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeRegexSpotter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeSpecificityComputer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeCompostSplitter</span><span class="o">()</span> <span class="c1">// morphological analysis</span>
-			<span class="o">.</span><span class="na">aeSyntacticVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeGraphicalVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeTermClassifier</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setTsvExportProperties</span><span class="o">(</span>
-					<span class="n">TermProperty</span><span class="o">.</span><span class="na">PILOT</span><span class="o">,</span>
-					<span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">,</span>
-					<span class="n">TermProperty</span><span class="o">.</span><span class="na">WR</span>
-				<span class="o">)</span>
-			<span class="o">.</span><span class="na">haeTsvExporter</span><span class="o">(</span><span class="s">&quot;terminology.tsv&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">haeJsonExporter</span><span class="o">(</span><span class="s">&quot;terminology.json&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">run</span><span class="o">();</span></code></pre>
+        
+<div class="alert alert-warning" role="alert">
+  <p><strong>Désolé ! </strong>Cette page n’existe pas en langue française. Veuillez vous référer à la <a href="/documentation/java-api/"> version anglaise</a>.</p>
 </div>
-
-<p>Un objet pipeline est créé en invoquant la méthode :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="err">`</span><span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">langCode</span><span class="o">)</span><span class="err">`</span></code></pre>
-</div>
-
-<p>Ensuite, vous devez invoquer la configuration obligatoire, i.e. le chemin du corpus (la racine d’un <a href="/documentation/fr/corpus/">corpus multilingue TermSuite</a>), tapé, et encodé, et le chemin vers le paquet ressource :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="o">.</span><span class="na">setResourcePath</span><span class="o">(</span><span class="s">&quot;/path/to/resource/pack&quot;</span><span class="o">)</span>
- <span class="o">.</span><span class="na">setCollection</span><span class="o">(</span>
-		 <span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span>
-		 <span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span></code></pre>
-</div>
-
-<p>Après cela, les méthodes commençant par ‘ae’ (pour  <em>analysis engines</em>) sont <strong>primary</strong> (ou <em>kernel</em>). Ces dernières implantent les fonctions des polices de l’extraction de terminologie : découpe en unité lexicales élémentaires (tokénisation), stemming, étiquettage, repérage de multi-mots, spécificités informatiques, détections de terme variable, analyse morphologique, etc.</p>
-
-<p>Les méthodes commençant par “hae” sont <strong>helper</strong> <em>analysis engines</em>, elles mettent en place des fonctionnalités secondaires telles que l’importation ou l’exportation.</p>
-
-<p>Les méthodes commençant par ‘set’ ou ‘enable’ aident à configurer les moteurs d’analyse. Dans ce cas, ils doivent précéder l’AE, car ils configurent la chaîne de traitement.</p>
-
-<p>Par exemple :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/treetagger&quot;</span><span class="o">)</span>
-<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span></code></pre>
-</div>
-
-<p>Enfin, la méthode ‘run’ démarre le processus de traitement du corpus. À la fin de ce processus, vous pouvez avoir la terminologie Java (un objet de la classe ‘TermIndex’) extrait avec la méthode ‘getTermIndex()’ :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermIndex</span> <span class="n">terminology</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="na">getTermIndex</span><span class="o">();</span></code></pre>
-</div>
-
-<h4 id="executer-une-chane-de-traitement-depuis-un-terminologie-existante">Executer une chaîne de traitement depuis un terminologie existante</h4>
-
-<p>‘TermSuitePipeline’ autorise également l’execution d’une chaîne de traitement existante. Pour faire cela, passez une terminologie existante par la méthode ‘TermSuitePipeline.create()’, invoquez ‘emptyCollection()’, et invoquez l’AE que vous souhaitez.</p>
-
-<p>Par exemple les lignes suivantes filtrent tous les termes ayant moins de deux occurrences dans la terminologie :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">myTerminology</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">emptyCollection</span><span class="o">()</span>
-		<span class="o">.</span><span class="na">aeThresholdCleaner</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">FREQUENCY</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">run</span><span class="o">();</span></code></pre>
-</div>
-
-<h4 id="la-liste-complte-des-moteurs-danalyse-et-leurs-configurations">La liste complète des Moteurs d’Analyse et leurs configurations</h4>
-
-<p>L’environnement de développement auto-complétion vous aidera à trouver les méthodes disponibles pour construire vos propres chaînes de traitement.<br />
-Autrement, pour voir vos possibilités avec ‘TermSuitePipeline’, regardez le <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2">Javadoc</a>.</p>
-
-<h3 id="exporter--importer-des-terminologies-json">Exporter / Importer des terminologies ‘json’</h3>
-
-<h4 id="exporter">Exporter</h4>
-
-<p>Les terminologies peuvent être exportées directement de la chaîne de traitement en invoquant l’AE ‘jsonExporter()’. D’autres exporteurs (‘tbx’ et ‘tsv’) sont également disponibles depuis la chaîne de traitement, mais ils ne peuvent être réimportés ensuite. Seules les terminologies ‘json’ peuvent être importées.</p>
-
-<p>Vous pouvez aussi exporter l’objet de la terminologie (l’exemple de classe ‘TermIndex’) dans une ligne comme ici :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">save</span><span class="o">(</span>
-		<span class="k">new</span> <span class="nf">FileWriter</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">),</span>
-		<span class="n">myTermino</span><span class="o">,</span>
-		<span class="kc">true</span><span class="o">,</span> 	<span class="c1">// store all occurrences</span>
-		<span class="kc">false</span><span class="o">);</span> <span class="c1">// do not store term contexts (very expensive)</span></code></pre>
-</div>
-
-<h4 id="importer">Importer</h4>
-
-<p>Il est également possible de charger les terminologies qui ont été calculées précédemment, en une seule ligne :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermIndex</span> <span class="n">myTerminology</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span>
-				<span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;myterminology.json&quot;</span><span class="o">),</span>
-				<span class="kc">false</span><span class="o">);</span></code></pre>
-</div>
-
-<h3 id="alignement-de-termes-multilingues">Alignement de termes multilingues</h3>
-
-<p>Pour l’alignement de termes multilingues, vous avez besoin :</p>
-
-<pre><code>* de deux terminologies TermSuite (comme des fichiers 'json', la source termino et la cible termino). De pareilles terminologies sont celles sorties par TermSuite [pipelines d'extraction de terminologie](/documentation/fr/command-line-api/#termino) dans un [corpora](documentation/fr/corpus) d'un domaine de spécificité comparable.  * un [dictionnaire bilingue](/documentation/fr/ressources/#dictionary).
-</code></pre>
-
-<h4 id="produire-des-terminologies-termsuite-valables-pour-lalignement">Produire des terminologies TermSuite valables pour l’alignement</h4>
-
-<p>Afin d’executer l’alignement depuis une <em>terminologie source</em> vers une <em>terminologie source</em>, vous devez extraire ces deux terminologies avec un vecteur contextuel pour chacun d’entre eux.<br />
-Pour faire cela, vous devez ajouter l’AE <em>Contextualizer</em> (<code>aeContextualizer()</code>) à la fin de votre chaîne de traitement d’extraction, juste avant d’exporter les AE :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">TermSuitePipeline</span> <span class="n">pipeline</span> <span class="o">=</span> <span class="n">TermSuitePipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="s">&quot;en&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setResourcePath</span><span class="o">(</span><span class="s">&quot;/path/to/resource/pack&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setCollection</span><span class="o">(</span>
-					<span class="n">TermSuiteCollection</span><span class="o">.</span><span class="na">TXT</span><span class="o">,</span>
-					<span class="s">&quot;/path/to/corpus&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeWordTokenizer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">setTreeTaggerHome</span><span class="o">(</span><span class="s">&quot;/path/to/treetagger&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">aeTreeTagger</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeUrlFilter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeStemmer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeRegexSpotter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeSpecificityComputer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeCompostSplitter</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeSyntacticVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeGraphicalVariantGatherer</span><span class="o">()</span>
-			<span class="o">.</span><span class="na">aeContextualizer</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span> <span class="c1">// computes scope-5 contexts for all terms, including multi-word terms</span>
-			<span class="o">.</span><span class="na">setExportJsonWithContext</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">setExportJsonWithOccurrences</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="c1">// expensive in disk size, but mandatory</span>
-			<span class="o">.</span><span class="na">haeJsonExporter</span><span class="o">(</span><span class="s">&quot;terminology.json&quot;</span><span class="o">)</span>
-			<span class="o">.</span><span class="na">run</span><span class="o">();</span></code></pre>
-</div>
-
-<p>Notez que dans la chaîne ci–dessus, vous devez spécifiquement déclarer que vous voulez que les vecteurs contextuels tout juste crééés soient stockés dans le fichier json.<br />
-Si vous voulez sauvegarder le termino séparément du pipeline :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">save</span><span class="o">(</span>
-		<span class="k">new</span> <span class="nf">FileWriter</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">),</span>
-		<span class="n">myTermino</span><span class="o">,</span>
-		<span class="kc">true</span><span class="o">,</span> 	<span class="c1">// garde toutes les occurrences</span>
-		<span class="kc">true</span><span class="o">);</span> <span class="c1">// garde les contextes</span></code></pre>
-</div>
-
-<h4 id="executer-lalignement-bilingue--biliguaaligner">Executer l’alignement bilingue : ‘BiliguaAligner’</h4>
-
-<p>Un aligneur bilingue peut aisément être créé depuis les deux terminologies et le dictionnaire, grâce à la <em>builder class</em> <code>BilingualAligner</code> (voir <a href="">Javadoc</a> pour plus de détails). Une fois l’aligneur créé, vous effectuez l’alignement en appelant la méthode ‘align()’ comme suit :</p>
-
-<div class="highlight">
-  <pre><code class="language-java" data-lang="java"><span class="c1">// Load terminologies from json files</span>
-<span class="n">TermIndex</span> <span class="n">sourceTermino</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;wind-energy-fr.json&quot;</span><span class="o">),</span> <span class="kc">true</span><span class="o">);</span>
-<span class="n">TermIndex</span> <span class="n">targetTermino</span> <span class="o">=</span> <span class="n">JSONTermIndexIO</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="s">&quot;wind-energy-en.json&quot;</span><span class="o">),</span> <span class="kc">true</span><span class="o">);</span>
-
-
-<span class="n">BilingualAligner</span> <span class="n">aligner</span> <span class="o">=</span> <span class="n">TermSuiteAlignerBuilder</span><span class="o">.</span><span class="na">start</span><span class="o">()</span>
-		<span class="o">.</span><span class="na">setTargetTerminology</span><span class="o">(</span><span class="n">targetTermino</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">setDicoPath</span><span class="o">(</span><span class="s">&quot;my-dico.fr&quot;</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">setDistance</span><span class="o">(</span><span class="n">DISTANCE</span><span class="o">)</span>
-		<span class="o">.</span><span class="na">create</span><span class="o">();</span>
-
-
-<span class="cm">/*</span>
-<span class="cm"> * Aligne le terme français &#39;hydroélectrique&#39; avecl le corpus anglais</span>
-<span class="cm"> * et récupère 10 candidats. Force les candidats à apparaître</span>
-<span class="cm"> * au moins deux fois dans le termino cible</span>
-<span class="cm"> */</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">TranslationCandidate</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">aligner</span><span class="o">.</span><span class="na">align</span><span class="o">(</span>
-		<span class="n">sourceTermino</span><span class="o">.</span><span class="na">getTermByGroupingKey</span><span class="o">(</span><span class="s">&quot;a: hydroélectrique&quot;</span><span class="o">),</span>
-		<span class="mi">10</span><span class="o">,</span>
-		<span class="mi">2</span><span class="o">);</span>
-
-<span class="c1">//</span>
-<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="k">for</span> <span class="o">(</span><span class="n">BilingualAligner</span><span class="o">.</span><span class="na">TranslationCandidate</span> <span class="n">r</span> <span class="o">:</span> <span class="n">results</span><span class="o">)</span> <span class="o">{</span>
-	<span class="n">i</span><span class="o">++;</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%2d [%.2f] %-15s %s\n&quot;</span><span class="o">,</span>
-			<span class="n">i</span><span class="o">,</span>
-			<span class="n">r</span><span class="o">.</span><span class="na">getScore</span><span class="o">(),</span>
-			<span class="n">r</span><span class="o">.</span><span class="na">getTerm</span><span class="o">().</span><span class="na">getLemma</span><span class="o">(),</span>
-			<span class="n">r</span><span class="o">.</span><span class="na">getExplanation</span><span class="o">()</span>
-		<span class="o">);</span>
-<span class="o">}</span></code></pre>
-</div>
-
-<h4 id="explication">Explication</h4>
-
-<p>Il est important de remarquer que vous pouvez aussi…</p>
 
 
       </article>
@@ -517,10 +292,10 @@ Si vous voulez sauvegarder le termino séparément du pipeline :</p>
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
           </li>
         </ul>
       </div>

@@ -115,7 +115,6 @@
   <div class="col-md-8">
     <header class="page-header">
       <h1>Documentation <small>Term Properties</small></h1>
-      
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -151,10 +150,18 @@
           
         
           
-            <a title="titles.getting-started"
+            <a title="titles.getting-started-cmd"
             class="list-group-item "
             href="/getting-started/">
               Getting Started [Tutorial]
+            </a>
+          
+        
+          
+            <a title="titles.gui"
+            class="list-group-item "
+            href="/gui/">
+              Graphical User Interface [Tutorial]
             </a>
           
         
@@ -187,14 +194,6 @@
             class="list-group-item "
             href="/documentation/resources/">
               Resources (resource pack, dictionaries)
-            </a>
-          
-        
-          
-            <a title="titles.corpus"
-            class="list-group-item "
-            href="/documentation/corpus/">
-              Corpus directory structure
             </a>
           
         
@@ -370,43 +369,37 @@ Fig2. Distribution of wrLog over the corpus “Wind Energy”, after filtering t
 
 <ul>
   <li>
+    <p><strong>rank:</strong> the rank of the term after the terminology has been scored and sort by specificity</p>
+  </li>
+  <li>
     <p><strong>pilot:</strong> the most frequent form of term</p>
   </li>
   <li>
     <p><strong>frequency:</strong> the number of occurrences of a term</p>
   </li>
   <li>
-    <p><strong>fnorm:</strong> the normalized frequency</p>
+    <p><strong>frequencyNorm:</strong> the normalized frequency</p>
   </li>
   <li>
-    <p><strong>generalFnorm:</strong> the general normalized frequency</p>
+    <p><strong>generalFrequencyNorm:</strong> the general normalized frequency</p>
   </li>
   <li>
-    <p><strong>dfreq:</strong> the number of document in corpus that contain the term</p>
+    <p><strong>documentFrequency:</strong> the number of document in corpus that contain the term</p>
   </li>
   <li>
     <p><strong>lemma:</strong> the concatenation of word lemmas</p>
   </li>
   <li>
-    <p><strong>groupingKey:</strong> the term grouping key, i.e. the term <em>id</em> (pattern + lemma)</p>
+    <p><strong>groupingKey:</strong> the term grouping key, i.e. the term <emph>id</emph> (pattern + lemma)</p>
   </li>
   <li>
-    <p><strong>wr:</strong> the weirdness ratio (the specificity)</p>
-  </li>
-  <li>
-    <p><strong>wrLog:</strong> the log of weirdness ratio</p>
+    <p><strong>specificity:</strong> the specificity of a term, i.e. the log of its weirdness ratio</p>
   </li>
   <li>
     <p><strong>pattern:</strong> the syntactic pattern of the term</p>
   </li>
   <li>
-    <p><strong>spottingRule:</strong> the <em>UIMA Tokens Regex</em> rule name that spotted the term</p>
-  </li>
-  <li>
-    <p><strong>termClassHead:</strong> the class the term belongs to</p>
-  </li>
-  <li>
-    <p><strong>termClassFrequency:</strong> the frequency of the term class</p>
+    <p><strong>spottingRule:</strong> the <emph>UIMA Tokens Regex</emph> rule name that spotted the term</p>
   </li>
 </ul>
 
@@ -466,10 +459,10 @@ Fig2. Distribution of wrLog over the corpus “Wind Energy”, after filtering t
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
           </li>
         </ul>
       </div>

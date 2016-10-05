@@ -121,7 +121,6 @@
   <li>TermSuite will now require Java 8</li>
   <li>Detection of synonimic variations</li>
   <li>Improve multilingual alignment results for complex terms and compounds</li>
-  <li>Extension of linguistic specification for derivates and prefix variation to <code>en</code> and all languages</li>
 </ul>
 
 <h2 id="version-23">Version 2.3</h2>
@@ -131,9 +130,11 @@ Java API and improving the documentation of TermSuite in french and english.</p>
 
 <ul>
   <li>Require Java 8,</li>
-  <li>Added a preprocessor script,</li>
-  <li>New Java API wrapper,</li>
-  <li>Linguistic resources are embedded by default.</li>
+  <li>Possibility to use TermSuite only as text preprocessor (tokenizer, tagger, lemmatizer, stemmer, filters),</li>
+  <li>New simplified Java API,</li>
+  <li>Linguistic resources are embedded by default,</li>
+  <li>Improved test coverage,</li>
+  <li>Extension of linguistic specification for derivates and prefix variation to <code>en</code>.</li>
 </ul>
 
 <h2 id="version-22">Version 2.2</h2>
@@ -178,7 +179,7 @@ Java API and improving the documentation of TermSuite in french and english.</p>
   <li>Morphosyntactic analysis: added lemmatization of components</li>
   <li>Allow the capping of terminology from TermSuiteTerminoCLI with options <code>periodic-filter-property</code> <code>periodic-filter-max-size</code>.</li>
   <li>Scalabilty : can now handle big corpus with MongoDB</li>
-  <li>Changed the IO API. See JSONTermIndexIO class</li>
+  <li>Changed the IO API. See JsonTermIndexIO class</li>
   <li>Removed term index measures</li>
   <li>Added <code>specificity</code> term property</li>
   <li>Added <code>rank</code> term property</li>
@@ -560,10 +561,10 @@ More stats and examples about term spotting and gathering in TermSuite’s logs.
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
           </li>
         </ul>
       </div>

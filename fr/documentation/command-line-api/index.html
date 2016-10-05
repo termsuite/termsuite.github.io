@@ -115,12 +115,6 @@
   <div class="col-md-8">
     <header class="page-header">
       <h1>Documentation <small>Executer l'extraction de terminologies en ligne de commande API</small></h1>
-      
-      <div class="alert alert-danger" role="alert">
-        <strong>ATTENTION: </strong>La traduction française de la documentation de TermSuite risque d'être incomplète et obsolète. Nous vous conseillons de
-        vous référer à la <a href="/documentation/command-line-api/"> version anglaise </a> tant que possible.
-      </div>
-      
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -156,10 +150,18 @@
           
         
           
-            <a title="titles.getting-started"
+            <a title="titles.getting-started-cmd"
             class="list-group-item "
             href="/fr/getting-started/">
               Débuter avec TermSuite [Tutoriel]
+            </a>
+          
+        
+          
+            <a title="titles.gui"
+            class="list-group-item "
+            href="/fr/gui/">
+              Guide de l'interface graphique [Tutoriel]
             </a>
           
         
@@ -192,14 +194,6 @@
             class="list-group-item "
             href="/fr/documentation/resources/">
               Ressources
-            </a>
-          
-        
-          
-            <a title="titles.corpus"
-            class="list-group-item "
-            href="/fr/documentation/corpus/">
-              Arborescence corpus
             </a>
           
         
@@ -237,460 +231,10 @@
     <div class="col-md-8">
 
       <article class="doc-content">
-        <p>TermSuite offre deux executeurs de lignes de commande. Un pour l’ <a href="#termino">extraction de terminologie</a>, et un autre pour <a href="#term-alignment">l’alignement multilingue</a>.</p>
-
-<ul id="markdown-toc">
-  <li><a href="#termino">Extraction de terminologie</a>    <ul>
-      <li><a href="#options-imposes">Options imposées</a></li>
-      <li><a href="#options-denregistrement">Options d’enregistrement</a></li>
-      <li><a href="#options-de-filtrage-des-termes">Options de filtrage des termes</a></li>
-      <li><a href="#options-compost-analyse-morphosyntaxique">Options compost* (analyse morphosyntaxique)</a></li>
-      <li><a href="#options-du-contextualiseur">Options du contextualiseur</a></li>
-      <li><a href="#autres-options-encodage-corpus-tiquetteur-etc">Autres options (encodage, corpus, étiquetteur, etc)</a></li>
-      <li><a href="#export">Options d’exportation</a></li>
-      <li><a href="#termino-exemples">Exemples</a>        <ul>
-          <li><a href="#extraire-la-terminologie-du-corpus-txt-et-exporter-les-100-termes-les-plus-rcurrents-en-tsv-et-json-">Extraire la terminologie du corpus ‘txt’, et exporter les 100 termes les plus récurrents en ‘tsv’ et ‘json’ :</a></li>
-          <li><a href="#reprer-les-occurrences-de-terme-multi-mots-dun-corpus-tei-et-sauvegarder-les-annotations-uima-vers-des-fichiers-xmi">Repérer les occurrences de terme multi-mots* d’un corpus ‘tei’ et sauvegarder les annotations UIMA vers des fichiers ‘xmi’.</a></li>
-        </ul>
-      </li>
-      <li><a href="#le-monde-en-ligne">Le monde en ligne</a></li>
-    </ul>
-  </li>
-  <li><a href="#term-alignment">L’alignement multilingue des termes.</a>    <ul>
-      <li><a href="#aligner">Le script ‘TermSuitealignerCLI’</a></li>
-      <li><a href="#aligner-options">Options</a>        <ul>
-          <li><a href="#options-obligatoires">Options obligatoires</a></li>
-          <li><a href="#autres-options">Autres options</a></li>
-        </ul>
-      </li>
-      <li><a href="#exemples">Exemples</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="termino">Extraction de terminologie</h3>
-
-<p>Extraire la terminologie d’un corpus spécifique à un domaine et <a href="#export">l’exporter</a> vers les formats ‘tsv’, ‘tbx’ ou ‘json’.</p>
-
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
-            -r /path/to/termsuite-resource-pack \
-            -t /path/to/tagger-home-dir \
-            -c /path/to/corpus/English/txt \
-            -l en
-</code></pre>
-
-<p>Par défaut, l’étiqueteur grammatical (et le lemmatiseur) utilisé par le script est TreeTagger. Si vous avez plutôt besoin de Mate, ajoutez l’option ‘–mate’ à la ligne de commande (voir ci-dessous).</p>
-
-<h4 id="options-imposes">Options imposées</h4>
-<p class="table table-striped">| <code>-r</code> PATH  | Chemin vers le paquet de ressources de TermSuite (un fichier jar ou un répertoire)   	|<br />
-| <code>-l</code> LANGUAGE   	| Le code de la langue du corpus : ‘en’, ‘fr’, etc.	|<br />
-| <code>-c</code> PATH   	| Chemin de sortie des corpus. 	|<br />
-| <code>-t</code> PATH   	| Chemin vers le dossier racine de Tree Tagger, ou celui de Mate. (voir [[InstallingPOSTagger]])       	|</p>
-
-<h4 id="options-denregistrement">Options d’enregistrement</h4>
-
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <td><code>--no-logging</code>  <em>(no arg)</em></td>
-      <td>Désactive l’enregistrement par console</td>
-    </tr>
-    <tr>
-      <td><code>--info</code>  <em>(no arg)</em></td>
-      <td>Règle les relevés au niveau ‘info’ Set logging level to <code>info</code></td>
-    </tr>
-    <tr>
-      <td><code>--debug</code>  <em>(no arg)</em></td>
-      <td>Règle les relevés au niveau ‘débug’ Set logging level to <code>debug</code></td>
-    </tr>
-    <tr>
-      <td><code>--profile</code>  <em>(no arg)</em></td>
-      <td>Affiche les différents exemples et les informations de l’AE (Applied Energistics)</td>
-    </tr>
-    <tr>
-      <td><code>--watch</code>  STRING</td>
-      <td>Affiche les informations (freq. spec. variants, etc.) sur tous les termes correspondant à la fin de la chaîne de traitement</td>
-    </tr>
-    <tr>
-      <td><code>--nb-examples</code>  INT 	[=5]</td>
-      <td>Le nombre d’exemples à afficher pour chaque résultat profilé</td>
-    </tr>
-    <tr>
-      <td><code>--tags</code> <em>(no arg)</em></td>
-      <td>Montre les étiquettes grammaticales en sortie (fonctionne seulement en ligne)</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="options-de-filtrage-des-termes">Options de filtrage des termes</h4>
-
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <td><code>--filter-property</code> STRING [=wrLog]</td>
-      <td>Voir <a href="">TermProperty</a> pour les valeurs disponibles</td>
-    </tr>
-    <tr>
-      <td><code>--filter-th</code> INT [=2]</td>
-      <td>Au filtrage, la valeur minimum de la propriété filtrée à garder dans la terminologie*</td>
-    </tr>
-    <tr>
-      <td><code>--filter-top-n</code> INT</td>
-      <td>Au filtrage, le nombre de termes à garder dans la terminologie après le triage des termes par ‘–filter-property’*.</td>
-    </tr>
-    <tr>
-      <td><code>--filter-variants</code> <em>(no arg)</em></td>
-      <td>Filtre également les variantes</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Pour executer un filtrage de termes, vous avez besoin de préciser l’option ‘–filter-property’, et une valeur ‘–filter-th’ ou ‘–filter–top-n’.<br />
-Les différentes valeurs figurent sur : (documentation <a href="">Javadoc</a>).</p>
-
-<ul>
-  <li>
-    <p><strong>frequency:</strong> the number of occurrences of a term</p>
-  </li>
-  <li>
-    <p><strong>fnorm:</strong> the normalized frequency</p>
-  </li>
-  <li>
-    <p><strong>generalFnorm:</strong> the general normalized frequency</p>
-  </li>
-  <li>
-    <p><strong>dfreq:</strong> the number of document in corpus that contain the term</p>
-  </li>
-  <li>
-    <p><strong>wr:</strong> the weirdness ratio (the specificity)</p>
-  </li>
-  <li>
-    <p><strong>wrLog:</strong> the log of weirdness ratio</p>
-  </li>
-  <li>
-    <p><strong>termClassFrequency:</strong> the frequency of the term class</p>
-  </li>
-</ul>
-
-<p>Par défaut, les termes sont filtrés en fonction de leurs propriétés <strong>wrlog</strong> avec un valeur seuil de 2**. Voir les <a href="/documentation/term-properties/">propriétés des termes</a> pour des informations spécifiques, et l’explication des propriétés ; en particulier <a href="/documentation/term-properties/#wr">wrLog</a>. Voir également les <a href="#termino-examples">exemples</a> pour une illustration. Ces options ne sont pas obligatoires.</p>
-
-<h4 id="options-compost-analyse-morphosyntaxique">Options compost* (analyse morphosyntaxique)</h4>
-
-<p>Voir la classe <a href="">Lang</a> pour les réglages par défaut.</p>
-
-<p class="table table-striped">| <code>--compost-coeff</code> STRING 	|  COMPOST les paramètres alpha, beta, gamma et delta, séparés par un trait d’union “-“. La somme doit être 1. |<br />
-| <code>--compost-similarity-threshold</code> FLOAT 	| Le seuil supérieur d’une chaîne de l’index COMPOST <strong><strong>&lt;/strong&gt;</strong><br />
-																				The segment similarity threshold above which an existing string in COMPOST index is considered as recognized. |<br />
-| <code>--compost-score-threshold</code> FLOAT 	|   The segmentation score threshold of COMPOST algo.    	|<br />
-																									Le résultat de la segmentation seuil de l’algorithme algo.<br />
-| <code>--compost-max-component-num</code> INT 	|   The maximum number of components that a compound can have    	|<br />
-																									Le nombre maximal de composants qu’une combinaison peut avoir<br />
-| <code>--compost-min-component-size</code> INT 	|   The minimum size allowed for a component	|<br />
-																						La taille minimum allouée à un composant</strong></p>
-
-<h4 id="options-du-contextualiseur">Options du contextualiseur</h4>
-
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <td><code>--contextualize</code> <em>(no arg)</em></td>
-      <td>Computes context vectors for all single-word terms.</td>
-    </tr>
-    <tr>
-      <td><code>--contextualize-all-terms</code> <em>(no arg)</em></td>
-      <td>Computes context vectors for ALL terms (single-word and multi-word terms).</td>
-    </tr>
-    <tr>
-      <td><code>--allow-mwts-in-contexts</code> <em>(no arg)</em></td>
-      <td>Allow to set multi-word terms as co-occurrences in context vectors.</td>
-    </tr>
-    <tr>
-      <td><code>--context-scope</code> INT</td>
-      <td>The window size when capturing each term’s context.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="autres-options-encodage-corpus-tiquetteur-etc">Autres options (encodage, corpus, étiquetteur, etc)</h4>
-
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <td><code>--encoding</code> ENCODING  [=UTF-8]</td>
-      <td>Encode les fichiers du corpus</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><code>--corpus-format</code> String [=txt]</td>
-      <td>Le format de fichier dans le corpus entrant. ‘txt’ et ‘tei’ sont supportés</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><code>--mate</code> <em>(no arg)</em></td>
-      <td>Utilise Mate plutôt que TreeTagger comme l’étiqueteur grammatical de TermSuite</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><code>--graphical-similarity-th</code> FLOAT</td>
-      <td>false</td>
-      <td> </td>
-      <td>Le seuil de similarité (une valeur entre 0 et 1, 0,9 conseillé) pour le recueil graphique des variantes.**</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="export">Options d’exportation</h4>
-
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <td><code>--json</code> FILENAME</td>
-      <td>Exporte le termino extrait pour donner un fichier Json</td>
-    </tr>
-    <tr>
-      <td><code>--tbx</code> FILENAME</td>
-      <td>Exporte le termino extrait pour donner un fichier TBX</td>
-    </tr>
-    <tr>
-      <td><code>--tsv</code> FILENAME</td>
-      <td>Exporte le termino extrait pour donner un fichier TSV</td>
-    </tr>
-    <tr>
-      <td><code>--tsv-properties</code> PROPERTIES [=”pilot,frequency”]</td>
-      <td>liste des propriétés des termes séparée par des <code>,</code> pour les exporter en colonnes dans un fichier TSV</td>
-    </tr>
-    <tr>
-      <td><code>--tsv-show-scores</code> <em>(no arg)</em></td>
-      <td>Montre les résultats des termes et des variantes utilisés par le classifieur de terme dans un fichier TSV</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Les possibles valeurs de l’option ‘–tsv-properties’ sont : (illustrées <a href="#exemples">ici</a>)</p>
-
-<ul>
-  <li>
-    <p><strong>pilot:</strong> the most frequent form of term</p>
-  </li>
-  <li>
-    <p><strong>frequency:</strong> the number of occurrences of a term</p>
-  </li>
-  <li>
-    <p><strong>fnorm:</strong> the normalized frequency</p>
-  </li>
-  <li>
-    <p><strong>generalFnorm:</strong> the general normalized frequency</p>
-  </li>
-  <li>
-    <p><strong>dfreq:</strong> the number of document in corpus that contain the term</p>
-  </li>
-  <li>
-    <p><strong>lemma:</strong> the concatenation of word lemmas</p>
-  </li>
-  <li>
-    <p><strong>groupingKey:</strong> the term grouping key, i.e. the term <em>id</em> (pattern + lemma)</p>
-  </li>
-  <li>
-    <p><strong>wr:</strong> the weirdness ratio (the specificity)</p>
-  </li>
-  <li>
-    <p><strong>wrLog:</strong> the log of weirdness ratio</p>
-  </li>
-  <li>
-    <p><strong>pattern:</strong> the syntactic pattern of the term</p>
-  </li>
-  <li>
-    <p><strong>spottingRule:</strong> the <em>UIMA Tokens Regex</em> rule name that spotted the term</p>
-  </li>
-  <li>
-    <p><strong>termClassHead:</strong> the class the term belongs to</p>
-  </li>
-  <li>
-    <p><strong>termClassFrequency:</strong> the frequency of the term class</p>
-  </li>
-</ul>
-
-<p>Voir les <a href="/documentation/fr/term-properties/">Propriétés des Termes</a> pour plus de détails, particulièrement <a href="/documentation/fr/term-properties/#wr">wrLog</a>.</p>
-
-<h4 id="termino-exemples">Exemples</h4>
-
-<h5 id="extraire-la-terminologie-du-corpus-txt-et-exporter-les-100-termes-les-plus-rcurrents-en-tsv-et-json-">Extraire la terminologie du corpus ‘txt’, et exporter les 100 termes les plus récurrents en ‘tsv’ et ‘json’ :</h5>
-
-<p>Disons que nous avons :</p>
-
-<ul>
-  <li>un <a href="/documentation/fr/corpus">corpus valide</a> dans <code>/home/moi/corpora/mycorpus</code></li>
-  <li>Tree Tagger installé dans <code>/home/moi/apps/TreeTagger</code>,</li>
-  <li>notre pack de ressources <code>/home/moi/data/termsuite-resources.jar</code></li>
-</ul>
-
-<p>Les commandes suivantes extraient la terminologie du corpus <em>mycorpus</em> en anglais, en utilisant TreeTagger, en sélectionnant les 100 termes les plus fréquents, et en les exportant en ‘.tsv’ et ‘.json’ :</p>
-
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
-            -r /home/me/data/termsuite-resources.jar \
-            -t /home/me/apps/TreeTagger \
-            -c /home/me/corpora/mycorpus/English/txt \
-            -l en \
-            --filter-property "frequency" \
-            --filter-top-n 100 \
-            --tsv "mytermino.tsv" \
-            --tsv-properties "pattern,pilot,wrLog,frequency"
-            --json "mytermino.json"
-</code></pre>
-
-<h5 id="reprer-les-occurrences-de-terme-multi-mots-dun-corpus-tei-et-sauvegarder-les-annotations-uima-vers-des-fichiers-xmi">Repérer les occurrences de terme multi-mots* d’un corpus ‘tei’ et sauvegarder les annotations UIMA vers des fichiers ‘xmi’.</h5>
-
-<p>Cela engendre un fichier ‘xmi’ par saisie dans le fichier ‘tei’ :</p>
-
-<pre><code>TODO
-</code></pre>
-
-<h4 id="le-monde-en-ligne">Le monde en ligne</h4>
-
-<p>Vous pouvez aussi executer la chaîne de traitement termino TermSuite sur une seule chaîne en ligne. Nul besoin de donner une option ‘-c’ (chemin du corpus).</p>
-
-<p>Le mode en ligne depuis l’option ‘–text’ :</p>
-
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
-            -r /path/to/termsuite-resource-pack \
-            -t /path/to/tree-tagger-home \
-            -l en \
-            --text "Wind energy is the energy of tomorrow."
-</code></pre>
-<p>Le mode en ligne depuis l’entrée standard :<br />
-~~~<br />
-$ echo “My test phrase.” | java -Xms1g -Xmx2g -cp termsuite-core-x.x.jar \ eu.project.ttc.tools.cli.TermSuiteTerminoCLI &lt;br /&gt;
-            -r /path/to/termsuite-resource-pack &lt;br /&gt;
-            -t /path/to/tree-tagger-home &lt;br /&gt;
-            -l en<br />
-~~~</p>
-
-<h3 id="term-alignment">L’alignement multilingue des termes.</h3>
-
-<p>Le script ‘TermSuiteAlignerCLI’ prend pour entrée :</p>
-
-<ul>
-  <li>les deux terminologies (la <em>source</em> et la <em>cible</em> extraites par TermSuite sur deux [corpora] comparables(/documentation/corpus)),tion/corpus)),</li>
-  <li>le [le dictionnaire bilngue],</li>
-  <li>la liste des termes à traduire.</li>
-</ul>
-
-<h4 id="aligner">Le script ‘TermSuitealignerCLI’</h4>
-
-<p>L’aligneur prend pour entrée :<br />
- * les deux terminologies extraites par TermSuite depuis un corpus multilngue comparable, l’un est dans la <em>langue source</em>, l’autre dans la <em>langue cible</em><br />
- * un terme, ou une liste de termes à aligner<br />
-~~~<br />
-$ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &lt;br /&gt;
-        –source-termino termino-fr.json &lt;br /&gt;
-        –target-termino termino-en.json &lt;br /&gt;
-        –dictionary dico.txt &lt;br /&gt;
-        –term “hydroélectricité”<br />
-~~~</p>
-
-<h4 id="aligner-options">Options</h4>
-
-<h5 id="options-obligatoires">Options obligatoires</h5>
-
-<table>
-  <tbody>
-    <tr>
-      <td><code>--source-termino</code> FILENAME</td>
-      <td>Exporte et extrait le termino pour donner un fichier Json</td>
-    </tr>
-    <tr>
-      <td><code>--target-termino</code> FILENAME</td>
-      <td>Exporte et extrait le termino pour donner un fichier TBX</td>
-    </tr>
-    <tr>
-      <td><code>--dictionary</code> FILENAME</td>
-      <td>Exporte et extrait le termino pour donner un fichier TSV (voir <a href="TermSuite Resources documentation">/documentation/fr/ressources/</a>)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Un des :</p>
-
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <td><code>--term</code> STRING</td>
-      <td>Le terme à aligner</td>
-    </tr>
-    <tr>
-      <td><code>--term-list</code> FILENAME</td>
-      <td>Un fichier contenant la liste des termes à aligner. Un par ligne.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h5 id="autres-options">Autres options</h5>
-
-<table>
-  <tbody>
-    <tr>
-      <td><code>-n</code> INT</td>
-      <td>Le nomber de traductions possibles à afficher</td>
-    </tr>
-    <tr>
-      <td><code>--distance</code> [cosine,jaccard]</td>
-      <td>La mesure de ressemblance utilisé pour calculer la distance entre deux vecteurs</td>
-    </tr>
-    <tr>
-      <td><code>--show-explation</code> <em>(no args)</em></td>
-      <td>Montre également les co-termes les plus influents et les traductions possibles</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="exemples">Exemples</h4>
-
-<p>Ce qui suit aligne le terme français <em>hydroéléctricité</em> depuis les terminologies en français, et le corpus <em>Wind Energy</em> en anglais :</p>
-
-<pre><code>$ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
-        --source-termino wind-energy-fr.json \
-        --target-termino wind-energy-en.json \
-        --dictionary FR-EN.txt \
-        --term "hydroélectricité"
-</code></pre>
-<p>Donnant les résultats :<br />
-~~~<br />
-n: hydropower	0,524<br />
-n: source	0,066<br />
-n: roadmap	0,061<br />
-n: target	0,058<br />
-n: consumption	0,049<br />
-n: energy	0,049<br />
-a: renewable	0,049<br />
-a: grid-connected	0,048<br />
-n: undertaking	0,048<br />
-n: fight	0,048<br />
-~~~<br />
-Ce qui prend du temps pour ‘TermSuiteAlignerCLI’ est de charger les deux terminologies. Si vous avez besoin d’aligner plusieurs termes, il est recommandé de les avoir dans un fichier comme ci-dessous :<br />
-~~~<br />
-rotor<br />
-éolienne<br />
-éolien<br />
-pale<br />
-turbine<br />
-dimensionnement<br />
-moyeu<br />
-calage<br />
-écoulement<br />
-générateur<br />
-nacelle<br />
-~~~<br />
-Et d’executer le script d’alignement sur ce fichier :<br />
-~~~<br />
-$ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &lt;br /&gt;
-        –source-termino wind-energy-fr.json &lt;br /&gt;
-        –target-termino wind-energy-en.json &lt;br /&gt;
-        –dictionary FR-EN.txt &lt;br /&gt;
-        –term-list list.txt<br />
-~~~</p>
+        
+<div class="alert alert-warning" role="alert">
+  <p><strong>Désolé ! </strong>Cette page n’existe pas en langue française. Veuillez vous référer à la <a href="/documentation/command-line-api/"> version anglaise</a>.</p>
+</div>
 
 
       </article>
@@ -748,10 +292,10 @@ $ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI &
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
           </li>
         </ul>
       </div>

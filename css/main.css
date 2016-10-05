@@ -1,3 +1,11 @@
+.figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+.figure .caption {
+  text-align: center;
+  font-style: italic; }
+
 .text-ok {
   color: #6AE54F; }
 
@@ -228,13 +236,30 @@ h4 {
 #home .row.downloads {
   padding: 25px 0; }
 
-.doc-content #markdown-toc {
-  background-color: #F5F5F5;
-  padding: 25px;
-  border: 1px solid #CCCCCC;
-  border-radius: 4px; }
-.doc-content h3, .doc-content h4, .doc-content h5 {
-  padding-top: 20px; }
+.doc-content {
+  counter-reset: H3; }
+  .doc-content h3:before {
+    content: counter(H3) ". ";
+    /* Print the H1 number */
+    counter-increment: H3;
+    /* Add 1 to next H1 */ }
+  .doc-content h3 {
+    counter-reset: H4; }
+  .doc-content h4:before {
+    content: counter(H3) "." counter(H4) " ";
+    counter-increment: H4; }
+  .doc-content h4 {
+    counter-reset: H5; }
+  .doc-content h5:before {
+    content: counter(H3) "." counter(H4) "." counter(H5) " ";
+    counter-increment: H5; }
+  .doc-content #markdown-toc {
+    background-color: #F5F5F5;
+    padding: 25px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px; }
+  .doc-content h3, .doc-content h4, .doc-content h5 {
+    padding-top: 20px; }
 
 footer {
   background-color: #00718d;

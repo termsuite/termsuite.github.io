@@ -115,12 +115,6 @@
   <div class="col-md-8">
     <header class="page-header">
       <h1>Documentation <small>Modèle de données de TermSuite</small></h1>
-      
-      <div class="alert alert-danger" role="alert">
-        <strong>ATTENTION: </strong>La traduction française de la documentation de TermSuite risque d'être incomplète et obsolète. Nous vous conseillons de
-        vous référer à la <a href="/documentation/data-model/"> version anglaise </a> tant que possible.
-      </div>
-      
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -156,10 +150,18 @@
           
         
           
-            <a title="titles.getting-started"
+            <a title="titles.getting-started-cmd"
             class="list-group-item "
             href="/fr/getting-started/">
               Débuter avec TermSuite [Tutoriel]
+            </a>
+          
+        
+          
+            <a title="titles.gui"
+            class="list-group-item "
+            href="/fr/gui/">
+              Guide de l'interface graphique [Tutoriel]
             </a>
           
         
@@ -192,14 +194,6 @@
             class="list-group-item "
             href="/fr/documentation/resources/">
               Ressources
-            </a>
-          
-        
-          
-            <a title="titles.corpus"
-            class="list-group-item "
-            href="/fr/documentation/corpus/">
-              Arborescence corpus
             </a>
           
         
@@ -238,87 +232,9 @@
 
       <article class="doc-content">
         
-<ul id="markdown-toc">
-  <li><a href="#les-types-uima-utiliss-dans-termsuite">Les types UIMA utilisés dans TermSuite</a>    <ul>
-      <li><a href="#orgapacheuimaexamplessourcedocumentinformation">org.apache.uima.examples.SourceDocumentInformation</a></li>
-      <li><a href="#euprojectttctypeswordannotation">eu.project.ttc.types.WordAnnotation</a></li>
-      <li><a href="#euprojectttctypestermoccannotation">eu.project.ttc.types.TermOccAnnotation</a></li>
-    </ul>
-  </li>
-  <li><a href="#les-modles-de-donnes-java-pour-termsuite">Les modèles de données Java pour TermSuite</a>    <ul>
-      <li><a href="#termindex">TermIndex</a></li>
-      <li><a href="#term">Term</a></li>
-      <li><a href="#termoccurrence">TermOccurrence</a></li>
-      <li><a href="#word">Word</a></li>
-      <li><a href="#termword">TermWord</a></li>
-      <li><a href="#termproperty">TermProperty</a></li>
-      <li><a href="#document">Document</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="les-types-uima-utiliss-dans-termsuite">Les types UIMA utilisés dans TermSuite</h1>
-
-<p>Il y a trois types utilisés dans TermSuite :</p>
-
-<h6 id="orgapacheuimaexamplessourcedocumentinformation">org.apache.uima.examples.SourceDocumentInformation</h6>
-
-<ul>
-  <li><code>uri:String</code></li>
-  <li><code>offsetInSource:Integer</code></li>
-  <li><code>lastSegment:Boolean</code></li>
-  <li><code>documentSize:Integer</code></li>
-</ul>
-
-<h6 id="euprojectttctypeswordannotation">eu.project.ttc.types.WordAnnotation</h6>
-
-<ul>
-  <li><code>stem:String</code></li>
-  <li><code>lemma:String</code></li>
-  <li><code>gender:String</code></li>
-  <li><code>case:String</code></li>
-  <li><code>mood:String</code></li>
-  <li><code>tense:String</code></li>
-  <li><code>tag:String</code></li>
-  <li><code>formation:String</code></li>
-  <li><code>degree:String</code></li>
-  <li><code>category:String</code></li>
-  <li><code>subCategory:String</code></li>
-  <li><code>person:String</code></li>
-  <li><code>possessor:String</code></li>
-  <li><code>regexLabel:String</code></li>
-  <li><code>labels:String</code></li>
-</ul>
-
-<h6 id="euprojectttctypestermoccannotation">eu.project.ttc.types.TermOccAnnotation</h6>
-
-<ul>
-  <li><code>category:String</code></li>
-  <li><code>frequency:Double</code></li>
-  <li><code>langset:String</code></li>
-  <li><code>lemma:String</code></li>
-  <li><code>pattern:StringArray</code> (an array of UIMA Tokens Regex labels)</li>
-  <li><code>ruleId:String</code> (the name of the UIMA Tokens Regex rule that spotted this term)</li>
-  <li><code>specifity:Double</code> (The Weirdness Ratio of this term @Deprecated)</li>
-</ul>
-
-<h1 id="les-modles-de-donnes-java-pour-termsuite">Les modèles de données Java pour TermSuite</h1>
-
-<p>TODO: dessiner un schema de ce modèle de données</p>
-
-<h6 id="termindex">TermIndex</h6>
-
-<h6 id="term">Term</h6>
-
-<h6 id="termoccurrence">TermOccurrence</h6>
-
-<h6 id="word">Word</h6>
-
-<h6 id="termword">TermWord</h6>
-
-<h6 id="termproperty">TermProperty</h6>
-
-<h6 id="document">Document</h6>
+<div class="alert alert-warning" role="alert">
+  <p><strong>Désolé ! </strong>Cette page n’existe pas en langue française. Veuillez vous référer à la <a href="/documentation/data-model/"> version anglaise</a>.</p>
+</div>
 
 
       </article>
@@ -376,10 +292,10 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
           </li>
         </ul>
       </div>

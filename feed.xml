@@ -5,9 +5,26 @@
     <description>site.description</description>
     <link>http://termsuite.github.io/</link>
     <atom:link href="http://termsuite.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 16 Sep 2016 18:09:41 +0200</pubDate>
-    <lastBuildDate>Fri, 16 Sep 2016 18:09:41 +0200</lastBuildDate>
+    <pubDate>Wed, 05 Oct 2016 14:23:18 +0200</pubDate>
+    <lastBuildDate>Wed, 05 Oct 2016 14:23:18 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Release : TermSuite 2.3</title>
+        <description>
+</description>
+        <pubDate>Mon, 03 Oct 2016 00:00:00 +0200</pubDate>
+        <link>http://termsuite.github.io/_i18n/en/news/release-2.3.html</link>
+        <guid isPermaLink="true">http://termsuite.github.io/_i18n/en/news/release-2.3.html</guid>
+        
+        
+        <category>_i18n</category>
+        
+        <category>en</category>
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Release : TermSuite 2.2</title>
@@ -87,7 +104,7 @@ pâle grivée
   &lt;li&gt;Morphosyntactic analysis: added lemmatization of components&lt;/li&gt;
   &lt;li&gt;Allow the capping of terminology from TermSuiteTerminoCLI with options &lt;code&gt;periodic-filter-property&lt;/code&gt; &lt;code&gt;periodic-filter-max-size&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;Scalabilty : can now handle big corpus with MongoDB&lt;/li&gt;
-  &lt;li&gt;Changed the IO API. See JSONTermIndexIO class&lt;/li&gt;
+  &lt;li&gt;Changed the IO API. See JsonTermIndexIO class&lt;/li&gt;
   &lt;li&gt;Removed term index measures&lt;/li&gt;
   &lt;li&gt;Added &lt;code&gt;specificity&lt;/code&gt; term property&lt;/li&gt;
   &lt;li&gt;Added &lt;code&gt;rank&lt;/code&gt; term property&lt;/li&gt;
@@ -248,7 +265,7 @@ Needs the concept of TerminologyView&lt;/p&gt;
   &lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;fr.univ-nantes.termsuite&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;termsuite-core&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

@@ -115,7 +115,6 @@
   <div class="col-md-8">
     <header class="page-header">
       <h1>Documentation <small>Run terminology extraction from command line API</small></h1>
-      
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -151,10 +150,18 @@
           
         
           
-            <a title="titles.getting-started"
+            <a title="titles.getting-started-cmd"
             class="list-group-item "
             href="/getting-started/">
               Getting Started [Tutorial]
+            </a>
+          
+        
+          
+            <a title="titles.gui"
+            class="list-group-item "
+            href="/gui/">
+              Graphical User Interface [Tutorial]
             </a>
           
         
@@ -187,14 +194,6 @@
             class="list-group-item "
             href="/documentation/resources/">
               Resources (resource pack, dictionaries)
-            </a>
-          
-        
-          
-            <a title="titles.corpus"
-            class="list-group-item "
-            href="/documentation/corpus/">
-              Corpus directory structure
             </a>
           
         
@@ -232,7 +231,8 @@
     <div class="col-md-8">
 
       <article class="doc-content">
-        <p>TermSuite comes with two command line runners. One for <a href="#termino">terminology extraction</a>, one for <a href="#term-alignment">multilingual term alignment</a>.</p>
+        
+<p>TermSuite comes with two command line runners. One for <a href="#termino">terminology extraction</a>, one for <a href="#term-alignment">multilingual term alignment</a>.</p>
 
 <ul id="markdown-toc">
   <li><a href="#termino">Terminology Extraction</a>    <ul>
@@ -269,7 +269,7 @@
 
 <p>Extract the terminology of a domain-specific corpus and <a href="#export">exports it</a> to <code>tsv</code>, <code>tbx</code> or <code>json</code>.</p>
 
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.3.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
             -r /path/to/termsuite-resource-pack \
             -t /path/to/tagger-home-dir \
             -c /path/to/corpus/English/txt \
@@ -353,33 +353,27 @@
   </tbody>
 </table>
 
-<p>To perform a term filtering, you need to provide the <code>--filter-property</code> option, and one of <code>--filter-th</code> or <code>--filter--top-n</code>. Allowed values for <code>--filter-property</code> are : (See <a href="">Javadoc</a> for an up-to-date list)</p>
+<p>To perform a term filtering, you need to provide the <code>--filter-property</code> option, and one of <code>--filter-th</code> or <code>--filter-top-n</code>. Allowed values for <code>--filter-property</code> are : (See <a href="">Javadoc</a> for an up-to-date list)</p>
 
 <ul>
   <li>
     <p><strong>frequency:</strong> the number of occurrences of a term</p>
   </li>
   <li>
-    <p><strong>fnorm:</strong> the normalized frequency</p>
+    <p><strong>frequencyNorm:</strong> the normalized frequency</p>
   </li>
   <li>
-    <p><strong>generalFnorm:</strong> the general normalized frequency</p>
+    <p><strong>generalFrequencyNorm:</strong> the general normalized frequency</p>
   </li>
   <li>
-    <p><strong>dfreq:</strong> the number of document in corpus that contain the term</p>
+    <p><strong>documentFrequency:</strong> the number of document in corpus that contain the term</p>
   </li>
   <li>
-    <p><strong>wr:</strong> the weirdness ratio (the specificity)</p>
-  </li>
-  <li>
-    <p><strong>wrLog:</strong> the log of weirdness ratio</p>
-  </li>
-  <li>
-    <p><strong>termClassFrequency:</strong> the frequency of the term class</p>
+    <p><strong>specificity:</strong> the specificity of a term, i.e. the log of its weirdness ratio</p>
   </li>
 </ul>
 
-<p>By default, the terms are filtered on property <strong>wrLog</strong> with a <strong>threshhold value of 2</strong>. See <a href="/documentation/term-properties/">Term Properties</a> for specific information and explanation about term properties, especially <a href="/documentation/term-properties/#wr">wrLog</a>. See also <a href="#termino-examples">examples</a> for an illustration. These options are not mandatory.</p>
+<p>By default, the terms are filtered on property <strong>wrLog</strong> with a <strong>threshold value of 2</strong>. See <a href="/documentation/term-properties/">Term Properties</a> for specific information and explanation about term properties, especially <a href="/documentation/term-properties/#wr">wrLog</a>. See also <a href="#termino-examples">examples</a> for an illustration. These options are not mandatory.</p>
 
 <h4 id="periodic-filtering-options">Periodic filtering options</h4>
 
@@ -542,43 +536,37 @@ if you have chosen of more sophisticated installation configuration.</p>
 
 <ul>
   <li>
+    <p><strong>rank:</strong> the rank of the term after the terminology has been scored and sort by specificity</p>
+  </li>
+  <li>
     <p><strong>pilot:</strong> the most frequent form of term</p>
   </li>
   <li>
     <p><strong>frequency:</strong> the number of occurrences of a term</p>
   </li>
   <li>
-    <p><strong>fnorm:</strong> the normalized frequency</p>
+    <p><strong>frequencyNorm:</strong> the normalized frequency</p>
   </li>
   <li>
-    <p><strong>generalFnorm:</strong> the general normalized frequency</p>
+    <p><strong>generalFrequencyNorm:</strong> the general normalized frequency</p>
   </li>
   <li>
-    <p><strong>dfreq:</strong> the number of document in corpus that contain the term</p>
+    <p><strong>documentFrequency:</strong> the number of document in corpus that contain the term</p>
   </li>
   <li>
     <p><strong>lemma:</strong> the concatenation of word lemmas</p>
   </li>
   <li>
-    <p><strong>groupingKey:</strong> the term grouping key, i.e. the term <em>id</em> (pattern + lemma)</p>
+    <p><strong>groupingKey:</strong> the term grouping key, i.e. the term <emph>id</emph> (pattern + lemma)</p>
   </li>
   <li>
-    <p><strong>wr:</strong> the weirdness ratio (the specificity)</p>
-  </li>
-  <li>
-    <p><strong>wrLog:</strong> the log of weirdness ratio</p>
+    <p><strong>specificity:</strong> the specificity of a term, i.e. the log of its weirdness ratio</p>
   </li>
   <li>
     <p><strong>pattern:</strong> the syntactic pattern of the term</p>
   </li>
   <li>
-    <p><strong>spottingRule:</strong> the <em>UIMA Tokens Regex</em> rule name that spotted the term</p>
-  </li>
-  <li>
-    <p><strong>termClassHead:</strong> the class the term belongs to</p>
-  </li>
-  <li>
-    <p><strong>termClassFrequency:</strong> the frequency of the term class</p>
+    <p><strong>spottingRule:</strong> the <emph>UIMA Tokens Regex</emph> rule name that spotted the term</p>
   </li>
 </ul>
 
@@ -591,14 +579,14 @@ if you have chosen of more sophisticated installation configuration.</p>
 <p>Say we have :</p>
 
 <ul>
-  <li>a <a href="/documentation/corpus">valid corpus</a> at <code>/home/me/corpora/mycorpus</code>,</li>
+  <li>a corpus of <code>txt</code> files at <code>/home/me/corpora/mycorpus</code>,</li>
   <li>Tree Tagger installed at <code>/home/me/apps/TreeTagger</code>,</li>
   <li>Our resource pack at <code>/home/me/data/termsuite-resources.jar</code></li>
 </ul>
 
 <p>The following command extracts the terminology of corpus <em>mycorpus</em> in english, using TreeTagger, selecting the first 100 terms by frequency, and exports them to tsv and json:</p>
 
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.3.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
             -r /home/me/data/termsuite-resources.jar \
             -t /home/me/apps/TreeTagger \
             -c /home/me/corpora/mycorpus/English/txt \
@@ -643,7 +631,7 @@ if you have chosen of more sophisticated installation configuration.</p>
 <p>The <code>TermSuiteAlignerCLI</code> script takes as input:</p>
 
 <ul>
-  <li>the two  terminologies (the <em>source</em> and the <em>target</em> terminologies extracted by TermSuite on two comparable <a href="/documentation/corpus">corpora</a>),</li>
+  <li>the two  terminologies (the <em>source</em> and the <em>target</em> terminologies extracted by TermSuite on two comparable corpora),</li>
   <li>the <a href="/documentation/resources/#dictionary">bilingual dictionary</a>,</li>
   <li>the list of terms to be translated.</li>
 </ul>
@@ -658,7 +646,7 @@ if you have chosen of more sophisticated installation configuration.</p>
   <li>a term, or list of term to align.</li>
 </ul>
 
-<pre><code>$ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.3.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino termino-fr.json \
         --target-termino termino-en.json \
         --dictionary dico.txt \
@@ -714,7 +702,7 @@ if you have chosen of more sophisticated installation configuration.</p>
       <td>The similarity measure used to compute the distance between two vectors</td>
     </tr>
     <tr>
-      <td><code>--show-explation</code> <em>(no args)</em></td>
+      <td><code>--explain</code> <em>(no args)</em></td>
       <td>Also show the most influencial co-terms with the translation candidates</td>
     </tr>
   </tbody>
@@ -724,7 +712,7 @@ if you have chosen of more sophisticated installation configuration.</p>
 
 <p>The following aligns the french term <em>hydroélectricité</em> from the terminologies in french and in english of the corpus <em>Wind Energy</em>:</p>
 
-<pre><code>$ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.3.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino wind-energy-fr.json \
         --target-termino wind-energy-en.json \
         --dictionary FR-EN.txt \
@@ -762,7 +750,7 @@ nacelle
 
 <p>And run the aligner script on this file:</p>
 
-<pre><code>$ java -cp termsuite-core-2.2.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.3.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino wind-energy-fr.json \
         --target-termino wind-energy-en.json \
         --dictionary FR-EN.txt \
@@ -825,10 +813,10 @@ nacelle
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
           </li>
         </ul>
       </div>
