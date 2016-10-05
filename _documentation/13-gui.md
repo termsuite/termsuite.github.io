@@ -11,5 +11,5 @@ getting_started: true
   <strong>Désolé ! </strong>Cette page n'existe pas en langue française. Veuillez vous référer à la <a href="{{ page.url }}"> version anglaise</a>.
 </div>
 {% else %}
-  {% translate_file documentation/data-model.md %}
+  {% translate_file documentation/gui.md %}
  {% endif %}
