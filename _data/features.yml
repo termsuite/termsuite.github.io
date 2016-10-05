@@ -4,10 +4,11 @@
 - features.stemming
 - features.terminology_extraction
 - features.mwt_detection
+- features.morphology
 - features.syntactic_variant_detection
 - features.graphical_variant_detection
+- features.pref_deriv_variant_detection
 - features.semantic_variant_detection
-- features.morphology
 - features.morphosyntactic_variant_detection
 - features.specificity
 - features.alignment

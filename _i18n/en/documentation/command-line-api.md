@@ -53,7 +53,7 @@ To perform a term filtering, you need to provide the `--filter-property` option,
   {% endif %}
 {% endfor %}
 
-By default, the terms are filtered on property **wrLog** with a **threshhold value of 2**. See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr). See also [examples](#termino-examples) for an illustration. These options are not mandatory.
+By default, the terms are filtered on property **wrLog** with a **threshold value of 2**. See [Term Properties](/documentation/term-properties/) for specific information and explanation about term properties, especially [wrLog](/documentation/term-properties/#wr). See also [examples](#termino-examples) for an illustration. These options are not mandatory.
 
 #### Periodic filtering options
 

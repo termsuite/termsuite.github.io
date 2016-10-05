@@ -81,41 +81,43 @@ contact:
 
 
 features:
-  word_tokenization: Word tokenization
-  postagging: "POS Tagging (3rd party: with TreeTagger or Mate)"
-  lemmatization: "Lemmatization (3rd party: with TreeTagger or Mate)"
+  word_tokenization: Découpe du texte en unités lexicales élémentaires (Tokenization)
+  postagging: "Étiquetage syntaxique (à l'aide d'un logiciel externe : TreeTagger ou Mate)"
+  lemmatization: "Lemmatisation  (à l'aide d'un logiciel externe : TreeTagger ou Mate)"
   stemming: Stemming (Snowball)
-  terminology_extraction: Terminology extraction
-  mwt_detection: Efficient multiword term detection
-  syntactic_variant_detection: Term syntactic variants detection
-  graphical_variant_detection: Term graphic variants detection
-  semantic_variant_detection: Term semantic variants detection (to come in 2.2)
-  morphology: Term morphology extraction
-  morphosyntactic_variant_detection: Term morphosyntactic variants detection
-  specificity: "Term specificity (Weirdness Ratio) computing and other term measures: WR log, term frequency, etc"
-  alignment: Term alignment (distributional and compositional, multilingual and monolingual)
-  export: "Terminology export in multiple formats: `json`, `tsv`, `tbx`"
+  terminology_extraction: Extraction de terminologie à partir d'un corpus de spécialité
+  mwt_detection: Détection de terme complexes
+  syntactic_variant_detection: Détection des variations syntaxiques de terme
+  graphical_variant_detection: Détection des variations graphiques de terme
+  pref_deriv_variant_detection: Détection des préfixes, des dérivés et des variantes associées de terme
+  semantic_variant_detection: Détection des variantes sémantiques de terme (to come in 2.4)
+  morphology: Détection des composés morphologiques
+  morphosyntactic_variant_detection: Détections des variantes basées sur la composition morphologique
+  specificity: "Mesure de la spécificité du terme (Weirdness Ratio)"
+  alignment: Alignement multilingue en corpus comparable (distributionel, compositionel et semi-distributionel)
+  export: "Export des terminologies dans de multiples formats: `json`, `tsv`, `tbx`"
 
 filtering_properties:
-  pilot: the most frequent form of term
-  frequency: the number of occurrences of a term
-  fnorm: the normalized frequency
-  generalFnorm: the general normalized frequency
-  dfreq: the number of document in corpus that contain the term
-  lemma: the concatenation of word lemmas
-  groupingKey: the term grouping key, i.e. the term *id* (pattern + lemma)
-  wr: the weirdness ratio (the specificity)
-  wrLog: the log of weirdness ratio
-  pattern: the syntactic pattern of the term
-  spottingRule: the *UIMA Tokens Regex* rule name that spotted the term
-  termClassHead: the class the term belongs to
-  termClassFrequency: the frequency of the term class
+  pilot: La forme la plus fréquente du terme
+  frequency: Le nombre d'occurrences d'un terme
+  fnorm: La fréquence normalisée, c'est-à-dire son nombre d'occurrences moyen tous les mille mots dans le corpus spécialisé
+  generalFnorm: La fréquence générale normalisée du terme, c'est-à-dire son nombre d'occurrences moyen tous les mille mots dans un corpus témoin de la langue
+  dfreq: Le nombre de documents du corpus qui contiennent le terme
+  lemma: Le lemme du terme, c'est-à-dire la concaténation des lemmes des mots qui composent le terme
+  groupingKey: La clé de regroupement du terme, c'est-à-dire son identifiant unique, composée du pattron syntaxique et du lemme
+  wr: Le weirdness ration, c'est-à-dire la mesure de spécificité
+  wrLog: Le logarithme du weirdness ratio (encore une mesure de la spécificité)
+  pattern: Le pattron syntaxique du terme
+  spottingRule: Le nom de la règle  *UIMA Tokens Regex* qui a permis la détection le terme dans le texte
+  specificity: La spécificité du terme dans le corpus, c'est-à-dire le logarithme de son weirdness ratio
+  rank: Le rang du terme après que chaque terme ait reçu un score par spécificité
 
 
 titles:
   blog: "Blog & Actualités"
   introduction: Introduction à TermSuite
-  getting-started: "Débuter avec TermSuite [Tutoriel]"
+  getting-started-cmd: "Débuter avec TermSuite [Tutoriel]"
+  gui: "Interface graphique"
   postagger: Installer l'étiquetteur grammatical et le lemmatiseur
   command-line-api: Executer l'extraction de terminologies en ligne de commande API
   java-api: API Java de TermSuite
@@ -126,11 +128,13 @@ titles:
   support: Assistance
   data-model: Modèle de données de TermSuite
   about: À propos de TermSuite
+  contact: Contact
 
 menus:
   blog:
   introduction: Introduction
-  getting-started: "Débuter avec TermSuite [Tutoriel]"
+  getting-started-cmd: "Débuter avec TermSuite [Tutoriel]"
+  gui: Guide de l'interface graphique [Tutoriel]
   postagger: Installer un étiquetteur grammatical
   command-line-api: API ligne de commande
   java-api: API Java

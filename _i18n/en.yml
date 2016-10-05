@@ -87,7 +87,8 @@ features:
   mwt_detection: Efficient multiword term detection
   syntactic_variant_detection: Term syntactic variants detection
   graphical_variant_detection: Term graphic variants detection
-  semantic_variant_detection: Term semantic variants detection (to come in 3.0)
+  semantic_variant_detection: Term semantic variants detection (to come in 2.4)
+  pref_deriv_variant_detection: Variant detection based on term derivations and term prefixation
   morphology: Term morphology extraction
   morphosyntactic_variant_detection: Term morphosyntactic variants detection
   specificity: "Term specificity (Weirdness Ratio) computing and other term measures: WR log, term frequency, etc"
@@ -105,14 +106,15 @@ filtering_properties:
   groupingKey: the term grouping key, i.e. the term <emph>id</emph> (pattern + lemma)
   wr: the weirdness ratio (the specificity)
   wrLog: the log of weirdness ratio
-  specificity: the specificity of a term, i.e. the log of its weirness ratio
+  specificity: the specificity of a term, i.e. the log of its weirdness ratio
   pattern: the syntactic pattern of the term
   spottingRule: the <emph>UIMA Tokens Regex</emph> rule name that spotted the term
 
 titles:
   blog: Blog & News
   introduction: Introduction
-  getting-started: "Tutorial: Getting Started"
+  getting-started-cmd: "Tutorial: Getting Started with the Command Line API"
+  gui: "Graphical User Interface (GUI)"
   postagger: "Installing the POS tagger and lemmatizer"
   command-line-api: Run terminology extraction from command line API
   java-api: TermSuite Java API
@@ -123,10 +125,12 @@ titles:
   support: Support
   data-model: Terminology data model of TermSuite
   about: À propos de TermSuite
+  contact: Contact
 
 menus:
   introduction: Introduction
-  getting-started: Getting Started [Tutorial]
+  getting-started-cmd: Getting Started [Tutorial]
+  gui: Graphical User Interface [Tutorial]
   postagger: Installing a POS Tagger
   command-line-api: Command line API
   java-api: Java API
@@ -140,7 +144,8 @@ menus:
 excerpts:
   blog: Latest news about TermSuite
   introduction: "User manual and technical documentation for TermSuite : terminology extraction and bilingual alignment."
-  getting-started: "This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus."
+  getting-started: "This page guides you through the steps to get TermSuite running and extracting the terminology from a short example corpus."
+  gui: "This page explains how to get running with TermSuite Graphical User Interface."
   postagger: "Documentation on installing TreeTagger or Mate POS tagger for TermSuite."
   command-line-api: Documentation on running TermSuite terminology extraction and bilingual alignment from command line.
   java-api: Documentation on running TermSuite terminology extraction and bilingual alignment from Java API.

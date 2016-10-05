@@ -1,4 +1,21 @@
 .doc-content {
+  counter-reset: H3;
+
+  h3:before {
+    content: counter(H3) ". "; 	/* Print the H1 number */
+    counter-increment: H3; 	/* Add 1 to next H1 */
+  }
+  h3 { counter-reset: H4; }
+  h4:before {
+    content: counter(H3) "." counter(H4) " ";
+    counter-increment: H4;
+  }
+  h4 { counter-reset: H5; }
+  h5:before {
+    content: counter(H3) "." counter(H4) "." counter(H5) " ";
+    counter-increment:H5;
+  }
+
   #markdown-toc {
     background-color: $code-background;
     padding: 25px;

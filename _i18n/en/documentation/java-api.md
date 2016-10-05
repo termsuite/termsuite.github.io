@@ -433,7 +433,7 @@ It is also possible, and often advised, to operate a filtering during the termin
 
 There are two distinct mode of filtering in TermSuite:
 
- 1. filtering by threshhold, (method `#keepOverTh`)
+ 1. filtering by threshold, (method `#keepOverTh`)
  1. filtering by keeping first-n terms. (method `#keepTopN`)
 
  Both modes imply specifying a TermProperty on which the filter is based. This property is set by invoking method `#by`.
