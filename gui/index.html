@@ -502,7 +502,15 @@
 
 <h4 id="exporting-a-terminology">Exporting a terminology</h4>
 
-<p>(todo)</p>
+<p>You can also configure the pipeline to export the extracted terminology in <code>json</code>, <code>tsv</code>, or <code>tbx</code> at the end of the extraction process, by expanding the “Output / Export” section:</p>
+
+<p><img src="/img/termsuite/29-export-section.png" alt="" /></p>
+
+<p>Exported terminologies are located at <code>TERMSUITE_WORKSPACE/termsuite/workspace/output/</code>.</p>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning!</strong> Terminology exportation will be made available from the terminology editor in the future.</p>
+</div>
 
 <h4 id="using-the-contextualizer">Using the contextualizer</h4>
 
@@ -634,10 +642,6 @@
 
 <p>You are now ready to align terms.</p>
 
-<div class="alert alert-warning" role="alert">
-  <p><strong>Warning!</strong> At this stage, due to an active bug, you need to exit TermSuite and restart TermSuite.</p>
-</div>
-
 <ul>
   <li>In the <em>Navigator</em> part, open the french <code>m-v-th2-contexts</code> terminology,</li>
   <li>In the opened terminology viewer, select the term you need to align,</li>
@@ -690,7 +694,37 @@
 
 <h3 id="editing-linguistic-resources-from-the-interface">Editing linguistic Resources from the interface</h3>
 
-<p>(to do)</p>
+<p>TermSuite’s linguistic resources are mainly rule-based, meaning that they are human readable and can be easily modified. TermSuite UI allows you to edit its linguistic resources so as to customize its behaviour.</p>
+
+<p>In order to see and edit custom linguistic resources:</p>
+
+<ul>
+  <li>Go to menu “Edit &gt; Preferences”,</li>
+  <li>Select the “Linguistic resources” pane,</li>
+  <li>Check the “Use custom linguistic resources”,</li>
+  <li>Click “Browse” on the field labeled “Location of linguistic resources” and select a (preferably) empty directory on your file system.</li>
+</ul>
+
+<p><img src="/img/termsuite/27-custom-resources.png" alt="" /></p>
+
+<ul>
+  <li>Click “Apply” and “Ok”.</li>
+</ul>
+
+<p>All linguistic resources contained in TermSuite are copied to the indicated directory on your file system and any subsequent pipeline execution within TermSuite will use these custom resources. The resources are now editable from within TermSuite:</p>
+
+<p><img src="/img/termsuite/28-custom-resources-tree.png" alt="" /></p>
+
+<ul>
+  <li>Double-click on any resource of any language to open it in a editor, ans save it with “Ctrl+S”.</li>
+</ul>
+
+<p>The most interesting and sensible resources in TermSuite are:</p>
+
+<ol>
+  <li><code>[lang]-multi-word-rule-system.regex</code>: the list of multi-word term spotting rules. Its format is <a href="https://github.com/JuleStar/uima-tokens-regex">UIMA Tokens Regex</a>,</li>
+  <li><code>[lang]-variants.yml</code>: the list of term variation rules serialized in <a href="http://www.yaml.org/start.html">YAML</a>.</li>
+</ol>
 
 <h3 id="enjoy-termsuite">Enjoy TermSuite</h3>
 
@@ -756,10 +790,10 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3.1/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3.1/">Maven</a>
           </li>
         </ul>
       </div>
