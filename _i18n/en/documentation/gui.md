@@ -309,10 +309,6 @@ The bilingual aligner also requires a bilingual dictionary from the source langu
 
 You are now ready to align terms.
 
-<div class="alert alert-warning" role="alert">
-**Warning!** At this stage, due to an active bug, you need to exit TermSuite and restart TermSuite.
-</div>
-
  * In the *Navigator* part, open the french `m-v-th2-contexts` terminology,
  * In the opened terminology viewer, select the term you need to align,
  * Right-click on the term and go to contextual menu "Align > ...". Normally, All the possible target terminology for alignment should appear in the sub-menu: (in our case, only the english `m-v-th2-contexts` terminology)
