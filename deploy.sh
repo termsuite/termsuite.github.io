@@ -11,8 +11,8 @@ GIT_HASH=`git log --pretty=format:'%h' -n 1`
 rm -rf $TEMP_DEST
 mkdir $TEMP_DEST
 git clone $GIT_URL $TEMP_DEST
-rm -rf $TEMP_DEST/*
-jekyll build JEKYLL_ENV=production --destination $TEMP_DEST
+
+bundle exec jekyll build JEKYLL_ENV=production --destination $TEMP_DEST
 
 cd $TEMP_DEST
 

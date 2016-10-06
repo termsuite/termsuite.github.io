@@ -337,7 +337,32 @@ The results are candidate translations scored and ordered. The column `method` g
 
 ### Editing linguistic Resources from the interface
 
-(to do)
+TermSuite's linguistic resources are mainly rule-based, meaning that they are human readable and can be easily modified. TermSuite UI allows you to edit its linguistic resources so as to customize its behaviour.
+
+In order to see and edit custom linguistic resources:
+
+ * Go to menu "Edit > Preferences",
+ * Select the "Linguistic resources" pane,
+ * Check the "Use custom linguistic resources",
+ * Click "Browse" on the field labeled "Location of linguistic resources" and select a (preferably) empty directory on your file system.
+
+ ![](/img/termsuite/27-custom-resources.png)
+
+ * Click "Apply" and "Ok".
+
+All linguistic resources contained in TermSuite are copied to the indicated directory on your file system and any subsequent pipeline execution within TermSuite will use these custom resources. The resources are now editable from within TermSuite:
+
+![](/img/termsuite/28-custom-resources-tree.png)
+
+ * Double-click on any resource of any language to open it in a editor, ans save it with "Ctrl+S".
+
+The most interesting and sensible resources in TermSuite are:
+
+ 1. `[lang]-multi-word-rule-system.regex`: the list of multi-word term spotting rules. Its format is [UIMA Tokens Regex](https://github.com/JuleStar/uima-tokens-regex),
+ 1. `[lang]-variants.yml`: the list of term variation rules serialized in [YAML](http://www.yaml.org/start.html).
+
+
+
 
 ### Enjoy TermSuite
 
