@@ -186,7 +186,16 @@ In the example below, we keep only the 500 most specific terms: (Specificty of a
 
 #### Exporting a terminology
 
-(todo)
+You can also configure the pipeline to export the extracted terminology in `json`, `tsv`, or `tbx` at the end of the extraction process, by expanding the "Output / Export" section:
+
+![](/img/termsuite/29-export-section.png)
+
+Exported terminologies are located at `TERMSUITE_WORKSPACE/termsuite/workspace/output/`.
+
+<div class="alert alert-warning" role="alert">
+**Warning!** Terminology exportation will be made available from the terminology editor in the future.
+</div>
+
 
 #### Using the contextualizer
 
