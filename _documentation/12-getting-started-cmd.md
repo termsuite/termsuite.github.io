@@ -7,4 +7,4 @@ permalink: /getting-started/
 getting_started: true
 ---
 
-{% translate_file documentation/getting-started.md %}
+{% translate_file documentation/getting-started-cmd.md %}
