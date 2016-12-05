@@ -223,6 +223,8 @@
         
           
         
+          
+        
     </div>
 
     <div class="col-md-1">
@@ -269,7 +271,7 @@
 
 <p>Extract the terminology of a domain-specific corpus and <a href="#export">exports it</a> to <code>tsv</code>, <code>tbx</code> or <code>json</code>.</p>
 
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.3.1.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.3.3.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
             -r /path/to/termsuite-resource-pack \
             -t /path/to/tagger-home-dir \
             -c /path/to/corpus/English/txt \
@@ -586,7 +588,7 @@ if you have chosen of more sophisticated installation configuration.</p>
 
 <p>The following command extracts the terminology of corpus <em>mycorpus</em> in english, using TreeTagger, selecting the first 100 terms by frequency, and exports them to tsv and json:</p>
 
-<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.3.1.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -Xms1g -Xmx2g -cp termsuite-core-2.3.3.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
             -r /home/me/data/termsuite-resources.jar \
             -t /home/me/apps/TreeTagger \
             -c /home/me/corpora/mycorpus/English/txt \
@@ -646,7 +648,7 @@ if you have chosen of more sophisticated installation configuration.</p>
   <li>a term, or list of term to align.</li>
 </ul>
 
-<pre><code>$ java -cp termsuite-core-2.3.1.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.3.3.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino termino-fr.json \
         --target-termino termino-en.json \
         --dictionary dico.txt \
@@ -712,7 +714,7 @@ if you have chosen of more sophisticated installation configuration.</p>
 
 <p>The following aligns the french term <em>hydroélectricité</em> from the terminologies in french and in english of the corpus <em>Wind Energy</em>:</p>
 
-<pre><code>$ java -cp termsuite-core-2.3.1.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.3.3.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino wind-energy-fr.json \
         --target-termino wind-energy-en.json \
         --dictionary FR-EN.txt \
@@ -750,7 +752,7 @@ nacelle
 
 <p>And run the aligner script on this file:</p>
 
-<pre><code>$ java -cp termsuite-core-2.3.1.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
+<pre><code>$ java -cp termsuite-core-2.3.3.jar eu.project.ttc.tools.cli.TermSuiteAlignerCLI \
         --source-termino wind-energy-fr.json \
         --target-termino wind-energy-en.json \
         --dictionary FR-EN.txt \
@@ -813,10 +815,10 @@ nacelle
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3.1/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3.1/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3.3/">Maven</a>
           </li>
         </ul>
       </div>
