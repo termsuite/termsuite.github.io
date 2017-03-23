@@ -9,7 +9,7 @@ Pour plus de simplicité, créez un répertoire où vous téléchargerez tous le
 
 #### Java
 
-Assurez-vous que Java est installé sur votre système d'exploitation (version 8 minimum), ou bien suivez les [instructions officielles d'installation](https://www.java.com/fr/download/)..
+Assurez-vous que Java est installé sur votre système d'exploitation (version 8 minimum), ou bien suivez les [instructions officielles d'installation](https://www.java.com/fr/download/).
 
 Pour vérifier si Java est installé correctement, et vérifier votre version, ouvrez une interface en ligne de commandes et tapez :
 
@@ -146,6 +146,6 @@ Ce format de sortie peut être configuré. 'tbx' et 'json' sont également possi
 
 Vous pouvez désormais executer TermSuite sur votre propre corpus.
 
-La documentation complète des options et possibilités des lignes de commandes :[command line API]({{site.production_url}}/documentation/fr/command-line-api).
+La documentation complète des options et possibilités des lignes de commandes : [command line API]({{site.production_url}}/documentation/fr/command-line-api).
 
-Pour intégrer TermSuite directement à votre projet Java: [Java API](/documentation/fr/command-line-api).
+Pour intégrer TermSuite directement à votre projet Java : [Java API](/documentation/fr/command-line-api).

@@ -87,7 +87,7 @@ features:
   mwt_detection: Efficient multiword term detection
   syntactic_variant_detection: Term syntactic variants detection
   graphical_variant_detection: Term graphic variants detection
-  semantic_variant_detection: Term semantic variants detection (to come in 2.4)
+  semantic_variant_detection: Term semantic variants detection
   pref_deriv_variant_detection: Variant detection based on term derivations and term prefixation
   morphology: Term morphology extraction
   morphosyntactic_variant_detection: Term morphosyntactic variants detection
@@ -124,7 +124,8 @@ titles:
   developers: Developers instructions (Gradle / Maven)
   support: Support
   data-model: Terminology data model of TermSuite
-  about: À propos de TermSuite
+  about: About TermSuite
+  properties: Properties
   contact: Contact
 
 menus:
@@ -137,6 +138,7 @@ menus:
   resources: Resources (resource pack, dictionaries)
   corpus: Corpus directory structure
   term-properties: Term Properties
+  properties: Properties
   developers: Developers (Gradle / Maven)
   support: Support
   data-model: Terminology data model
@@ -152,6 +154,7 @@ excerpts:
   resources: List and documentation of linguistics resources needed by TermSuite.
   corpus: Documentation on preparing your corpus for TermSuite.
   term-properties: This page lists and explains the most important term properties in TermSuite, and how they are used in the terminology extraction process.
+  properties: Documentation on all term and relation properties in TermSuite.
   developers: "Information about TermSuite for developers: Gradle, Github, Maven..."
   support: You need help with TermSuite ?
   data-model: Terminology data model

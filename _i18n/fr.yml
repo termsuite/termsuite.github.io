@@ -124,6 +124,7 @@ titles:
   resources: Charger les ressources langagières de TermSuite
   corpus: Arborescence d'un corpus TermSuite
   term-properties: Liste des propriétés de terme disponibles dans TermSuite.
+  properties: Liste des propriétés de terms et de relations de TermSuite.
   developers: Instructions pour les développeurs (Gradle / Maven)
   support: Assistance
   data-model: Modèle de données de TermSuite
@@ -141,6 +142,7 @@ menus:
   resources: Ressources
   corpus: Arborescence corpus
   term-properties: Propriétés de terme
+  properties: Liste des propriétés
   developers: Développeurs (Gradle / Maven)
   data-model: Modèle de données
   support: Assistance
@@ -155,7 +157,8 @@ excerpts:
   java-api: Documentation et execution de l'extraction de terminologie, et de l'alignement bilingue depuis l'API Java.
   resources: Liste et documentation des ressources linguistiques nécessaires pour TermSuite.
   corpus: "Documentation pour préparer votre corpus à TermSuite."
-  term-properties: Liste des propriétés de terme disponibles dans TermSuite.
+  term-properties: Liste des propriétés de termes de TermSuite.
+  properties: Liste des propriétés de termes et de relations de TermSuite.
   developers: "Informations pour les développeurs : Gradle, Github, Maven..."
   support: Obtenir de l'aide avec TermSuite
   data-model:
