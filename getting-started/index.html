@@ -198,11 +198,13 @@
           
         
           
-            <a title="titles.term-properties"
+            <a title="titles.properties"
             class="list-group-item "
-            href="/documentation/term-properties/">
-              Term Properties
+            href="/documentation/properties/">
+              Properties
             </a>
+          
+        
           
         
           
@@ -233,7 +235,11 @@
     <div class="col-md-8">
 
       <article class="doc-content">
-        <p>This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.</p>
+        <div class="alert alert-danger" role="alert">
+  <p><strong>Warning: </strong> This documentation page is out of date. Some of its information cannot be applied to current version of TermSuite 3.0</p>
+</div>
+
+<p>This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.</p>
 
 <ul id="markdown-toc">
   <li><a href="#requirements">1. Requirements</a>    <ul>
@@ -278,7 +284,7 @@
 
 <p>Download the last stable version of TermSuite’s jar for project <code>termsuite-core</code> from <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/">Maven Central</a> to directory <code>TERMSUITE_WORKSPACE</code>.</p>
 
-<p>Currently : <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/2.3.3/termsuite-core-2.3.3.jar">termsuite-core-2.3.3.jar</a></p>
+<p>Currently : <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/3.0/termsuite-core-3.0.jar">termsuite-core-3.0.jar</a></p>
 
 <h3 id="prepare-your-corpus">4. Prepare your corpus</h3>
 
@@ -307,12 +313,12 @@
     models/
       english.par # Should be the `utf-8` model !
     [...]
-  termsuite-core-2.3.3.jar
+  termsuite-core-3.0.jar
 </code></pre>
 
 <p>Run the terminology extraction on the <em>Wind Energy</em> corpus and language <code>en</code>:</p>
 
-<pre><code>$ java -cp termsuite-core-2.3.3.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -cp termsuite-core-3.0.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
   -t ./tree-tagger/ \
   -c ./wind-energy/English/txt/ \
   -l en \
@@ -447,17 +453,17 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/2.3.3/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/2.3.3/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0/">Maven</a>
           </li>
         </ul>
       </div>
     </div>
 
     <div id="copyright" class="row">
-      <p class="text-center">© University of Nantes 2015-2016</p>
+      <p class="text-center">© University of Nantes 2015-2017</p>
     </div>
   </div>
 </footer>
