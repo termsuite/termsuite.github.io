@@ -1,3 +1,8 @@
+<div class="alert alert-danger" role="alert">
+<strong>Warning: </strong> This documentation page is out of date. Some of its information cannot be applied to current version of TermSuite {{site.termsuite.version}}
+</div>
+
+
 This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.
 
 * TOC

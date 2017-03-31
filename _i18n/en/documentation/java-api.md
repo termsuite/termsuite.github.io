@@ -1,3 +1,9 @@
+<div class="alert alert-danger" role="alert">
+<strong>Warning: </strong> This documentation page is out of date. Some of its information cannot be applied to current version of TermSuite {{site.termsuite.version}}
+</div>
+
+
+
 TermSuite offers a convenient way of running terminology extraction and multilingual terminology alignment from its Java API. As expected, this way of running TermSuite allows a deeper control over the components than the [command line API](/documentation/command-line-api/) and the [graphical UI]().
 
 * TOC

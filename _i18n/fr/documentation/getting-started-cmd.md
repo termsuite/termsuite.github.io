@@ -1,3 +1,8 @@
+<div class="alert alert-danger" role="alert">
+<strong>Avertissement: </strong> Cette page de documentation est obsolète. Certaines parties de son contenu peuvent ne pas s'appliquer à la version actuelle de TermSuite : {{site.termsuite.version}}
+</div>
+
+
 Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire la terminologie d'un petit corpus.
 
 * TOC

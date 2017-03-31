@@ -1,3 +1,7 @@
+<div class="alert alert-danger" role="alert">
+<strong>Avertissement: </strong> Cette page de documentation est obsolète. Certaines parties de son contenu peuvent ne pas s'appliquer à la version actuelle de TermSuite : {{site.termsuite.version}}
+</div>
+
 
 * TOC
 {:toc}
