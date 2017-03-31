@@ -7,7 +7,7 @@
 #### Usage
 
 ```
-java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.jar \
+java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
 	 fr.univnantes.termsuite.tools.TerminologyExtractorCLI OPTIONS
 ```
 
@@ -37,6 +37,12 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 #### Other options
+
+###### `--capped-size` INT
+{: id="TerminologyExtractorCLI-capped-size"}
+
+
+ > The maximum number of terms to keep in memory while spotting. Allows to process bigger volumes of input text.
 
 ###### `--context-assoc-rate` INT or FLOAT
 {: id="TerminologyExtractorCLI-context-assoc-rate"}
@@ -82,6 +88,12 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
  > Disable morphological derivative splitting
+
+###### `--disable-gathering` *(no arg)*
+{: id="TerminologyExtractorCLI-disable-gathering"}
+
+
+ > Disable variant term gathering
 
 ###### `--disable-merging` *(no arg)*
 {: id="TerminologyExtractorCLI-disable-merging"}
@@ -181,6 +193,12 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 **Warning:** This option can only be set when option [`--enable-semantic-gathering`](#TerminologyExtractorCLI-enable-semantic-gathering) is already set.
 </div>
 
+###### `--no-occurrence` *(no arg)*
+{: id="TerminologyExtractorCLI-no-occurrence"}
+
+
+ > Do not store occurrence offsets in memory while spotting. Allows to process bigger volumes of input text.
+
 ###### `--post-filter-keep-variants` *(no arg)*
 {: id="TerminologyExtractorCLI-post-filter-keep-variants"}
 
@@ -222,7 +240,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At most one option in [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th), [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n) must be set.
+**Warning:** At most one option in [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n), [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th) must be set.
 </div>
 
 ###### `--post-filter-top-n` INT
@@ -238,7 +256,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At most one option in [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th), [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n) must be set.
+**Warning:** At most one option in [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n), [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th) must be set.
 </div>
 
 ###### `--postproc-independance-th` INT or FLOAT
@@ -261,17 +279,6 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 <div class="alert alert-warning" role="alert">
 **Warning:** This option **cannot be set** when option [`--disable-post-processing`](#TerminologyExtractorCLI-disable-post-processing) is already set.
-</div>
-
-###### `--pre-filter-keep-variants` *(no arg)*
-{: id="TerminologyExtractorCLI-pre-filter-keep-variants"}
-
-
- > Keep variants during pre-gathering filtering even if they are to be filtered
-
-
-<div class="alert alert-warning" role="alert">
-**Warning:** This option can only be set when option [`--pre-filter-property`](#TerminologyExtractorCLI-pre-filter-property) is already set.
 </div>
 
 ###### `--pre-filter-max-variants` INT
@@ -472,7 +479,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 #### Usage
 
 ```
-java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.jar \
+java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
 	 fr.univnantes.termsuite.tools.PreprocessorCLI OPTIONS
 ```
 
@@ -502,16 +509,22 @@ Applies TermSuite's preprocessings to given text corpus.
 
 
 
-###### [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json-anno`](#PreprocessorCLI-json-anno)
+###### [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno)
 
 
 <div class="alert alert-warning" role="alert">
-At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
 </div>
 
 
 
 #### Other options
+
+###### `--capped-size` INT
+{: id="PreprocessorCLI-capped-size"}
+
+
+ > The maximum number of terms to keep in memory while spotting. Allows to process bigger volumes of input text.
 
 ###### `--encoding`, `-e` ENC
 {: id="PreprocessorCLI-encoding"}
@@ -527,7 +540,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
 </div>
 
 ###### `--json-anno` DIR
@@ -538,8 +551,14 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
 </div>
+
+###### `--no-occurrence` *(no arg)*
+{: id="PreprocessorCLI-no-occurrence"}
+
+
+ > Do not store occurrence offsets in memory while spotting. Allows to process bigger volumes of input text.
 
 ###### `--resource-dir` DIR
 {: id="PreprocessorCLI-resource-dir"}
@@ -573,7 +592,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
 </div>
 
 ###### `--watch` TERM_LIST
@@ -590,7 +609,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
 </div>
 
 
@@ -602,7 +621,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--tsv-anno`](#Prepro
 #### Usage
 
 ```
-java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.jar \
+java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
 	 fr.univnantes.termsuite.tools.AlignerCLI OPTIONS
 ```
 
@@ -618,17 +637,17 @@ Translates domain-specific terms in multiligual comparable corpora from given la
 
  > The source terminology (indexed corpus)
 
-###### `--target-termino` FILE
-{: id="AlignerCLI-target-termino"}
-
-
- > The source terminology (indexed corpus)
-
 ###### `--dictionary` FILE
 {: id="AlignerCLI-dictionary"}
 
 
  > The path to the bilingual dictionary to use for bilingual alignment
+
+###### `--target-termino` FILE
+{: id="AlignerCLI-target-termino"}
+
+
+ > The source terminology (indexed corpus)
 
 
 
