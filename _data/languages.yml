@@ -10,6 +10,10 @@ ru:
   name: global.russian
   path: /img/flags/Russia.png
   support: global.good
+it:
+  name: global.italian
+  path: /img/flags/Italy.png
+  support: global.good
 de:
   name: global.german
   path: /img/flags/Germany.png

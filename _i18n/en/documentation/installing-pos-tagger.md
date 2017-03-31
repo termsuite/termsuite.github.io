@@ -34,6 +34,7 @@ $ ln -s lib models
 |:--------|:-------|:--------:|
 | English   | english.par   | utf-8   |
 | French   | french.par   | utf-8   |
+| Italian   | italian.par   | utf-8   |
 | Spanish   | spanish.par   | utf-8   |
 | German   | german.par   | utf-8   |
 | Russian   | russian.par   | utf-8   |

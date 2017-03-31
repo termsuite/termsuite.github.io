@@ -39,6 +39,7 @@ Dans le répertoire 'models', TermSuite attend un fichier spécifiquement nommé
 | Spanish   | spanish.par   | utf-8   |
 | German   | german.par   | utf-8   |
 | Russian   | russian.par   | utf-8   |
+| Italian   | italian.par   | utf-8   |
 | Danish   | danish.par   | utf-8   |
 {: class="table table-striped"}
 
