@@ -236,8 +236,6 @@
 
       <article class="doc-content">
         
-<p>Example launcher</p>
-
 <ul id="markdown-toc">
   <li><a href="#TerminologyExtractorCLI">TerminologyExtractorCLI</a>    <ul>
       <li><a href="#usage">Usage</a></li>
@@ -248,11 +246,13 @@
         </ul>
       </li>
       <li><a href="#other-options">Other options</a>        <ul>
+          <li><a href="#TerminologyExtractorCLI-capped-size"><code>--capped-size</code> INT</a></li>
           <li><a href="#TerminologyExtractorCLI-context-assoc-rate"><code>--context-assoc-rate</code> INT or FLOAT</a></li>
           <li><a href="#TerminologyExtractorCLI-context-coocc-th"><code>--context-coocc-th</code> INT or FLOAT</a></li>
           <li><a href="#TerminologyExtractorCLI-context-scope"><code>--context-scope</code> INT</a></li>
           <li><a href="#TerminologyExtractorCLI-contextualize"><code>--contextualize</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-disable-derivative-splitting"><code>--disable-derivative-splitting</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-gathering"><code>--disable-gathering</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-disable-merging"><code>--disable-merging</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-disable-morphology"><code>--disable-morphology</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-disable-native-splitting"><code>--disable-native-splitting</code> <em>(no arg)</em></a></li>
@@ -266,6 +266,7 @@
           <li><a href="#TerminologyExtractorCLI-json"><code>--json</code> FILE</a></li>
           <li><a href="#TerminologyExtractorCLI-language"><code>--language</code>, <code>-l</code> LANG</a></li>
           <li><a href="#TerminologyExtractorCLI-nb-semantic-candidates"><code>--nb-semantic-candidates</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-no-occurrence"><code>--no-occurrence</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-post-filter-keep-variants"><code>--post-filter-keep-variants</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-post-filter-max-variants"><code>--post-filter-max-variants</code> INT</a></li>
           <li><a href="#TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code> STRING</a></li>
@@ -273,7 +274,6 @@
           <li><a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code> INT</a></li>
           <li><a href="#TerminologyExtractorCLI-postproc-independance-th"><code>--postproc-independance-th</code> INT or FLOAT</a></li>
           <li><a href="#TerminologyExtractorCLI-postproc-variation-score-th"><code>--postproc-variation-score-th</code> INT or FLOAT</a></li>
-          <li><a href="#TerminologyExtractorCLI-pre-filter-keep-variants"><code>--pre-filter-keep-variants</code> <em>(no arg)</em></a></li>
           <li><a href="#TerminologyExtractorCLI-pre-filter-max-variants"><code>--pre-filter-max-variants</code> INT</a></li>
           <li><a href="#TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code> STRING</a></li>
           <li><a href="#TerminologyExtractorCLI-pre-filter-th"><code>--pre-filter-th</code> INT or FLOAT</a></li>
@@ -304,13 +304,15 @@
           <li><a href="#PreprocessorCLI-tagger-home"><code>--tagger-home</code>, <code>-t</code> FILE</a></li>
           <li><a href="#PreprocessorCLI-from-text-corpus"><code>--from-text-corpus</code>, <code>-c</code> DIR</a></li>
           <li><a href="#PreprocessorCLI-language"><code>--language</code>, <code>-l</code> LANG</a></li>
-          <li><a href="#jsonpreprocessorcli-json---tsv-annopreprocessorcli-tsv-anno---xmi-annopreprocessorcli-xmi-anno---json-annopreprocessorcli-json-anno"><a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a></a></li>
+          <li><a href="#jsonpreprocessorcli-json---xmi-annopreprocessorcli-xmi-anno---tsv-annopreprocessorcli-tsv-anno---json-annopreprocessorcli-json-anno"><a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a></a></li>
         </ul>
       </li>
       <li><a href="#other-options-1">Other options</a>        <ul>
+          <li><a href="#PreprocessorCLI-capped-size"><code>--capped-size</code> INT</a></li>
           <li><a href="#PreprocessorCLI-encoding"><code>--encoding</code>, <code>-e</code> ENC</a></li>
           <li><a href="#PreprocessorCLI-json"><code>--json</code> FILE</a></li>
           <li><a href="#PreprocessorCLI-json-anno"><code>--json-anno</code> DIR</a></li>
+          <li><a href="#PreprocessorCLI-no-occurrence"><code>--no-occurrence</code> <em>(no arg)</em></a></li>
           <li><a href="#PreprocessorCLI-resource-dir"><code>--resource-dir</code> DIR</a></li>
           <li><a href="#PreprocessorCLI-resource-jar"><code>--resource-jar</code> FILE</a></li>
           <li><a href="#PreprocessorCLI-resource-url-prefix"><code>--resource-url-prefix</code> STRING</a></li>
@@ -327,8 +329,8 @@
       <li><a href="#description-2">Description</a></li>
       <li><a href="#mandatory-options-2">Mandatory options</a>        <ul>
           <li><a href="#AlignerCLI-source-termino"><code>--source-termino</code> FILE</a></li>
-          <li><a href="#AlignerCLI-target-termino"><code>--target-termino</code> FILE</a></li>
           <li><a href="#AlignerCLI-dictionary"><code>--dictionary</code> FILE</a></li>
+          <li><a href="#AlignerCLI-target-termino"><code>--target-termino</code> FILE</a></li>
           <li><a href="#termalignercli-term---term-listalignercli-term-list"><a href="#AlignerCLI-term"><code>--term</code></a>, <a href="#AlignerCLI-term-list"><code>--term-list</code></a></a></li>
         </ul>
       </li>
@@ -344,13 +346,14 @@
       </li>
     </ul>
   </li>
+  <li><a href="#examples">Examples</a></li>
 </ul>
 
 <h3 id="TerminologyExtractorCLI">TerminologyExtractorCLI</h3>
 
 <h4 id="usage">Usage</h4>
 
-<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.jar \
+<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
 	 fr.univnantes.termsuite.tools.TerminologyExtractorCLI OPTIONS
 </code></pre>
 
@@ -373,6 +376,12 @@
 </div>
 
 <h4 id="other-options">Other options</h4>
+
+<h6 id="TerminologyExtractorCLI-capped-size"><code>--capped-size</code> INT</h6>
+
+<blockquote>
+  <p>The maximum number of terms to keep in memory while spotting. Allows to process bigger volumes of input text.</p>
+</blockquote>
 
 <h6 id="TerminologyExtractorCLI-context-assoc-rate"><code>--context-assoc-rate</code> INT or FLOAT</h6>
 
@@ -414,6 +423,12 @@
 
 <blockquote>
   <p>Disable morphological derivative splitting</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-gathering"><code>--disable-gathering</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable variant term gathering</p>
 </blockquote>
 
 <h6 id="TerminologyExtractorCLI-disable-merging"><code>--disable-merging</code> <em>(no arg)</em></h6>
@@ -510,6 +525,12 @@
   <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code></a> is already set.</p>
 </div>
 
+<h6 id="TerminologyExtractorCLI-no-occurrence"><code>--no-occurrence</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Do not store occurrence offsets in memory while spotting. Allows to process bigger volumes of input text.</p>
+</blockquote>
+
 <h6 id="TerminologyExtractorCLI-post-filter-keep-variants"><code>--post-filter-keep-variants</code> <em>(no arg)</em></h6>
 
 <blockquote>
@@ -547,7 +568,7 @@
 </div>
 
 <div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code></a>, <a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code></a> must be set.</p>
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code></a>, <a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code></a> must be set.</p>
 </div>
 
 <h6 id="TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code> INT</h6>
@@ -561,7 +582,7 @@
 </div>
 
 <div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code></a>, <a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code></a> must be set.</p>
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code></a>, <a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code></a> must be set.</p>
 </div>
 
 <h6 id="TerminologyExtractorCLI-postproc-independance-th"><code>--postproc-independance-th</code> INT or FLOAT</h6>
@@ -582,16 +603,6 @@
 
 <div class="alert alert-warning" role="alert">
   <p><strong>Warning:</strong> This option <strong>cannot be set</strong> when option <a href="#TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code></a> is already set.</p>
-</div>
-
-<h6 id="TerminologyExtractorCLI-pre-filter-keep-variants"><code>--pre-filter-keep-variants</code> <em>(no arg)</em></h6>
-
-<blockquote>
-  <p>Keep variants during pre-gathering filtering even if they are to be filtered</p>
-</blockquote>
-
-<div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code></a> is already set.</p>
 </div>
 
 <h6 id="TerminologyExtractorCLI-pre-filter-max-variants"><code>--pre-filter-max-variants</code> INT</h6>
@@ -772,7 +783,7 @@
 
 <h4 id="usage-1">Usage</h4>
 
-<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.jar \
+<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
 	 fr.univnantes.termsuite.tools.PreprocessorCLI OPTIONS
 </code></pre>
 
@@ -800,13 +811,19 @@
   <p>Language of the input corpus</p>
 </blockquote>
 
-<h6 id="jsonpreprocessorcli-json---tsv-annopreprocessorcli-tsv-anno---xmi-annopreprocessorcli-xmi-anno---json-annopreprocessorcli-json-anno"><a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a></h6>
+<h6 id="jsonpreprocessorcli-json---xmi-annopreprocessorcli-xmi-anno---tsv-annopreprocessorcli-tsv-anno---json-annopreprocessorcli-json-anno"><a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a></h6>
 
 <div class="alert alert-warning" role="alert">
-  <p>At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
+  <p>At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
 </div>
 
 <h4 id="other-options-1">Other options</h4>
+
+<h6 id="PreprocessorCLI-capped-size"><code>--capped-size</code> INT</h6>
+
+<blockquote>
+  <p>The maximum number of terms to keep in memory while spotting. Allows to process bigger volumes of input text.</p>
+</blockquote>
 
 <h6 id="PreprocessorCLI-encoding"><code>--encoding</code>, <code>-e</code> ENC</h6>
 
@@ -821,7 +838,7 @@
 </blockquote>
 
 <div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
+  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
 </div>
 
 <h6 id="PreprocessorCLI-json-anno"><code>--json-anno</code> DIR</h6>
@@ -831,8 +848,14 @@
 </blockquote>
 
 <div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
+  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
 </div>
+
+<h6 id="PreprocessorCLI-no-occurrence"><code>--no-occurrence</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Do not store occurrence offsets in memory while spotting. Allows to process bigger volumes of input text.</p>
+</blockquote>
 
 <h6 id="PreprocessorCLI-resource-dir"><code>--resource-dir</code> DIR</h6>
 
@@ -865,7 +888,7 @@
 </blockquote>
 
 <div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
+  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
 </div>
 
 <h6 id="PreprocessorCLI-watch"><code>--watch</code> TERM_LIST</h6>
@@ -881,14 +904,14 @@
 </blockquote>
 
 <div class="alert alert-warning" role="alert">
-  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
+  <p><strong>Warning:</strong> At least one option in <a href="#PreprocessorCLI-json"><code>--json</code></a>, <a href="#PreprocessorCLI-xmi-anno"><code>--xmi-anno</code></a>, <a href="#PreprocessorCLI-tsv-anno"><code>--tsv-anno</code></a>, <a href="#PreprocessorCLI-json-anno"><code>--json-anno</code></a> must be set.</p>
 </div>
 
 <h3 id="AlignerCLI">AlignerCLI</h3>
 
 <h4 id="usage-2">Usage</h4>
 
-<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.jar \
+<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
 	 fr.univnantes.termsuite.tools.AlignerCLI OPTIONS
 </code></pre>
 
@@ -904,16 +927,16 @@
   <p>The source terminology (indexed corpus)</p>
 </blockquote>
 
-<h6 id="AlignerCLI-target-termino"><code>--target-termino</code> FILE</h6>
-
-<blockquote>
-  <p>The source terminology (indexed corpus)</p>
-</blockquote>
-
 <h6 id="AlignerCLI-dictionary"><code>--dictionary</code> FILE</h6>
 
 <blockquote>
   <p>The path to the bilingual dictionary to use for bilingual alignment</p>
+</blockquote>
+
+<h6 id="AlignerCLI-target-termino"><code>--target-termino</code> FILE</h6>
+
+<blockquote>
+  <p>The source terminology (indexed corpus)</p>
 </blockquote>
 
 <h6 id="termalignercli-term---term-listalignercli-term-list"><a href="#AlignerCLI-term"><code>--term</code></a>, <a href="#AlignerCLI-term-list"><code>--term-list</code></a></h6>
@@ -973,6 +996,12 @@
 <blockquote>
   <p>A file path to write output of the bilingual aligner</p>
 </blockquote>
+
+<h3 id="examples">Examples</h3>
+
+<p>Example launcher scripts can be found at:</p>
+
+<p><a href="https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd">https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd</a></p>
 
 
       </article>
