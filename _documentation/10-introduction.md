@@ -1,7 +1,8 @@
 ---
 layout: documentation
 title: titles.introduction
-menu: menus.introduction
+menu_title: docmenu.introduction
+menu: introduction
 excerpt: excerpts.introduction
 permalink: /documentation/introduction/
 ---

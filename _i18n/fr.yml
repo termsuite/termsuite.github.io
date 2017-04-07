@@ -135,7 +135,7 @@ titles:
 menus:
   blog:
   introduction: Introduction
-  getting-started-cmd: "Débuter avec TermSuite [Tutoriel]"
+  getting-started: "Débuter avec TermSuite [Tutoriel]"
   gui: Guide de l'interface graphique [Tutoriel]
   postagger: Installer un étiquetteur grammatical
   command-line-api: API ligne de commande
@@ -147,6 +147,9 @@ menus:
   developers: Développeurs (Gradle / Maven)
   data-model: Modèle de données
   support: Assistance
+  getting-started: "Débuter avec TermSuite"
+  cmd-api: "Ligne de commande"
+  java-api: "API Java"
 
 
 excerpts:

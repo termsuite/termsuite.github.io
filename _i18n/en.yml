@@ -131,18 +131,32 @@ titles:
 
 menus:
   introduction: Introduction
-  getting-started-cmd: Getting Started [Tutorial]
-  gui: Graphical User Interface [Tutorial]
-  postagger: Installing a POS Tagger
-  command-line-api: Command line API
+  getting-started: Getting Started
+  gui: Graphical User Interface
+  command-line-api: Command Line API
   java-api: Java API
-  resources: Resources (resource pack, dictionaries)
-  corpus: Corpus directory structure
+  resources: Resources
+  corpus: Corpus
+  properties: Properties
+  developers: Developers
+  support: Support
+  data-model: Terminology
+
+docmenu:
+  introduction: Introduction
+  getting-started: Beginner Guide
+  gui: Graphical User Interface
+  postagger: Installing a POS Tagger
+  command-line-api: Command Line API
+  java-api: Java API
+  resources: Resources
+  corpus: Corpus
   term-properties: Term Properties
   properties: Properties
-  developers: Developers (Gradle / Maven)
+  developers: Developers
   support: Support
-  data-model: Terminology data model
+  data-model: Terminology
+
 
 excerpts:
   blog: Latest news about TermSuite

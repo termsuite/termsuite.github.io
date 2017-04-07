@@ -1,7 +1,8 @@
 ---
 layout: documentation
 title: titles.gui
-menu: menus.gui
+menu_title: menus.gui
+menu: gui
 excerpt: excerpts.gui
 permalink: /gui/
 getting_started: true

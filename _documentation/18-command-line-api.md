@@ -1,7 +1,8 @@
 ---
 layout: documentation
 title: titles.command-line-api
-menu: menus.command-line-api
+menu_title: menus.command-line-api
+menu: command-line-api
 excerpt: excerpts.command-line-api
 permalink: /documentation/command-line-api/
 ---

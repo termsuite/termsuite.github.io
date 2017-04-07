@@ -1,8 +1,8 @@
 ---
 layout: documentation
 title: titles.resources
-menu_title: menus.resources
 menu: resources
+submenu: menus.resource-synonyms
 excerpt: excerpts.resources
 permalink: /documentation/resources/
 ---

@@ -1,7 +1,8 @@
 ---
 layout: documentation
 title: titles.postagger
-menu: menus.postagger
+menu_title: docmenu.postagger
+menu: getting-started
 excerpt: excerpts.postagger
 permalink: /documentation/pos-tagger-lemmatizer/
 

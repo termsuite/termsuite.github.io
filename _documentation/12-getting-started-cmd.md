@@ -1,7 +1,8 @@
 ---
 layout: documentation
 title: titles.getting-started-cmd
-menu: menus.getting-started-cmd
+menu_title: docmenu.getting-started
+menu: getting-started
 excerpt: excerpts.getting-started-cmd
 permalink: /getting-started/
 getting_started: true

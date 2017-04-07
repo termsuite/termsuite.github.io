@@ -1,3 +1,27 @@
+
+
+#docmenu {
+  padding: 0px;
+
+  .panel {
+    margin: 0px;
+  }
+
+  .panel-heading.active {
+    background: $brand-primary;
+    color: lighten($brand-secondary, 50%);
+    font-weight: bold;
+  }
+  .docitem {
+    margin: 10px 0px;
+
+    & .active {
+      font-weight: bold;
+    }
+  }
+
+}
+
 .doc-content {
   counter-reset: H3;
 

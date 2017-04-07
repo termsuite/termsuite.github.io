@@ -1,7 +1,8 @@
 ---
 layout: documentation
 title: titles.properties
-menu: menus.properties
+menu_title: menus.properties
+menu: data-model
 excerpt: excerpts.properties  
 permalink: /documentation/properties/
 ---

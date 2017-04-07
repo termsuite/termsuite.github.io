@@ -12,17 +12,41 @@ layout: default
     {% include share.html %}
   </div>
   <div class="row">
-    <div class="list-group col-md-3">
+    <div id="docmenu" class="col-md-3">
 
-        {% for doc in site.documentation %}
-          {% if doc.status != 'draft' %}
-            <a title="{{doc.title}}"
-            class="list-group-item {% if doc.url == page.url %}active{% endif %}"
-            href="{{site.baseurl}}{{ doc.url }}">
-              {% t doc.menu %}
-            </a>
+      {% for menu in site.data.menu %}
+        {% capture menukey %}menus.{{ menu }}{% endcapture %}
+        {% assign docs = site.documentation | where: "menu", menu | where_exp: "status", "status != draft" | sort | uniq %}
+
+          {% if docs.size > 0 %}
+            {%  assign current_page = docs | where: "url", page.url %}
+              <div class="panel panel-default">
+                <div class="panel-heading {% if current_page.size > 0 %}active{% endif %}" role="tab" id="heading{{forloop.index}}">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{forloop.index}}" aria-expanded="true" aria-controls="collapseOne">
+                      {% t menukey %}
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse{{forloop.index}}" class="panel-collapse collapse {% if current_page.size > 0 %}in{% endif %}" role="tabpanel" aria-labelledby="heading{{forloop.index}}">
+                  <div class="panel-body">
+                    {% for doc in docs %}
+                      {% if forloop.index >= 2  %}<hr /> {% endif %}
+                      <div class="docitem">
+                        <a title="{{doc.title}}"
+                            class="{% if doc.url == page.url %}active{% endif %}"
+                            href="{{site.baseurl}}{{ doc.url }}">
+                          {% t doc.menu_title %}
+                        </a>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
           {% endif %}
-        {% endfor %}
+
+      {% endfor %}
     </div>
 
     <div class="col-md-1">
