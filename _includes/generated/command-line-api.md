@@ -7,7 +7,7 @@
 #### Usage
 
 ```
-java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
+java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.2.jar \
 	 fr.univnantes.termsuite.tools.TerminologyExtractorCLI OPTIONS
 ```
 
@@ -19,19 +19,19 @@ Extracts terminology from a domain-specific textual corpus (or preprocessed corp
 
 
 
-###### [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus), [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus)
+###### [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus), [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus)
 
 
 <div class="alert alert-warning" role="alert">
-Exactly one option in [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus), [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus) must be set.
+Exactly one option in [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus), [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus) must be set.
 </div>
 
 
-###### [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json), [`--tsv`](#TerminologyExtractorCLI-tsv)
+###### [`--tsv`](#TerminologyExtractorCLI-tsv), [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json)
 
 
 <div class="alert alert-warning" role="alert">
-At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json), [`--tsv`](#TerminologyExtractorCLI-tsv) must be set.
+At least one option in [`--tsv`](#TerminologyExtractorCLI-tsv), [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json) must be set.
 </div>
 
 
@@ -145,7 +145,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** Exactly one option in [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus), [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus) must be set.
+**Warning:** Exactly one option in [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus), [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus) must be set.
 </div>
 
 ###### `--from-text-corpus`, `-c` DIR
@@ -156,7 +156,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** Exactly one option in [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus), [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus) must be set.
+**Warning:** Exactly one option in [`--from-text-corpus`](#TerminologyExtractorCLI-from-text-corpus), [`--from-prepared-corpus`](#TerminologyExtractorCLI-from-prepared-corpus) must be set.
 </div>
 
 ###### `--graphical-similarity-th` INT or FLOAT
@@ -173,7 +173,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json), [`--tsv`](#TerminologyExtractorCLI-tsv) must be set.
+**Warning:** At least one option in [`--tsv`](#TerminologyExtractorCLI-tsv), [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json) must be set.
 </div>
 
 ###### `--language`, `-l` LANG
@@ -225,7 +225,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 {: id="TerminologyExtractorCLI-post-filter-property"}
 
 
- > Enables post-gathering filtering based on given property.  Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-f_norm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gf_norm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ifreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfidf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specidf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
+ > Enables post-gathering filtering based on given property.  Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dFreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-fNorm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gfNorm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-iFreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfIdf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specIdf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
 
 ###### `--post-filter-th` INT or FLOAT
 {: id="TerminologyExtractorCLI-post-filter-th"}
@@ -240,7 +240,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At most one option in [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n), [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th) must be set.
+**Warning:** At most one option in [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th), [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n) must be set.
 </div>
 
 ###### `--post-filter-top-n` INT
@@ -256,7 +256,29 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At most one option in [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n), [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th) must be set.
+**Warning:** At most one option in [`--post-filter-th`](#TerminologyExtractorCLI-post-filter-th), [`--post-filter-top-n`](#TerminologyExtractorCLI-post-filter-top-n) must be set.
+</div>
+
+###### `--postproc-affix-score-th` INT or FLOAT
+{: id="TerminologyExtractorCLI-postproc-affix-score-th"}
+
+
+ > Minimal score for affix-score. Variations under that threshold are filtered out.
+
+
+<div class="alert alert-warning" role="alert">
+**Warning:** This option **cannot be set** when option [`--disable-post-processing`](#TerminologyExtractorCLI-disable-post-processing) is already set.
+</div>
+
+###### `--postproc-affix-score-th` INT or FLOAT
+{: id="TerminologyExtractorCLI-postproc-affix-score-th"}
+
+
+ > Minimal score for variataion orthographic score. Variations under that threshold are filtered out.
+
+
+<div class="alert alert-warning" role="alert">
+**Warning:** This option **cannot be set** when option [`--disable-post-processing`](#TerminologyExtractorCLI-disable-post-processing) is already set.
 </div>
 
 ###### `--postproc-independance-th` INT or FLOAT
@@ -296,7 +318,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 {: id="TerminologyExtractorCLI-pre-filter-property"}
 
 
- > Enables pre-gathering filtering based on given property. Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-f_norm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gf_norm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ifreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfidf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specidf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
+ > Enables pre-gathering filtering based on given property. Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dFreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-fNorm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gfNorm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-iFreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfIdf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specIdf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
 
 ###### `--pre-filter-th` INT or FLOAT
 {: id="TerminologyExtractorCLI-pre-filter-th"}
@@ -334,22 +356,22 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 {: id="TerminologyExtractorCLI-ranking-asc"}
 
 
- > Sets the output ranking property in ASCENDING order.  Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-f_norm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gf_norm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ifreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfidf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specidf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
+ > Sets the output ranking property in ASCENDING order.  Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dFreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-fNorm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gfNorm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-iFreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfIdf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specIdf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At most one option in [`--ranking-desc`](#TerminologyExtractorCLI-ranking-desc), [`--ranking-asc`](#TerminologyExtractorCLI-ranking-asc) must be set.
+**Warning:** At most one option in [`--ranking-asc`](#TerminologyExtractorCLI-ranking-asc), [`--ranking-desc`](#TerminologyExtractorCLI-ranking-desc) must be set.
 </div>
 
 ###### `--ranking-desc` STRING
 {: id="TerminologyExtractorCLI-ranking-desc"}
 
 
- > Sets the output ranking property in DESCENDING order.  Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-f_norm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gf_norm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ifreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfidf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specidf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
+ > Sets the output ranking property in DESCENDING order.  Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dFreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-fNorm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gfNorm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-iFreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfIdf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specIdf), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth)
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At most one option in [`--ranking-desc`](#TerminologyExtractorCLI-ranking-desc), [`--ranking-asc`](#TerminologyExtractorCLI-ranking-asc) must be set.
+**Warning:** At most one option in [`--ranking-asc`](#TerminologyExtractorCLI-ranking-asc), [`--ranking-desc`](#TerminologyExtractorCLI-ranking-desc) must be set.
 </div>
 
 ###### `--resource-dir` DIR
@@ -370,6 +392,17 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
  > Custom resource url prefix
 
+###### `--semantic-dico-only` *(no arg)*
+{: id="TerminologyExtractorCLI-semantic-dico-only"}
+
+
+ > Find semantic variants with the help of dictionary only, no alignment.
+
+
+<div class="alert alert-warning" role="alert">
+**Warning:** This option can only be set when option [`--enable-semantic-gathering`](#TerminologyExtractorCLI-enable-semantic-gathering) is already set.
+</div>
+
 ###### `--semantic-distance` INT or FLOAT
 {: id="TerminologyExtractorCLI-semantic-distance"}
 
@@ -386,6 +419,17 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
  > Minimum semantic similarity threshold for semantic gathering (monolingual alignment)
+
+
+<div class="alert alert-warning" role="alert">
+**Warning:** This option can only be set when option [`--enable-semantic-gathering`](#TerminologyExtractorCLI-enable-semantic-gathering) is already set.
+</div>
+
+###### `--synonyms-dico` FILE
+{: id="TerminologyExtractorCLI-synonyms-dico"}
+
+
+ > Custom synonyms dictionary for semantic variant detection.
 
 
 <div class="alert alert-warning" role="alert">
@@ -417,7 +461,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json), [`--tsv`](#TerminologyExtractorCLI-tsv) must be set.
+**Warning:** At least one option in [`--tsv`](#TerminologyExtractorCLI-tsv), [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json) must be set.
 </div>
 
 ###### `--tsv` FILE
@@ -428,7 +472,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json), [`--tsv`](#TerminologyExtractorCLI-tsv) must be set.
+**Warning:** At least one option in [`--tsv`](#TerminologyExtractorCLI-tsv), [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#TerminologyExtractorCLI-json) must be set.
 </div>
 
 ###### `--tsv-hide-headers` *(no arg)*
@@ -457,7 +501,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 {: id="TerminologyExtractorCLI-tsv-properties"}
 
 
- > The comma-separated list columns of the tsv file. Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`isSingleWord`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swt), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-f_norm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gf_norm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ifreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`pilot`]({{site.baseurl_root}}/documentation/properties/#TermProperty-pilot), [`lemma`]({{site.baseurl_root}}/documentation/properties/#TermProperty-lemma), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfidf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specidf), [`groupingKey`]({{site.baseurl_root}}/documentation/properties/#TermProperty-key), [`pattern`]({{site.baseurl_root}}/documentation/properties/#TermProperty-pattern), [`spottingRule`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rule), [`isFixedExpression`]({{site.baseurl_root}}/documentation/properties/#TermProperty-fixed_exp), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Filtered`]({{site.baseurl_root}}/documentation/properties/#TermProperty-filtered), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth), [`VariationRank`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vrank), [`VariationRule`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vrules), [`DerivationType`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-dtype), [`GraphSimilarity`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-graphSim), [`Score`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vScore), [`AffixGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affGain), [`AffixSpec`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affSpec), [`AffixRatio`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affRatio), [`AffixScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affScore), [`NormalizedAffixScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-normAffScore), [`AffixOrthographicScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affOrtho), [`ExtensionScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-extScore), [`NormalizedExtensionScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-normExtScore), [`HasExtensionAffix`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-hasExtAffix), [`IsExtension`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isExt), [`VariantBagFrequency`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vBagFreq), [`SourceGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-srcGain), [`NormalizedSourceGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-normSrcGain), [`IsInfered`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isInfered), [`IsGraphical`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isGraph), [`IsDerivation`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isDeriv), [`IsPrefixation`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isPref), [`IsSyntagmatic`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isSyntag), [`IsMorphological`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isMorph), [`IsSemantic`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isSem), [`Distributional`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-distrib), [`SemanticSimilarity`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-semSim), [`Dico`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isDico), [`SemanticScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-semScore)
+ > The comma-separated list columns of the tsv file. Allowed values are: [`rank`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rank), [`isSingleWord`]({{site.baseurl_root}}/documentation/properties/#TermProperty-isSwt), [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dFreq), [`frequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-fNorm), [`generalFrequencyNorm`]({{site.baseurl_root}}/documentation/properties/#TermProperty-gfNorm), [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec), [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), [`OrthographicScore`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ortho), [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-iFreq), [`Independance`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ind), [`pilot`]({{site.baseurl_root}}/documentation/properties/#TermProperty-pilot), [`lemma`]({{site.baseurl_root}}/documentation/properties/#TermProperty-lem), [`tf-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-tfIdf), [`spec-idf`]({{site.baseurl_root}}/documentation/properties/#TermProperty-specIdf), [`groupingKey`]({{site.baseurl_root}}/documentation/properties/#TermProperty-key), [`pattern`]({{site.baseurl_root}}/documentation/properties/#TermProperty-pattern), [`spottingRule`]({{site.baseurl_root}}/documentation/properties/#TermProperty-rule), [`isFixedExpression`]({{site.baseurl_root}}/documentation/properties/#TermProperty-isFixedExp), [`SwtSize`]({{site.baseurl_root}}/documentation/properties/#TermProperty-swtSize), [`Filtered`]({{site.baseurl_root}}/documentation/properties/#TermProperty-isFiltered), [`Depth`]({{site.baseurl_root}}/documentation/properties/#TermProperty-depth), [`VariationRank`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vRank), [`VariationRule`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vRules), [`DerivationType`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-derivType), [`GraphSimilarity`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-graphSim), [`Score`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vScore), [`AffixGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affGain), [`AffixSpec`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affSpec), [`AffixRatio`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affRatio), [`AffixScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affScore), [`NormalizedAffixScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-nAffScore), [`AffixOrthographicScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affOrtho), [`ExtensionScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-extScore), [`NormalizedExtensionScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-nExtScore), [`HasExtensionAffix`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-hasExtAffix), [`IsExtension`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isExt), [`VariantBagFrequency`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vBagFreq), [`SourceGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-srcGain), [`NormalizedSourceGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-nSrcGain), [`IsInfered`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isInfered), [`IsGraphical`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isGraph), [`IsDerivation`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isDeriv), [`IsPrefixation`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isPref), [`IsSyntagmatic`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isSyntag), [`IsMorphological`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isMorph), [`IsSemantic`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isSem), [`Distributional`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-distrib), [`SemanticSimilarity`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-semSim), [`Dico`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-isDico), [`SemanticScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-semScore)
 
 
 <div class="alert alert-warning" role="alert">
@@ -479,7 +523,7 @@ At least one option in [`--tbx`](#TerminologyExtractorCLI-tbx), [`--json`](#Term
 #### Usage
 
 ```
-java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
+java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.2.jar \
 	 fr.univnantes.termsuite.tools.PreprocessorCLI OPTIONS
 ```
 
@@ -495,25 +539,25 @@ Applies TermSuite's preprocessings to given text corpus.
 
  > Path to POS tagger's home
 
-###### `--from-text-corpus`, `-c` DIR
-{: id="PreprocessorCLI-from-text-corpus"}
-
-
- > Directory to corpus (containing a list of .txt documents)
-
 ###### `--language`, `-l` LANG
 {: id="PreprocessorCLI-language"}
 
 
  > Language of the input corpus
 
+###### `--from-text-corpus`, `-c` DIR
+{: id="PreprocessorCLI-from-text-corpus"}
 
 
-###### [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno)
+ > Directory to corpus (containing a list of .txt documents)
+
+
+
+###### [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json`](#PreprocessorCLI-json)
 
 
 <div class="alert alert-warning" role="alert">
-At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+At least one option in [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json`](#PreprocessorCLI-json) must be set.
 </div>
 
 
@@ -540,7 +584,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json`](#PreprocessorCLI-json) must be set.
 </div>
 
 ###### `--json-anno` DIR
@@ -551,7 +595,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json`](#PreprocessorCLI-json) must be set.
 </div>
 
 ###### `--no-occurrence` *(no arg)*
@@ -592,7 +636,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json`](#PreprocessorCLI-json) must be set.
 </div>
 
 ###### `--watch` TERM_LIST
@@ -609,7 +653,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#Prepro
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno) must be set.
+**Warning:** At least one option in [`--tsv-anno`](#PreprocessorCLI-tsv-anno), [`--json-anno`](#PreprocessorCLI-json-anno), [`--xmi-anno`](#PreprocessorCLI-xmi-anno), [`--json`](#PreprocessorCLI-json) must be set.
 </div>
 
 
@@ -621,7 +665,7 @@ At least one option in [`--json`](#PreprocessorCLI-json), [`--xmi-anno`](#Prepro
 #### Usage
 
 ```
-java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.1.jar \
+java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.2.jar \
 	 fr.univnantes.termsuite.tools.AlignerCLI OPTIONS
 ```
 
@@ -631,8 +675,8 @@ Translates domain-specific terms in multiligual comparable corpora from given la
 
 #### Mandatory options
 
-###### `--source-termino` FILE
-{: id="AlignerCLI-source-termino"}
+###### `--target-termino` FILE
+{: id="AlignerCLI-target-termino"}
 
 
  > The source terminology (indexed corpus)
@@ -643,19 +687,19 @@ Translates domain-specific terms in multiligual comparable corpora from given la
 
  > The path to the bilingual dictionary to use for bilingual alignment
 
-###### `--target-termino` FILE
-{: id="AlignerCLI-target-termino"}
+###### `--source-termino` FILE
+{: id="AlignerCLI-source-termino"}
 
 
  > The source terminology (indexed corpus)
 
 
 
-###### [`--term`](#AlignerCLI-term), [`--term-list`](#AlignerCLI-term-list)
+###### [`--term-list`](#AlignerCLI-term-list), [`--term`](#AlignerCLI-term)
 
 
 <div class="alert alert-warning" role="alert">
-Exactly one option in [`--term`](#AlignerCLI-term), [`--term-list`](#AlignerCLI-term-list) must be set.
+Exactly one option in [`--term-list`](#AlignerCLI-term-list), [`--term`](#AlignerCLI-term) must be set.
 </div>
 
 
@@ -694,7 +738,7 @@ Exactly one option in [`--term`](#AlignerCLI-term), [`--term-list`](#AlignerCLI-
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** Exactly one option in [`--term`](#AlignerCLI-term), [`--term-list`](#AlignerCLI-term-list) must be set.
+**Warning:** Exactly one option in [`--term-list`](#AlignerCLI-term-list), [`--term`](#AlignerCLI-term) must be set.
 </div>
 
 ###### `--term-list` FILE
@@ -705,7 +749,7 @@ Exactly one option in [`--term`](#AlignerCLI-term), [`--term-list`](#AlignerCLI-
 
 
 <div class="alert alert-warning" role="alert">
-**Warning:** Exactly one option in [`--term`](#AlignerCLI-term), [`--term-list`](#AlignerCLI-term-list) must be set.
+**Warning:** Exactly one option in [`--term-list`](#AlignerCLI-term-list), [`--term`](#AlignerCLI-term) must be set.
 </div>
 
 ###### `--tsv` FILE

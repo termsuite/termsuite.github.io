@@ -5,23 +5,23 @@
 
  > The rank of the term assigned by TermSuite post-processor engine.
 
-#### `isSingleWord`, `swt` [Boolean]
-{: id="TermProperty-swt"}
+#### `isSingleWord`, `isSwt` [Boolean]
+{: id="TermProperty-isSwt"}
 
  > Wether this term is single-word or not.
 
-#### `documentFrequency`, `dfreq` [Integer]
-{: id="TermProperty-dfreq"}
+#### `documentFrequency`, `dFreq` [Integer]
+{: id="TermProperty-dFreq"}
 
  > The number of documents in corpus in which the term is occurring.
 
-#### `frequencyNorm`, `f_norm` [Double]
-{: id="TermProperty-f_norm"}
+#### `frequencyNorm`, `fNorm` [Double]
+{: id="TermProperty-fNorm"}
 
  > The number of occurrences of the term in the corpus every 1000 words.
 
-#### `generalFrequencyNorm`, `gf_norm` [Double]
-{: id="TermProperty-gf_norm"}
+#### `generalFrequencyNorm`, `gfNorm` [Double]
+{: id="TermProperty-gfNorm"}
 
  > The number of occurrences of the term in the general language corpus every 1000 words.
 
@@ -40,15 +40,15 @@
 
  > The probability for the covered text of the term for being an actual term assigned by TermSuite post-processor engine.
 
-#### `IndependantFrequency`, `ifreq` [Integer]
-{: id="TermProperty-ifreq"}
+#### `IndependantFrequency`, `iFreq` [Integer]
+{: id="TermProperty-iFreq"}
 
  > The number of times a term occurrs in corpus as it is, i.e. not as any of its variant forms, assigned by TermSuite post-processor engine.
 
 #### `Independance`, `ind` [Double]
 {: id="TermProperty-ind"}
 
- > The [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-ifreq) divided by [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), assigned by TermSuite post-processor engine.
+ > The [`IndependantFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-iFreq) divided by [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq), assigned by TermSuite post-processor engine.
 
 #### `pilot` [String]
 {: id="TermProperty-pilot"}
@@ -60,15 +60,15 @@
 
  > The concatenation of the term's word lemmas.
 
-#### `tf-idf`, `tfidf` [Double]
-{: id="TermProperty-tfidf"}
+#### `tf-idf`, `tfIdf` [Double]
+{: id="TermProperty-tfIdf"}
 
- > [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq) divided by [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq).
+ > [`frequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-freq) divided by `DOCUMENT_FREQUENCY`.
 
-#### `spec-idf`, `specidf` [Double]
-{: id="TermProperty-specidf"}
+#### `spec-idf`, `specIdf` [Double]
+{: id="TermProperty-specIdf"}
 
- > [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec) divided by [`documentFrequency`]({{site.baseurl_root}}/documentation/properties/#TermProperty-dfreq).
+ > [`specificity`]({{site.baseurl_root}}/documentation/properties/#TermProperty-spec) divided by `DOCUMENT_FREQUENCY`.
 
 #### `groupingKey`, `key` [String]
 {: id="TermProperty-key"}
@@ -85,8 +85,8 @@
 
  > The name of the UIMA Tokens Regex spotting rule that found the term in the corpus.
 
-#### `isFixedExpression`, `fixed_exp` [Boolean]
-{: id="TermProperty-fixed_exp"}
+#### `isFixedExpression`, `isFixedExp` [Boolean]
+{: id="TermProperty-isFixedExp"}
 
  > Wether the term is a fixed expression.
 
@@ -95,8 +95,8 @@
 
  > The number of words composing the term that are single-words.
 
-#### `Filtered`, `filtered` [Boolean]
-{: id="TermProperty-filtered"}
+#### `Filtered`, `isFiltered` [Boolean]
+{: id="TermProperty-isFiltered"}
 
  > Wether the term has been marked as filtered by TermSuite post-processor engine. Usually, such a term is not meant to be displayed.
 
@@ -109,18 +109,18 @@
 
 ### Relation properties
 
-#### `VariationRank`, `vrank` [Integer]
-{: id="RelationProperty-vrank"}
+#### `VariationRank`, `vRank` [Integer]
+{: id="RelationProperty-vRank"}
 
  > The rank of the variation among all variations starting from the same source term, when the relation is a variation.
 
-#### `VariationRule`, `vrules` [Set]
-{: id="RelationProperty-vrules"}
+#### `VariationRule`, `vRules` [Set]
+{: id="RelationProperty-vRules"}
 
  > The set of YAML variation rules that detected this pair of terms as a term variation, when the relation is a variation.
 
-#### `DerivationType`, `dtype` [String]
-{: id="RelationProperty-dtype"}
+#### `DerivationType`, `derivType` [String]
+{: id="RelationProperty-derivType"}
 
  > The derivation type of the variation, when the relation is a variation.
 
@@ -154,8 +154,8 @@
 
  > When the relation is a variation of type "extension", the weighted average of `AFFIX_GAIN` and `AFFIX_RATIO`.
 
-#### `NormalizedAffixScore`, `normAffScore` [Double]
-{: id="RelationProperty-normAffScore"}
+#### `NormalizedAffixScore`, `nAffScore` [Double]
+{: id="RelationProperty-nAffScore"}
 
  > When the relation is a variation of type "extension", the min-max normalization of [`AffixScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affScore).
 
@@ -169,8 +169,8 @@
 
  > When the relation is a variation of type "extension", the score of the extension affix term (combines [`AffixGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affGain) and [`AffixGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-affGain)).
 
-#### `NormalizedExtensionScore`, `normExtScore` [Double]
-{: id="RelationProperty-normExtScore"}
+#### `NormalizedExtensionScore`, `nExtScore` [Double]
+{: id="RelationProperty-nExtScore"}
 
  > When the relation is a variation of type "extension", the min-max normalization of [`ExtensionScore`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-extScore).
 
@@ -194,8 +194,8 @@
 
  > When the relation is a variation, the log10 of [`VariantBagFrequency`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-vBagFreq) divided by the FREQUENCY of the base term.
 
-#### `NormalizedSourceGain`, `normSrcGain` [Double]
-{: id="RelationProperty-normSrcGain"}
+#### `NormalizedSourceGain`, `nSrcGain` [Double]
+{: id="RelationProperty-nSrcGain"}
 
  > When the relation is a variation of type "extension", the linear normalization of [`SourceGain`]({{site.baseurl_root}}/documentation/properties/#RelationProperty-srcGain).
 
