@@ -236,6 +236,19 @@ h4 {
 #home .row.downloads {
   padding: 25px 0; }
 
+#docmenu {
+  padding: 0px; }
+  #docmenu .panel {
+    margin: 0px; }
+  #docmenu .panel-heading.active {
+    background: #00718D;
+    color: #effbff;
+    font-weight: bold; }
+  #docmenu .docitem {
+    margin: 10px 0px; }
+    #docmenu .docitem .active {
+      font-weight: bold; }
+
 .doc-content {
   counter-reset: H3; }
   .doc-content h3:before {
