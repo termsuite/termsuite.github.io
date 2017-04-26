@@ -16,7 +16,7 @@ layout: default
 
       {% for menu in site.data.menu %}
         {% capture menukey %}menus.{{ menu }}{% endcapture %}
-        {% assign docs = site.documentation | where: "menu", menu | where_exp: "status", "status != draft" | sort | uniq %}
+        {% assign docs = site.documentation | where: "menu", menu | where_exp: "status", "status != draft" | sort : 'order' | uniq %}
 
           {% if docs.size > 0 %}
             {%  assign current_page = docs | where: "url", page.url %}

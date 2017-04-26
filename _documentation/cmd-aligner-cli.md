@@ -4,6 +4,7 @@ title: menus.aligner-cli
 menu_title: menus.aligner-cli
 menu: command-line-api
 excerpt: excerpt.aligner-cli
+order: 30
 permalink: /documentation/aligner-cli/
 ---
 
