@@ -141,6 +141,9 @@ menus:
   developers: Developers
   support: Support
   data-model: Terminology
+  terminology-extractor-cli: TerminologyExtractorCLI
+  preprocessor-cli: PreprocessorCLI
+  aligner-cli: AlignerCLI
 
 docmenu:
   introduction: Introduction
@@ -175,6 +178,9 @@ excerpts:
   data-model: Terminology data model
   changelog: "Changelog, new features, and bug fixes of TermSuite"
   contact: "Contact information of TermSuite contributors."
+  terminology-extractor-cli: "Documention of command TerminologyExtractorCLI for terminology extraction."
+  preprocessor-cli: "Documention of command TerminologyExtractorCLI for NLP preprocessing (tokenizing, POS-tagging, lemmatization, multi-word term spotting)."
+  aligner-cli: "Documention of command AlignerCLI for bilingual alignment."
 
 authors:
   dc:

@@ -1,11 +1,12 @@
 ---
 layout: documentation
-title: titles.command-line-api
-menu_title: menus.command-line-api
+title: menus.preprocessor-cli
+menu_title: menus.preprocessor-cli
 menu: command-line-api
-excerpt: excerpts.command-line-api
-permalink: /documentation/command-line-api/
+excerpt: excerpt.preprocessor-cli
+permalink: /documentation/preprocessor-cli/
 ---
+
 
 
 {% if "fr" == site.lang %}
@@ -13,5 +14,5 @@ permalink: /documentation/command-line-api/
   <strong>Désolé ! </strong>Cette page n'existe pas en langue française. Veuillez vous référer à la <a href="{{ page.url }}"> version anglaise</a>.
 </div>
 {% else %}
-  {% translate_file documentation/command-line-api.md %}
+  {% translate_file documentation/cmd-preprocessor-cli.md %}
 {% endif %}
