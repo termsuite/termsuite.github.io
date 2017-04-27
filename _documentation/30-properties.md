@@ -2,7 +2,7 @@
 layout: documentation
 title: titles.properties
 menu_title: menus.properties
-menu: data-model
+menu: theory
 excerpt: excerpts.properties  
 permalink: /documentation/properties/
 ---

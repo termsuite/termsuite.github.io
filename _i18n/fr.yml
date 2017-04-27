@@ -133,7 +133,6 @@ titles:
   contact: Contact
 
 menus:
-  blog:
   introduction: Introduction
   getting-started: "Débuter avec TermSuite [Tutoriel]"
   gui: Guide de l'interface graphique [Tutoriel]
@@ -142,14 +141,17 @@ menus:
   java-api: API Java
   resources: Ressources
   corpus: Arborescence corpus
-  term-properties: Propriétés de terme
-  properties: Liste des propriétés
   developers: Développeurs (Gradle / Maven)
   data-model: Modèle de données
   support: Assistance
   getting-started: "Débuter avec TermSuite"
   cmd-api: "Ligne de commande"
-  java-api: "API Java"
+  links: Liens
+  pipeline: Chaînes de traitement TAL
+  theory: Théorie et architecture
+  properties: Propriétés
+  postprocessing: Post-traitements
+
 
 
 excerpts:

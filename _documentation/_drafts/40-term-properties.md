@@ -2,7 +2,7 @@
 layout: documentation
 title: titles.term-properties
 menu_title: menus.term-properties
-menu: data-model
+menu: theory
 excerpt: excerpts.term-properties
 status: draft
 permalink: /documentation/term-properties/

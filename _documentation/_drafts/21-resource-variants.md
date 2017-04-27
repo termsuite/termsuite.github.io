@@ -1,8 +1,9 @@
 ---
 layout: documentation
 title: titles.resources
+menu_title: menus.resources
 menu: resources
-submenu: menus.mwtspottingrules
+status: draft
 excerpt: excerpts.resources
 permalink: /documentation/resources/
 ---

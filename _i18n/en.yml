@@ -138,12 +138,17 @@ menus:
   resources: Resources
   corpus: Corpus
   properties: Properties
-  developers: Developers
-  support: Support
+  data-model: Data Model
+  postprocessing: Post-Processing
+  pipeline: Terminology Extraction Pipeline
+  links: Links
   data-model: Terminology
   terminology-extractor-cli: TerminologyExtractorCLI
   preprocessor-cli: PreprocessorCLI
   aligner-cli: AlignerCLI
+  theory: Theory and Architecture
+  support: Support
+  developers: Developers
 
 docmenu:
   introduction: Introduction

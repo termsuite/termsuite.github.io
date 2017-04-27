@@ -2,7 +2,8 @@
 layout: documentation
 title: titles.developers
 menu_title: menus.developers
-menu: developers
+menu: links
+order: 10
 excerpt: excerpts.developers
 permalink: /documentation/developers/
 ---
