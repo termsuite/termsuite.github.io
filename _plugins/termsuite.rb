@@ -1,4 +1,6 @@
-class TermSuite
+require_relative "example"
+
+module TermSuite
   class << self
     def config
       @config ||= File.open("_termsuite.yml") { |file| YAML.load(file) }
