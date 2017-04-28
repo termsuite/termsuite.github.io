@@ -36,6 +36,9 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   parse_block_html: true
 
+gems:
+  - jekyll-redirect-from
+  
 collections:
   documentation:
     output: true

@@ -155,7 +155,6 @@ menus:
 
 
 excerpts:
-  blog:
   introduction: "Manuel d'utilisation et documentation technique pour TermSuite : terminologie de l'extraction et alignement bilingue."
   getting-started: Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire la terminologie d'un petit corpus.
   postagger: Documentation pour l'installation de l'étiqueteur arboré (TreeTagger) ou de l'étiquetteur grammatical Mate (POS tagger) pour TermSuite.

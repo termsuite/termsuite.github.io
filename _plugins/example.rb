@@ -60,7 +60,6 @@ module TermSuite
         endf = startf + header_lines[(startf+1)..-1].index("---")
         return {} if endf.nil?
         fmatter = header_lines[startf..endf].join("\n")
-        puts "startf: #{startf}\nendf:   #{endf}"
         YAML.load(fmatter)
       end
     end

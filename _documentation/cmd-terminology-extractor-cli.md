@@ -5,6 +5,7 @@ menu_title: menus.terminology-extractor-cli
 menu: command-line-api
 excerpt: excerpt.terminology-extractor-cli
 permalink: /documentation/terminology-extractor-cli/
+redirect_from: /documentation/command-line-api/
 order: 20
 ---
 

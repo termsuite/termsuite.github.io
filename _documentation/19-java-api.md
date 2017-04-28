@@ -5,6 +5,7 @@ menu_title: menus.java-api
 menu: java-api
 excerpt: excerpts.java-api
 permalink: /documentation/java-api/
+redirect_from: /documentation/java-api/
 ---
 
 {% if "fr" == site.lang %}
