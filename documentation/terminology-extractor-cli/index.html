@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>TerminologyExtractorCLI</title>
+
+    <meta name="description" content="excerpt.terminology-extractor-cli" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/documentation/terminology-extractor-cli/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Fork TermSuite on GitHub."
+    src="/img/forkme.png"
+    alt="Fork TermSuite on GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <ul  class="nav navbar-nav navbar-right navright">
+        <li class="" >
+          <a class="" href="/contact">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Newsletter
+          </a>
+        </li>
+    </ul>
+
+
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/getting-started">Getting Started</a></li>
+          <li class="active"><a href="/documentation/introduction/" >Documentation</a></li>
+          <li class=""><a href="/#publications" >Publications</a></li>
+          <li id="about" class="dropdown">
+            <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/changelog">Change log</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/documentation/support">Support</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">View on Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/about">About TermSuite</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="active" ><a href="/documentation/terminology-extractor-cli/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="" ><a href="/fr/documentation/terminology-extractor-cli/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8">
+    <header class="page-header">
+      <h1>Documentation <small>TerminologyExtractorCLI</small></h1>
+    </header>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=menus.terminology-extractor-cli&url=http://termsuite.github.io/documentation/terminology-extractor-cli/&via=&related="
+        rel="nofollow" target="_blank" title="Share on Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/documentation/terminology-extractor-cli/" rel="nofollow" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/documentation/terminology-extractor-cli/" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/documentation/terminology-extractor-cli/&title=menus.terminology-extractor-cli&summary=excerpt.terminology-extractor-cli&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/documentation/terminology-extractor-cli/&title=menus.terminology-extractor-cli" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+  </div>
+  <div class="row">
+    <div id="docmenu" class="col-md-3">
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                      Getting Started
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="titles.introduction"
+                            class=""
+                            href="/documentation/introduction/">
+                          Introduction
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.getting-started-cmd"
+                            class=""
+                            href="/getting-started/">
+                          Beginner Guide
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.postagger"
+                            class=""
+                            href="/documentation/pos-tagger-lemmatizer/">
+                          Installing a POS Tagger
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                      Command Line API
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="menus.preprocessor-cli"
+                            class=""
+                            href="/documentation/preprocessor-cli/">
+                          PreprocessorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menus.terminology-extractor-cli"
+                            class="active"
+                            href="/documentation/terminology-extractor-cli/">
+                          TerminologyExtractorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menus.aligner-cli"
+                            class=""
+                            href="/documentation/aligner-cli/">
+                          AlignerCLI
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                      Java API
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="titles.java-api"
+                            class=""
+                            href="/documentation/java-api/">
+                          Java API
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                      Graphical User Interface
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="titles.gui"
+                            class=""
+                            href="/gui/">
+                          Graphical User Interface
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapseOne">
+                      Theory and Architecture
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="titles.properties"
+                            class=""
+                            href="/documentation/properties/">
+                          Properties
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.data-model"
+                            class=""
+                            href="/documentation/data-model/">
+                          Terminology
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapseOne">
+                      Resources
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="titles.resources"
+                            class=""
+                            href="/documentation/resources/">
+                          Resources
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading7">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapseOne">
+                      Links
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading7">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="titles.developers"
+                            class=""
+                            href="/documentation/developers/">
+                          Developers
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.support"
+                            class=""
+                            href="/documentation/support/">
+                          Support
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8">
+
+      <article class="doc-content">
+        
+<ul id="markdown-toc">
+  <li><a href="#TerminologyExtractorCLI">TerminologyExtractorCLI</a>    <ul>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#description">Description</a></li>
+      <li><a href="#mandatory-options">Mandatory options</a>        <ul>
+          <li><a href="#from-text-corpusterminologyextractorcli-from-text-corpus---from-prepared-corpusterminologyextractorcli-from-prepared-corpus"><a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code></a>, <a href="#TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code></a></a></li>
+          <li><a href="#tsvterminologyextractorcli-tsv---tbxterminologyextractorcli-tbx---jsonterminologyextractorcli-json"><a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a>, <a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code></a>, <a href="#TerminologyExtractorCLI-json"><code>--json</code></a></a></li>
+        </ul>
+      </li>
+      <li><a href="#other-options">Other options</a>        <ul>
+          <li><a href="#TerminologyExtractorCLI-capped-size"><code>--capped-size</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-context-assoc-rate"><code>--context-assoc-rate</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-context-coocc-th"><code>--context-coocc-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-context-scope"><code>--context-scope</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-contextualize"><code>--contextualize</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-derivative-splitting"><code>--disable-derivative-splitting</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-gathering"><code>--disable-gathering</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-merging"><code>--disable-merging</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-morphology"><code>--disable-morphology</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-native-splitting"><code>--disable-native-splitting</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-disable-prefix-splitting"><code>--disable-prefix-splitting</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-encoding"><code>--encoding</code>, <code>-e</code> ENC</a></li>
+          <li><a href="#TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code> DIR</a></li>
+          <li><a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code>, <code>-c</code> DIR</a></li>
+          <li><a href="#TerminologyExtractorCLI-graphical-similarity-th"><code>--graphical-similarity-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-json"><code>--json</code> FILE</a></li>
+          <li><a href="#TerminologyExtractorCLI-language"><code>--language</code>, <code>-l</code> LANG</a></li>
+          <li><a href="#TerminologyExtractorCLI-nb-semantic-candidates"><code>--nb-semantic-candidates</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-no-occurrence"><code>--no-occurrence</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-post-filter-keep-variants"><code>--post-filter-keep-variants</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-post-filter-max-variants"><code>--post-filter-max-variants</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-postproc-affix-score-th"><code>--postproc-affix-score-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-postproc-affix-score-th"><code>--postproc-affix-score-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-postproc-independance-th"><code>--postproc-independance-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-postproc-variation-score-th"><code>--postproc-variation-score-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-pre-filter-max-variants"><code>--pre-filter-max-variants</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-pre-filter-th"><code>--pre-filter-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-pre-filter-top-n"><code>--pre-filter-top-n</code> INT</a></li>
+          <li><a href="#TerminologyExtractorCLI-ranking-asc"><code>--ranking-asc</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-ranking-desc"><code>--ranking-desc</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-resource-dir"><code>--resource-dir</code> DIR</a></li>
+          <li><a href="#TerminologyExtractorCLI-resource-jar"><code>--resource-jar</code> FILE</a></li>
+          <li><a href="#TerminologyExtractorCLI-resource-url-prefix"><code>--resource-url-prefix</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-semantic-dico-only"><code>--semantic-dico-only</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-semantic-distance"><code>--semantic-distance</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-semantic-similarity-th"><code>--semantic-similarity-th</code> INT or FLOAT</a></li>
+          <li><a href="#TerminologyExtractorCLI-synonyms-dico"><code>--synonyms-dico</code> FILE</a></li>
+          <li><a href="#TerminologyExtractorCLI-tagger"><code>--tagger</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-tagger-home"><code>--tagger-home</code>, <code>-t</code> FILE</a></li>
+          <li><a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code> FILE</a></li>
+          <li><a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code> FILE</a></li>
+          <li><a href="#TerminologyExtractorCLI-tsv-hide-headers"><code>--tsv-hide-headers</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-tsv-hide-variants"><code>--tsv-hide-variants</code> <em>(no arg)</em></a></li>
+          <li><a href="#TerminologyExtractorCLI-tsv-properties"><code>--tsv-properties</code> STRING</a></li>
+          <li><a href="#TerminologyExtractorCLI-watch"><code>--watch</code> TERM_LIST</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#examples">Examples</a>    <ul>
+      <li><a href="#filtering-cleaning-by-threshold-value-on-any-property">Filtering: cleaning by threshold value on any property</a></li>
+      <li><a href="#filtering-keeping-only-top-n-terms">Filtering: keeping only top n terms</a></li>
+      <li><a href="#filtering-keeping-term-variants">Filtering: keeping term variants</a></li>
+      <li><a href="#exporting-terminology-to-tsv">Exporting terminology to TSV</a></li>
+      <li><a href="#deactivating-variant-gathering">Deactivating variant gathering</a></li>
+      <li><a href="#activating-semantic-variant-detection">Activating semantic variant detection</a></li>
+      <li><a href="#semantic-variant-detection-with-custom-dictionary">Semantic variant detection with custom dictionary</a></li>
+      <li><a href="#semantic-variant-detection-without-distributional-variants-dico-only">Semantic variant detection without distributional variants (dico only)</a></li>
+      <li><a href="#extracting-a-terminology-from-a-very-large-corpus">Extracting a terminology from a very large corpus</a></li>
+      <li><a href="#extracting-a-terminology-from-preprocessed-corpus">Extracting a terminology from preprocessed corpus</a></li>
+      <li><a href="#customizing-terminology-post-processing">Customizing Terminology Post-Processing</a></li>
+      <li><a href="#filtering-cleaning-terminology-before-gathering-step---pre-filter-">Filtering: cleaning terminology before gathering step (<code>--pre-filter-*</code>)</a></li>
+      <li><a href="#debugging-terminology-extraction">Debugging terminology extraction</a></li>
+      <li><a href="#using-customized-linguistic-resources-advanced-users">Using customized linguistic resources (Advanced users)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="TerminologyExtractorCLI">TerminologyExtractorCLI</h3>
+
+<h4 id="usage">Usage</h4>
+
+<pre><code>java [-Xms256m -Xmx8g] -cp termsuite-core-3.0.2.jar \
+	 fr.univnantes.termsuite.tools.TerminologyExtractorCLI OPTIONS
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Extracts terminology from a domain-specific textual corpus (or preprocessed corpus).</p>
+
+<h4 id="mandatory-options">Mandatory options</h4>
+
+<h6 id="from-text-corpusterminologyextractorcli-from-text-corpus---from-prepared-corpusterminologyextractorcli-from-prepared-corpus"><a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code></a>, <a href="#TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code></a></h6>
+
+<div class="alert alert-warning" role="alert">
+  <p>Exactly one option in <a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code></a>, <a href="#TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code></a> must be set.</p>
+</div>
+
+<h6 id="tsvterminologyextractorcli-tsv---tbxterminologyextractorcli-tbx---jsonterminologyextractorcli-json"><a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a>, <a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code></a>, <a href="#TerminologyExtractorCLI-json"><code>--json</code></a></h6>
+
+<div class="alert alert-warning" role="alert">
+  <p>At least one option in <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a>, <a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code></a>, <a href="#TerminologyExtractorCLI-json"><code>--json</code></a> must be set.</p>
+</div>
+
+<h4 id="other-options">Other options</h4>
+
+<h6 id="TerminologyExtractorCLI-capped-size"><code>--capped-size</code> INT</h6>
+
+<blockquote>
+  <p>The maximum number of terms to keep in memory while spotting. Allows to process bigger volumes of input text.</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-context-assoc-rate"><code>--context-assoc-rate</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Association rate measure used to normalize context vectors. Allowed values are: <code>MutualInformation</code>, <code>LogLikelihood</code></p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-contextualize"><code>--contextualize</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-context-coocc-th"><code>--context-coocc-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Sets a minimum frequency threshold for co-terms to appear in context vectors</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-contextualize"><code>--contextualize</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-context-scope"><code>--context-scope</code> INT</h6>
+
+<blockquote>
+  <p>Radius of single-word term window used during contextualization</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-contextualize"><code>--contextualize</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-contextualize"><code>--contextualize</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Activates the contextualizer</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-derivative-splitting"><code>--disable-derivative-splitting</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable morphological derivative splitting</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-gathering"><code>--disable-gathering</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable variant term gathering</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-merging"><code>--disable-merging</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable graphical term merging</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-morphology"><code>--disable-morphology</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable morphology analysis (native, prefix, derivation splitting)</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-native-splitting"><code>--disable-native-splitting</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable morphological native splitting</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable post-gathering scoring and filtering processings</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-disable-prefix-splitting"><code>--disable-prefix-splitting</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Disable morphological prefix splitting</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Enable semantic term gathering (monolingual alignment)</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-encoding"><code>--encoding</code>, <code>-e</code> ENC</h6>
+
+<blockquote>
+  <p>Encoding of the input corpus</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code> DIR</h6>
+
+<blockquote>
+  <p>A file or directory path. Starts the terminology extraction pipeline from an XMI corpus or an imported terminology json file instead of a txt corpus.</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> Exactly one option in <a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code></a>, <a href="#TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code>, <code>-c</code> DIR</h6>
+
+<blockquote>
+  <p>Directory to corpus (containing a list of .txt documents)</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> Exactly one option in <a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code></a>, <a href="#TerminologyExtractorCLI-from-prepared-corpus"><code>--from-prepared-corpus</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-graphical-similarity-th"><code>--graphical-similarity-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Graphical similarity threshold</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-json"><code>--json</code> FILE</h6>
+
+<blockquote>
+  <p>Outputs terminology to JSON file</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At least one option in <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a>, <a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code></a>, <a href="#TerminologyExtractorCLI-json"><code>--json</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-language"><code>--language</code>, <code>-l</code> LANG</h6>
+
+<blockquote>
+  <p>Language of the input corpus</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-nb-semantic-candidates"><code>--nb-semantic-candidates</code> INT</h6>
+
+<blockquote>
+  <p>Max number of semantic variants for each terms</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-no-occurrence"><code>--no-occurrence</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Do not store occurrence offsets in memory while spotting. Allows to process bigger volumes of input text.</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-post-filter-keep-variants"><code>--post-filter-keep-variants</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Keep variants during post-gathering filtering even if they are to be filtered</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-post-filter-max-variants"><code>--post-filter-max-variants</code> INT</h6>
+
+<blockquote>
+  <p>The maximum number of variants to keep during post-gathering filtering</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code> STRING</h6>
+
+<blockquote>
+  <p>Enables post-gathering filtering based on given property.  Allowed values are: <a href="/documentation/properties/#TermProperty-rank"><code>rank</code></a>, <a href="/documentation/properties/#TermProperty-dFreq"><code>documentFrequency</code></a>, <a href="/documentation/properties/#TermProperty-fNorm"><code>frequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-gfNorm"><code>generalFrequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-spec"><code>specificity</code></a>, <a href="/documentation/properties/#TermProperty-freq"><code>frequency</code></a>, <a href="/documentation/properties/#TermProperty-ortho"><code>OrthographicScore</code></a>, <a href="/documentation/properties/#TermProperty-iFreq"><code>IndependantFrequency</code></a>, <a href="/documentation/properties/#TermProperty-ind"><code>Independance</code></a>, <a href="/documentation/properties/#TermProperty-tfIdf"><code>tf-idf</code></a>, <a href="/documentation/properties/#TermProperty-specIdf"><code>spec-idf</code></a>, <a href="/documentation/properties/#TermProperty-swtSize"><code>SwtSize</code></a>, <a href="/documentation/properties/#TermProperty-depth"><code>Depth</code></a></p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Threshold value of post-gathering filter</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code></a> is already set.</p>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code></a>, <a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code> INT</h6>
+
+<blockquote>
+  <p>N value for post-gathering filtering over top N terms</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-post-filter-property"><code>--post-filter-property</code></a> is already set.</p>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-post-filter-th"><code>--post-filter-th</code></a>, <a href="#TerminologyExtractorCLI-post-filter-top-n"><code>--post-filter-top-n</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-postproc-affix-score-th"><code>--postproc-affix-score-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Minimal score for affix-score. Variations under that threshold are filtered out.</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option <strong>cannot be set</strong> when option <a href="#TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-postproc-affix-score-th"><code>--postproc-affix-score-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Minimal score for variataion orthographic score. Variations under that threshold are filtered out.</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option <strong>cannot be set</strong> when option <a href="#TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-postproc-independance-th"><code>--postproc-independance-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Term independance score threshold. Terms under threshold are filtered out.</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option <strong>cannot be set</strong> when option <a href="#TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-postproc-variation-score-th"><code>--postproc-variation-score-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Filters out variations with scores under given threshold</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option <strong>cannot be set</strong> when option <a href="#TerminologyExtractorCLI-disable-post-processing"><code>--disable-post-processing</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-pre-filter-max-variants"><code>--pre-filter-max-variants</code> INT</h6>
+
+<blockquote>
+  <p>The maximum number of variants to keep during pre-gathering filtering</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code> STRING</h6>
+
+<blockquote>
+  <p>Enables pre-gathering filtering based on given property. Allowed values are: <a href="/documentation/properties/#TermProperty-rank"><code>rank</code></a>, <a href="/documentation/properties/#TermProperty-dFreq"><code>documentFrequency</code></a>, <a href="/documentation/properties/#TermProperty-fNorm"><code>frequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-gfNorm"><code>generalFrequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-spec"><code>specificity</code></a>, <a href="/documentation/properties/#TermProperty-freq"><code>frequency</code></a>, <a href="/documentation/properties/#TermProperty-ortho"><code>OrthographicScore</code></a>, <a href="/documentation/properties/#TermProperty-iFreq"><code>IndependantFrequency</code></a>, <a href="/documentation/properties/#TermProperty-ind"><code>Independance</code></a>, <a href="/documentation/properties/#TermProperty-tfIdf"><code>tf-idf</code></a>, <a href="/documentation/properties/#TermProperty-specIdf"><code>spec-idf</code></a>, <a href="/documentation/properties/#TermProperty-swtSize"><code>SwtSize</code></a>, <a href="/documentation/properties/#TermProperty-depth"><code>Depth</code></a></p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-pre-filter-th"><code>--pre-filter-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Threshold value of pre-gathering filter</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code></a> is already set.</p>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-pre-filter-top-n"><code>--pre-filter-top-n</code></a>, <a href="#TerminologyExtractorCLI-pre-filter-th"><code>--pre-filter-th</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-pre-filter-top-n"><code>--pre-filter-top-n</code> INT</h6>
+
+<blockquote>
+  <p>N value for pre-gathering filtering over top N terms</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-pre-filter-property"><code>--pre-filter-property</code></a> is already set.</p>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-pre-filter-top-n"><code>--pre-filter-top-n</code></a>, <a href="#TerminologyExtractorCLI-pre-filter-th"><code>--pre-filter-th</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-ranking-asc"><code>--ranking-asc</code> STRING</h6>
+
+<blockquote>
+  <p>Sets the output ranking property in ASCENDING order.  Allowed values are: <a href="/documentation/properties/#TermProperty-rank"><code>rank</code></a>, <a href="/documentation/properties/#TermProperty-dFreq"><code>documentFrequency</code></a>, <a href="/documentation/properties/#TermProperty-fNorm"><code>frequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-gfNorm"><code>generalFrequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-spec"><code>specificity</code></a>, <a href="/documentation/properties/#TermProperty-freq"><code>frequency</code></a>, <a href="/documentation/properties/#TermProperty-ortho"><code>OrthographicScore</code></a>, <a href="/documentation/properties/#TermProperty-iFreq"><code>IndependantFrequency</code></a>, <a href="/documentation/properties/#TermProperty-ind"><code>Independance</code></a>, <a href="/documentation/properties/#TermProperty-tfIdf"><code>tf-idf</code></a>, <a href="/documentation/properties/#TermProperty-specIdf"><code>spec-idf</code></a>, <a href="/documentation/properties/#TermProperty-swtSize"><code>SwtSize</code></a>, <a href="/documentation/properties/#TermProperty-depth"><code>Depth</code></a></p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-ranking-asc"><code>--ranking-asc</code></a>, <a href="#TerminologyExtractorCLI-ranking-desc"><code>--ranking-desc</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-ranking-desc"><code>--ranking-desc</code> STRING</h6>
+
+<blockquote>
+  <p>Sets the output ranking property in DESCENDING order.  Allowed values are: <a href="/documentation/properties/#TermProperty-rank"><code>rank</code></a>, <a href="/documentation/properties/#TermProperty-dFreq"><code>documentFrequency</code></a>, <a href="/documentation/properties/#TermProperty-fNorm"><code>frequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-gfNorm"><code>generalFrequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-spec"><code>specificity</code></a>, <a href="/documentation/properties/#TermProperty-freq"><code>frequency</code></a>, <a href="/documentation/properties/#TermProperty-ortho"><code>OrthographicScore</code></a>, <a href="/documentation/properties/#TermProperty-iFreq"><code>IndependantFrequency</code></a>, <a href="/documentation/properties/#TermProperty-ind"><code>Independance</code></a>, <a href="/documentation/properties/#TermProperty-tfIdf"><code>tf-idf</code></a>, <a href="/documentation/properties/#TermProperty-specIdf"><code>spec-idf</code></a>, <a href="/documentation/properties/#TermProperty-swtSize"><code>SwtSize</code></a>, <a href="/documentation/properties/#TermProperty-depth"><code>Depth</code></a></p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At most one option in <a href="#TerminologyExtractorCLI-ranking-asc"><code>--ranking-asc</code></a>, <a href="#TerminologyExtractorCLI-ranking-desc"><code>--ranking-desc</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-resource-dir"><code>--resource-dir</code> DIR</h6>
+
+<blockquote>
+  <p>Custom resource directory</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-resource-jar"><code>--resource-jar</code> FILE</h6>
+
+<blockquote>
+  <p>Custom resource jar</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-resource-url-prefix"><code>--resource-url-prefix</code> STRING</h6>
+
+<blockquote>
+  <p>Custom resource url prefix</p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-semantic-dico-only"><code>--semantic-dico-only</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Find semantic variants with the help of dictionary only, no alignment.</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-semantic-distance"><code>--semantic-distance</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Similarity measure used for semantic alignment. Allowed values are: <code>Cosine</code>, <code>Jaccard</code></p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-semantic-similarity-th"><code>--semantic-similarity-th</code> INT or FLOAT</h6>
+
+<blockquote>
+  <p>Minimum semantic similarity threshold for semantic gathering (monolingual alignment)</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-synonyms-dico"><code>--synonyms-dico</code> FILE</h6>
+
+<blockquote>
+  <p>Custom synonyms dictionary for semantic variant detection.</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-enable-semantic-gathering"><code>--enable-semantic-gathering</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-tagger"><code>--tagger</code> STRING</h6>
+
+<blockquote>
+  <p>Which POS tagger to use. Allowed values are: <code>mate</code>, <code>tt</code></p>
+</blockquote>
+
+<h6 id="TerminologyExtractorCLI-tagger-home"><code>--tagger-home</code>, <code>-t</code> FILE</h6>
+
+<blockquote>
+  <p>Path to POS tagger’s home</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-from-text-corpus"><code>--from-text-corpus</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-tbx"><code>--tbx</code> FILE</h6>
+
+<blockquote>
+  <p>Outputs terminology to TBX file</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At least one option in <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a>, <a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code></a>, <a href="#TerminologyExtractorCLI-json"><code>--json</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-tsv"><code>--tsv</code> FILE</h6>
+
+<blockquote>
+  <p>Outputs terminology to TSV file</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> At least one option in <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a>, <a href="#TerminologyExtractorCLI-tbx"><code>--tbx</code></a>, <a href="#TerminologyExtractorCLI-json"><code>--json</code></a> must be set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-tsv-hide-headers"><code>--tsv-hide-headers</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Hide column headers</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-tsv-hide-variants"><code>--tsv-hide-variants</code> <em>(no arg)</em></h6>
+
+<blockquote>
+  <p>Does no show the variants for each term</p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-tsv-properties"><code>--tsv-properties</code> STRING</h6>
+
+<blockquote>
+  <p>The comma-separated list columns of the tsv file. Allowed values are: <a href="/documentation/properties/#TermProperty-rank"><code>rank</code></a>, <a href="/documentation/properties/#TermProperty-isSwt"><code>isSingleWord</code></a>, <a href="/documentation/properties/#TermProperty-dFreq"><code>documentFrequency</code></a>, <a href="/documentation/properties/#TermProperty-fNorm"><code>frequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-gfNorm"><code>generalFrequencyNorm</code></a>, <a href="/documentation/properties/#TermProperty-spec"><code>specificity</code></a>, <a href="/documentation/properties/#TermProperty-freq"><code>frequency</code></a>, <a href="/documentation/properties/#TermProperty-ortho"><code>OrthographicScore</code></a>, <a href="/documentation/properties/#TermProperty-iFreq"><code>IndependantFrequency</code></a>, <a href="/documentation/properties/#TermProperty-ind"><code>Independance</code></a>, <a href="/documentation/properties/#TermProperty-pilot"><code>pilot</code></a>, <a href="/documentation/properties/#TermProperty-lemma"><code>lemma</code></a>, <a href="/documentation/properties/#TermProperty-tfIdf"><code>tf-idf</code></a>, <a href="/documentation/properties/#TermProperty-specIdf"><code>spec-idf</code></a>, <a href="/documentation/properties/#TermProperty-key"><code>groupingKey</code></a>, <a href="/documentation/properties/#TermProperty-pattern"><code>pattern</code></a>, <a href="/documentation/properties/#TermProperty-rule"><code>spottingRule</code></a>, <a href="/documentation/properties/#TermProperty-isFixedExp"><code>isFixedExpression</code></a>, <a href="/documentation/properties/#TermProperty-swtSize"><code>SwtSize</code></a>, <a href="/documentation/properties/#TermProperty-isFiltered"><code>Filtered</code></a>, <a href="/documentation/properties/#TermProperty-depth"><code>Depth</code></a>, <a href="/documentation/properties/#RelationProperty-vRank"><code>VariationRank</code></a>, <a href="/documentation/properties/#RelationProperty-vRules"><code>VariationRule</code></a>, <a href="/documentation/properties/#RelationProperty-derivType"><code>DerivationType</code></a>, <a href="/documentation/properties/#RelationProperty-graphSim"><code>GraphSimilarity</code></a>, <a href="/documentation/properties/#RelationProperty-vScore"><code>Score</code></a>, <a href="/documentation/properties/#RelationProperty-affGain"><code>AffixGain</code></a>, <a href="/documentation/properties/#RelationProperty-affSpec"><code>AffixSpec</code></a>, <a href="/documentation/properties/#RelationProperty-affRatio"><code>AffixRatio</code></a>, <a href="/documentation/properties/#RelationProperty-affScore"><code>AffixScore</code></a>, <a href="/documentation/properties/#RelationProperty-nAffScore"><code>NormalizedAffixScore</code></a>, <a href="/documentation/properties/#RelationProperty-affOrtho"><code>AffixOrthographicScore</code></a>, <a href="/documentation/properties/#RelationProperty-extScore"><code>ExtensionScore</code></a>, <a href="/documentation/properties/#RelationProperty-nExtScore"><code>NormalizedExtensionScore</code></a>, <a href="/documentation/properties/#RelationProperty-hasExtAffix"><code>HasExtensionAffix</code></a>, <a href="/documentation/properties/#RelationProperty-isExt"><code>IsExtension</code></a>, <a href="/documentation/properties/#RelationProperty-vBagFreq"><code>VariantBagFrequency</code></a>, <a href="/documentation/properties/#RelationProperty-srcGain"><code>SourceGain</code></a>, <a href="/documentation/properties/#RelationProperty-nSrcGain"><code>NormalizedSourceGain</code></a>, <a href="/documentation/properties/#RelationProperty-isInfered"><code>IsInfered</code></a>, <a href="/documentation/properties/#RelationProperty-isGraph"><code>IsGraphical</code></a>, <a href="/documentation/properties/#RelationProperty-isDeriv"><code>IsDerivation</code></a>, <a href="/documentation/properties/#RelationProperty-isPref"><code>IsPrefixation</code></a>, <a href="/documentation/properties/#RelationProperty-isSyntag"><code>IsSyntagmatic</code></a>, <a href="/documentation/properties/#RelationProperty-isMorph"><code>IsMorphological</code></a>, <a href="/documentation/properties/#RelationProperty-isSem"><code>IsSemantic</code></a>, <a href="/documentation/properties/#RelationProperty-distrib"><code>Distributional</code></a>, <a href="/documentation/properties/#RelationProperty-semSim"><code>SemanticSimilarity</code></a>, <a href="/documentation/properties/#RelationProperty-isDico"><code>Dico</code></a>, <a href="/documentation/properties/#RelationProperty-semScore"><code>SemanticScore</code></a></p>
+</blockquote>
+
+<div class="alert alert-warning" role="alert">
+  <p><strong>Warning:</strong> This option can only be set when option <a href="#TerminologyExtractorCLI-tsv"><code>--tsv</code></a> is already set.</p>
+</div>
+
+<h6 id="TerminologyExtractorCLI-watch"><code>--watch</code> TERM_LIST</h6>
+
+<blockquote>
+  <p>List of terms (grouping keys or lemmas) to log to output</p>
+</blockquote>
+
+<h3 id="examples">Examples</h3>
+
+<p>Example launcher scripts can be found at:</p>
+
+<p><a href="https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd">https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd</a></p>
+
+<h4 id="filtering-cleaning-by-threshold-value-on-any-property">Filtering: cleaning by threshold value on any property</h4>
+
+<p>Terminology can be filtered on any property after variant gathering with <code>--post-filter-property</code> option. When given together with option <code>--post-filter-th</code>, TermSuite will filter by threshold on given property. &gt; Any numeric property can be used when for post-propcessing filtering. See all <a href="http://termsuite.github.io/documentation/properties/">TermSuite properties</a>. &gt; For example, this launcher filters all term having <code>dFreq &lt; 3</code>, i.e. appearing in less than 3 different document in the source corpus..</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --post-filter-property dFreq \
+            --post-filter-th 3 \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pattern,pilot,spec,freq,dFreq" \
+            --info
+</code></pre>
+
+<h4 id="filtering-keeping-only-top-n-terms">Filtering: keeping only top n terms</h4>
+
+<p>Terminology can be filtered on any property after variant gathering with <code>--post-filter-property</code> option. When given together with option <code>--post-filter-top-n</code>, TermSuite will only keep top n values sorted by given property (desc). &gt; Any numeric property can be used when for post-propcessing filtering. See all <a href="http://termsuite.github.io/documentation/properties/">TermSuite properties</a>. &gt; For example, this launcher keeps only top 500 most specific terms.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --post-filter-property spec \
+            --post-filter-top-n 500 \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pattern,pilot,spec,freq,dFreq" \
+            --info
+</code></pre>
+
+<h4 id="filtering-keeping-term-variants">Filtering: keeping term variants</h4>
+
+<p>Filtering terminology will often result in having few term variants detected in output terminology, because most term variants have low frequencies. You can configure TermSuite to keep all variants of a term even if they are to be filtered out by the filter selector. &gt; Any numeric property can be used when for post-propcessing filtering. See all <a href="http://termsuite.github.io/documentation/properties/">TermSuite properties</a>. &gt; This launcher script keeps top 500 term by specificity, plus all 1-degree variants of these 500 terms.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --post-filter-property freq \
+            --post-filter-top-n 500 \
+            --post-filter-keep-variants \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pattern,pilot,spec,freq,dFreq" \
+            --info
+</code></pre>
+
+<h4 id="exporting-terminology-to-tsv">Exporting terminology to TSV</h4>
+
+<p>Export extracted terminology to TSV simply by setting option <code>--tsv</code>. &gt; You can select term and variant properties to appear as column in TSV with option <code>--tsv-properties</code>. Given value must be a <code>,</code>-separated list of valid property names. See all <a href="http://termsuite.github.io/documentation/properties/">available properties</a>.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "key,pattern,pilot,spec,freq,ind" \
+            --info
+</code></pre>
+
+<h4 id="deactivating-variant-gathering">Deactivating variant gathering</h4>
+
+<p>Variant gathering ca be deactivated with option <code>--disable-gathering</code>. this should make the terminology extraction pipeline to terminate significantly more quickly.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --disable-gathering \
+            --tsv $TSV_OUTPUT_FILE \
+            --info
+</code></pre>
+
+<h4 id="activating-semantic-variant-detection">Activating semantic variant detection</h4>
+
+<p>You can activate semantic variant detection with option <code>--enable-semantic-gathering</code>. Semantic variant gathering can be significantly slower. In TSV output, semantic variants are flagged as <code>V[h]</code>. TSV properties <code>isDico</code> and <code>isDistrib</code> tell if the variant has been detected with a synonymic dictionary or with distributional alignments.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --enable-semantic-gathering \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pilot,freq,spec,semScore,isDico,isDistrib" \
+            --info
+</code></pre>
+
+<h4 id="semantic-variant-detection-with-custom-dictionary">Semantic variant detection with custom dictionary</h4>
+
+<p>Extracting semantic variants requires a synonyms dictionary. Due to licensing issues, the one packaged with TermSuite can be very poor for some languages. You might prefer to use your own dictionary with option <code>--synonyms-dico</code>. See TermSuite packaged <a href="https://github.com/termsuite/termsuite-core/raw/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-synonyms.txt">english dictionary</a> for an example of dictionary format.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --enable-semantic-gathering \
+            --synonyms-dico $SYNONYMS_DICO \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pilot,freq,spec,semScore,isDico,isDistrib" \
+            --info
+</code></pre>
+
+<h4 id="semantic-variant-detection-without-distributional-variants-dico-only">Semantic variant detection without distributional variants (dico only)</h4>
+
+<p>Semantic variants found distributionally (with property <code>isDistrib=true</code>) generally are of worse quality and slower to find compared to variants found on dictionary. You can tell TermSuite to deactivate distributional gathering with option <code>--semantic-dico-only</code>.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --enable-semantic-gathering \
+            --semantic-dico-only \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pilot,freq,spec,semScore,isDico,isDistrib" \
+            --info
+</code></pre>
+
+<h4 id="extracting-a-terminology-from-a-very-large-corpus">Extracting a terminology from a very large corpus</h4>
+
+<p>Extracts a terminology from a very large corpus by deactivating occurrence indexing and setting a capped terminology size. The capped size is the maximum number of terms allowed to be kept in memory. Every time this number goes over the capped size, TermSuite filters the on-going termino by frequency.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --no-occurrence \
+            --capped-size 500000 \
+            --tsv $TSV_OUTPUT_FILE \
+            --info
+</code></pre>
+
+<h4 id="extracting-a-terminology-from-preprocessed-corpus">Extracting a terminology from preprocessed corpus</h4>
+
+<p>It is not mandatory to start a terminology extraction pipeline on textual corpus (with option <code>-c</code>). You may want to do your preprocessings once and start a extraction pipelines from an already preprocessed corpus with option <code>--from-prepared-corpus</code> instead. &gt; Note that since the corpus is prepared (including POS tags), there is no more need for setting options <code>-t</code>. TermSuite will complain if both options are set together. &gt; A valid preprocessed corpus is a directory path containing as many <code>*.xmi</code> files as there are <code>*.txt</code> file in input corpus. The <code>file-i.xmi</code> file being the list of preprocessed annotation of file <code>file-i.txt</code>. &gt; Another valid preprocessed corpus type is a TermSuite <code>.json</code> terminology in which all spotted terms have been imported but on which no further terminology extraction processings have been operated. &gt; See <a href="http://termsuite.github.io/documentation/preprocessor-cli/">TermSuite <code>Preprocessor</code></a> on how to produce a valid preprocessed corpus in any of these format.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            --from-prepared-corpus $PREPARED_CORPUS_PATH \
+            -l en \
+            --tsv $TSV_OUTPUT_FILE \
+            --info
+</code></pre>
+
+<h4 id="customizing-terminology-post-processing">Customizing Terminology Post-Processing</h4>
+
+<p>Terminology Post-Processing step (after variant gathering) can be customized with <code>--postproc-*</code> options. Option <code>--disable-post-processing</code> would disable this step. &gt; This launcher sets a threshold of 0.20 for term property <code>Independance</code>. This means that for each term, at least 20% of its occurrences must not be in the form of any of its variant. &gt; See <a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-extractor-config.json">default TermSuite config</a> for the default english post-processing values.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --postproc-independance-th 0.20 \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pilot,freq,spec,ind" \
+            --info
+</code></pre>
+
+<h4 id="filtering-cleaning-terminology-before-gathering-step---pre-filter-">Filtering: cleaning terminology before gathering step (<code>--pre-filter-*</code>)</h4>
+
+<p>Filtering terminology after the variant gathering step (<code>--post-filter-*</code>) is often the default requirement for users. Sometimes, it is clever to filter the terminology before the variant gathering with <code>--pre-filter-property</code> option. One of the main use case for pre-filtering is to reduce the terminology size in amount of term variant gathering, thus accelerating the whole variant gathering step. &gt; Any numeric property can be used when for pre-propcessing filtering. See all <a href="http://termsuite.github.io/documentation/properties/">TermSuite properties</a>. &gt; For example, this launcher filters all term having <code>freq &lt; 2</code> (hapaxes) before variant gathering. As a consequence, that will never be possible to detect term variants occurring exactly once. There can not be any <code>*-keep-variants</code> option with <code>--pre-filter</code> as there is <code>--post-filter-keep-variants</code>.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --pre-filter-property freq \
+            --pre-filter-th 2 \
+            --tsv $TSV_OUTPUT_FILE \
+            --tsv-properties "pattern,pilot,spec,freq,dFreq" \
+            --info
+</code></pre>
+
+<h4 id="debugging-terminology-extraction">Debugging terminology extraction</h4>
+
+<p>You can activate logging to console with either <code>--info</code> or <code>--debug</code> (more verbose). &gt; There is also the possibility to get term-centered information with option <code>--watch</code>. The following launcher will print all pipeline information about term “offshore wind energy”, even if it has been filtered. This is a very convenient tool when you do not get what you expected of a term (missing variants, missing term, etc).</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --debug \
+            --tsv $TSV_OUTPUT_FILE \
+            --watch "offshore wind energy"
+</code></pre>
+
+<h4 id="using-customized-linguistic-resources-advanced-users">Using customized linguistic resources (Advanced users)</h4>
+
+<p>TermSuite terminology extraction is based on multiple linguistic resources of many types and formats (multi-word term spotting patterns, variation gathering rules, term frequencies in general language, morphology rules, etc). The main use case for this option is to elaborate linguistic ressources for a new language. Use customized linguistic resources with options <code>--resource-dir</code> or <code>--resource-jar</code>. &gt; See <a href="http://termsuite.github.io/documentation/resources/">TermSuite resources</a> documentation and see how to easily produce your own custom resource directory or jar.</p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --resource-dir $CUSTOM_RESOURCE_DIR \
+            --tsv $TSV_OUTPUT_FILE \
+            --info
+</code></pre>
+
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>About</h4>
+        <p>TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>
+          <a href="/contact">Contact</a>
+        </h4>
+        <p class="text-center">
+            <a href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+        </p>
+        Team
+        <ul>
+
+          
+            <li><a href="https://github.com/pompadour"><p>Damien Cram</p>
+</a></li>
+          
+            <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>
+</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="/contact">Newsletter</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://bintray.com/termsuite/generic/termsuite-ui">Bintray</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.2/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.2/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© University of Nantes 2015-2017</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>
