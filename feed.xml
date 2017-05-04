@@ -5,8 +5,8 @@
     <description>site.description</description>
     <link>http://termsuite.github.io/</link>
     <atom:link href="http://termsuite.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 28 Apr 2017 18:35:11 +0200</pubDate>
-    <lastBuildDate>Fri, 28 Apr 2017 18:35:11 +0200</lastBuildDate>
+    <pubDate>Thu, 04 May 2017 18:28:08 +0200</pubDate>
+    <lastBuildDate>Thu, 04 May 2017 18:28:08 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -265,7 +265,7 @@ Needs the concept of TerminologyView&lt;/p&gt;
   &lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;fr.univ-nantes.termsuite&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;termsuite-core&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.0.2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.0.3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

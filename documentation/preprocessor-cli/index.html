@@ -335,7 +335,25 @@
                         <a title="titles.data-model"
                             class=""
                             href="/documentation/data-model/">
-                          Terminology
+                          Data Model
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.tsv-output"
+                            class=""
+                            href="/documentation/terminology-tsv-output/">
+                          TSV Output
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.alignment"
+                            class=""
+                            href="/documentation/alignment/">
+                          
                         </a>
                       </div>
                     
@@ -457,8 +475,8 @@
     </ul>
   </li>
   <li><a href="#examples">Examples</a>    <ul>
-      <li><a href="#preprocessing-a-txt-corpus-and-exporting-it-to-a-json-preprocessed-corpus">Preprocessing a ``<em>.txt<code> corpus and exporting it to a </code></em>.json` preprocessed corpus</a></li>
       <li><a href="#preprocessing-a-txt-corpus-and-exporting-it-to-a-xmi-preprocessed-corpus">Preprocessing a <code>*.txt</code> corpus and exporting it to a <code>*.xmi</code> preprocessed corpus</a></li>
+      <li><a href="#preprocessing-a-txt-corpus-and-exporting-it-to-a-json-preprocessed-corpus">Preprocessing a ``<em>.txt<code> corpus and exporting it to a </code></em>.json` preprocessed corpus</a></li>
       <li><a href="#preprocessing-a-txt-corpus-and-exporting-it-as-a-json-terminology">Preprocessing a ``*.txt<code> corpus and exporting it as a </code>json` terminology</a></li>
     </ul>
   </li>
@@ -598,21 +616,11 @@
 
 <p><a href="https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd">https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd</a></p>
 
-<h4 id="preprocessing-a-txt-corpus-and-exporting-it-to-a-json-preprocessed-corpus">Preprocessing a ``<em>.txt<code> corpus and exporting it to a </code></em>.json` preprocessed corpus</h4>
-
-<p>This example shows how to execute the preprocessing pipeline on a textual corpus and export the preprocessed documents to their <code>*.json</code> format for later reuse (e.g. by <a href="http://termsuite.github.io/documentation/terminology-extractor-cli/">TerminoExtractorCLI</a>). <br /> <strong>Note:</strong> The prepared corpus in <code>*.json</code> format (i.e. one output directory containing one <code>file-i.json</code> annotation file per input <code>file-i.txt</code> input text document) is different from the prepared corpus in imported terminology <code>imported-termino.json</code> format (one signle <code>json</code> file for the whole input document).</p>
-
-<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.PreprocessorCLI \
-            -t $TREETAGGER_HOME \
-            -c $CORPUS_PATH \
-            -l en \
-            --json-anno $PREPARED_CORPUS_PATH_JSON \
-            --info
-</code></pre>
-
 <h4 id="preprocessing-a-txt-corpus-and-exporting-it-to-a-xmi-preprocessed-corpus">Preprocessing a <code>*.txt</code> corpus and exporting it to a <code>*.xmi</code> preprocessed corpus</h4>
 
 <p>This example shows how to execute the preprocessing pipeline on a textual corpus and export the preprocessed documents to their <code>*.xmi</code> format for later reuse (e.g. by <a href="http://termsuite.github.io/documentation/terminology-extractor-cli/">TerminoExtractorCLI</a>).</p>
+
+<p><strong>Command Line</strong></p>
 
 <pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.PreprocessorCLI \
             -t $TREETAGGER_HOME \
@@ -622,12 +630,55 @@
             --info
 </code></pre>
 
-<h4 id="preprocessing-a-txt-corpus-and-exporting-it-as-a-json-terminology">Preprocessing a ``*.txt<code> corpus and exporting it as a </code>json` terminology</h4>
+<p><strong>Docker</strong></p>
 
-<p>This example shows how to execute the preprocessing pipeline on a textual corpus and export the preprocessed corpus as a terminology in its native format (one single output <code>.json</code>) for later reuse (e.g. by <a href="http://termsuite.github.io/documentation/terminology-extractor-cli/">TerminoExtractorCLI</a>). &gt; <strong>Note:</strong> The prepared corpus in <code>*.json</code> format (i.e. one output directory containing one <code>file-i.json</code> annotation file per input <code>file-i.txt</code> input text document) is different from the prepared corpus in imported terminology <code>terminology.json</code> format (one signle <code>json</code> file for the whole input document).</p>
+<pre><code class="language-bash">termsuite preprocess \
+            -c $CORPUS_PATH \
+            -l en \
+            --xmi-anno $PREPARED_CORPUS_PATH_XMI \
+            --info
+</code></pre>
+
+<h4 id="preprocessing-a-txt-corpus-and-exporting-it-to-a-json-preprocessed-corpus">Preprocessing a ``<em>.txt<code> corpus and exporting it to a </code></em>.json` preprocessed corpus</h4>
+
+<p>This example shows how to execute the preprocessing pipeline on a textual corpus and export the preprocessed documents to their <code>*.json</code> format for later reuse (e.g. by <a href="http://termsuite.github.io/documentation/terminology-extractor-cli/">TerminoExtractorCLI</a>). <br /> <strong>Note:</strong> The prepared corpus in <code>*.json</code> format (i.e. one output directory containing one <code>file-i.json</code> annotation file per input <code>file-i.txt</code> input text document) is different from the prepared corpus in imported terminology <code>imported-termino.json</code> format (one signle <code>json</code> file for the whole input document).</p>
+
+<p><strong>Command Line</strong></p>
 
 <pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.PreprocessorCLI \
             -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --json-anno $PREPARED_CORPUS_PATH_JSON \
+            --info
+</code></pre>
+
+<p><strong>Docker</strong></p>
+
+<pre><code class="language-bash">termsuite preprocess \
+            -c $CORPUS_PATH \
+            -l en \
+            --json-anno $PREPARED_CORPUS_PATH_JSON \
+            --info
+</code></pre>
+
+<h4 id="preprocessing-a-txt-corpus-and-exporting-it-as-a-json-terminology">Preprocessing a ``*.txt<code> corpus and exporting it as a </code>json` terminology</h4>
+
+<p>This example shows how to execute the preprocessing pipeline on a textual corpus and export the preprocessed corpus as a terminology in its native format (one single output <code>.json</code>) for later reuse (e.g. by <a href="http://termsuite.github.io/documentation/terminology-extractor-cli/">TerminoExtractorCLI</a>). <br /> <strong>Note:</strong> The prepared corpus in <code>*.json</code> format (i.e. one output directory containing one <code>file-i.json</code> annotation file per input <code>file-i.txt</code> input text document) is different from the prepared corpus in imported terminology <code>terminology.json</code> format (one signle <code>json</code> file for the whole input document).</p>
+
+<p><strong>Command Line</strong></p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.PreprocessorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
+            -l en \
+            --json $PREPARED_CORPUS_AS_TERMINOLOGY_PATH \
+            --info
+</code></pre>
+
+<p><strong>Docker</strong></p>
+
+<pre><code class="language-bash">termsuite preprocess \
             -c $CORPUS_PATH \
             -l en \
             --json $PREPARED_CORPUS_AS_TERMINOLOGY_PATH \
@@ -690,10 +741,10 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.3/">Maven</a>
           </li>
         </ul>
       </div>

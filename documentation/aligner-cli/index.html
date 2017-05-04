@@ -335,7 +335,25 @@
                         <a title="titles.data-model"
                             class=""
                             href="/documentation/data-model/">
-                          Terminology
+                          Data Model
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.tsv-output"
+                            class=""
+                            href="/documentation/terminology-tsv-output/">
+                          TSV Output
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.alignment"
+                            class=""
+                            href="/documentation/alignment/">
+                          
                         </a>
                       </div>
                     
@@ -452,7 +470,10 @@
     </ul>
   </li>
   <li><a href="#examples">Examples</a>    <ul>
-      <li><a href="#cmd3-alignalignsh">cmd/3-align/align.sh</a></li>
+      <li><a href="#translating-french-terms-to-english-and-print-top-5-candidates">Translating french terms to english (and print top 5 candidates)</a>        <ul>
+          <li><a href="#result">Result</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -553,17 +574,54 @@
 
 <p><a href="https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd">https://github.com/termsuite/termsuite-core/tree/develop/examples/cmd</a></p>
 
-<h4 id="cmd3-alignalignsh">cmd/3-align/align.sh</h4>
+<h4 id="translating-french-terms-to-english-and-print-top-5-candidates">Translating french terms to english (and print top 5 candidates)</h4>
 
-<pre><code class="language-bash">java -Xms1g -Xmx8g -cp termsuite-core-$TS_VERSION.jar \
+<p>You can translate domain-specific terms, i.e. terms that cannot be found in<br />
+any general language bilingual dictionary, from one source language to another<br />
+target language, based on:</p>
+<ul>
+  <li>a contextualized terminology extracted from a comparable multilingual corpus for the **source** language (`--source-termino`)</li>
+  <li>a contextualized terminology extracted from **the same** comparable multilingual corpus for the **target** language (`--target-termino`)</li>
+  <li>a bilingual `source language`-to-`target-language` dictionary (`--dictionary`)</li>
+  <li>the source term to translate (`--source-term`) within double quotes `"` when multi-worded.</li>
+</ul>
+<p><br /><br />
+See how to produce an alignment-ready (i.e. contextualized) terminology with TermSuite<br />
+with <a href="http://termsuite.github.io/documentation/terminology-extractor-cli/">TerminologyExtractorCLI</a>.</p>
+
+<p><strong>Command Line</strong></p>
+
+<pre><code class="language-bash">java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar \
       fr.univnantes.termsuite.tools.AlignerCLI \
-      --source-termino mytermino-fr.json \
-      --target-termino mytermino-en.json  \
+      --source-termino $SOURCE_TERMINO_JSON \
+      --target-termino $TARGET_TERMINO_JSON \
       --dictionary $BILINGUAL_DICO_PATH \
-       --term "énergie éolienne" \
+       --term $SOURCE_TERM \
        -n 5 \
        --info
 </code></pre>
+
+<p><strong>Docker</strong></p>
+
+<pre><code class="language-bash">termsuite align \
+      --source-termino $SOURCE_TERMINO_JSON \
+      --target-termino $TARGET_TERMINO_JSON \
+      --dictionary $BILINGUAL_DICO_PATH \
+       --term $SOURCE_TERM \
+       -n 5 \
+       --info
+</code></pre>
+
+<h5 id="result">Result</h5>
+
+<pre><code>1	énergie éolienne	wind energy	0,262	COMPOSITIONAL
+2	énergie éolienne	wind power	0,252	COMPOSITIONAL
+3	énergie éolienne	power of the wind	0,172	COMPOSITIONAL
+4	énergie éolienne	Windpower	0,164	COMPOSITIONAL
+5	énergie éolienne	Wind-Energy	0,150	COMPOSITIONAL
+</code></pre>
+
+<p>The output shows that the first translation candidate is <code>wind energy</code>. The flag <code>COMPOSITIONAL</code> indicates that it has been found by <a href="/documentation/alignment#compositional">compositional method</a>.</p>
 
 
       </article>
@@ -621,10 +679,10 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.3/">Maven</a>
           </li>
         </ul>
       </div>

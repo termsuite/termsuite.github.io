@@ -335,7 +335,25 @@
                         <a title="titles.data-model"
                             class=""
                             href="/documentation/data-model/">
-                          Terminology
+                          Data Model
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.tsv-output"
+                            class=""
+                            href="/documentation/terminology-tsv-output/">
+                          TSV Output
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="titles.alignment"
+                            class=""
+                            href="/documentation/alignment/">
+                          
                         </a>
                       </div>
                     
@@ -428,7 +446,7 @@
 
       <article class="doc-content">
         <div class="alert alert-danger" role="alert">
-  <p><strong>Warning: </strong> This documentation page is out of date. Some of its information cannot be applied to current version of TermSuite 3.0.2</p>
+  <p><strong>Warning: </strong> This documentation page is out of date. Some of its information cannot be applied to current version of TermSuite 3.0.3</p>
 </div>
 
 <p>This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.</p>
@@ -476,7 +494,7 @@
 
 <p>Download the last stable version of TermSuite’s jar for project <code>termsuite-core</code> from <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/">Maven Central</a> to directory <code>TERMSUITE_WORKSPACE</code>.</p>
 
-<p>Currently : <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/3.0.2/termsuite-core-3.0.2.jar">termsuite-core-3.0.2.jar</a></p>
+<p>Currently : <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/3.0.3/termsuite-core-3.0.3.jar">termsuite-core-3.0.3.jar</a></p>
 
 <h3 id="prepare-your-corpus">4. Prepare your corpus</h3>
 
@@ -505,12 +523,12 @@
     models/
       english.par # Should be the `utf-8` model !
     [...]
-  termsuite-core-3.0.2.jar
+  termsuite-core-3.0.3.jar
 </code></pre>
 
 <p>Run the terminology extraction on the <em>Wind Energy</em> corpus and language <code>en</code>:</p>
 
-<pre><code>$ java -cp termsuite-core-3.0.2.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
+<pre><code>$ java -cp termsuite-core-3.0.3.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
   -t ./tree-tagger/ \
   -c ./wind-energy/English/txt/ \
   -l en \
@@ -645,10 +663,10 @@
             <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
           </li>
           <li>
-            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.2/">Javadoc</a>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.3/">Javadoc</a>
           </li>
           <li>
-            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.2/">Maven</a>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.3/">Maven</a>
           </li>
         </ul>
       </div>
