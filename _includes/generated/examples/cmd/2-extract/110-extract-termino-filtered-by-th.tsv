@@ -1,0 +1,2673 @@
+#	type	pattern	pilot	spec	freq	dFreq
+1	T	N	rotor	4,82	848	30
+2	T	N N	wind turbine	4,56	1855	37
+2	V[s]	N N N	wind turbine rotor	3,38	31	12
+2	V[s]	N N N	WIND TURBINE APPLICATIONS	3,83	86	3
+2	V[s]	N N N	wind turbine blades	3,57	48	12
+2	V[s]	A N N	offshore wind turbine	3,26	47	7
+2	V[s]	N N N	wind turbine noise	3,53	43	3
+2	V[s]	N N N	wind turbine concepts	3,46	37	4
+2	V[s]	N N N	wind turbine generator	3,02	27	8
+2	V[s]	A N N	small wind turbines	3,41	33	8
+2	V[s]	N N N	MW wind turbine	2,89	10	5
+2	V[s]+	N N N	wind turbine technology	3,34	28	10
+2	V[s]	N N N	wind turbine system	3,40	32	7
+2	V[s]	A N N	modern wind turbines	2,82	17	7
+2	V[s]	N N N	wind turbine tower	3,07	15	9
+2	V[s]	A N N	large wind turbines	3,12	17	10
+3	T	N N	wind energy	4,51	414	32
+3	V[s]	N N N	wind energy potential	3,07	15	5
+3	V[s]	A N N	offshore wind energy	3,56	47	7
+3	V[s]	N N N	wind energy development	3,29	25	5
+3	V[s]	N N N	Wind Energy Facility	3,04	14	5
+3	V[s]	N N N	wind energy projects	2,97	12	8
+3	V[s]	N N N	wind energy technology	2,67	6	5
+3	V[s]	N N N	wind energy research	2,67	6	5
+3	V[s]	N N N	wind energy application	2,50	4	3
+3	V[s]	N N N	wind energy resources	2,50	4	3
+4	T	N N	wind power	4,34	278	26
+4	V[s]	N N N	wind turbine power	2,89	10	6
+4	V[s]	N N N	Wind Power Plant	3,76	74	9
+4	V[s]	A N N	offshore wind power	3,01	13	4
+4	V[s]	N N N	Wind Power Project	3,17	19	5
+4	V[s]	N N N	wind power development	3,04	14	5
+4	V[s]	N N N	wind power generation	2,63	11	7
+4	V[s]	N N N	wind power capacity	2,67	6	3
+5	T	N	airfoil	4,26	236	8
+6	T	N	voltage	4,22	214	19
+7	T	A	due	4,16	185	32
+8	T	N N	wind speed	4,11	332	32
+8	V[s]	A N N	average wind speed	3,01	26	13
+8	V[s]	A N N	low wind speed	3,15	18	7
+8	V[s]	N N N	Cut-out wind speed	2,29	5	3
+9	T	N	hydrogen	4,09	156	3
+10	T	N	vortex	4,01	132	7
+11	T	N	hub	3,95	114	23
+12	T	N N	wind generator	3,91	105	11
+12	V[s]	N N N	wind turbine generator	3,02	27	8
+13	T	N N	pitch angle	3,89	100	6
+13	V[s]	N N N	blade pitch angle	2,97	12	5
+14	T	N P N	angle of attack	3,88	97	8
+15	T	N N	blade element	3,87	96	4
+16	T	N N	power coefficient	3,87	94	5
+16	V[s]	A N N	maximum power coefficient	2,89	10	3
+17	T	N N	rotor blade	3,87	94	13
+17	V[s]	N N N N	wind turbine rotor blade	2,50	4	3
+18	T	N	TSR	3,85	91	4
+19	T	N N	turbine blades	3,85	91	16
+19	V[s]	N P N N	blades of wind turbines	2,59	5	4
+19	V[s]	N N N	wind turbine blades	3,57	48	12
+20	T	N N N	WIND TURBINE APPLICATIONS	3,83	86	3
+21	T	N	Annex	3,81	83	7
+22	T	N N	farm development	3,79	79	5
+22	V[s]	N P N N	development of a wind farm	2,50	4	3
+22	V[s]	N N N	wind farm development	3,73	69	5
+23	T	A N N	low frequency sound	3,78	78	3
+24	T	N	ordinance	3,78	77	3
+25	T	N N	blade design	3,78	77	4
+26	T	N N	project activity	3,77	76	4
+27	T	N N N	Wind Power Plant	3,76	74	9
+28	T	N	HAWT	3,74	71	5
+29	T	N N N	wind farm development	3,73	69	5
+30	T	N	nacelle	3,73	69	14
+31	T	N N	wind resource	3,71	66	10
+31	V[s]	N N N	wind energy resources	2,50	4	3
+32	T	N N	emission reductions	3,67	60	3
+33	T	A	solar	3,67	60	11
+34	T	N	EIA	3,66	59	5
+35	T	A N	reactive power	3,66	58	3
+36	T	A	linear	3,64	56	11
+37	T	N	VAWT	3,64	56	6
+38	T	A N N N	Vertical Axis Wind Turbines	3,62	53	7
+39	T	N N	flow field	3,61	52	4
+40	T	N N	turbine noise	3,61	52	4
+40	V[s]	N N N	wind turbine noise	3,53	43	3
+41	T	N	inverter	3,59	50	5
+42	T	N N	project area	3,58	49	5
+43	T	N	dBA	3,57	48	4
+44	T	N N N	wind turbine blades	3,57	48	12
+45	T	N N	power production	3,56	47	8
+46	T	A N N	offshore wind energy	3,56	47	7
+47	T	N N	rotor diameter	3,56	47	14
+48	T	N	stator	3,56	47	6
+49	T	A N N	Low Frequency Noise	3,55	46	4
+50	T	N	rpm	3,55	45	13
+51	T	N	transformer	3,55	45	14
+52	T	N	NREL	3,54	44	8
+53	T	N N	blade length	3,54	44	9
+54	T	N	Max	3,53	43	8
+55	T	N N N	wind turbine noise	3,53	43	3
+56	T	N N	power systems	3,53	43	8
+57	T	A N	synchronous generator	3,53	43	7
+58	T	N	MWh	3,52	42	3
+59	T	N N	Reynolds number	3,52	42	5
+60	T	N N	wind velocity	3,52	42	7
+61	T	A N N N	Horizontal Axis Wind Turbine	3,50	41	9
+62	T	A N	sound levels	3,49	80	5
+63	T	N	NACA	3,49	40	3
+64	T	N N	blade pitch	3,49	40	9
+64	V[s]	N N N	blade pitch angle	2,97	12	5
+65	T	N N	turbine technology	3,49	40	14
+65	V[s]+	N N N	wind turbine technology	3,34	28	10
+66	T	N N	grid connection	3,48	39	10
+66	V[s]	N N N	grid connection requirements	2,74	7	3
+67	T	N	deg	3,47	38	5
+68	T	N N	energy production	3,46	37	12
+68	V[s]	A N N	annual energy production	3,01	13	5
+69	T	N N N	wind turbine concepts	3,46	37	4
+70	T	N	Ref	3,42	34	6
+71	T	N N	power curve	3,42	34	10
+71	V[s]	N N P N	power curve of a wind	2,37	3	3
+72	T	N N	project boundary	3,42	34	3
+73	T	N	cos	3,42	34	3
+74	T	A	net	3,42	34	10
+75	T	N	Vol	3,41	33	9
+76	T	A N N	small wind turbines	3,41	33	8
+77	T	N	substation	3,41	33	8
+78	T	N N	power converter	3,41	33	4
+78	V[s]	N A N	power electronic converter	3,04	14	3
+79	T	N N	blade geometry	3,41	33	3
+80	T	N N N	wind turbine system	3,40	32	7
+81	T	A N	rotational speed	3,38	31	8
+82	T	N N	turbine power	3,38	31	8
+82	V[s]	N N N	wind turbine power	2,89	10	6
+82	V[s]	N N N	turbine power output	2,74	7	4
+83	T	N N N	wind turbine rotor	3,38	31	12
+84	T	N	REpower	3,38	31	5
+85	T	N N	blade shape	3,38	31	4
+86	T	N N	rotor speed	3,37	30	10
+87	T	N	receptors	3,37	30	8
+88	T	N	HAWTs	3,37	30	4
+89	T	A	avian	3,35	29	5
+90	T	A A N N	National Renewable Energy Laboratory	3,35	29	9
+91	T	N	amplitude	3,35	29	9
+92	T	N N	rotor plane	3,35	29	4
+93	T	N	infrasound	3,35	115	3
+94	T	N	Darrieus	3,34	28	5
+95	T	N	Vestas	3,34	28	6
+96	T	N	topologies	3,34	28	3
+97	T	A	3-blade	3,34	28	3
+98	T	A N	higher frequency	3,34	28	5
+99	T	N N N	wind turbine technology	3,34	28	10
+99	V[s]	A N N N	Offshore wind turbine technology	2,37	3	3
+100	T	N N	tower base	3,34	28	4
+101	T	N N	air density	3,34	28	8
+102	T	N N	hub height	3,34	28	11
+103	T	N	UAE	3,32	27	3
+104	T	N N	drive train	3,32	27	8
+105	T	N N	wind park	3,31	26	4
+106	T	A	compensatory	3,31	26	4
+107	T	N	ECN	3,31	26	4
+108	T	N N	blade tip	3,31	26	10
+108	V[s]	N N N	blade tip speed	2,67	6	3
+109	T	N N	transmission lines	3,31	26	5
+110	T	N N	chord length	3,31	26	3
+111	T	A N N	renewable energy sources	3,29	25	10
+112	T	N	kWh	3,29	25	5
+113	T	A N	angular velocity	3,29	25	4
+114	T	N N N	wind energy development	3,29	25	5
+115	T	N N	wind tunnel	3,29	50	12
+116	T	A	top	3,29	25	15
+117	T	N P N N	impacts of wind farms	3,29	25	3
+118	T	N N	tip-speed ratio	3,28	98	3
+119	T	N N	lift coefficient	3,27	24	5
+120	T	A N	installed capacity	3,27	24	8
+121	T	N N	speed ratio	3,27	24	5
+122	T	A N N	offshore wind turbine	3,26	47	7
+123	T	N N	wind projects	3,25	23	6
+123	V[s]	N N N	Wind Power Project	3,17	19	5
+123	V[s]	N N N	wind farm projects	3,10	16	3
+123	V[s]	N N N	wind energy projects	2,97	12	8
+123	V[s]	N N N	wind turbine project	2,67	12	6
+124	T	N	FAA	3,25	23	3
+125	T	N	CO2	3,25	23	3
+126	T	A N	centrifugal forces	3,25	23	5
+127	T	N N	support structures	3,25	23	6
+128	T	A	upwind	3,24	45	11
+129	T	A	aerodynamic	3,24	244	20
+130	T	N	excitation	3,23	22	5
+131	T	A N	compensatory measures	3,23	22	3
+132	T	N N	wind industry	3,23	22	8
+133	T	N P N N	impact of wind turbines	3,23	22	6
+134	T	N	Enercon	3,21	21	4
+135	T	N N	water depth	3,21	21	4
+136	T	N	kilowatt	3,21	21	6
+137	T	N N	Energy Policy	3,21	21	4
+138	T	N N	wind farm	3,20	488	21
+138	V[s]	A N N	offshore wind farms	3,11	66	7
+138	V[s]	N N N	wind farm development	3,73	69	5
+138	V[s]	N N N	wind farm projects	3,10	16	3
+138	V[s]	A N N	large wind farms	2,97	12	5
+138	V[s]	N N N	wind farm construction	2,67	6	4
+138	V[s]	A N N	modern wind farms	2,37	3	3
+139	T	A	1st	3,19	20	5
+140	T	N	III	3,19	20	9
+141	T	N	Pierpont	3,19	20	3
+142	T	N N	induction generator	3,19	20	5
+143	T	N N	shadow flicker	3,19	20	3
+144	T	N N	energy yield	3,19	20	4
+145	T	N N	wind technology	3,19	20	6
+145	V[s]+	N N N	wind turbine technology	3,34	28	10
+145	V[s]	N N N	wind energy technology	2,67	6	5
+145	V[s]	N N N	wind power technology	2,37	3	3
+146	T	N N N	Wind Power Project	3,17	19	5
+147	T	N N	power control	3,17	19	6
+148	T	N	windings	3,17	19	4
+149	T	A N	mechanical power	3,17	19	7
+150	T	N	oscillations	3,17	19	7
+151	T	N P N	amount of energy	3,17	19	7
+152	T	N N	battery bank	3,17	19	5
+153	T	N N	blade profile	3,17	19	3
+154	T	N	cut-in	3,17	19	11
+155	T	N	Proc	3,15	18	3
+156	T	N N	power electronics	3,15	18	7
+157	T	A	meteorological	3,15	18	9
+158	T	A N N N	variable speed wind turbine	3,15	18	3
+159	T	N	solidity	3,15	18	4
+160	T	N	validation	3,15	18	6
+161	T	N	AIAA	3,15	18	4
+162	T	A	licensed	3,15	18	3
+163	T	N N	rotor hub	3,15	18	6
+164	T	N	vector	3,15	18	6
+165	T	N N	turbine operation	3,15	18	6
+165	V[s]	N P N N	operation of wind turbines	2,85	9	8
+165	V[s]	N N N	wind turbine operations	3,04	14	5
+166	T	A N N	low wind speed	3,15	18	7
+167	T	N	IEC	3,12	17	7
+168	T	A	periodic	3,12	17	12
+169	T	N N	surface area	3,12	17	5
+170	T	N	Delft	3,12	17	4
+171	T	A N	active power	3,12	17	3
+171	V[p]	A N	reactive power	3,66	58	3
+172	T	N N	energy potential	3,12	17	6
+172	V[s]	N N N	wind energy potential	3,07	15	5
+173	T	N N	Wind Engineering	3,12	17	4
+174	T	R	due	3,12	17	10
+175	T	A N	renewable sources	3,12	17	5
+175	V[s]	A N P N	renewable source of electricity	2,50	4	3
+176	T	N N	turbine generator	3,12	34	9
+176	V[s]	N N N	wind turbine generator	3,02	27	8
+177	T	A N	aerodynamic forces	3,12	17	4
+178	T	A N	kinetic energy	3,12	17	6
+179	T	A	numerical	3,12	17	7
+180	T	A N	offshore turbines	3,12	17	7
+181	T	A N N	large wind turbines	3,12	17	10
+182	T	A N N	offshore wind farms	3,11	66	7
+183	T	N N N	wind farm projects	3,10	16	3
+184	T	A	online	3,10	16	8
+185	T	A N	steady state	3,10	16	7
+186	T	N N	control volume	3,10	16	3
+187	T	A N	normal operation	3,10	16	4
+188	T	N	raptors	3,10	16	5
+189	T	A	approximate	3,10	16	6
+190	T	N N	energy consumption	3,07	15	3
+191	T	N N	turbine components	3,07	15	6
+191	V[s]	N N N	wind turbine component	2,85	9	3
+192	T	N N	grid faults	3,07	15	3
+193	T	N	incl	3,07	15	4
+194	T	N	loudness	3,07	15	3
+195	T	A N	CO2 emissions	3,07	30	3
+196	T	N N	energy output	3,07	15	5
+196	V[s]	A N N	annual energy output	2,89	10	3
+197	T	N N	wind conditions	3,07	15	9
+198	T	A	land-based	3,07	15	3
+199	T	N N N	wind energy potential	3,07	15	5
+200	T	A	pursuant	3,07	15	4
+201	T	N N	wind source	3,07	15	3
+202	T	N N	lift force	3,07	15	6
+203	T	N	visualization	3,07	15	4
+204	T	N	anemometer	3,07	15	7
+205	T	N N N	wind turbine tower	3,07	15	9
+206	T	N	aluminum	3,07	30	5
+207	T	A N	maximum power	3,05	29	9
+208	T	N N N	wind power development	3,04	14	5
+209	T	N	Conf	3,04	14	3
+210	T	N A N	power electronic converter	3,04	14	3
+211	T	A N N	permanent magnet generator	3,04	14	5
+212	T	N P N	Ministry of Environment	3,04	28	6
+213	T	N N N	wind turbine operations	3,04	14	5
+214	T	N N N	wind turbine performance	3,04	14	5
+215	T	A	red	3,04	14	7
+216	T	A N	sound power	3,04	14	3
+217	T	N	capacitor	3,04	14	3
+218	T	N P N	cost of energy	3,04	14	6
+219	T	N N	boundary layer	3,04	14	4
+220	T	N N N	Wind Energy Facility	3,04	14	5
+221	T	N N	wind direction	3,04	14	7
+222	T	N	verification	3,04	14	3
+223	T	A N	Baltic Sea	3,04	14	3
+224	T	N N N	wind turbine generator	3,02	27	8
+225	T	A N N	annual energy production	3,01	13	5
+226	T	N N	wind data	3,01	13	5
+227	T	N	kilometers	3,01	13	3
+228	T	N	ind	3,01	13	5
+229	T	N	GIS	3,01	13	3
+230	T	A N	low speed	3,01	13	6
+231	T	A N	larger turbines	3,01	13	9
+232	T	N N	energy demand	3,01	13	4
+233	T	A N	National Wind	3,01	13	8
+234	T	A N	General Description	3,01	13	4
+235	T	A N	aerodynamic loads	3,01	13	5
+236	T	A N	Technical Report	3,01	13	6
+237	T	N	Email	3,01	13	8
+238	T	N	ANSI	3,01	13	5
+239	T	A N	electrical energy	3,01	26	9
+240	T	A N N	offshore wind power	3,01	13	4
+241	T	N N	output power	3,01	13	3
+242	T	N N	turbine foundations	3,01	13	5
+242	V[s]	N N N	wind turbine foundations	2,85	9	3
+243	T	N N N N	Wind Energy Conversion System	3,01	13	3
+244	T	N P N N	effects of wind turbines	3,01	13	4
+245	T	N P N N	types of wind turbines	3,01	13	7
+246	T	N	alternator	3,01	13	3
+247	T	A N N	average wind speed	3,01	26	13
+248	T	N	website	3,01	13	7
+248	V[m]	N N	web site	2,50	4	3
+249	T	N	velocity	2,98	183	13
+250	T	N	defense	2,97	12	3
+251	T	N N	turbine locations	2,97	12	3
+251	V[s]	N P N N	location of the wind turbines	2,37	3	3
+251	V[s]	N N N	wind turbine locations	2,50	4	3
+252	T	N	mph	2,97	12	5
+253	T	N	O&M	2,97	12	4
+254	T	A	viscous	2,97	12	3
+255	T	N N N	wind energy projects	2,97	12	8
+256	T	N N N	blade pitch angle	2,97	12	5
+257	T	A N N N	European Wind Energy Conference	2,97	12	3
+258	T	N N	wind plants	2,97	12	4
+258	V[s]	N N N	Wind Power Plant	3,76	74	9
+259	T	N C A N	Engineering and Industrial Aerodynamics	2,97	12	3
+260	T	A N N	large wind farms	2,97	12	5
+261	T	N N	noise exposure	2,97	12	4
+262	T	N	volt	2,97	12	7
+263	T	N P N	power of the wind	2,97	12	7
+263	V[s]+	N N	wind power	4,34	278	26
+264	T	N	variability	2,97	12	7
+265	T	N	AWEA	2,97	12	3
+266	T	N	computation	2,97	12	4
+267	T	N P N	Table of Contents	2,97	12	10
+268	T	N N	energy sector	2,97	12	7
+269	T	A N	upwind rotor	2,97	12	6
+270	T	A N	aerodynamic loading	2,93	11	4
+271	T	N N	electricity system	2,93	11	3
+272	T	N N	migration routes	2,93	11	4
+273	T	A N	electrical power	2,93	11	9
+274	T	R	dynamically	2,93	11	4
+275	T	N N	technology improvements	2,93	11	3
+276	T	N N	power levels	2,93	11	5
+276	V[s]	A N N	sound power level	2,67	6	3
+277	T	A N	Technical Description	2,93	11	3
+278	T	N	DOE	2,93	11	3
+279	T	A N	potential effects	2,93	11	3
+280	T	N N	wind development	2,93	11	6
+280	V[s]	N N N	wind power development	3,04	14	5
+280	V[s]	N N N	wind farm development	3,73	69	5
+280	V[s]	N N N	wind energy development	3,29	25	5
+280	V[s]	N N N	wind turbine development	2,50	4	3
+281	T	N N	Noise Guidelines	2,93	11	4
+282	T	N N	rotor design	2,93	11	5
+283	T	A	three-bladed	2,93	33	4
+284	T	N N	blade passage	2,93	11	3
+285	T	A N	aerodynamic performance	2,93	11	6
+286	T	N	airflow	2,93	11	3
+286	V[m]	N N	air flow	2,89	10	4
+287	T	N N	electricity output	2,93	11	5
+288	T	N N	voltage level	2,93	11	4
+289	T	N N	power capacity	2,93	11	5
+289	V[s]	N N N	wind power capacity	2,67	6	3
+290	T	A N	short circuit	2,93	11	3
+291	T	N N	generator speed	2,93	11	4
+292	T	N	BWEA	2,93	11	5
+293	T	N N	bat fatalities	2,93	11	4
+294	T	N N	turbine installation	2,89	10	5
+295	T	N	neighbors	2,89	10	5
+296	T	N	LLC	2,89	10	4
+297	T	A N	renewable electricity	2,89	10	3
+298	T	A N	high power	2,89	10	5
+299	T	N N	stream tube	2,89	10	3
+300	T	N N N	wind turbine power	2,89	10	6
+301	T	N N	rotor power	2,89	10	4
+302	T	N N	Engineering Department	2,89	10	4
+302	V[s]	N P A N	Department of Mechanical Engineering	2,59	5	3
+303	T	N	VAWTs	2,89	10	3
+304	T	N N	resource assessment	2,89	10	3
+305	T	N N	wind flow	2,89	10	5
+305	V[s]	N N N	wind turbine flow	2,74	7	4
+306	T	N	gasoline	2,89	10	3
+307	T	N N N	MW wind turbine	2,89	10	5
+308	T	A N	static pressure	2,89	10	3
+309	T	A N	high voltage	2,89	10	9
+310	T	N N	flow chart	2,89	10	3
+311	T	N	taper	2,89	10	3
+312	T	N N	lightning protection	2,89	10	6
+313	T	N	EWEA	2,89	10	5
+314	T	A	grid-connected	2,89	20	5
+315	T	N	waveform	2,89	10	4
+316	T	A N	offshore locations	2,89	10	3
+317	T	A N N	annual energy output	2,89	10	3
+318	T	N N N	greenhouse gas emissions	2,89	10	4
+319	T	A N	meteorological towers	2,89	10	3
+320	T	A N	Sustainable Energy	2,89	10	5
+321	T	N N	connection point	2,89	10	4
+322	T	N	Sandia	2,89	10	3
+323	T	N	Schematic	2,89	10	4
+324	T	N	Altamont	2,89	10	3
+325	T	N N	monitoring plan	2,89	10	3
+326	T	A N N	maximum power coefficient	2,89	10	3
+327	T	N N	air flow	2,89	10	4
+328	T	N	Fig	2,87	115	10
+329	T	N	optimization	2,87	19	8
+330	T	N	web	2,85	9	6
+331	T	N N	rotor position	2,85	9	3
+332	T	N	USA	2,85	9	9
+333	T	N N	bird mortality	2,85	9	3
+334	T	A	3-D	2,85	9	3
+335	T	N	Hertz	2,85	9	5
+336	T	N N	thrust force	2,85	9	3
+337	T	N	color	2,85	9	3
+338	T	N N	control strategies	2,85	9	6
+339	T	N P N N	operation of wind turbines	2,85	9	8
+340	T	N N N	California Energy Commission	2,85	9	4
+341	T	N	Nomenclature	2,85	9	4
+342	T	N N	turbine costs	2,85	9	3
+343	T	N N	turbulence intensity	2,85	9	3
+344	T	N N N	wind turbine component	2,85	9	3
+345	T	A N	mechanical torque	2,85	9	5
+346	T	A	Chatham-Kent	2,85	18	3
+347	T	N N N	wind turbine foundations	2,85	9	3
+348	T	A N	Synchronous machine	2,85	9	3
+349	T	N	conduction	2,85	9	3
+350	T	A	analogous	2,85	9	6
+351	T	N N	power grid	2,85	9	6
+352	T	N	coordinates	2,85	18	4
+353	T	R	ago	2,85	9	7
+354	T	A N	small turbines	2,85	9	6
+354	V[s]	A N N N	Small scale wind turbines	2,37	3	3
+355	T	N N	State University	2,85	9	3
+356	T	N N	cost analysis	2,85	9	4
+357	T	N N	system frequency	2,85	9	3
+358	T	N	hydropower	2,85	9	4
+359	T	A	brushless	2,85	9	3
+360	T	N N	voltage control	2,85	9	3
+361	T	N N	design requirements	2,85	9	3
+362	T	N N	blade section	2,85	9	3
+363	T	A N	global wind	2,85	9	4
+364	T	A N	sensitive receptors	2,85	9	3
+365	T	N P N	collection of information	2,85	9	3
+366	T	A	perpendicular	2,85	18	6
+367	T	A N	dynamic response	2,85	9	3
+368	T	N N	John Wiley	2,85	9	7
+369	T	A	climatic	2,85	9	4
+370	T	A	leeward	2,85	9	3
+371	T	A N	Technical Information	2,85	9	3
+372	T	A	geometric	2,85	9	6
+373	T	A N	aerodynamic efficiency	2,85	9	3
+374	T	N N	speed range	2,85	9	3
+374	V[s]	N P N N	range of wind speeds	2,50	4	4
+375	T	N	Windpower	2,82	17	8
+375	V[mg]+	N N	wind power	4,34	278	26
+375	V[m]+	N P N	power of the wind	2,97	12	7
+375	V[m]	N N N	wind turbine power	2,89	10	6
+376	T	A N N	modern wind turbines	2,82	17	7
+377	T	A N	electrical generator	2,81	25	5
+378	T	N	blade	2,80	1425	34
+379	T	N	Tel	2,80	8	6
+380	T	N N	investment costs	2,80	8	5
+381	T	N	NRC	2,80	8	4
+382	T	N N	Noise Impacts	2,80	8	4
+383	T	N N	health concerns	2,80	8	3
+384	T	N	fog	2,80	8	3
+385	T	N	viscosity	2,80	8	3
+386	T	N N N	wind turbine design	2,80	16	10
+387	T	N N	pressure coefficient	2,80	8	3
+388	T	N N	ice throw	2,80	8	3
+389	T	N	azimuth	2,80	8	4
+390	T	N N	power source	2,80	8	5
+391	T	N N	Community Noise	2,80	8	3
+392	T	N	winch	2,80	8	3
+393	T	N	deformation	2,80	8	4
+394	T	A	longitudinal	2,80	8	5
+395	T	A N	magnetic fields	2,80	8	6
+396	T	N	Aug	2,80	8	4
+397	T	N N N	Wind Energy System	2,80	8	3
+398	T	A N	high angles	2,80	8	4
+399	T	N P N	level of noise	2,80	8	3
+399	V[s]+	N N	noise levels	1,88	38	7
+400	T	A N	dynamic loads	2,80	8	4
+401	T	N N	System Operator	2,80	8	5
+402	T	A N N	global climate change	2,80	8	3
+403	T	A N	mechanical energy	2,80	8	4
+404	T	A	favorable	2,80	8	5
+405	T	N N	background noise	2,80	8	4
+406	T	N N	turbine shaft	2,80	8	3
+407	T	A	mid	2,80	8	7
+408	T	N N	energy capture	2,80	8	4
+409	T	A N N	National Research Council	2,80	8	4
+410	T	N N	output voltage	2,80	8	3
+411	T	N N	rotor shaft	2,80	8	4
+412	T	N N	tower height	2,80	8	6
+413	T	N N	electricity consumption	2,80	8	4
+414	T	N N	transmission system	2,80	8	5
+415	T	A N N	individual wind turbines	2,80	8	6
+416	T	N N	tunnel test	2,80	8	6
+416	V[s]	N N N	Wind tunnel test	2,50	4	4
+417	T	A N	technical data	2,80	8	4
+418	T	A	intermittent	2,80	8	6
+419	T	N N	airfoil section	2,80	16	5
+420	T	A N	normal force	2,80	8	3
+421	T	N N	blade radius	2,80	8	3
+422	T	A N	potential risk	2,80	8	3
+423	T	N N	electricity grid	2,80	8	3
+424	T	A N	vibroacoustic disease	2,78	23	3
+425	T	N N	rotor side	2,77	15	3
+426	T	N	air	2,76	192	26
+427	T	N	Keywords	2,74	7	7
+428	T	N N	peak power	2,74	14	3
+429	T	N N	life cycle	2,74	7	5
+430	T	N N	business days	2,74	7	3
+431	T	N N	blade chord	2,74	7	4
+432	T	N	spacing	2,74	7	4
+433	T	A N	upper surface	2,74	7	3
+434	T	N P N	cost of the system	2,74	7	3
+435	T	A N N	Federal Aviation Administration	2,74	7	3
+436	T	A N	Executive Summary	2,74	7	5
+437	T	N	increments	2,74	7	5
+438	T	N P N	description of project	2,74	7	3
+439	T	N	biomass	2,74	7	4
+440	T	N N	test data	2,74	7	4
+441	T	A N	protected areas	2,74	7	3
+442	T	N P N	top of the tower	2,74	7	3
+443	T	A	projected	2,74	7	4
+444	T	N P N	impacts of the project	2,74	7	4
+444	V[s]	N P A N	Impacts of Wind-Energy Projects	2,67	6	4
+445	T	N N N	wind turbine flow	2,74	7	4
+446	T	A N N	single wind turbine	2,74	7	3
+447	T	N	hysteresis	2,74	7	3
+448	T	N N N	wind turbine sites	2,74	7	5
+449	T	N P N	sources of energy	2,74	7	5
+450	T	N N	Kyoto Protocol	2,74	7	3
+451	T	N N	cut-in speed	2,74	7	3
+452	T	N N	noise sources	2,74	7	3
+453	T	N N	wind generation	2,74	7	3
+453	V[s]	N N N	wind power generation	2,63	11	7
+454	T	N	ASME	2,74	7	3
+455	T	N N N	grid connection requirements	2,74	7	3
+456	T	A N	good wind	2,74	7	4
+457	T	A N	clean energy	2,74	7	6
+458	T	N N N	turbine power output	2,74	7	4
+459	T	A N N	commercial wind turbines	2,74	7	6
+460	T	N N	wind potential	2,74	7	3
+460	V[s]	N N N	wind energy potential	3,07	15	5
+461	T	A	stand-alone	2,74	14	7
+462	T	A N	finite element	2,74	7	3
+463	T	N N	rotation speed	2,74	7	5
+463	V[d]	A N	rotational speed	3,38	31	8
+464	T	N N	construction phase	2,74	7	3
+465	T	N N	capacity factor	2,74	7	3
+466	T	N N	installation process	2,74	7	3
+467	T	N N	power rating	2,74	7	5
+468	T	N N	PAGE PAGE	2,74	7	5
+469	T	N	monopile	2,72	20	5
+470	T	A N	baseline scenario	2,71	13	3
+471	T	N	WindPACT	2,71	13	3
+472	T	A	two-bladed	2,69	19	3
+473	T	N	Jonkman	2,67	6	4
+474	T	N N N	wind turbine project	2,67	12	6
+475	T	N N	pressure distribution	2,67	6	3
+476	T	N P N	amount of power	2,67	6	5
+477	T	N	rad	2,67	6	3
+478	T	A N	operational lifetime	2,67	6	4
+479	T	N N	generator rotor	2,67	6	3
+480	T	N	man	2,67	6	5
+481	T	N N	rotor geometry	2,67	6	3
+482	T	N N	turbine collisions	2,67	6	4
+482	V[s]	N N N	wind turbine collisions	2,50	4	3
+483	T	N N	cell phone	2,67	6	3
+484	T	N	GEN	2,67	6	3
+485	T	A N N N	European Wind Energy Association	2,67	6	5
+486	T	N N	frequency response	2,67	6	4
+487	T	N N	generator power	2,67	6	3
+488	T	A N	major components	2,67	6	5
+489	T	N N	Darrieus rotor	2,67	6	3
+490	T	N N	boundary conditions	2,67	6	3
+491	T	N N N	wind energy research	2,67	6	5
+492	T	A	6th	2,67	6	4
+493	T	N N	grid voltage	2,67	6	4
+494	T	N N	energy target	2,67	6	3
+495	T	N N	flow conditions	2,67	6	4
+496	T	A N	large rotor	2,67	6	6
+497	T	N P A N	Impacts of Wind-Energy Projects	2,67	6	4
+498	T	N N	power quality	2,67	6	4
+499	T	N N	Turbine geometry	2,67	6	3
+500	T	N N	road construction	2,67	6	3
+501	T	A N N	sound power level	2,67	6	3
+502	T	N P N N	parts of the wind turbine	2,67	6	5
+503	T	N N	wind sites	2,67	6	3
+503	V[s]	N N N	wind turbine sites	2,74	7	5
+504	T	N C N N	operation and maintenance costs	2,67	6	4
+505	T	N N	electricity network	2,67	6	3
+506	T	N	approx	2,67	6	4
+507	T	A	baseline	2,67	114	7
+508	T	N	Dec	2,67	6	5
+509	T	A	asynchronous	2,67	6	5
+510	T	N N	AIAA Paper	2,67	6	3
+511	T	A N	horizontal position	2,67	6	3
+512	T	A N	aerodynamic noise	2,67	6	3
+513	T	N	Aeronautics	2,67	6	4
+514	T	N N	Blade material	2,67	6	5
+515	T	N N N	wind power capacity	2,67	6	3
+516	T	A	accepted	2,67	6	6
+517	T	N N	lattice tower	2,67	6	3
+518	T	N N N	blade tip speed	2,67	6	3
+519	T	N N	system design	2,67	6	5
+520	T	N P N	installation of the wind	2,67	6	4
+520	V[s]	N N	wind installations	2,37	3	3
+521	T	N N	rotor surface	2,67	6	3
+522	T	A	inviscid	2,67	12	4
+523	T	A	Aeronautical	2,67	6	3
+524	T	N N	distribution system	2,67	6	4
+525	T	A N	extreme winds	2,67	6	4
+526	T	N N	bat species	2,67	6	3
+527	T	N N	cross section	2,67	6	4
+528	T	N N	project developer	2,67	6	3
+529	T	N N	tower shadow	2,67	6	3
+530	T	N N	field data	2,67	6	3
+531	T	A N	operational data	2,67	6	3
+532	T	N N N	wind energy technology	2,67	6	5
+533	T	A N	Fluid Dynamics	2,67	6	3
+534	T	N N	design process	2,67	6	4
+535	T	N N N	wind farm construction	2,67	6	4
+536	T	A N N	higher wind speeds	2,67	6	6
+537	T	N P N N	height of the Wind Turbine	2,67	6	3
+538	T	N N N	Wind Resource Area	2,67	6	3
+539	T	A N	related facilities	2,67	6	3
+540	T	N N N	wind power generation	2,63	11	7
+541	T	A N	electromagnetic fields	2,63	11	3
+542	T	N N	turbine sites	2,63	11	5
+542	V[g]	N N	Turbine size	2,37	6	3
+542	V[s]	N N N	wind turbine sites	2,74	7	5
+543	T	N	spreadsheet	2,63	11	4
+544	T	N N	power transmission	2,59	5	3
+545	T	A N	structural loads	2,59	5	4
+546	T	N P A N	Department of Mechanical Engineering	2,59	5	3
+547	T	A N	Baseline Study	2,59	10	3
+548	T	A N	minimum setback	2,59	5	3
+549	T	A N	human hearing	2,59	5	3
+550	T	A N	thermal energy	2,59	5	3
+551	T	N N	NREL S809	2,59	5	3
+552	T	A N	S809 airfoil	2,59	10	4
+553	T	A	Musial	2,59	10	3
+554	T	A	4th	2,59	5	4
+555	T	A	gearless	2,59	5	3
+556	T	N P N	source of electricity	2,59	5	4
+556	V[s]	A N P N	renewable source of electricity	2,50	4	3
+557	T	N N	flow separation	2,59	5	5
+558	T	N N	Force vectors	2,59	5	3
+559	T	N P N	Density of air	2,59	5	3
+559	V[s]	N N	air density	3,34	28	8
+560	T	A	Wind-Energy	2,59	10	4
+560	V[mg]+	N N	wind energy	4,51	414	32
+561	T	N P N	forms of energy	2,59	5	3
+562	T	N N	service life	2,59	5	3
+563	T	A N	Downwind rotor	2,59	5	3
+564	T	N N	power loss	2,59	5	3
+565	T	A N	regular maintenance	2,59	5	3
+566	T	N P N	blades of a turbine	2,59	5	5
+566	V[s]+	N N	turbine blades	3,85	91	16
+567	T	N	BOS	2,59	5	3
+568	T	N	setup	2,59	5	5
+569	T	A	site-specific	2,59	10	4
+570	T	N N	pressure drop	2,59	5	3
+571	T	N N	drive shaft	2,59	5	3
+572	T	A N	operational systems	2,59	5	3
+573	T	A	raw	2,59	5	3
+574	T	A	simultaneous	2,59	5	4
+575	T	A	mass	2,59	5	5
+576	T	N N	setback distances	2,59	5	4
+577	T	A N N N	American Wind Energy Association	2,59	10	6
+578	T	N N	foundation design	2,59	5	3
+579	T	A N	experimental data	2,59	10	3
+580	T	A	specialized	2,59	5	5
+581	T	N P N	power of the turbine	2,59	5	3
+581	V[s]+	N N	turbine power	3,38	31	8
+582	T	N N	design features	2,59	5	4
+583	T	N P N	Department of Commerce	2,59	5	3
+584	T	N P N	impact of noise	2,59	5	4
+584	V[s]	N N	Noise Impacts	2,80	8	4
+585	T	A N	constant speed	2,59	5	5
+586	T	A N	mathematical model	2,59	5	3
+587	T	N P N	amount of electricity	2,59	5	5
+588	T	A N	turbulent wind	2,59	5	5
+589	T	A N	Active Control	2,59	5	3
+590	T	A	incompressible	2,59	5	3
+591	T	N	compaction	2,59	5	4
+592	T	N N	rotor axis	2,59	5	3
+593	T	A N	experimental results	2,59	5	3
+594	T	A N	migratory birds	2,59	5	3
+595	T	N P N	type of generator	2,59	5	3
+596	T	N N	Impact Study	2,59	5	5
+597	T	A N	specific site	2,59	5	3
+598	T	N N	speed increases	2,59	5	3
+599	T	N P N N	blades of wind turbines	2,59	5	4
+600	T	A N	unwanted sound	2,59	5	3
+601	T	A N	analytical methods	2,59	5	3
+602	T	A N	structural design	2,59	5	5
+603	T	N N	pressure system	2,59	5	3
+604	T	A N	potential impacts	2,57	62	3
+605	T	A	inertial	2,55	9	5
+606	T	N N	project site	2,55	9	3
+607	T	A N N	renewable energy projects	2,53	13	5
+608	T	N	torque	2,52	225	14
+609	T	N	configuration	2,50	85	16
+610	T	N N N	wind turbine collisions	2,50	4	3
+611	T	N	vii	2,50	4	4
+612	T	N P N	power of the generator	2,50	4	3
+612	V[s]	N N	generator power	2,67	6	3
+613	T	N	Sep	2,50	4	4
+614	T	N	Oct	2,50	4	3
+615	T	N N	power regulation	2,50	4	3
+616	T	N N	stall control	2,50	4	3
+617	T	N	km2	2,50	4	3
+618	T	N N N	wind energy application	2,50	4	3
+619	T	N	Lieu	2,50	4	3
+620	T	N P N	stage of the project	2,50	4	3
+621	T	N N	Peer Review	2,50	4	3
+622	T	N P N	direction of the wind	2,50	4	3
+622	V[s]	N N	wind direction	3,04	14	7
+623	T	N N	Savonius rotor	2,50	8	3
+624	T	N N	air pressure	2,50	4	4
+625	T	N N	energy calculations	2,50	4	3
+626	T	N N	installation costs	2,50	4	3
+627	T	N N N	Wind Tunnel Investigation	2,50	4	3
+628	T	N N	generator efficiency	2,50	4	3
+629	T	N P N	direction of rotation	2,50	4	3
+630	T	N N N	wind energy resources	2,50	4	3
+631	T	N N N	scale wind turbine	2,50	4	4
+632	T	N	kilowatt-hour	2,50	4	3
+633	T	N P N	plane of rotation	2,50	4	3
+634	T	N P N N	development of a wind farm	2,50	4	3
+635	T	N N	migration corridors	2,50	4	3
+636	T	A	geometrical	2,50	4	3
+637	T	N	fiber	2,50	4	4
+638	T	N N	Research Report	2,50	4	3
+639	T	N N	turbine areas	2,50	4	3
+640	T	N N	soil compaction	2,50	4	3
+641	T	N P N	rotation of the blades	2,50	4	4
+642	T	N N	turbine diameter	2,50	4	3
+643	T	N N	generation facility	2,50	4	3
+644	T	N N N	REpower Systems AG	2,50	4	3
+645	T	N P N N	construction of wind turbine	2,50	4	3
+646	T	A N	environmental conditions	2,50	8	3
+647	T	N N	web site	2,50	4	3
+648	T	N P N	tip of the blade	2,50	4	3
+648	V[s]+	N N	blade tip	3,31	26	10
+649	T	N N	Energy Center	2,50	4	3
+650	T	N	neighborhoods	2,50	4	4
+651	T	N	EXP	2,50	4	3
+652	T	A N P N	renewable source of electricity	2,50	4	3
+653	T	N N N	wind turbine locations	2,50	4	3
+654	T	A N	National Academies	2,50	4	3
+655	T	N N	Design Concept	2,50	4	3
+656	T	N P N	variability of wind	2,50	4	4
+657	T	N	Apr	2,50	4	3
+658	T	N P N	capacity of the turbine	2,50	4	4
+659	T	N N	turbine availability	2,50	4	3
+660	T	A N	monthly basis	2,50	4	3
+661	T	N N N N	wind turbine rotor blade	2,50	4	3
+662	T	N N	gear box	2,50	4	3
+663	T	N N	cost advantage	2,50	4	3
+664	T	N N	air mass	2,50	4	3
+665	T	N N N	wind turbine development	2,50	4	3
+666	T	A N	circular path	2,50	4	3
+667	T	A N P N	higher angle of attack	2,50	4	4
+668	T	N P N N	range of wind speeds	2,50	4	4
+669	T	A N	applicable laws	2,50	4	3
+670	T	N N	power demand	2,50	4	3
+671	T	A N	current knowledge	2,50	4	3
+672	T	N N	fatigue loads	2,50	4	3
+673	T	A N	turbulent flow	2,50	4	3
+674	T	A N	downwind turbines	2,50	4	3
+675	T	N N N	Wind tunnel test	2,50	4	4
+676	T	N N	fatigue life	2,50	4	4
+677	T	A A N N N	Small Horizontal Axis Wind Turbine	2,50	4	3
+678	T	R	Low	2,50	4	3
+679	T	A A N	International Electrotechnical Commission	2,50	4	4
+680	T	A	behavioural	2,50	8	3
+681	T	A N	electrical components	2,50	4	3
+682	T	A N	International Expert	2,50	4	3
+683	T	A N	total power	2,50	4	4
+684	T	A N	Environmental Engineering	2,50	4	3
+685	T	N N	rotor aerodynamics	2,50	4	3
+686	T	A	needed	2,50	4	3
+687	T	N	Nordex	2,50	8	3
+688	T	N P N	speed of the generator	2,50	4	3
+688	V[s]	N N	generator speed	2,93	11	4
+689	T	N N	kW turbines	2,50	4	3
+690	T	N	tech	2,50	4	4
+691	T	A N	mechanical parts	2,50	4	3
+692	T	A N N	ambient noise levels	2,50	4	3
+693	T	N N	rotor revolution	2,50	4	3
+694	T	N N	maintenance requirements	2,50	4	3
+695	T	N N	air stream	2,50	4	4
+696	T	N	Abatement	2,50	4	3
+697	T	N N	bat mortality	2,50	4	3
+698	T	A N	technical challenges	2,50	4	3
+699	T	A	finished	2,50	4	3
+700	T	N N N	lightning protection system	2,50	4	3
+701	T	N N	energy requirements	2,50	4	4
+702	T	N N	wind gusts	2,50	4	3
+703	T	A N	environmental considerations	2,50	4	4
+703	V[g]	A N	Environmental Conservation	2,37	3	3
+704	T	R	numerically	2,50	4	3
+705	T	N N	power technology	2,50	4	3
+705	V[s]	N N N	wind power technology	2,37	3	3
+706	T	N	dataset	2,50	4	3
+707	T	N N	wind shear	2,50	4	3
+708	T	N N P N	power output of the turbine	2,50	4	3
+709	T	N N	rotor radius	2,50	4	3
+710	T	A	Aeroelastic	2,47	15	3
+711	T	N	frequency	2,46	422	20
+712	T	N	displacement	2,46	55	6
+713	T	A N	CO2 reductions	2,44	7	3
+714	T	A	bladed	2,44	7	5
+715	T	A	resistive	2,44	7	4
+716	T	N N	electricity production	2,44	7	3
+717	T	N N	dose-response relationship	2,44	7	3
+718	T	N N	sound sources	2,44	7	3
+719	T	A N	Environmental Research	2,44	7	3
+720	T	A N	Sound Measurement	2,44	7	4
+721	T	N N	power plants	2,43	139	14
+721	V[s]	N N N	Wind Power Plant	3,76	74	9
+722	T	A	Electrotechnical	2,42	10	4
+723	T	N	Wisconsin	2,40	45	4
+724	T	N	carbon	2,40	70	10
+725	T	N	generator	2,37	559	30
+726	T	A	spinning	2,37	6	3
+727	T	N	archeology	2,37	3	3
+728	T	A N	larger machines	2,37	3	3
+729	T	N N	transmission networks	2,37	3	3
+730	T	N P N	rotation of the turbine	2,37	3	3
+731	T	A N	dynamic effects	2,37	3	3
+732	T	N P N	force of the wind	2,37	3	3
+733	T	A	2-D	2,37	3	3
+734	T	N	glass-fibre	2,37	3	3
+735	T	N	coordination	2,37	3	3
+736	T	A N	average size	2,37	3	3
+737	T	A N	cleaner sources	2,37	3	3
+738	T	A N	rotational energy	2,37	3	3
+739	T	N N	noise issues	2,37	3	3
+740	T	N	offsets	2,37	3	3
+741	T	N N	energy industry	2,37	3	3
+742	T	A N	axial direction	2,37	3	3
+743	T	N P N	frequency of the system	2,37	3	3
+743	V[s]	N N	system frequency	2,85	9	3
+744	T	A N	preliminary design	2,37	3	3
+745	T	N N	tower design	2,37	3	3
+746	T	N N	design criterion	2,37	3	3
+747	T	A N	advanced control	2,37	3	3
+748	T	N	byproduct	2,37	3	3
+749	T	A N	acoustic noise	2,37	3	3
+750	T	N P N N	systems of wind turbines	2,37	3	3
+751	T	N N	Turbine size	2,37	6	3
+752	T	A N	detailed comparison	2,37	3	3
+753	T	N N	analysis results	2,37	3	3
+754	T	A N	aerodynamic brakes	2,37	3	3
+755	T	N P N	regions of the world	2,37	3	3
+756	T	N N	suction side	2,37	3	3
+757	T	N N	wind installations	2,37	3	3
+758	T	N	Mech	2,37	3	3
+759	T	N	downtime	2,37	3	3
+760	T	A N N	renewable energy generation	2,37	3	3
+761	T	N N	voltage drop	2,37	3	3
+762	T	N P N N	cube of the wind speed	2,37	3	3
+763	T	N N	Industry Association	2,37	3	3
+764	T	A N	potential sources	2,37	3	3
+765	T	N N	hub designs	2,37	3	3
+766	T	N N	Wind field	2,37	3	3
+767	T	A N	active stall	2,37	3	3
+768	T	A N	municipal council	2,37	3	3
+769	T	N P N	security of supplies	2,37	3	3
+770	T	A N	Future turbines	2,37	3	3
+771	T	A	Multibrid	2,37	12	3
+772	T	N	dam	2,37	3	3
+773	T	A N A N	permanent magnet synchronous generator	2,37	3	3
+774	T	N N	cost effectiveness	2,37	3	3
+775	T	A N	conservative approach	2,37	3	3
+776	T	N	Manwell	2,37	3	3
+777	T	N N	roller bearings	2,37	3	3
+778	T	A N	RESPONSIBLE PERSON	2,37	3	3
+779	T	N	ISBN	2,37	3	3
+780	T	N	Cotrell	2,37	3	3
+781	T	A	prescribed	2,37	3	3
+782	T	N N	grid frequency	2,37	3	3
+783	T	A N N	modern wind farms	2,37	3	3
+784	T	N N	inflow conditions	2,37	3	3
+785	T	A N	mechanical stress	2,37	3	3
+786	T	A N	onshore technology	2,37	3	3
+787	T	N P N	top of the foundation	2,37	3	3
+788	T	N N	energy equation	2,37	3	3
+789	T	N P N N	function of wind speed	2,37	3	3
+790	T	N N N	drive WIND TURBINE	2,37	3	3
+791	T	N P N	nature of wind	2,37	3	3
+792	T	A N	operational life	2,37	3	3
+793	T	N N	pressure difference	2,37	3	3
+794	T	A	Lee	2,37	3	3
+795	T	A N	special reference	2,37	3	3
+796	T	N P N N	Analysis of Wind Energy	2,37	3	3
+797	T	N N	input data	2,37	3	3
+798	T	N N	wind vane	2,37	3	3
+799	T	A N N	high frequency components	2,37	6	3
+800	T	N P N N	location of the wind turbines	2,37	3	3
+801	T	A N	electrical output	2,37	3	3
+802	T	A N	Environmental Conservation	2,37	3	3
+803	T	N P N N	placement of wind turbines	2,37	3	3
+804	T	A N	individual components	2,37	3	3
+805	T	N P N	flow of wind	2,37	3	3
+805	V[s]+	N N	wind flow	2,89	10	5
+806	T	N P N	speed of the blade	2,37	3	3
+807	T	N N N N	Wind Turbine Generator Systems	2,37	3	3
+808	T	A N	current study	2,37	3	3
+809	T	N P N N	curve of a wind turbine	2,37	3	3
+810	T	N N N	power generation facilities	2,37	3	3
+811	T	R	aerodynamically	2,37	3	3
+812	T	N N	rotor rotation	2,37	3	3
+813	T	A N	annual electricity	2,37	3	3
+814	T	N N N	wind power technology	2,37	3	3
+815	T	A N	Aerodynamic Characteristics	2,37	3	3
+816	T	A N	scientific data	2,37	3	3
+817	T	A N	strong focus	2,37	3	3
+818	T	N P N	Department of Defense	2,37	3	3
+819	T	N N P N	power curve of a wind	2,37	3	3
+820	T	A N	long-term basis	2,37	3	3
+821	T	A N	nearby residents	2,37	3	3
+822	T	N P N	parts of the wind	2,37	9	5
+823	T	N	Micro	2,37	3	3
+824	T	A N N	grid-connected wind turbine	2,37	3	3
+825	T	A N N N	Offshore wind turbine technology	2,37	3	3
+826	T	N N	model predictions	2,37	3	3
+827	T	A N	GENTLE BREEZE	2,37	3	3
+828	T	N	pinions	2,37	3	3
+829	T	A N N N	Small scale wind turbines	2,37	3	3
+830	T	N P N N	variation of wind speed	2,37	3	3
+831	T	A	Weibull	2,37	6	3
+832	T	A	offshore	2,36	440	12
+833	T	N	mitigation	2,36	100	4
+834	T	N	Center	2,36	73	20
+835	T	N N	Impact Assessment	2,36	58	4
+835	V[s]	A N N	Environmental Impact Assessment	2,01	26	3
+836	T	N	node	2,34	36	3
+837	T	N	license	2,33	55	7
+838	T	A	onshore	2,33	65	8
+839	T	A N	electric generation	2,32	8	3
+839	V[s]	N N	electricity generation	2,04	21	6
+840	T	N	methodology	2,32	85	12
+841	T	N	diameter	2,32	111	24
+842	T	N	gearbox	2,31	78	16
+842	V[m]	N N	gear box	2,50	4	3
+843	T	N	wetlands	2,31	44	5
+844	T	N	vibration	2,30	136	9
+845	T	N	simulation	2,29	88	14
+846	T	N N	blade span	2,29	5	3
+847	T	N N N	Cut-out wind speed	2,29	5	3
+848	T	A N	baseline information	2,29	5	3
+849	T	A	Unsteady	2,28	27	6
+850	T	A	nominal	2,28	29	13
+851	T	N N	power output	2,26	56	15
+851	V[s]	N N N	turbine power output	2,74	7	4
+851	V[s]	N N P N	power output of the turbine	2,50	4	3
+852	T	N	Licensee	2,25	75	3
+853	T	A	downwind	2,23	39	6
+854	T	A	hourly	2,23	28	4
+855	T	N	bats	2,22	143	4
+856	T	A	stationary	2,21	25	9
+857	T	A	audible	2,20	32	5
+858	T	N P N	side of the transformer	2,20	4	3
+859	T	N N N	wind turbine model	2,20	4	3
+860	T	A N N	renewable energy resources	2,20	4	3
+861	T	A N	Fluid Mechanics	2,20	4	3
+862	T	N	flux	2,20	32	7
+863	T	N N	EIA process	2,20	4	3
+864	T	A	variable	2,19	162	17
+865	T	A N	environmental impacts	2,18	75	11
+866	T	N	percent	2,17	49	7
+867	T	N	template	2,15	43	3
+868	T	N	windmill	2,15	48	10
+869	T	N N	property owners	2,13	26	4
+870	T	N	radius	2,10	59	12
+871	T	N	APPENDIX	2,09	58	7
+872	T	A	SMALL-SCALE	2,08	80	5
+873	T	N	equation	2,08	242	17
+874	T	N	program	2,07	175	19
+875	T	N	grid	2,04	315	25
+876	T	N N	electricity generation	2,04	21	6
+877	T	N	matrix	2,03	19	4
+878	T	A N	fossil fuels	2,03	31	13
+879	T	N	inflow	2,02	39	5
+880	T	A N	visual impact	2,02	16	5
+881	T	N	energy	2,02	1432	38
+882	T	N	habitat	2,01	307	6
+883	T	A	geographic	2,01	17	4
+884	T	A N N	Environmental Impact Assessment	2,01	26	3
+885	T	N	parameters	2,01	79	18
+886	T	A N	natural gas	2,01	31	5
+887	T	A	visual	2,00	57	11
+888	T	A	passive	1,98	29	5
+889	T	A N	significant effect	1,98	35	4
+890	T	N N	power generation	1,97	39	16
+890	V[s]	N N N	wind power generation	2,63	11	7
+891	T	N	composites	1,96	14	4
+892	T	N	gas	1,96	125	12
+893	T	N	drag	1,95	75	7
+894	T	N	meters	1,95	77	15
+895	T	N N	protection system	1,95	19	8
+895	V[s]	N N N	lightning protection system	2,50	4	3
+896	T	N	migration	1,94	52	5
+897	T	N	sun	1,93	14	7
+898	T	N	vicinity	1,92	40	9
+899	T	N	stakeholders	1,92	20	4
+900	T	N	diagram	1,92	22	9
+901	T	N N	maintenance costs	1,92	25	5
+902	T	N N	Energy Efficiency	1,90	11	5
+903	T	N	NASA	1,90	20	6
+904	T	N	megawatts	1,90	15	12
+905	T	N	accordance	1,89	45	14
+906	T	N	sin	1,88	62	5
+907	T	N N	greenhouse gas	1,88	23	4
+907	V[s]	N N N	greenhouse gas emissions	2,89	10	4
+908	T	N N	noise levels	1,88	38	7
+908	V[s]	A N N	ambient noise levels	2,50	4	3
+909	T	N	estimation	1,87	15	6
+910	T	N	summary	1,87	58	16
+911	T	N	Ontario	1,87	29	3
+912	T	N N	climate change	1,87	28	8
+912	V[s]	A N N	global climate change	2,80	8	3
+913	T	N	data	1,86	37	14
+914	T	A N	human health	1,86	12	4
+915	T	A	transient	1,86	12	6
+916	T	N N	access roads	1,86	32	4
+917	T	N N	construction activities	1,86	10	3
+918	T	N	turbulence	1,86	49	15
+919	T	A	Biological	1,85	19	5
+920	T	N N	control system	1,85	44	7
+921	T	N	topography	1,85	17	7
+922	T	N	measurements	1,85	99	17
+923	T	A N	adverse effects	1,84	60	5
+924	T	A	actual	1,84	60	25
+925	T	N N	capital cost	1,84	26	4
+926	T	N	load	1,83	160	23
+927	T	N	hypothesis	1,83	28	3
+928	T	N N	generation capacity	1,83	11	3
+929	T	N	scaling	1,82	10	5
+930	T	N	tower	1,82	502	27
+931	T	A	applicable	1,81	49	11
+932	T	N	noise	1,81	483	19
+933	T	N	evaluation	1,80	58	16
+934	T	A N	shallow water	1,80	15	5
+935	T	N	leakage	1,78	23	5
+936	T	N	contour	1,78	13	5
+937	T	A	proportional	1,77	12	9
+938	T	A	constant	1,76	101	21
+939	T	N	mortality	1,76	67	5
+940	T	A	conventional	1,75	49	13
+941	T	A	state-of-the-art	1,75	14	4
+942	T	A	yearly	1,74	11	4
+943	T	N	curve	1,74	89	20
+944	T	A N	adverse impacts	1,74	13	4
+945	T	N	tip	1,74	106	18
+946	T	N	components	1,73	243	30
+947	T	A	Federal	1,73	39	10
+948	T	N P N	Department of Energy	1,72	14	7
+949	T	N	vegetation	1,72	32	6
+950	T	A	elastic	1,72	10	4
+951	T	A	continuous	1,72	26	12
+952	T	N	Butterfield	1,72	10	4
+953	T	A	integrated	1,72	20	9
+954	T	N	reliability	1,72	49	13
+955	T	N	erection	1,71	15	6
+956	T	N	characteristics	1,71	145	21
+957	T	N	approximation	1,71	9	4
+958	T	N	thrust	1,71	74	4
+959	T	A	large-scale	1,70	40	12
+960	T	N	modification	1,70	47	12
+961	T	N	graph	1,70	20	8
+962	T	N	stall	1,69	149	14
+963	T	A N	electrical system	1,69	8	5
+964	T	A N	negative effects	1,68	15	4
+965	T	N	maps	1,68	75	7
+966	T	N N	wind blows	1,68	6	4
+967	T	N P N	phase of the project	1,68	6	4
+968	T	A	legislative	1,68	9	3
+969	T	N	species	1,68	211	5
+970	T	N	degradation	1,67	20	5
+971	T	N	data	1,67	404	32
+972	T	N	storage	1,65	94	11
+973	T	N N	ground level	1,64	11	6
+974	T	A N	heavy equipment	1,64	6	3
+975	T	N N	Construction Costs	1,64	6	4
+976	T	A	on-site	1,64	6	5
+977	T	A	auxiliary	1,64	13	6
+978	T	N	stiffness	1,63	9	3
+979	T	A N	negative impact	1,62	12	3
+980	T	N	wiring	1,61	20	4
+981	T	N	sound	1,61	643	11
+982	T	A	operational	1,61	68	17
+983	T	N	controller	1,60	94	11
+984	T	N N	land area	1,60	5	4
+985	T	N N	text books	1,60	5	3
+986	T	R	thereof	1,60	13	6
+987	T	N	correlation	1,60	15	5
+988	T	N	compliance	1,59	30	9
+989	T	A	electronic	1,59	49	17
+989	V[g]	N	electronics	1,04	30	9
+990	T	N	coil	1,58	12	4
+991	T	N N	States government	1,58	11	4
+992	T	N	assessment	1,58	300	17
+993	T	N	maintenance	1,58	154	26
+994	T	N	night-time	1,57	7	3
+995	T	A	anticipated	1,57	7	5
+996	T	N	analysis	1,57	258	28
+997	T	A	low	1,57	457	35
+998	T	A N N	Environmental Protection Agency	1,57	12	5
+999	T	N N	test results	1,57	6	4
+1000	T	A	Advisory	1,57	6	4
+1001	T	A N	public health	1,57	42	6
+1002	T	A N	highest pressure	1,56	5	4
+1003	T	N	input	1,55	125	17
+1004	T	N	electricity	1,55	294	26
+1005	T	N	interaction	1,55	32	13
+1006	T	N	initiation	1,55	7	3
+1007	T	A	integral	1,55	14	8
+1008	T	N	feasibility	1,55	14	8
+1009	T	N	species	1,53	82	4
+1010	T	N	fluid	1,53	53	9
+1011	T	A	sustainable	1,53	41	10
+1012	T	N	shaft	1,53	93	16
+1013	T	N	installation	1,52	174	26
+1014	T	R	upstream	1,52	12	3
+1015	T	N	cylinders	1,52	28	4
+1016	T	N	collision	1,51	87	5
+1017	T	N	fatalities	1,51	34	5
+1018	T	N	Cluster	1,51	26	4
+1019	T	A	Swedish	1,51	14	3
+1020	T	A	uninterrupted	1,51	4	3
+1021	T	A	physical	1,51	93	15
+1022	T	N	battery	1,50	73	8
+1023	T	N	orientation	1,50	17	9
+1024	T	N	calculation	1,50	111	23
+1025	T	A	specific	1,50	90	24
+1026	T	N	wire	1,50	88	10
+1027	T	A	additional	1,50	86	24
+1028	T	N	layer	1,50	55	10
+1029	T	N	availability	1,50	51	18
+1030	T	A	calculated	1,50	7	6
+1031	T	A	evolutionary	1,49	5	3
+1032	T	N N	research studies	1,49	5	3
+1033	T	A	indicative	1,49	21	6
+1034	T	N N	distribution network	1,49	8	4
+1035	T	N	Sea	1,49	84	9
+1036	T	A	static	1,49	38	12
+1037	T	N	brake	1,48	60	10
+1038	T	N	superstructure	1,48	6	3
+1039	T	A N	higher wind	1,48	19	13
+1040	T	N	breaker	1,48	16	3
+1041	T	N	impacts	1,47	567	21
+1042	T	N	thesis	1,47	31	6
+1043	T	A	predominant	1,47	4	4
+1044	T	A	measurable	1,47	4	3
+1045	T	A	enlarged	1,47	4	4
+1046	T	A	maximum	1,46	147	27
+1047	T	N	duration	1,46	29	12
+1048	T	A	negligible	1,46	15	7
+1049	T	A N	American Society	1,46	5	3
+1050	T	N P N	state of the art	1,46	6	5
+1051	T	N	permit	1,45	38	8
+1052	T	N	construction	1,45	292	23
+1053	T	N N	sea level	1,44	12	3
+1054	T	N	top	1,43	40	18
+1055	T	N	disturbance	1,43	66	9
+1056	T	N	thickness	1,43	6	4
+1057	T	A N	sustainable development	1,43	9	3
+1058	T	A N	main objective	1,43	8	6
+1059	T	N	cooperation	1,43	10	3
+1060	T	N	synthesis	1,43	4	4
+1061	T	A	high-speed	1,43	8	4
+1061	V[mg]	A N	higher speed	0,94	7	7
+1061	V[m]	A N N	higher wind speeds	2,67	6	6
+1062	T	N	wildlife	1,43	62	7
+1063	T	N	sensitivity	1,43	56	5
+1064	T	N	Fax	1,42	19	10
+1065	T	N	cable	1,42	105	13
+1066	T	N	crane	1,42	40	9
+1067	T	A	recreational	1,42	9	4
+1068	T	A N	independent consultant	1,41	7	3
+1069	T	A	current	1,41	196	31
+1070	T	A	rigid	1,41	17	6
+1071	T	N	functioning	1,40	5	3
+1072	T	A	reliable	1,40	40	14
+1073	T	N	follow	1,40	4	3
+1074	T	A	twisted	1,40	4	3
+1075	T	A N	similar projects	1,40	4	3
+1076	T	N	balancing	1,40	4	3
+1077	T	N	Protocol	1,40	23	9
+1078	T	N	breeding	1,40	19	3
+1079	T	A	Golden	1,39	25	7
+1080	T	N	manual	1,38	39	10
+1081	T	A N	agricultural lands	1,38	8	4
+1082	T	A N	Final Report	1,38	13	8
+1083	T	R	electrically	1,38	5	3
+1084	T	N	lift	1,37	106	11
+1085	T	A N	basic principles	1,37	8	4
+1086	T	N	gradients	1,37	6	4
+1087	T	A N	deep water	1,37	16	4
+1088	T	A	Chosen	1,37	4	3
+1089	T	N	classification	1,36	20	7
+1090	T	A	confidential	1,36	27	3
+1091	T	A	residential	1,35	32	8
+1092	T	N	model	1,35	382	30
+1093	T	A N	geographical area	1,35	6	4
+1094	T	N	Minnesota	1,35	6	3
+1095	T	N P N	area of land	1,35	3	3
+1095	V[s]	N N	land area	1,60	5	4
+1096	T	A N	common practice	1,35	6	3
+1097	T	N N	time frame	1,35	3	3
+1098	T	A N	additional information	1,35	3	3
+1099	T	A	significant	1,35	161	22
+1100	T	A	initial	1,35	57	17
+1101	T	A	resultant	1,34	4	3
+1102	T	N	variation	1,33	89	19
+1103	T	N	design	1,33	586	34
+1104	T	N	tubing	1,33	5	4
+1105	T	N	fatigue	1,33	31	11
+1106	T	N	span	1,33	26	7
+1107	T	N	filter	1,33	17	4
+1108	T	N N	electricity supply	1,32	10	5
+1109	T	N	Ecology	1,32	13	4
+1110	T	N	project	1,32	1215	27
+1111	T	N	ton	1,31	22	5
+1112	T	N	accumulation	1,31	3	3
+1113	T	N	Dept	1,31	5	5
+1114	T	N P N	part of the project	1,31	3	3
+1115	T	N	sampling	1,31	6	3
+1116	T	N	Corrosion	1,31	5	3
+1117	T	N	Acknowledgments	1,31	6	6
+1118	T	A N	public road	1,31	8	3
+1119	T	N	twist	1,31	53	4
+1120	T	A	dominant	1,30	13	7
+1121	T	N	motor	1,30	50	11
+1122	T	N	Aviation	1,30	14	4
+1123	T	N	cooling	1,29	5	4
+1124	T	N	birds	1,29	281	11
+1125	T	N	applicant	1,29	104	3
+1126	T	A	active	1,29	89	17
+1127	T	A	undisturbed	1,29	8	3
+1128	T	N	California	1,29	97	7
+1129	T	N	logo	1,28	43	3
+1130	T	R	approximately	1,28	82	23
+1131	T	N	occurrence	1,28	16	7
+1132	T	A	downstream	1,28	9	4
+1133	T	N N	mortality rates	1,28	6	4
+1134	T	A N	natural environment	1,28	6	3
+1135	T	A N	major difference	1,28	3	3
+1136	T	R	adversely	1,28	28	4
+1137	T	N	screw	1,27	16	4
+1138	T	A	typical	1,27	74	19
+1139	T	N	default	1,27	15	5
+1140	T	N	attachment	1,27	17	8
+1141	T	N	limitation	1,27	36	18
+1142	T	N	Specification	1,27	64	15
+1143	T	A	potential	1,27	340	19
+1144	T	N	exposure	1,27	115	7
+1145	T	N	hydrocarbons	1,26	4	3
+1146	T	N N	power lines	1,26	8	5
+1147	T	N N	Research Institute	1,26	8	3
+1148	T	N	prediction	1,26	58	13
+1149	T	A	electric	1,25	108	19
+1150	T	A N	private businesses	1,25	5	3
+1151	T	N	physics	1,25	6	5
+1152	T	N	circumference	1,25	3	3
+1153	T	A N	main purpose	1,25	3	3
+1154	T	N	transportation	1,25	16	7
+1155	T	N	height	1,24	132	27
+1156	T	N	Hansen	1,24	7	4
+1157	T	A	practical	1,24	49	11
+1158	T	N	efficiency	1,24	107	22
+1159	T	N	reference	1,24	197	32
+1160	T	N	tube	1,24	48	8
+1161	T	R	continuously	1,23	17	8
+1162	T	A	lightweight	1,23	12	4
+1163	T	N	gap	1,23	31	9
+1164	T	A	negative	1,23	52	13
+1165	T	N	guidance	1,23	82	9
+1166	T	N	locations	1,23	247	27
+1167	T	N	lightning	1,22	19	8
+1167	V[g]	N	lighting	0,84	17	7
+1168	T	N	comparison	1,22	123	22
+1169	T	A	preceding	1,22	4	3
+1170	T	R	nominally	1,22	3	3
+1171	T	A	additive	1,22	6	3
+1172	T	A N	geographical locations	1,22	3	3
+1173	T	N	usage	1,22	17	7
+1174	T	N	correction	1,21	13	5
+1175	T	A	cost-effective	1,21	11	6
+1176	T	A	relevant	1,21	59	13
+1177	T	N	Mar	1,20	20	4
+1178	T	A	unsuitable	1,20	15	3
+1179	T	N	restoration	1,20	30	8
+1180	T	N	elevation	1,20	13	7
+1181	T	N	definition	1,20	49	14
+1182	T	N	Annexes	1,20	8	3
+1183	T	A	mandatory	1,20	12	4
+1184	T	A	limited	1,20	45	19
+1185	T	A	industrial	1,20	50	15
+1186	T	A N	significant impact	1,20	7	4
+1187	T	N	timescales	1,19	3	3
+1187	V[g]	N	timescale	0,52	3	3
+1188	T	N	barge	1,19	11	3
+1189	T	N	threshold	1,19	36	7
+1190	T	N N	case studies	1,19	7	4
+1191	T	A N	future development	1,19	7	3
+1192	T	N	certification	1,18	11	10
+1193	T	N	bearing	1,18	37	9
+1194	T	N	roadway	1,18	6	5
+1195	T	N	latitude	1,18	4	3
+1196	T	A	adjacent	1,18	29	9
+1197	T	R	typically	1,18	49	20
+1198	T	N	Description	1,17	82	11
+1199	T	N	seabed	1,17	11	5
+1200	T	N	PAGE	1,17	256	21
+1201	T	N	pollutants	1,17	12	7
+1202	T	A N	significant reduction	1,17	3	3
+1203	T	N N	project manager	1,17	7	4
+1204	T	A N	large area	1,17	7	3
+1205	T	N	segments	1,16	12	6
+1206	T	N	depth	1,16	75	9
+1207	T	A N	real estate	1,16	5	3
+1208	T	N	proximity	1,16	18	8
+1209	T	A	achievable	1,16	7	3
+1210	T	N	flora	1,16	14	3
+1211	T	R	Lastly	1,15	8	4
+1212	T	N	section	1,15	256	28
+1213	T	N	removal	1,15	36	6
+1214	T	N	study	1,15	399	29
+1215	T	N	integrity	1,15	55	5
+1216	T	N	loop	1,15	8	3
+1217	T	N	Mach	1,15	4	3
+1218	T	A N	International Standards	1,15	4	3
+1219	T	A N	annual basis	1,15	3	3
+1220	T	N	conjunction	1,15	13	8
+1221	T	N	database	1,14	27	9
+1222	T	N	setbacks	1,14	55	4
+1223	T	N	warranty	1,14	11	5
+1224	T	N	chapter	1,14	79	10
+1225	T	A	inherent	1,14	13	8
+1226	T	A	systematic	1,13	5	4
+1227	T	A	digital	1,13	13	6
+1228	T	R	manually	1,13	4	4
+1229	T	N N	waste disposal	1,13	4	3
+1230	T	N	effects	1,13	604	28
+1231	T	A	human	1,13	104	9
+1232	T	A	sensitive	1,12	43	13
+1233	T	A N	dramatic increase	1,12	3	3
+1234	T	A	suburban	1,12	3	3
+1235	T	A	complementary	1,12	8	4
+1236	T	N	wake	1,12	50	6
+1237	T	A	prolonged	1,12	7	3
+1238	T	A	seasonal	1,11	8	5
+1239	T	A	adequate	1,11	26	12
+1240	T	A N	Cultural Heritage	1,11	4	3
+1241	T	N	drainage	1,11	8	3
+1242	T	A	insignificant	1,11	9	3
+1243	T	A N	International Conference	1,11	9	3
+1244	T	A	broad	1,11	25	7
+1245	T	N	terrain	1,11	16	4
+1246	T	N	panel	1,11	118	9
+1247	T	A	large	1,11	313	35
+1248	T	N N	air pollution	1,11	5	3
+1249	T	A	clean	1,11	55	18
+1250	T	N	function	1,11	103	26
+1251	T	N	Update	1,10	13	6
+1252	T	N	array	1,10	10	7
+1253	T	N N	development plan	1,10	7	4
+1254	T	N	technology	1,10	286	31
+1255	T	N	assumption	1,10	57	12
+1256	T	A N	close proximity	1,10	4	4
+1257	T	A	undesirable	1,10	4	3
+1258	T	N	phase	1,10	72	14
+1259	T	N	method	1,10	171	24
+1260	T	N	Massachusetts	1,10	10	5
+1261	T	N	format	1,10	48	7
+1262	T	R	periodically	1,09	6	4
+1263	T	N	site	1,09	561	24
+1264	T	N	stream	1,09	44	11
+1265	T	N	machine	1,09	224	22
+1266	T	N	combination	1,09	69	14
+1267	T	A	suitable	1,09	52	14
+1268	T	N	technicians	1,09	23	8
+1269	T	A	feasible	1,09	12	4
+1270	T	A N	national grid	1,09	18	4
+1271	T	A N	large amount	1,08	6	4
+1272	T	N N	construction site	1,08	4	3
+1273	T	N	screening	1,08	26	5
+1274	T	A	fundamental	1,08	23	6
+1275	T	A	sufficient	1,08	53	18
+1276	T	A N	total cost	1,08	10	4
+1277	T	A	minimum	1,08	61	16
+1278	T	N	disadvantages	1,08	40	7
+1279	T	A	liquid	1,07	22	3
+1280	T	N	ear	1,07	48	3
+1281	T	N	documentation	1,07	14	8
+1282	T	A	comparable	1,07	17	9
+1283	T	N	tools	1,07	57	18
+1284	T	N	APPLICATIONS	1,07	255	25
+1285	T	A N	urban areas	1,07	10	5
+1286	T	N	pole	1,07	34	7
+1287	T	N	lab	1,07	6	6
+1288	T	A	prohibitive	1,07	3	3
+1289	T	N	Introduction	1,07	77	25
+1290	T	N	circulation	1,06	26	3
+1291	T	A	normal	1,06	74	18
+1292	T	N	enhancement	1,06	5	5
+1293	T	N	capability	1,06	41	15
+1294	T	N	requirements	1,06	169	27
+1295	T	N	know-how	1,06	7	3
+1296	T	N N	carbon dioxide	1,06	7	3
+1297	T	N	scenario	1,06	69	10
+1298	T	A N	natural heritage	1,06	27	3
+1299	T	N	intensity	1,06	22	7
+1300	T	N	criteria	1,06	70	16
+1301	T	N	framework	1,06	45	7
+1302	T	N P N	rate of return	1,06	4	3
+1303	T	N	depreciation	1,06	4	3
+1304	T	R	randomly	1,06	4	4
+1305	T	N	probability	1,06	15	5
+1306	T	N	sources	1,05	285	30
+1307	T	N	testing	1,05	70	15
+1308	T	N	logistics	1,05	7	3
+1309	T	N	designation	1,05	8	3
+1310	T	N N	safety issues	1,05	3	3
+1311	T	N	boring	1,05	3	3
+1312	T	N	photos	1,05	24	4
+1313	T	N	adoption	1,04	15	3
+1314	T	A N	sensitive areas	1,04	4	4
+1315	T	N	profile	1,04	72	14
+1316	T	N	factor	1,04	290	27
+1317	T	A	susceptible	1,04	9	4
+1318	T	A N	residential areas	1,04	5	5
+1319	T	N	hinge	1,04	5	3
+1320	T	N	fault	1,04	88	6
+1321	T	N	electronics	1,04	30	9
+1322	T	N	visibility	1,04	10	5
+1323	T	N	connection	1,04	125	21
+1324	T	N	end	1,03	70	21
+1325	T	N	structure	1,03	186	23
+1326	T	A	average	1,03	170	25
+1327	T	N	detection	1,03	9	4
+1328	T	N	appraisal	1,02	7	4
+1329	T	N	entity	1,02	23	5
+1330	T	A	attributable	1,02	10	4
+1331	T	A	minimal	1,02	14	13
+1332	T	N N	power stations	1,02	30	6
+1333	T	A	temporary	1,02	17	4
+1334	T	A	consistent	1,02	38	15
+1335	T	A N	economic activity	1,02	11	3
+1336	T	N	ACKNOWLEDGEMENTS	1,02	7	6
+1336	V[g]	N	Acknowledgments	1,31	6	6
+1337	T	N	foundation	1,01	101	17
+1338	T	N	attributes	1,01	11	5
+1339	T	A	direct	1,00	69	18
+1340	T	N	Act	1,00	40	11
+1341	T	R	vertically	1,00	5	5
+1342	T	R	upward	1,00	3	3
+1343	T	N	altitude	1,00	9	3
+1344	T	N	literature	1,00	52	9
+1345	T	A	stringent	1,00	4	3
+1346	T	N	constraints	1,00	24	7
+1347	T	A	neutral	0,99	14	5
+1348	T	R	primarily	0,99	33	11
+1349	T	N	friction	0,99	6	6
+1350	T	N	Colorado	0,99	6	4
+1351	T	A	reasonable	0,99	44	16
+1352	T	N	Table	0,99	243	25
+1353	T	A N	straight line	0,99	3	3
+1354	T	A N	good choice	0,99	4	3
+1355	T	N	separation	0,99	31	10
+1356	T	R	firstly	0,98	10	3
+1357	T	N	Figure	0,98	739	24
+1358	T	A N	civil engineering	0,98	6	3
+1359	T	A	high	0,98	426	36
+1360	T	A	graphic	0,97	4	3
+1361	T	A	reliant	0,97	4	3
+1362	T	N	bolts	0,97	10	6
+1363	T	N	adjustment	0,97	19	6
+1364	T	N	misnomer	0,97	3	3
+1365	T	N	system	0,97	834	35
+1366	T	A	extensive	0,97	14	10
+1367	T	N	safety	0,97	153	18
+1368	T	N N	Nova Scotia	0,97	5	3
+1369	T	A N	low levels	0,97	21	4
+1370	T	A	valid	0,97	14	10
+1371	T	N	ventilation	0,97	7	4
+1372	T	N	law	0,97	65	15
+1373	T	A	common	0,97	96	24
+1374	T	A	compatible	0,96	6	4
+1375	T	N	twelve	0,96	6	5
+1376	T	R	Additionally	0,96	12	8
+1377	T	N	mechanism	0,96	48	13
+1378	T	N	distance	0,96	98	20
+1379	T	N	barriers	0,96	56	8
+1380	T	A	mobile	0,96	11	7
+1381	T	N	regulations	0,95	117	19
+1382	T	R	potentially	0,95	39	13
+1383	T	R	doubly	0,95	5	3
+1384	T	N	range	0,95	220	27
+1385	T	N	steel	0,95	58	18
+1386	T	A N	integral part	0,95	7	5
+1387	T	N	width	0,95	7	4
+1388	T	N	disc	0,95	22	6
+1389	T	N	review	0,95	135	18
+1390	T	R	commonly	0,95	16	8
+1391	T	A	equal	0,95	39	14
+1392	T	N	Horns	0,95	22	4
+1393	T	A	regional	0,95	33	9
+1394	T	N N	design teams	0,94	3	3
+1395	T	R	inherently	0,94	4	3
+1396	T	N N	weather conditions	0,94	13	7
+1397	T	A	small	0,94	219	35
+1398	T	N	obstruction	0,94	8	3
+1399	T	A	viable	0,94	15	10
+1400	T	A N	higher speed	0,94	7	7
+1401	T	A N	good practice	0,94	12	4
+1402	T	N	fencing	0,94	5	4
+1403	T	R	theoretically	0,94	5	4
+1404	T	N	clearing	0,93	4	3
+1405	T	N	size	0,93	126	25
+1406	T	R	rigidly	0,93	3	3
+1407	T	N	enforcement	0,93	9	3
+1408	T	A	extreme	0,93	32	11
+1409	T	N	Demonstrator	0,93	20	3
+1410	T	N N	health risk	0,93	5	3
+1411	T	A	secondary	0,93	17	7
+1412	T	N	Experiment	0,93	41	9
+1413	T	R	independently	0,92	15	8
+1414	T	N	soil	0,92	35	6
+1415	T	N	Copyright	0,92	6	3
+1416	T	N	accuracy	0,92	16	14
+1417	T	N	resolution	0,92	51	9
+1418	T	A	economic	0,92	67	15
+1419	T	N	rating	0,92	37	16
+1420	T	N	advancements	0,91	6	3
+1421	T	N	mast	0,91	7	5
+1422	T	A	efficient	0,91	29	15
+1423	T	N	shape	0,91	71	10
+1424	T	N N	maintenance works	0,91	3	3
+1425	T	A N	low cost	0,91	7	5
+1426	T	N	exclusion	0,91	14	5
+1427	T	N	climate	0,91	43	10
+1428	T	N	fraction	0,90	9	5
+1429	T	N	gravity	0,90	9	4
+1430	T	N	amount	0,90	122	24
+1431	T	N	preservation	0,90	4	3
+1432	T	N	interface	0,90	4	4
+1433	T	N	stability	0,90	31	15
+1434	T	N	research	0,90	224	28
+1435	T	N	computing	0,90	7	3
+1436	T	A	long-term	0,90	53	11
+1437	T	N	perches	0,90	3	3
+1438	T	N	quantities	0,90	22	11
+1439	T	N	device	0,89	69	14
+1440	T	N N	San Francisco	0,89	16	3
+1441	T	N	guidelines	0,89	62	14
+1442	T	N	Ridge	0,89	10	5
+1443	T	N	mass	0,89	39	12
+1444	T	N	signal	0,89	42	9
+1445	T	N	procedures	0,89	144	17
+1446	T	N	development	0,89	432	30
+1447	T	A	plausible	0,89	5	3
+1448	T	N	weight	0,88	80	14
+1449	T	N	developers	0,88	49	7
+1450	T	N N	government agencies	0,88	4	3
+1451	T	A	parallel	0,88	21	4
+1452	T	A	general	0,88	151	24
+1453	T	N	degrees	0,88	88	16
+1454	T	N	approval	0,88	54	9
+1455	T	A N	recent study	0,88	3	3
+1456	T	A	concrete	0,88	17	9
+1457	T	N	beam	0,88	10	7
+1458	T	N	acceleration	0,88	6	4
+1459	T	N	Highway	0,87	13	6
+1460	T	N	environment	0,87	148	21
+1461	T	A	educational	0,87	9	3
+1462	T	N	alternatives	0,87	92	11
+1463	T	N	cycle	0,87	39	14
+1464	T	N	registration	0,87	13	6
+1465	T	N	financing	0,87	10	3
+1466	T	N	copper	0,87	9	3
+1467	T	N	shadow	0,87	41	7
+1468	T	N	shipping	0,87	8	5
+1469	T	N	activity	0,87	255	14
+1470	T	N	Pioneer	0,87	10	4
+1471	T	N	revolution	0,86	49	8
+1472	T	N	insulation	0,86	6	4
+1473	T	N	chart	0,86	15	6
+1474	T	A	underground	0,86	18	3
+1475	T	A	relative	0,86	94	15
+1476	T	R	prior	0,86	45	13
+1477	T	N	purpose	0,86	99	24
+1478	T	N	squirrel	0,86	4	3
+1479	T	N	Netherlands	0,86	23	8
+1480	T	N	Article	0,86	134	12
+1481	T	N	staging	0,86	5	3
+1482	T	N	reductions	0,86	117	16
+1483	T	A	distinct	0,85	6	4
+1484	T	A	similar	0,85	72	17
+1485	T	A	severe	0,85	22	10
+1486	T	N	deployment	0,85	7	4
+1487	T	A	regular	0,85	18	7
+1488	T	N	infrastructure	0,85	36	7
+1489	T	N	transition	0,85	21	7
+1490	T	N	operation	0,85	367	30
+1491	T	A N	wide range	0,85	15	9
+1492	T	N	drawing	0,85	21	5
+1493	T	N P N	economies of scale	0,85	4	4
+1494	T	N	boxes	0,84	24	13
+1495	T	A	social	0,84	34	5
+1496	T	R	commercially	0,84	10	7
+1497	T	R	directly	0,84	85	23
+1498	T	N	utility	0,84	46	12
+1499	T	N	information	0,84	305	29
+1500	T	N	emergency	0,84	35	9
+1501	T	N	lighting	0,84	17	7
+1502	T	N	landowners	0,84	22	4
+1503	T	N P N	period of time	0,84	9	6
+1504	T	A	compact	0,84	3	3
+1505	T	N	complexity	0,83	11	7
+1506	T	N	solution	0,83	106	21
+1507	T	N	indicators	0,83	14	5
+1508	T	N	conditions	0,83	317	32
+1509	T	N	peak	0,83	44	12
+1510	T	N	direction	0,83	95	23
+1511	T	A	separate	0,82	18	9
+1512	T	N	paragraph	0,82	8	5
+1513	T	N	conclusions	0,82	69	27
+1514	T	N	earth	0,82	61	11
+1515	T	A N	environmental issues	0,82	3	3
+1516	T	N	shore	0,82	29	7
+1517	T	N	Version	0,82	75	16
+1518	T	N	measures	0,82	147	13
+1519	T	A	financial	0,82	32	8
+1520	T	N	Denmark	0,81	38	10
+1521	T	A	legal	0,81	33	8
+1522	T	N	prerequisite	0,81	4	4
+1523	T	A	conservative	0,81	20	11
+1524	T	R	significantly	0,81	51	16
+1525	T	N	row	0,81	11	5
+1526	T	A	identical	0,81	8	7
+1527	T	N	obstacles	0,81	18	6
+1528	T	N N	summer months	0,81	5	3
+1529	T	N	viii	0,80	4	3
+1530	T	N	expansion	0,80	49	7
+1531	T	N	cost	0,80	403	26
+1532	T	A	valuable	0,80	16	8
+1533	T	A	Excellent	0,80	30	6
+1534	T	N	document	0,80	125	13
+1535	T	N	temperature	0,80	39	9
+1536	T	A	independent	0,80	42	17
+1537	T	N	Coal	0,80	31	5
+1538	T	A	superior	0,80	10	5
+1539	T	R	economically	0,80	11	7
+1540	T	N	lung	0,80	14	3
+1541	T	N	nuts	0,80	9	3
+1542	T	A	noticeable	0,79	4	3
+1543	T	N	consideration	0,79	66	20
+1544	T	N	standards	0,79	185	18
+1545	T	N	pressure	0,79	260	19
+1546	T	A	short-term	0,79	19	4
+1547	T	A	positive	0,79	47	16
+1548	T	A	heavy	0,79	27	11
+1549	T	N	Prohibition	0,79	4	3
+1550	T	N	rod	0,78	9	4
+1551	T	N	metal	0,78	20	3
+1552	T	N	repair	0,78	29	6
+1553	T	R	correctly	0,78	15	5
+1554	T	N	feedback	0,78	6	6
+1555	T	N	Unit	0,78	203	23
+1556	T	A	rare	0,78	25	3
+1557	T	N	excavations	0,78	3	3
+1558	T	A N	rapid growth	0,78	3	3
+1559	T	N	infancy	0,78	3	3
+1560	T	A	unreliable	0,78	3	3
+1561	T	N	BREEZE	0,77	12	4
+1562	T	R	electronically	0,77	4	3
+1563	T	A	numerous	0,77	8	6
+1564	T	N	phenomenon	0,77	22	14
+1565	T	A	differential	0,77	6	3
+1566	T	N	addition	0,77	105	20
+1567	T	N	participants	0,77	26	3
+1568	T	N	tank	0,76	32	4
+1569	T	A	simple	0,76	66	19
+1570	T	N	receipt	0,76	14	3
+1571	T	N	Ohio	0,76	7	3
+1572	T	R	separately	0,76	11	6
+1573	T	N	nature	0,76	86	12
+1574	T	N	dimensions	0,76	20	9
+1575	T	N	diagnosis	0,75	9	4
+1576	T	N	landscape	0,75	33	8
+1577	T	N	Restrictions	0,75	34	9
+1578	T	N	pin	0,75	4	4
+1579	T	A	German	0,75	10	5
+1580	T	N	Outcomes	0,75	53	10
+1581	T	A	critical	0,75	32	17
+1582	T	N	abandonment	0,75	4	3
+1583	T	A	complete	0,74	44	14
+1584	T	N	materials	0,74	119	25
+1585	T	A N	global warming	0,74	5	5
+1586	T	A	favourable	0,74	14	3
+1586	V[g]	A	favorable	2,80	8	5
+1587	T	N	Proceedings	0,74	43	11
+1588	T	N	aim	0,74	16	7
+1589	T	N	grain	0,74	9	6
+1590	T	N	Physics	0,74	5	3
+1591	T	A	proper	0,74	17	11
+1592	T	N	equipment	0,74	99	18
+1593	T	N	consultation	0,74	46	6
+1594	T	R	specifically	0,74	30	14
+1595	T	N	Faculty	0,73	10	5
+1596	T	N	corridors	0,73	16	3
+1597	T	A	on-line	0,73	3	3
+1598	T	N	bus	0,73	28	3
+1599	T	A	unique	0,73	25	13
+1600	T	A N	high levels	0,73	24	6
+1601	T	N	passage	0,73	23	5
+1602	T	N	volume	0,73	56	15
+1603	T	N	Hamburg	0,73	8	3
+1604	T	A	uniform	0,73	17	8
+1605	T	N	completion	0,73	15	9
+1606	T	A	total	0,73	148	22
+1607	T	N	plots	0,73	36	5
+1608	T	N	zones	0,73	43	8
+1609	T	A	Gary	0,73	3	3
+1610	T	R	visually	0,73	5	4
+1611	T	N	communications	0,73	37	12
+1612	T	A	visible	0,73	12	8
+1613	T	N	Town	0,72	241	7
+1614	T	A	fast	0,72	26	15
+1615	T	N	likelihood	0,72	10	3
+1616	T	N	farmland	0,72	6	3
+1617	T	N	risk	0,72	142	13
+1618	T	N	water	0,72	240	25
+1619	T	N	continuity	0,72	6	3
+1620	T	N	Margin	0,72	65	10
+1621	T	N	manufacturing	0,72	23	10
+1622	T	N	Printer	0,72	7	3
+1623	T	N	pollution	0,71	22	10
+1624	T	N	residences	0,71	25	4
+1625	T	A	expensive	0,71	42	17
+1626	T	A N	industrial development	0,71	3	3
+1627	T	A	personal	0,71	24	12
+1628	T	N	forces	0,71	270	23
+1629	T	N	respect	0,71	69	12
+1630	T	A	flexible	0,71	13	8
+1631	T	N	instant	0,71	6	3
+1632	T	R	substantially	0,71	21	7
+1633	T	N	area	0,71	567	36
+1634	T	N	motion	0,71	45	14
+1635	T	N	obligations	0,70	25	5
+1636	T	N	consent	0,70	24	3
+1637	T	N	drilling	0,70	3	3
+1638	T	A	problematic	0,70	3	3
+1639	T	N	performance	0,70	250	27
+1640	T	N	heat	0,70	39	15
+1641	T	N	importance	0,70	46	10
+1642	T	N	apparatus	0,70	4	4
+1643	T	N	property	0,70	134	18
+1644	T	N	incentives	0,70	27	7
+1645	T	N	edge	0,70	50	10
+1646	T	N	plan	0,70	360	12
+1647	T	A	secure	0,70	15	5
+1648	T	A N	Key elements	0,70	3	3
+1649	T	A	individual	0,70	87	19
+1650	T	N	conception	0,69	4	4
+1651	T	N	geography	0,69	5	3
+1652	T	N	presentation	0,69	25	7
+1653	T	N	EXPERT	0,69	88	13
+1654	T	A N	large number	0,69	13	8
+1655	T	A	considerable	0,69	11	5
+1656	T	N	perception	0,69	22	6
+1657	T	N	heating	0,69	16	7
+1658	T	N	significance	0,69	18	5
+1659	T	N	concentration	0,69	16	5
+1660	T	N	perspective	0,68	23	8
+1661	T	N	Sharpe	0,68	3	3
+1662	T	A N	local businesses	0,68	3	3
+1663	T	N	telecommunication	0,68	6	3
+1664	T	N	Handbook	0,68	5	5
+1665	T	N	focus	0,68	31	12
+1666	T	R	lower	0,68	5	4
+1667	T	N	territory	0,68	39	3
+1668	T	A N	highest point	0,68	3	3
+1669	T	N	liability	0,68	21	6
+1670	T	N	loss	0,68	150	17
+1671	T	R	automatically	0,68	20	10
+1672	T	A	public	0,68	226	14
+1673	T	N	hunting	0,68	7	3
+1674	T	N	stress	0,67	33	12
+1675	T	N	response	0,67	114	16
+1676	T	N	storm	0,67	25	8
+1677	T	N	land	0,67	143	20
+1678	T	A	economical	0,67	4	3
+1679	T	N	waterways	0,67	3	3
+1680	T	A	complex	0,67	43	12
+1681	T	A N	important role	0,67	5	4
+1682	T	A	effective	0,67	34	13
+1683	T	N	software	0,67	14	9
+1684	T	N	planners	0,67	10	3
+1685	T	A	deep	0,67	29	10
+1686	T	N	techniques	0,66	42	18
+1687	T	A	beneficial	0,66	7	5
+1688	T	R	highly	0,66	69	17
+1689	T	A	preferred	0,66	7	6
+1690	T	N	core	0,66	13	8
+1691	T	N	Lake	0,66	17	5
+1692	T	N	test	0,66	139	18
+1693	T	N	order	0,66	219	31
+1694	T	N N	water supply	0,66	4	3
+1695	T	N	slope	0,66	13	8
+1696	T	N	access	0,66	89	19
+1697	T	N	network	0,66	78	12
+1698	T	N	sum	0,66	16	10
+1699	T	N	milestone	0,65	6	3
+1700	T	N	assembly	0,65	57	13
+1701	T	A	invaluable	0,65	4	3
+1702	T	N	error	0,65	34	13
+1703	T	N	yield	0,65	26	8
+1704	T	N	scope	0,65	22	8
+1705	T	A	robust	0,65	6	4
+1706	T	R	environmentally	0,65	5	5
+1707	T	N	tonnes	0,65	25	4
+1708	T	N	lifetime	0,65	15	7
+1709	T	R	accurately	0,65	9	7
+1710	T	A	calm	0,65	7	6
+1711	T	N	jurisdiction	0,65	7	4
+1712	T	A	skilled	0,65	3	3
+1713	T	A	so-called	0,65	9	6
+1714	T	N	Edition	0,64	13	5
+1715	T	N	bottom	0,64	24	8
+1716	T	N	expense	0,64	39	8
+1717	T	N	equivalent	0,64	31	5
+1718	T	N	part	0,64	341	35
+1719	T	N	step	0,64	115	24
+1720	T	A	opposite	0,64	11	4
+1721	T	N	notice	0,64	32	7
+1722	T	N	context	0,64	26	7
+1723	T	N	period	0,64	157	20
+1724	T	N	platform	0,64	35	11
+1725	T	A	wide	0,63	33	15
+1726	T	N	button	0,63	10	4
+1727	T	A	acceptable	0,63	22	9
+1728	T	A	dependent	0,63	19	4
+1729	T	A	accurate	0,63	12	10
+1730	T	R	internationally	0,63	10	5
+1731	T	N	Benchmark	0,63	4	3
+1732	T	A	affordable	0,63	4	3
+1733	T	N	manuscript	0,63	3	3
+1734	T	A	rigorous	0,63	3	3
+1735	T	N	disruption	0,63	9	4
+1736	T	A	academic	0,63	16	4
+1737	T	N	process	0,63	165	27
+1738	T	A	gross	0,62	7	3
+1739	T	N	working	0,62	17	6
+1740	T	N	instance	0,62	48	9
+1741	T	N	knowledge	0,62	49	8
+1742	T	A	invisible	0,62	3	3
+1743	T	N	diversity	0,62	7	4
+1744	T	N	relevance	0,62	6	3
+1745	T	A N	European countries	0,62	9	4
+1746	T	N	state	0,62	275	27
+1747	T	A	important	0,61	132	32
+1748	T	N	Robert	0,61	14	4
+1749	T	A	back-up	0,61	5	3
+1750	T	R	drastically	0,61	4	4
+1751	T	N	switch	0,61	12	5
+1752	T	N	livestock	0,61	8	4
+1753	T	N	discussion	0,61	53	19
+1754	T	N	advantages	0,61	75	18
+1755	T	N	results	0,61	273	31
+1756	T	N	provisions	0,61	49	7
+1757	T	A	credible	0,61	4	3
+1758	T	N	competence	0,60	5	3
+1759	T	N	Rogers	0,60	6	4
+1760	T	N	mining	0,60	7	3
+1761	T	N	forest	0,60	31	6
+1762	T	N	contractors	0,60	20	8
+1763	T	N	principles	0,60	54	21
+1764	T	N	ease	0,60	9	3
+1765	T	A	attractive	0,60	26	6
+1766	T	A N	recent report	0,60	4	4
+1767	T	A N	major role	0,60	3	3
+1768	T	R	internally	0,60	3	3
+1769	T	A N	best performance	0,60	8	3
+1770	T	A	original	0,60	13	9
+1771	T	R	smoothly	0,60	5	3
+1772	T	N	population	0,60	66	10
+1773	T	N	trends	0,60	51	14
+1774	T	N	improvements	0,60	68	15
+1775	T	N	manner	0,59	41	16
+1776	T	A	frequent	0,59	3	3
+1777	T	N	trademark	0,59	3	3
+1778	T	R	considerably	0,59	16	9
+1778	V[g]	A	considerable	0,69	11	5
+1779	T	N	form	0,59	117	20
+1780	T	A	slight	0,59	6	4
+1781	T	R	partially	0,59	7	5
+1782	T	N	participation	0,59	13	5
+1783	T	N	instability	0,59	3	3
+1784	T	A N	easy access	0,59	3	3
+1785	T	N	ladder	0,59	9	5
+1786	T	N	transformation	0,59	6	4
+1787	T	N	innovation	0,59	14	3
+1788	T	N	Master	0,59	32	7
+1789	T	N	processing	0,59	4	4
+1790	T	A N	European Commission	0,59	13	3
+1791	T	R	generally	0,58	51	19
+1792	T	N	drawbacks	0,58	4	4
+1793	T	N	topic	0,58	11	7
+1794	T	N	manufacturers	0,58	45	11
+1795	T	N	basis	0,58	81	18
+1796	T	A	greater	0,58	94	25
+1797	T	A	prevalent	0,58	3	3
+1798	T	A	sunny	0,58	3	3
+1799	T	A	underway	0,58	5	3
+1800	T	A	essential	0,57	29	12
+1801	T	N	hawks	0,57	3	3
+1802	T	N	determination	0,57	26	10
+1803	T	A	tall	0,57	13	7
+1804	T	N	user	0,57	29	13
+1805	T	N	regard	0,57	19	8
+1806	T	N	resistance	0,57	16	9
+1807	T	N	engineer	0,57	31	14
+1808	T	N	relationship	0,57	64	13
+1809	T	N	expression	0,57	12	4
+1810	T	N	fittings	0,56	5	3
+1811	T	A	correct	0,56	17	9
+1812	T	N	check	0,56	23	8
+1813	T	N	aircraft	0,56	32	10
+1814	T	N	excess	0,56	13	5
+1815	T	N	authors	0,56	31	13
+1816	T	N	Professor	0,56	19	6
+1817	T	N	tasks	0,56	57	11
+1818	T	N	University	0,56	177	23
+1819	T	N	sample	0,56	17	5
+1820	T	A N	early stage	0,55	8	3
+1821	T	R	adequately	0,55	5	4
+1822	T	R	high	0,55	5	5
+1823	T	N	practice	0,55	72	16
+1824	T	A	realistic	0,55	8	6
+1825	T	N	contact	0,55	32	13
+1826	T	N	recommendations	0,55	31	12
+1827	T	N	survey	0,55	70	10
+1828	T	N	lot	0,55	10	7
+1829	T	N	balance	0,55	40	14
+1830	T	N	inspection	0,55	10	4
+1831	T	N	instructions	0,54	17	7
+1832	T	R	brightly	0,54	3	3
+1833	T	N	uncertainty	0,54	20	7
+1834	T	A N	final decision	0,54	7	3
+1835	T	A	intense	0,54	7	4
+1836	T	N	indications	0,54	24	6
+1837	T	N	slide	0,54	6	4
+1838	T	N	extent	0,54	34	10
+1839	T	N	selection	0,54	27	10
+1840	T	N	vessel	0,54	31	7
+1841	T	A	nearby	0,54	14	5
+1842	T	N	findings	0,54	28	12
+1843	T	A	plastic	0,54	9	4
+1844	T	N	root	0,53	18	4
+1845	T	N	suppliers	0,53	19	6
+1846	T	N	illustration	0,53	5	3
+1847	T	N	community	0,53	131	19
+1848	T	N	Lease	0,53	8	3
+1849	T	N	absence	0,53	23	7
+1850	T	R	readily	0,53	10	6
+1851	T	N	disease	0,53	49	4
+1852	T	N	alteration	0,53	5	3
+1853	T	N	Publishing	0,53	6	5
+1854	T	N	Exhibit	0,53	4	3
+1855	T	N	Agency	0,53	76	12
+1856	T	N	coast	0,53	35	8
+1857	T	A	diesel	0,52	5	3
+1858	T	R	fundamentally	0,52	4	3
+1859	T	N	tissues	0,52	4	3
+1860	T	A	apparent	0,52	12	7
+1861	T	A	safe	0,52	39	16
+1862	T	N	timescale	0,52	3	3
+1863	T	N	date	0,52	64	19
+1864	T	N	pipeline	0,52	8	5
+1865	T	N	respondents	0,52	4	3
+1866	T	N	spring	0,52	40	10
+1867	T	R	rapidly	0,52	20	10
+1868	T	N	ring	0,52	22	7
+1869	T	N	detail	0,52	71	20
+1870	T	A	back	0,51	3	3
+1871	T	N	region	0,51	102	17
+1872	T	N	formula	0,51	23	7
+1873	T	N	terms	0,51	126	26
+1874	T	N	bids	0,51	13	3
+1875	T	R	physically	0,51	11	6
+1876	T	A	present	0,51	70	20
+1877	T	N	agreement	0,51	71	13
+1878	T	N	burning	0,51	3	3
+1879	T	N	cloth	0,51	4	3
+1880	T	N	Note	0,51	48	14
+1881	T	A	powerful	0,51	12	8
+1882	T	N	credits	0,50	27	6
+1883	T	N	fees	0,50	24	6
+1884	T	A	competitive	0,50	14	8
+1885	T	N	host	0,50	18	4
+1886	T	N	fish	0,50	33	5
+1887	T	N	learning	0,50	5	3
+1888	T	N	defect	0,50	4	3
+1889	T	N	conductor	0,50	9	3
+1890	T	A	slow	0,50	16	10
+1891	T	A	eligible	0,50	7	5
+1892	T	N	variety	0,50	21	9
+1893	T	A	real	0,50	22	12
+1894	T	N	inclusion	0,50	4	3
+1895	T	N	personnel	0,50	15	6
+1896	T	N	owner	0,50	56	9
+1897	T	N	report	0,49	239	25
+1898	T	N	simplicity	0,49	4	3
+1899	T	A	American	0,49	56	10
+1900	T	N	flexibility	0,49	11	7
+1901	T	R	Similarly	0,49	13	5
+1902	T	A	daily	0,49	13	7
+1903	T	R	jointly	0,49	8	4
+1904	T	A	poor	0,49	29	10
+1905	T	R	safely	0,49	10	5
+1906	T	N	quality	0,49	67	20
+1907	T	N	residents	0,49	36	11
+1908	T	N	number	0,49	288	34
+1909	T	N	publications	0,49	17	10
+1910	T	R	Finally	0,49	60	19
+1911	T	N	interpretation	0,49	8	4
+1912	T	N	metres	0,49	22	6
+1913	T	N	intervals	0,49	14	9
+1914	T	N	position	0,49	137	22
+1915	T	A	immense	0,48	3	3
+1916	T	N	trucks	0,48	10	3
+1917	T	N	fibre	0,48	4	4
+1918	T	A	select	0,48	3	3
+1919	T	N	coastlines	0,48	3	3
+1920	T	A	middle	0,48	20	4
+1921	T	N	approach	0,48	75	15
+1922	T	N	means	0,48	11	5
+1923	T	N	inhabitants	0,48	4	3
+1924	T	N	operator	0,48	34	10
+1925	T	N	building	0,48	104	21
+1926	T	R	annually	0,47	10	5
+1927	T	N	feet	0,47	73	9
+1928	T	A	unnecessary	0,47	5	3
+1929	T	N	weather	0,47	39	13
+1930	T	N	workshop	0,47	13	6
+1931	T	N	animals	0,47	43	6
+1932	T	N	light	0,47	64	9
+1933	T	N	tension	0,47	15	7
+1934	T	N	Press	0,47	41	6
+1935	T	N	Interior	0,47	9	3
+1936	T	A	costly	0,47	5	4
+1937	T	N	debris	0,47	4	3
+1938	T	N	ground	0,47	112	26
+1939	T	N	background	0,47	27	7
+1940	T	N	hammer	0,47	5	3
+1941	T	N	text	0,47	12	6
+1942	T	N	class	0,47	61	14
+1943	T	N	compensation	0,47	25	8
+1944	T	A	Bright	0,47	12	4
+1945	T	R	sufficiently	0,46	8	4
+1946	T	A	short	0,46	58	19
+1947	T	N	meaning	0,46	7	3
+1948	T	N	Phone	0,46	24	9
+1949	T	N	demand	0,46	87	18
+1950	T	N	1990s	0,46	7	4
+1951	T	R	roughly	0,46	6	4
+1952	T	N	machinery	0,46	7	6
+1953	T	N	strategy	0,46	41	13
+1954	T	N	Finland	0,46	8	7
+1955	T	R	necessarily	0,46	16	10
+1956	T	R	Ideally	0,46	4	4
+1957	T	N	option	0,46	68	14
+1958	T	N	consensus	0,45	8	4
+1959	T	A	tight	0,45	8	4
+1960	T	N	presence	0,45	25	10
+1961	T	N	damage	0,45	52	14
+1962	T	N	increase	0,45	106	26
+1963	T	N	delay	0,45	21	8
+1964	T	A	long	0,45	53	21
+1965	T	N	consultancy	0,44	6	3
+1966	T	R	locally	0,44	9	6
+1967	T	N	request	0,44	20	4
+1968	T	A	capable	0,44	23	9
+1969	T	N	paper	0,44	71	21
+1970	T	N	stations	0,44	71	19
+1971	T	A	stable	0,44	8	6
+1972	T	A N	local residents	0,44	3	3
+1973	T	N	relation	0,44	29	12
+1974	T	N	spin	0,44	3	3
+1975	T	A	uncertain	0,44	4	3
+1976	T	N	object	0,43	11	5
+1977	T	N	concerns	0,43	88	16
+1978	T	N	Recording	0,43	7	4
+1979	T	N	candidates	0,43	47	3
+1980	T	N	possibility	0,43	34	14
+1981	T	A N	rural areas	0,43	5	5
+1982	T	N	influence	0,43	24	11
+1983	T	A N	nuclear power	0,43	3	3
+1984	T	N	flight	0,43	36	7
+1985	T	A N	general public	0,43	4	3
+1986	T	N	Corporation	0,43	19	9
+1987	T	R	briefly	0,43	7	5
+1988	T	N	Guide	0,43	23	9
+1989	T	R	firmly	0,43	19	6
+1990	T	N	Commission	0,43	71	12
+1991	T	A	crucial	0,42	10	4
+1992	T	N	maturity	0,42	4	4
+1993	T	A	future	0,42	106	17
+1994	T	R	notably	0,42	10	3
+1995	T	N	arms	0,42	26	4
+1996	T	N	address	0,42	18	5
+1997	T	N	series	0,42	50	16
+1998	T	R	Likewise	0,42	4	3
+1999	T	N	purchase	0,42	22	6
+2000	T	N	consultant	0,42	22	7
+2001	T	N	failure	0,42	35	16
+2002	T	R	subsequently	0,42	12	6
+2003	T	A N	major problem	0,42	3	3
+2004	T	N	difference	0,42	47	18
+2005	T	A	modest	0,41	6	6
+2006	T	A	subject	0,41	51	10
+2007	T	R	initially	0,41	16	10
+2008	T	R	strongly	0,41	23	7
+2009	T	N	experience	0,41	79	17
+2010	T	N	hillsides	0,41	3	3
+2011	T	A	rough	0,41	6	5
+2012	T	N	PILOT	0,41	13	3
+2013	T	N	internet	0,41	9	5
+2014	T	N	priorities	0,41	25	6
+2015	T	N	designers	0,41	14	7
+2016	T	N	awareness	0,40	7	5
+2017	T	N	emphasis	0,40	13	8
+2018	T	N	person	0,40	63	10
+2019	T	A	harsh	0,40	3	3
+2020	T	N	benefits	0,40	64	13
+2021	T	N	regulators	0,40	10	4
+2022	T	N	assistance	0,40	14	11
+2023	T	N	movement	0,40	38	12
+2024	T	N	surge	0,40	4	3
+2025	T	N	telephone	0,40	15	9
+2026	T	R	faster	0,40	7	4
+2027	T	N	destruction	0,40	6	4
+2028	T	N	body	0,40	96	13
+2029	T	A	thin	0,40	5	4
+2030	T	A	evident	0,40	7	3
+2031	T	A	final	0,39	75	21
+2032	T	A	medium	0,39	33	8
+2033	T	A	routine	0,39	7	4
+2034	T	A	Atlantic	0,39	9	5
+2035	T	A	early	0,39	50	13
+2036	T	N	account	0,39	54	15
+2037	T	N	investigation	0,39	42	13
+2038	T	N	stop	0,39	10	6
+2039	T	N	challenges	0,39	46	14
+2040	T	N	Transactions	0,39	7	4
+2041	T	N	skills	0,39	44	4
+2042	T	R	frequently	0,39	11	7
+2043	T	N	explanation	0,39	13	6
+2044	T	N	shift	0,38	10	7
+2045	T	N	contrast	0,38	18	10
+2046	T	N	exercise	0,38	22	6
+2047	T	N	case	0,38	210	27
+2048	T	R	fairly	0,38	14	6
+2049	T	A	responsible	0,38	35	12
+2050	T	N	categories	0,38	14	10
+2051	T	N	behaviour	0,38	25	5
+2052	T	N	insurance	0,38	17	4
+2053	T	N	specialist	0,38	14	4
+2054	T	N	copy	0,38	11	3
+2055	T	N	partners	0,38	38	5
+2056	T	A	extra	0,38	9	7
+2057	T	N	replacement	0,38	17	8
+2058	T	N	target	0,38	38	10
+2059	T	N	routes	0,38	35	8
+2060	T	N	stage	0,38	71	14
+2061	T	N	evidence	0,38	83	9
+2062	T	N	graduate	0,38	10	4
+2063	T	A	inadequate	0,37	4	4
+2064	T	N	conflicts	0,37	18	4
+2065	T	A	weak	0,37	8	5
+2066	T	A	fourth	0,37	13	7
+2067	T	R	simultaneously	0,37	4	4
+2068	T	N	chemical	0,37	8	4
+2069	T	N	valley	0,37	11	4
+2070	T	N	isolation	0,37	4	3
+2071	T	N	cover	0,37	14	7
+2072	T	N	researchers	0,37	9	6
+2073	T	N	Photography	0,36	3	3
+2074	T	N	burden	0,36	9	5
+2075	T	A	big	0,36	16	7
+2076	T	N	skin	0,36	10	4
+2077	T	N	instruments	0,36	7	7
+2078	T	A	successful	0,36	24	11
+2079	T	A	square	0,36	18	4
+2080	T	R	essentially	0,36	6	4
+2081	T	N	interest	0,36	108	17
+2082	T	N	junction	0,36	3	3
+2083	T	N	product	0,36	58	18
+2084	T	R	extremely	0,36	22	11
+2085	T	A	double	0,36	12	5
+2086	T	N	list	0,36	33	14
+2087	T	R	greatly	0,36	10	6
+2088	T	R	nowadays	0,36	8	3
+2089	T	N	terminal	0,35	7	4
+2090	T	A	quiet	0,35	10	6
+2091	T	R	dramatically	0,35	8	5
+2092	T	A	professional	0,35	23	6
+2093	T	N	advances	0,35	16	7
+2094	T	N	appreciation	0,35	3	3
+2095	T	N	January	0,35	48	12
+2096	T	N	key	0,35	3	3
+2097	T	N	contribution	0,35	30	15
+2098	T	N	watts	0,35	9	5
+2099	T	N	deck	0,35	4	3
+2100	T	N	point	0,35	144	33
+2101	T	A	close	0,35	53	18
+2102	T	A	express	0,35	3	3
+2103	T	N	wear	0,34	3	3
+2104	T	N	dollars	0,34	15	4
+2105	T	N	grade	0,34	6	4
+2106	T	N	fire	0,34	40	5
+2107	T	N	strength	0,34	22	12
+2108	T	A	Pacific	0,34	5	3
+2109	T	R	actively	0,34	5	4
+2110	T	R	fully	0,34	29	13
+2111	T	N	reasons	0,34	78	17
+2112	T	N	Agriculture	0,34	8	3
+2113	T	N	cent	0,34	5	3
+2114	T	A	Green	0,34	33	8
+2115	T	N	bed	0,34	9	4
+2116	T	N	engine	0,34	14	6
+2117	T	N	authorities	0,34	100	11
+2118	T	N	savings	0,34	18	4
+2119	T	N	payments	0,34	30	5
+2120	T	A	sophisticated	0,33	3	3
+2121	T	A	accessible	0,33	4	4
+2122	T	N	transport	0,33	16	7
+2123	T	N	Robinson	0,33	7	3
+2124	T	N	encouragement	0,33	4	3
+2125	T	R	solely	0,33	4	4
+2126	T	N	bulk	0,33	4	4
+2127	T	N	representative	0,33	20	6
+2128	T	N	crops	0,33	8	6
+2129	T	A	cheap	0,33	12	5
+2130	T	R	ultimately	0,33	9	3
+2131	T	N	meeting	0,33	86	13
+2132	T	R	nationally	0,33	3	3
+2133	T	N	ed	0,32	9	4
+2134	T	R	slightly	0,32	18	13
+2135	T	R	worldwide	0,32	7	5
+2136	T	R	permanently	0,32	3	3
+2137	T	N	issues	0,32	89	22
+2138	T	N	necessity	0,32	4	4
+2139	T	N	origin	0,32	6	4
+2140	T	N	strain	0,32	7	4
+2141	T	N	opportunities	0,32	67	16
+2142	T	R	specially	0,32	5	4
+2143	T	N	Consumer	0,32	17	7
+2144	T	N	projections	0,32	4	3
+2145	T	R	easily	0,32	22	15
+2146	T	N	insight	0,32	6	5
+2147	T	N	October	0,32	40	14
+2148	T	N	guarantees	0,32	7	5
+2149	T	N	trees	0,32	20	7
+2150	T	R	temporarily	0,32	3	3
+2151	T	N	shows	0,32	58	23
+2152	T	N	amendment	0,32	7	4
+2153	T	N	equity	0,32	9	4
+2154	T	A	easy	0,31	37	15
+2155	T	N	reserve	0,31	13	8
+2156	T	N	legislation	0,31	22	5
+2157	T	A	familiar	0,31	7	6
+2158	T	N	ability	0,31	27	13
+2159	T	N	aid	0,31	5	4
+2160	T	N	beginning	0,31	9	7
+2161	T	N	extension	0,31	9	4
+2162	T	N	security	0,31	24	12
+2163	T	N	leak	0,31	4	3
+2164	T	N	reach	0,31	3	3
+2165	T	R	previously	0,31	19	9
+2166	T	R	widely	0,31	14	10
+2167	T	R	successfully	0,31	11	6
+2168	T	N	Organization	0,31	51	11
+2169	T	N	turn	0,31	17	10
+2170	T	N	Conference	0,31	58	15
+2171	T	N	revenue	0,31	18	5
+2172	T	A	absent	0,31	3	3
+2173	T	N	complaints	0,31	20	5
+2174	T	N	legs	0,31	9	4
+2175	T	N	circumstances	0,30	24	9
+2176	T	N	art	0,30	13	8
+2177	T	A	free	0,30	26	13
+2178	T	R	constantly	0,30	8	6
+2179	T	N	peer	0,30	5	3
+2180	T	N	reactions	0,30	17	6
+2181	T	R	properly	0,30	16	10
+2182	T	N	disposal	0,30	7	4
+2183	T	N	promotion	0,30	10	5
+2184	T	R	exclusively	0,30	4	4
+2185	T	N	charge	0,30	60	11
+2186	T	N	Committee	0,30	66	10
+2187	T	R	precisely	0,29	6	3
+2188	T	N	December	0,29	27	13
+2189	T	N	investment	0,29	48	8
+2190	T	N	winter	0,29	17	9
+2191	T	N	run	0,29	10	5
+2192	T	N	Europe	0,29	83	15
+2193	T	N	Berlin	0,29	5	4
+2194	T	R	equally	0,29	14	7
+2195	T	R	positively	0,29	4	3
+2196	T	N	progress	0,29	20	11
+2197	T	N	package	0,29	19	7
+2198	T	N	price	0,29	92	12
+2199	T	N	Sons	0,29	9	7
+2200	T	R	immediately	0,29	27	11
+2201	T	N	vehicles	0,29	24	10
+2202	T	N P N	point of view	0,29	5	4
+2203	T	N	June	0,29	21	11
+2204	T	N	industry	0,29	93	19
+2205	T	N	Kingdom	0,29	9	4
+2206	T	N	suite	0,28	5	5
+2207	T	N	permission	0,28	11	6
+2208	T	N	choice	0,28	28	10
+2209	T	N	Cole	0,28	5	4
+2210	T	N	students	0,28	42	8
+2211	T	N	comments	0,28	26	10
+2212	T	N	exchange	0,28	14	5
+2213	T	N	conduct	0,28	6	3
+2214	T	N	Amsterdam	0,28	3	3
+2215	T	R	July	0,28	25	12
+2216	T	N	Pass	0,28	9	5
+2217	T	N	substances	0,27	5	3
+2218	T	A	flat	0,27	15	9
+2219	T	N	legend	0,27	5	3
+2220	T	N	days	0,27	99	18
+2221	T	N	taxes	0,27	9	4
+2222	T	A	August	0,27	30	11
+2223	T	N	work	0,27	140	30
+2224	T	N	November	0,27	28	10
+2225	T	N	interview	0,27	18	5
+2226	T	N	April	0,27	22	9
+2227	T	N	funding	0,27	20	8
+2228	T	N	role	0,27	43	11
+2229	T	N	Statement	0,27	38	13
+2230	T	N	mill	0,27	7	4
+2231	T	N	schedule	0,27	6	3
+2232	T	N	intent	0,27	5	3
+2233	T	A	usual	0,27	6	4
+2234	T	N	College	0,27	24	5
+2235	T	A	obvious	0,26	9	5
+2236	T	A	quick	0,26	7	3
+2237	T	A	impossible	0,26	13	9
+2238	T	N	opinion	0,26	22	7
+2239	T	N	bars	0,26	5	3
+2240	T	N	Germany	0,26	27	10
+2241	T	A	clear	0,26	45	13
+2242	T	N	blocks	0,26	9	5
+2243	T	R	completely	0,26	15	11
+2244	T	N	space	0,26	25	11
+2245	T	N	decision	0,26	81	13
+2246	T	N	expertise	0,26	7	4
+2247	T	N	gain	0,26	11	6
+2248	T	N	observer	0,25	6	4
+2249	T	N	farmer	0,25	28	3
+2250	T	R	virtually	0,25	12	9
+2251	T	N	1980s	0,25	6	4
+2252	T	N	market	0,25	102	17
+2253	T	R	steadily	0,25	4	4
+2254	T	N	September	0,25	27	12
+2255	T	N	weakness	0,25	5	3
+2256	T	N	existence	0,25	6	3
+2257	T	R	financially	0,25	3	3
+2258	T	N	Forum	0,25	6	5
+2259	T	A	dangerous	0,25	8	4
+2260	T	N	scientists	0,25	10	4
+2261	T	R	officially	0,24	6	4
+2262	T	N	column	0,24	6	5
+2263	T	R	slowly	0,24	5	4
+2264	T	N	March	0,24	33	14
+2265	T	A	Assistant	0,24	7	3
+2266	T	N	moment	0,24	33	10
+2267	T	N	circle	0,24	6	5
+2268	T	N	rain	0,24	9	7
+2269	T	N	head	0,24	38	7
+2270	T	N	Spain	0,24	18	5
+2271	T	N	suggestions	0,24	13	6
+2272	T	N	tourism	0,24	7	4
+2273	T	N	search	0,24	10	4
+2274	T	N	Bank	0,24	52	16
+2275	T	A	North	0,23	31	7
+2276	T	N	July	0,23	4	4
+2277	T	R	regularly	0,23	9	6
+2278	T	R	East	0,23	6	4
+2279	T	N	Exhibition	0,23	12	3
+2280	T	N	investors	0,23	15	3
+2281	T	N	examination	0,23	6	4
+2282	T	A	political	0,23	7	3
+2283	T	N	items	0,23	12	6
+2284	T	N	acquisition	0,23	9	5
+2285	T	A N	great deal	0,23	4	4
+2286	T	A	past	0,23	28	13
+2287	T	R	fast	0,23	7	6
+2288	T	N	hours	0,23	57	20
+2289	T	R	closely	0,23	8	6
+2290	T	N	problem	0,23	94	24
+2291	T	N	group	0,23	107	14
+2292	T	R	rarely	0,22	6	6
+2293	T	N	controversy	0,22	7	3
+2294	T	N	threat	0,22	18	4
+2295	T	N	river	0,22	10	7
+2296	T	N	acre	0,22	5	3
+2297	T	N	reading	0,22	7	6
+2298	T	N	producers	0,22	10	3
+2299	T	N	blows	0,22	8	6
+2300	T	N	scheme	0,22	43	10
+2301	T	N	world	0,22	88	19
+2302	T	R	Fortunately	0,22	3	3
+2303	T	R	partly	0,22	8	5
+2304	T	N	effort	0,22	30	14
+2305	T	N	Canada	0,22	7	5
+2306	T	N	minorities	0,21	4	3
+2307	T	N	Society	0,21	41	14
+2308	T	N	Letter	0,21	27	6
+2309	T	N	tendency	0,21	3	3
+2310	T	N	responsibility	0,21	20	9
+2311	T	N	Brussel	0,21	8	3
+2312	T	A	true	0,21	16	9
+2313	T	N	attention	0,21	18	10
+2314	T	N	proposal	0,21	29	10
+2315	T	N	Lecture	0,21	3	3
+2316	T	N	training	0,21	19	7
+2317	T	N	claim	0,21	28	4
+2318	T	N	tape	0,21	5	4
+2319	T	N	glass	0,21	9	6
+2320	T	N	danger	0,21	15	7
+2321	T	N	window	0,20	14	8
+2322	T	N	post	0,20	17	11
+2323	T	N	conversation	0,20	5	3
+2324	T	N	rock	0,20	7	3
+2325	T	N	action	0,20	53	11
+2326	T	N	time	0,20	274	34
+2327	T	N	Entrance	0,20	3	3
+2328	T	N	countries	0,20	86	17
+2329	T	N	expectations	0,20	8	5
+2330	T	N	release	0,20	7	5
+2331	T	N	Lock	0,20	3	3
+2332	T	N	picture	0,20	17	7
+2333	T	R	longer	0,20	20	13
+2334	T	N	recovery	0,20	9	3
+2335	T	N	summer	0,19	23	9
+2336	T	N	rise	0,19	20	9
+2337	T	N	education	0,19	23	7
+2338	T	A	February	0,19	17	9
+2339	T	N	miles	0,19	24	8
+2340	T	A	difficult	0,19	41	11
+2341	T	N	partnership	0,19	8	5
+2342	T	A N	European Union	0,19	6	3
+2343	T	A N	recent years	0,19	7	5
+2344	T	N	pairs	0,19	8	5
+2345	T	N	rules	0,19	23	11
+2346	T	N	brand	0,19	6	4
+2347	T	R	largely	0,19	10	8
+2348	T	N	high	0,19	5	4
+2349	T	N	opposition	0,19	13	5
+2350	T	N	swing	0,19	4	3
+2351	T	N	print	0,19	4	3
+2352	T	N	event	0,19	44	15
+2353	T	A	vital	0,19	6	5
+2354	T	N	sign	0,19	11	6
+2355	T	N	Dean	0,18	3	3
+2356	T	A	East	0,18	11	8
+2357	T	N	1970s	0,18	3	3
+2358	T	N	employees	0,18	14	6
+2359	T	N	band	0,18	14	3
+2360	T	R	recently	0,18	29	15
+2361	T	N	cap	0,18	4	3
+2362	T	N	pool	0,18	7	3
+2363	T	N	words	0,18	30	11
+2364	T	N	hand	0,18	36	16
+2365	T	N	link	0,18	12	4
+2366	T	R	increasingly	0,18	9	8
+2367	T	N	bridge	0,18	16	6
+2368	T	R	Originally	0,18	7	4
+2369	T	N	contract	0,18	24	12
+2370	T	N	majority	0,17	11	7
+2371	T	R	gradually	0,17	3	3
+2372	T	R	publicly	0,17	4	4
+2373	T	N	outlets	0,17	4	3
+2374	T	N	gates	0,17	4	3
+2375	T	N	forecasts	0,17	4	3
+2376	T	A	exciting	0,17	3	3
+2377	T	N	Belgium	0,17	4	3
+2378	T	N	commitments	0,17	15	6
+2379	T	N	goal	0,17	30	14
+2380	T	N	decades	0,17	11	9
+2381	T	A	white	0,17	11	5
+2382	T	N	remarks	0,16	5	3
+2383	T	N	fact	0,16	51	22
+2384	T	R	possibly	0,16	9	6
+2385	T	N	warning	0,16	8	5
+2386	T	N	favour	0,16	7	4
+2387	T	N	employment	0,16	8	5
+2388	T	N	newspaper	0,16	14	3
+2389	T	R	closer	0,16	3	3
+2390	T	R	naturally	0,16	4	4
+2391	T	N	floor	0,16	8	4
+2392	T	A	ready	0,16	11	8
+2393	T	N	atmosphere	0,16	5	3
+2394	T	N	idea	0,16	26	11
+2395	T	N	eye	0,16	8	3
+2396	T	N	Ownership	0,16	5	3
+2397	T	A	hard	0,15	14	6
+2398	T	N	budget	0,15	14	4
+2399	T	R	effectively	0,15	7	7
+2400	T	N	vision	0,15	5	5
+2401	T	N	history	0,15	18	9
+2402	T	N	interventions	0,15	3	3
+2403	T	N	return	0,15	19	9
+2404	T	N	situation	0,15	21	12
+2405	T	A	official	0,15	27	5
+2406	T	N	Paul	0,15	3	3
+2407	T	N	Images	0,15	9	7
+2408	T	N	hill	0,15	14	8
+2409	T	N	front	0,15	12	7
+2410	T	N	advice	0,15	13	4
+2411	T	N	place	0,15	70	19
+2412	T	N	wood	0,14	9	4
+2413	T	N	start	0,14	13	8
+2414	T	N	team	0,14	57	11
+2415	T	R	quickly	0,14	11	7
+2416	T	N	programme	0,14	32	3
+2417	T	N	food	0,14	12	5
+2418	T	N	Thomas	0,14	4	3
+2419	T	A	interested	0,14	8	7
+2420	T	N	debt	0,14	6	3
+2421	T	N	citizens	0,14	6	3
+2422	T	N	calls	0,14	14	6
+2423	T	N	centre	0,13	33	13
+2424	T	N	life	0,13	62	22
+2425	T	N	economies	0,13	14	13
+2426	T	N	years	0,13	300	27
+2427	T	N	question	0,13	26	10
+2428	T	N	lessons	0,13	4	3
+2429	T	R	long	0,13	17	9
+2430	T	N	China	0,13	5	3
+2431	T	N	Stand	0,13	6	4
+2432	T	N	School	0,13	39	16
+2433	T	N	John	0,13	17	9
+2434	T	N	business	0,13	48	15
+2435	T	N	Peters	0,13	5	3
+2436	T	N	customer	0,13	16	5
+2437	T	N	worker	0,13	18	5
+2438	T	N	judgment	0,13	5	3
+2439	T	N	lanes	0,13	3	3
+2440	T	N	penalty	0,12	9	5
+2441	T	N	trading	0,12	4	3
+2442	T	N	injury	0,12	16	6
+2443	T	N	hole	0,12	10	4
+2444	T	R	heavily	0,12	4	4
+2445	T	R	simply	0,12	16	10
+2446	T	N	Family	0,12	31	5
+2447	T	R	inevitably	0,12	3	3
+2448	T	N	initiatives	0,12	8	4
+2449	T	R	totally	0,12	5	5
+2450	T	N	Title	0,12	15	8
+2451	T	N	settlement	0,11	4	3
+2452	T	N	corner	0,11	5	5
+2453	T	A	popular	0,11	4	4
+2454	T	N	sale	0,11	21	7
+2455	T	N	ship	0,11	6	3
+2456	T	N	mind	0,11	12	5
+2457	T	N	care	0,11	11	5
+2458	T	N	channels	0,11	4	4
+2459	T	N	promise	0,10	3	3
+2460	T	N	island	0,10	11	6
+2461	T	R	late	0,10	3	3
+2462	T	A	Young	0,10	11	3
+2463	T	N	opening	0,10	3	3
+2464	T	N	parties	0,10	45	6
+2465	T	N	success	0,10	15	9
+2466	T	N	rest	0,10	7	6
+2467	T	N	lead	0,10	8	6
+2468	T	N	government	0,10	58	17
+2469	T	N	West	0,10	9	6
+2470	T	R	forward	0,10	12	7
+2471	T	A	aware	0,09	7	6
+2472	T	N	Office	0,09	26	13
+2473	T	N	people	0,09	101	11
+2474	T	N	months	0,09	52	10
+2475	T	N	Mark	0,09	8	5
+2476	T	N	company	0,09	66	19
+2477	T	N	France	0,09	13	6
+2478	T	N	income	0,08	7	4
+2479	T	N	fan	0,08	7	6
+2480	T	A	worth	0,08	7	5
+2481	T	N	Wright	0,08	3	3
+2482	T	N	Lewis	0,08	3	3
+2483	T	N	today	0,08	32	14
+2484	T	N	border	0,07	6	3
+2485	T	N	boats	0,07	4	3
+2486	T	A	confident	0,07	4	4
+2487	T	N	argument	0,07	5	5
+2488	T	N	treatment	0,07	6	6
+2489	T	N	Hall	0,07	7	5
+2490	T	N	answer	0,07	5	5
+2491	T	N	agents	0,07	4	3
+2492	T	N	half	0,07	7	6
+2493	T	N	Australia	0,07	5	4
+2494	T	N	City	0,07	16	8
+2495	T	R	west	0,06	3	3
+2496	T	N	jobs	0,06	9	5
+2497	T	N	room	0,06	10	6
+2498	T	N	incident	0,06	6	5
+2499	T	N	duties	0,06	4	3
+2500	T	R	eventually	0,06	4	3
+2501	T	N	driver	0,06	5	3
+2502	T	R	earlier	0,06	9	8
+2503	T	N	Trade	0,06	4	3
+2504	T	N	firms	0,06	7	6
+2505	T	N	accidents	0,06	4	3
+2506	T	N	GRANT	0,05	4	4
+2507	T	N	chance	0,05	9	6
+2508	T	N	Director	0,05	9	5
+2509	T	N	nation	0,05	6	5
+2510	T	N	matter	0,05	8	6
+2511	T	N	leader	0,05	9	6
+2512	T	N	Ireland	0,05	6	3
+2513	T	N	things	0,05	17	7
+2514	T	N	seasons	0,04	11	5
+2515	T	N	minute	0,04	10	8
+2516	T	N	homes	0,04	19	8
+2517	T	R	back	0,04	21	13
+2518	T	N	Church	0,04	4	3
+2519	T	N	night	0,04	18	7
+2520	T	R	ahead	0,04	6	4
+2521	T	N	death	0,04	6	5
+2522	T	N	Smith	0,04	6	3
+2523	T	A	wrong	0,04	3	3
+2524	T	N	round	0,03	5	4
+2525	T	N	Street	0,03	8	4
+2526	T	N	News	0,03	3	3
+2527	T	N	house	0,03	9	4
+2528	T	N	trust	0,02	4	4
+2529	T	N	London	0,02	4	4
+2530	T	N	money	0,02	6	4
+2531	T	N	England	0,01	3	3
+2532	T	N	Scotland	0,01	11	4
+2533	T	N	weeks	0,01	4	4

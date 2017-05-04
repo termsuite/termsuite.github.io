@@ -1,0 +1,569 @@
+#	type	pattern	pilot	spec	freq	dFreq
+1	T	N	rotor	4,82	848	30
+2	T	N N	wind turbine	4,68	1854	37
+2	V[s]	N N N	wind turbine rotor	3,38	31	12
+2	V[s]	N N N	WIND TURBINE APPLICATIONS	3,83	86	3
+2	V[s]	N N N	WIND TURBINE SOUND	3,74	71	2
+2	V[s]	N N N	wind turbine blades	3,57	48	12
+2	V[s]	A N N	offshore wind turbine	3,26	47	7
+2	V[s]	N N N	DFIG wind turbine	3,25	23	2
+2	V[s]	N N N	wind turbine noise	3,53	43	3
+2	V[s]	N N N	wind turbine concepts	3,46	37	4
+2	V[s]	N N N	wind turbine generator	3,02	27	8
+2	V[s]	A N N	Domestic Wind Turbines	3,35	29	1
+2	V[s]	A N N	small wind turbines	3,41	33	8
+2	V[s]	N N N	wind turbine technology	3,34	28	10
+2	V[s]+	N N N	wind turbine system	3,40	32	7
+2	V[s]	N N N	wind turbine syndrome	3,21	21	2
+2	V[s]	N N N	wind turbine tower	3,07	15	9
+2	V[s]	A N N	large wind turbines	3,12	17	10
+3	T	N N	wind energy	4,51	414	32
+3	V[s]	N N N	wind energy potential	3,07	15	5
+3	V[s]	A N N	offshore wind energy	3,56	47	7
+3	V[s]	N N N	wind energy development	3,29	25	5
+3	V[s]	N N N	Wind Energy Facility	3,04	14	5
+3	V[s]	N N N	wind energy projects	2,97	12	8
+4	T	N N	wind power	4,34	278	26
+4	V[s]	N N N	Wind Power Plant	3,76	74	9
+4	V[s]	N N N	wind power stations	3,27	24	2
+4	V[s]	A N N	offshore wind power	3,01	13	4
+4	V[s]	N N N	Wind Power Project	3,17	19	5
+4	V[s]	N N N	wind power development	3,04	14	5
+5	T	N	airfoil	4,26	236	8
+6	T	N	voltage	4,22	214	19
+7	T	A	due	4,16	185	32
+8	T	N N	wind speed	4,11	332	32
+8	V[s]	A N N	average wind speed	3,01	26	13
+8	V[s]	A N N	low wind speed	3,15	18	7
+9	T	N	hydrogen	4,09	156	3
+10	T	N	Natura	4,05	144	2
+11	T	N	vortex	4,01	132	7
+12	T	N	WECS	3,96	116	1
+13	T	N	hub	3,95	114	23
+14	T	N	DEIS	3,93	110	1
+15	T	N N	wind generator	3,91	105	11
+15	V[s]	N N N	wind turbine generator	3,02	27	8
+15	V[s]	N N N	wind generator systems	3,50	41	2
+16	T	N N	pitch angle	3,89	100	6
+16	V[s]	N N N	blade pitch angle	2,97	12	5
+17	T	N P N	angle of attack	3,88	97	8
+18	T	N N	blade element	3,87	96	4
+18	V[s]	N N N	blade element theory	3,23	22	2
+19	T	N N	power coefficient	3,87	94	5
+20	T	N N	rotor blade	3,87	94	13
+20	V[s]	N N N	rotor blade position	3,12	17	1
+21	T	N	TSR	3,85	91	4
+22	T	N N	turbine blades	3,85	91	16
+22	V[s]	N N N	wind turbine blades	3,57	48	12
+23	T	N N N	WIND TURBINE APPLICATIONS	3,83	86	3
+24	T	N	Annex	3,81	83	7
+25	T	N N	TURBINE SOUND	3,80	80	2
+25	V[s]	N N N	WIND TURBINE SOUND	3,74	71	2
+26	T	N N	farm development	3,79	79	5
+26	V[s]	N N N	wind farm development	3,73	69	5
+27	T	A N N	low frequency sound	3,78	78	3
+28	T	N	ordinance	3,78	77	3
+29	T	N N	blade design	3,78	77	4
+29	V[s]	A N N	HAWT blade design	2,97	24	1
+30	T	N N	project activity	3,77	76	4
+31	T	N N N	Wind Power Plant	3,76	74	9
+32	T	A N	dynamic stall	3,76	74	2
+33	T	N N	Habitats Directive	3,76	73	1
+34	T	N	HAWT	3,74	71	5
+35	T	N N N	WIND TURBINE SOUND	3,74	71	2
+36	T	N N	Town Board	3,74	70	2
+37	T	N N N	wind farm development	3,73	69	5
+38	T	N	nacelle	3,73	69	14
+39	T	N N	wind resource	3,71	66	10
+39	V[s]	A N N	offshore wind resource	3,12	17	2
+40	T	A N	SMALL-SCALE PROJECTS	3,67	60	1
+41	T	N N	emission reductions	3,67	60	3
+42	T	A	solar	3,67	60	11
+43	T	N	DOWEC	3,67	60	1
+44	T	N	EIA	3,66	59	5
+45	T	A N	reactive power	3,66	58	3
+45	V[s]	A C A N	active and reactive power	3,01	13	2
+46	T	N	DFIG	3,65	57	2
+47	T	A	linear	3,64	56	11
+48	T	N	VAWT	3,64	56	6
+49	T	N	flywheel	3,62	54	2
+50	T	A N N N	Vertical Axis Wind Turbines	3,62	53	7
+51	T	N N	flow field	3,61	52	4
+51	V[s]	N N N	blade flow field	2,93	11	1
+52	T	N	Jepirachi	3,61	52	1
+53	T	N N	turbine noise	3,61	52	4
+53	V[s]	N N N	wind turbine noise	3,53	43	3
+54	T	N N	mitigation measures	3,60	51	2
+54	V[s]	A N N	potential mitigation measures	3,04	14	1
+55	T	N	inverter	3,59	50	5
+56	T	N N	project area	3,58	49	5
+57	T	N N	conservation objectives	3,58	49	1
+58	T	N	dBA	3,57	48	4
+59	T	N N N	wind turbine blades	3,57	48	12
+60	T	A	vestibular	3,57	48	1
+61	T	N	UPME	3,56	47	1
+62	T	N N	power production	3,56	47	8
+63	T	A N N	offshore wind energy	3,56	47	7
+64	T	N N	rotor diameter	3,56	47	14
+65	T	A N	modified blade	3,56	47	1
+66	T	N	stator	3,56	47	6
+67	T	A N N	Low Frequency Noise	3,55	46	4
+68	T	N N	guy wire	3,55	46	2
+69	T	N	rpm	3,55	45	13
+70	T	N N N	TURBINE APPLICATIONS PAGE	3,55	45	1
+71	T	N	transformer	3,55	45	14
+72	T	N C N N	SOUND AND HEALTH EFFECTS	3,54	44	2
+73	T	N	NREL	3,54	44	8
+74	T	N N	blade length	3,54	44	9
+75	T	N	Max	3,53	43	8
+76	T	N N N	wind turbine noise	3,53	43	3
+77	T	N N	power systems	3,53	43	8
+78	T	A N	synchronous generator	3,53	43	7
+79	T	N	PMSG	3,52	42	2
+80	T	N	MWh	3,52	42	3
+81	T	N N	Reynolds number	3,52	42	5
+82	T	A N N N N	JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT	3,52	42	1
+83	T	N N	wind velocity	3,52	42	7
+84	T	N N N N N	IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM	3,52	42	1
+85	T	A N A N N	Joint Implementation Supervisory Committee page	3,50	41	1
+86	T	A N N N	Horizontal Axis Wind Turbine	3,50	41	9
+87	T	N N N	wind generator systems	3,50	41	2
+88	T	A N	sound levels	3,49	80	5
+89	T	N	NACA	3,49	40	3
+90	T	N N	blade pitch	3,49	40	9
+90	V[s]	N N N	blade pitch angle	2,97	12	5
+91	T	N N	induction factor	3,49	40	1
+91	V[s]	A N N	axial induction factor	3,29	25	1
+92	T	N N	turbine technology	3,49	40	14
+92	V[s]	N N N	wind turbine technology	3,34	28	10
+93	T	N N	grid connection	3,48	39	10
+94	T	N N N	EXPERT PANEL REVIEW	3,48	39	2
+95	T	A N	marine mammals	3,47	38	2
+96	T	N	deg	3,47	38	5
+97	T	A N N	sound pressure level	3,47	38	2
+98	T	N	infrasound	3,47	113	3
+99	T	N N	energy production	3,46	37	12
+99	V[s]	A N N	annual energy production	3,01	13	5
+100	T	N N N	wind turbine concepts	3,46	37	4
+101	T	N	LFA	3,45	36	1
+102	T	N N	water tower	3,45	36	2
+103	T	N	SCIG	3,45	36	1
+104	T	A N	competent authority	3,44	35	1
+105	T	N	Ref	3,42	34	6
+106	T	N N	power curve	3,42	34	10
+107	T	N N	project boundary	3,42	34	3
+108	T	N	cos	3,42	34	3
+109	T	A	net	3,42	34	10
+110	T	N	Vol	3,41	33	9
+111	T	A N N	small wind turbines	3,41	33	8
+112	T	N N N N	WIND TURBINE APPLICATIONS PAGE	3,41	33	1
+113	T	N	substation	3,41	33	8
+114	T	N N	power converter	3,41	33	4
+114	V[s]	N A N	power electronic converter	3,04	14	3
+114	V[s]	A N N	full-scale power converter	3,12	17	1
+115	T	N N	blade geometry	3,41	33	3
+116	T	N N	Birds Directive	3,40	32	1
+117	T	N	HSWF	3,40	32	1
+118	T	N	CDM	3,40	32	2
+119	T	N	BEM	3,40	32	2
+120	T	N N N	wind turbine system	3,40	32	7
+120	V[s]	A N N N	Domestic Wind Turbines Systems	3,07	15	1
+121	T	A N	rotational speed	3,38	31	8
+122	T	N	UAB	3,38	31	1
+123	T	N N	turbine power	3,38	31	8
+124	T	N N N	wind turbine rotor	3,38	31	12
+125	T	N N	earth anchor	3,38	31	1
+126	T	N	REpower	3,38	31	5
+127	T	N N	blade shape	3,38	31	4
+128	T	N N	Castelo Branco	3,37	30	2
+129	T	N N	length blade	3,37	30	1
+130	T	N N	rotor speed	3,37	30	10
+131	T	N	receptors	3,37	30	8
+132	T	N	HAWTs	3,37	30	4
+133	T	A	avian	3,35	29	5
+134	T	A A N N	National Renewable Energy Laboratory	3,35	29	9
+135	T	A N N	Domestic Wind Turbines	3,35	29	1
+136	T	N	amplitude	3,35	29	9
+137	T	N N	rotor plane	3,35	29	4
+138	T	N N	crediting period	3,35	29	2
+139	T	N	Darrieus	3,34	28	5
+140	T	N N	Van Oord	3,34	28	1
+140	V[s]	N N N	Mammoet Van Oord	2,97	12	1
+141	T	N	Vestas	3,34	28	6
+142	T	N	topologies	3,34	28	3
+143	T	A	3-blade	3,34	28	3
+144	T	A N	higher frequency	3,34	28	5
+145	T	N N N	wind turbine technology	3,34	28	10
+146	T	N N	tower base	3,34	28	4
+147	T	N N	air density	3,34	28	8
+148	T	N N	hub height	3,34	28	11
+149	T	N	UAE	3,32	27	3
+150	T	N	GHG	3,32	27	2
+151	T	N N	twist distribution	3,32	27	2
+152	T	N	slipstream	3,32	27	1
+153	T	N N	drive train	3,32	27	8
+154	T	N N	wind park	3,31	26	4
+155	T	A	compensatory	3,31	26	4
+156	T	N	decibels	3,31	26	2
+157	T	N	ECN	3,31	26	4
+158	T	N N	blade tip	3,31	26	10
+159	T	N N	transmission lines	3,31	26	5
+160	T	N N	chord length	3,31	26	3
+161	T	A N N	renewable energy sources	3,29	25	10
+162	T	N	kWh	3,29	25	5
+163	T	A N	angular velocity	3,29	25	4
+164	T	A N N	axial induction factor	3,29	25	1
+165	T	N N N	wind energy development	3,29	25	5
+166	T	N N	wind tunnel	3,29	50	12
+167	T	A N	INTERNAL File	3,29	25	1
+168	T	A	top	3,29	25	15
+169	T	A N	radial locations	3,29	25	2
+170	T	N N	pages Status	3,29	25	1
+171	T	N P N N	impacts of wind farms	3,29	25	3
+172	T	N N	tip-speed ratio	3,28	98	3
+173	T	A N N	dynamic stall vortex	3,27	24	1
+174	T	N	VAD	3,27	24	1
+175	T	N N	lift coefficient	3,27	24	5
+176	T	A N N	relative wind angle	3,27	24	1
+177	T	N N N	wind power stations	3,27	24	2
+178	T	N N	hydrogen system	3,27	24	1
+179	T	N	HYPERLINK	3,27	48	1
+180	T	A N	human impact	3,27	24	1
+181	T	A N	installed capacity	3,27	24	8
+182	T	N N	speed ratio	3,27	24	5
+183	T	A N N	adverse health effects	3,27	24	2
+184	T	A N	sound pressure	3,26	47	2
+185	T	A N N	offshore wind turbine	3,26	47	7
+186	T	N N	thrust coefficient	3,25	23	2
+187	T	N N N	DFIG wind turbine	3,25	23	2
+188	T	N P N	integrity of the site	3,25	23	1
+189	T	N	EEPPM	3,25	23	1
+190	T	N N	wind projects	3,25	23	6
+190	V[s]	N N N	Wind Power Project	3,17	19	5
+190	V[s]	N N N	wind farm projects	3,10	16	3
+190	V[s]	N N N	wind energy projects	2,97	12	8
+191	T	N	FAA	3,25	23	3
+192	T	N	CO2	3,25	23	3
+193	T	A N	centrifugal forces	3,25	23	5
+194	T	N N	support structures	3,25	23	6
+195	T	A	upwind	3,24	45	11
+196	T	A	aerodynamic	3,24	244	20
+197	T	N P N	Town of Sheldon	3,23	22	1
+198	T	N	excitation	3,23	22	5
+199	T	A	SIMULATE	3,23	44	1
+200	T	A N	compensatory measures	3,23	22	3
+201	T	N N	Unit Specification	3,23	22	1
+202	T	N N	farmer Bob	3,23	22	1
+203	T	N N N	blade element theory	3,23	22	2
+204	T	N N	wind industry	3,23	22	8
+205	T	N P N N	impact of wind turbines	3,23	22	6
+206	T	N	XFOIL	3,21	21	1
+207	T	N	Pedersen	3,21	21	2
+208	T	N	Enercon	3,21	21	4
+209	T	N N	ice accretions	3,21	21	1
+210	T	N N	water depth	3,21	21	4
+211	T	N	kilowatt	3,21	21	6
+212	T	N N	Energy Policy	3,21	21	4
+213	T	N N N	wind turbine syndrome	3,21	21	2
+214	T	N N N	operation control system	3,21	21	1
+215	T	N N	wind farm	3,20	488	21
+215	V[s]	A N N	offshore wind farms	3,11	66	7
+215	V[s]	N N N	wind farm development	3,73	69	5
+215	V[s]	A N N	SIMULATE Wind farm	3,10	16	1
+215	V[s]	N N N	wind farm projects	3,10	16	3
+215	V[s]	A N N	large wind farms	2,97	12	5
+216	T	A	1st	3,19	20	5
+217	T	N	III	3,19	20	9
+218	T	N N	hearing loss	3,19	20	1
+219	T	N	Pierpont	3,19	20	3
+220	T	N N	induction generator	3,19	20	5
+221	T	N N	property line	3,19	20	2
+222	T	N N	PM machines	3,19	20	1
+223	T	N N	shadow flicker	3,19	20	3
+224	T	N N	energy yield	3,19	20	4
+225	T	N N	wind technology	3,19	20	6
+225	V[s]	N N N	wind turbine technology	3,34	28	10
+226	T	N N	Bay Area	3,19	20	2
+227	T	N N	hydrogen storage	3,19	20	1
+228	T	N	Sudenai	3,19	20	1
+229	T	N N	habitat loss	3,19	20	2
+230	T	N N	BEM theory	3,19	20	1
+231	T	N	TIO	3,17	19	1
+232	T	N N	Guidance document	3,17	19	2
+233	T	N N N	Wind Power Project	3,17	19	5
+234	T	N N	power control	3,17	19	6
+235	T	N	windings	3,17	19	4
+236	T	A N	mechanical power	3,17	19	7
+237	T	N	oscillations	3,17	19	7
+238	T	N P N	amount of energy	3,17	19	7
+239	T	N N	battery bank	3,17	19	5
+240	T	N	ERs	3,17	19	2
+241	T	N	EEA	3,17	19	1
+242	T	N	ARI	3,17	19	1
+243	T	N N	blade profile	3,17	19	3
+244	T	N	EESG	3,17	19	1
+245	T	A N	rotational augmentation	3,17	19	1
+246	T	N	Waye	3,17	19	2
+247	T	A	2-blade	3,17	19	1
+248	T	N N	JI Project	3,17	19	1
+249	T	N	cut-in	3,17	19	11
+250	T	N N	glide ratio	3,17	19	1
+251	T	A N	Environmental Noise	3,17	19	2
+252	T	N	NYSDEC	3,17	19	1
+253	T	N	Proc	3,15	18	3
+254	T	N N	power electronics	3,15	18	7
+255	T	N	Schreck	3,15	18	2
+256	T	A	meteorological	3,15	18	9
+257	T	A N N N	variable speed wind turbine	3,15	18	3
+258	T	A N	vestibular system	3,15	18	1
+259	T	N N	ice profile	3,15	18	1
+260	T	A N	axial velocity	3,15	18	1
+261	T	N C N N	Power and Frequency conversion	3,15	18	1
+262	T	N	solidity	3,15	18	4
+263	T	N	validation	3,15	18	6
+264	T	N	AIAA	3,15	18	4
+265	T	A	licensed	3,15	18	3
+266	T	N	electrolyzer	3,15	36	1
+267	T	N N	rotor hub	3,15	18	6
+268	T	N N	collision risk	3,15	18	2
+269	T	N	vector	3,15	18	6
+270	T	N N	turbine operation	3,15	18	6
+270	V[s]	N N N	wind turbine operations	3,04	14	5
+271	T	A N N	low wind speed	3,15	18	7
+272	T	A N N	full-scale power converter	3,12	17	1
+273	T	N N N	rotor blade position	3,12	17	1
+274	T	N	IET	3,12	17	2
+275	T	N	IEC	3,12	17	7
+276	T	N N	nest sites	3,12	17	1
+277	T	A	periodic	3,12	17	12
+278	T	N N	surface area	3,12	17	5
+279	T	N	Delft	3,12	17	4
+280	T	A	Authorized	3,12	17	2
+281	T	A N	active power	3,12	17	3
+281	V[p]+	A N	reactive power	3,66	58	3
+281	V[s]	A C A N	active and reactive power	3,01	13	2
+282	T	N N	energy potential	3,12	17	6
+282	V[s]	N N N	wind energy potential	3,07	15	5
+283	T	N N	Wind Engineering	3,12	17	4
+284	T	A N	airborne sound	3,12	17	1
+285	T	N	doi	3,12	17	1
+286	T	A N N	offshore wind resource	3,12	17	2
+287	T	N N	machine pod	3,12	17	1
+288	T	A N	HAWT blade	3,12	34	1
+289	T	N N	Power Gener	3,12	17	2
+290	T	R	due	3,12	17	10
+291	T	A N	renewable sources	3,12	17	5
+292	T	N N	turbine generator	3,12	34	9
+292	V[s]	N N N	wind turbine generator	3,02	27	8
+293	T	A N	aerodynamic forces	3,12	17	4
+294	T	A N	kinetic energy	3,12	17	6
+295	T	A	numerical	3,12	17	7
+296	T	A N	offshore turbines	3,12	17	7
+297	T	N N	distribution grid	3,12	17	1
+298	T	A N N	large wind turbines	3,12	17	10
+299	T	A N N	offshore wind farms	3,11	66	7
+300	T	A	PSCAD®	3,10	81	1
+301	T	N N N	wind farm projects	3,10	16	3
+302	T	N	GSC	3,10	16	1
+303	T	A	online	3,10	16	8
+304	T	N N	land plots	3,10	16	1
+305	T	N N N	World Health Organization	3,10	16	2
+306	T	A N	steady state	3,10	16	7
+307	T	N N	side converter	3,10	16	1
+308	T	N N	control volume	3,10	16	3
+309	T	A N	potential mitigation	3,10	16	1
+310	T	N	Mammoet	3,10	16	1
+311	T	N N	Persson Waye	3,10	16	2
+312	T	A N	normal operation	3,10	16	4
+313	T	A N	imperative reasons	3,10	16	1
+314	T	A N N	SIMULATE Wind farm	3,10	16	1
+315	T	N N	bird species	3,10	16	2
+316	T	N N	nature conservation	3,10	16	1
+317	T	A N	hydraulic pump	3,10	16	1
+318	T	N P N C N	Institution of Engineering and Technology	3,10	16	1
+319	T	N N N	Margin emission factor	3,10	32	2
+320	T	N N	IEEE Xplore	3,10	16	1
+321	T	N	raptors	3,10	16	5
+322	T	A	approximate	3,10	16	6
+323	T	N N	fuel cell	3,08	31	2
+324	T	A N	lateral angle	3,08	31	1
+325	T	N N N N N	chord length blade length Blade	3,07	15	1
+326	T	N N	vortex theory	3,07	15	1
+327	T	N N	project participants	3,07	15	2
+328	T	A N	solar panel	3,07	15	2
+329	T	A N N	dynamic pitch control	3,07	15	1
+330	T	N N	energy consumption	3,07	15	3
+331	T	N N	Min Torque	3,07	15	1
+332	T	N N	turbine components	3,07	15	6
+333	T	A N N N	Domestic Wind Turbines Systems	3,07	15	1
+334	T	A N	physical model	3,07	15	2
+335	T	N N N N N	TSR chord length blade length	3,07	15	1
+336	T	N P N	integrity of the Natura	3,07	15	1
+337	T	N N	grid faults	3,07	15	3
+338	T	N	incl	3,07	15	4
+339	T	N	loudness	3,07	15	3
+340	T	A N	CO2 emissions	3,07	30	3
+341	T	N N	energy output	3,07	15	5
+342	T	N N	wind conditions	3,07	15	9
+343	T	N N	charge controller	3,07	30	1
+344	T	A	land-based	3,07	15	3
+345	T	N N N	wind energy potential	3,07	15	5
+346	T	N N	Max Torque	3,07	15	1
+347	T	N N	Barrier effect	3,07	15	1
+348	T	N N	GHG emissions	3,07	15	2
+349	T	A	pursuant	3,07	15	4
+350	T	N N	frequency range	3,07	15	1
+351	T	N N	wind source	3,07	15	3
+352	T	N N	test turbine	3,07	15	1
+353	T	N N	summary Ref	3,07	15	1
+354	T	N N N N N	length blade length Blade Pitch	3,07	15	1
+355	T	N N	lift force	3,07	15	6
+356	T	N	visualization	3,07	15	4
+357	T	N N	Ballast Nedam	3,07	15	1
+358	T	N	anemometer	3,07	15	7
+359	T	N N N	wind turbine tower	3,07	15	9
+360	T	N	TFPM	3,07	15	1
+361	T	A N	main drive	3,07	15	1
+362	T	N	blasting	3,07	15	2
+363	T	N	aluminum	3,07	30	5
+364	T	N N	actuator disk	3,05	29	2
+365	T	A N	maximum power	3,05	29	9
+366	T	N	PCF	3,04	14	1
+367	T	N N N	wind power development	3,04	14	5
+368	T	N	Conf	3,04	14	3
+369	T	N	Langston	3,04	14	1
+370	T	N N	airfoil type	3,04	14	1
+371	T	A N	hydraulic motor	3,04	14	1
+372	T	A N N	potential mitigation measures	3,04	14	1
+373	T	N A N	power electronic converter	3,04	14	3
+374	T	A N N	permanent magnet generator	3,04	14	5
+375	T	N	audiology	3,04	14	1
+376	T	N	rectifier	3,04	14	2
+377	T	A	tCO2	3,04	14	2
+378	T	N P N	Ministry of Environment	3,04	28	6
+379	T	N N N	wind turbine operations	3,04	14	5
+380	T	N N N	wind turbine performance	3,04	14	5
+381	T	N	cochlea	3,04	14	1
+382	T	A	red	3,04	14	7
+383	T	N N	energy conservation	3,04	14	1
+384	T	N N	collision mortality	3,04	14	2
+385	T	A N	sound power	3,04	14	3
+386	T	N	capacitor	3,04	14	3
+387	T	N P N	cost of energy	3,04	14	6
+388	T	N N	boundary layer	3,04	14	4
+389	T	N N N	Wind Energy Facility	3,04	14	5
+390	T	N N	wind direction	3,04	14	7
+391	T	N	Phocoena	3,04	14	1
+392	T	N	verification	3,04	14	3
+393	T	N N	frequency control	3,04	14	2
+394	T	N N	Low-Frequency Sound	3,04	14	2
+394	V[img]	A N N	low frequency sound	3,78	78	3
+395	T	A N	human ear	3,04	14	2
+396	T	N N	grid codes	3,04	14	2
+397	T	A N	Baltic Sea	3,04	14	3
+398	T	N N N	wind turbine generator	3,02	27	8
+399	T	N N	wind towers	3,01	13	2
+399	V[s]	N N N	wind turbine tower	3,07	15	9
+400	T	N	Lendimai	3,01	13	1
+401	T	N	SPAs	3,01	13	1
+402	T	A N N	annual energy production	3,01	13	5
+403	T	N	PDD	3,01	13	2
+404	T	A	three-dimensional	3,01	26	2
+405	T	N N	wind data	3,01	13	5
+406	T	N	kilometers	3,01	13	3
+407	T	N	ind	3,01	13	5
+408	T	N	GIS	3,01	13	3
+409	T	N N	model turbines	3,01	13	2
+410	T	N C N N	Research and Development Status	3,01	26	1
+411	T	A N	low speed	3,01	13	6
+412	T	A N N	variable speed concept	3,01	13	2
+413	T	A N	larger turbines	3,01	13	9
+414	T	N N	energy bill	3,01	13	1
+415	T	N N	energy demand	3,01	13	4
+416	T	A N	National Wind	3,01	13	8
+417	T	A N P N N	potential impact of wind farms	3,01	13	1
+418	T	A N	General Description	3,01	13	4
+419	T	A N	aerodynamic loads	3,01	13	5
+420	T	A N	Technical Report	3,01	13	6
+421	T	N	Email	3,01	13	8
+422	T	N N	load range	3,01	13	1
+423	T	N N	pressure field	3,01	13	1
+424	T	N	ANSI	3,01	13	5
+425	T	N	ϕopt	3,01	13	1
+426	T	A N	electrical energy	3,01	26	9
+427	T	A N N	offshore wind power	3,01	13	4
+428	T	N N	output part	3,01	13	1
+429	T	N N	output power	3,01	13	3
+430	T	N N	RFPM machines	3,01	13	1
+431	T	N N	turbine foundations	3,01	13	5
+432	T	N N N N	Wind Energy Conversion System	3,01	13	3
+433	T	N P N N	effects of wind turbines	3,01	13	4
+434	T	N	tCO2	3,01	13	2
+435	T	N N	case series	3,01	13	1
+436	T	N P N N	types of wind turbines	3,01	13	7
+437	T	A C A N	active and reactive power	3,01	13	2
+438	T	N	alternator	3,01	13	3
+439	T	N N	TFPM machines	3,01	13	1
+440	T	A N N	average wind speed	3,01	26	13
+441	T	N	website	3,01	13	7
+442	T	A N	optimal pitch	3,01	13	2
+443	T	N	ACM0002	2,99	25	2
+444	T	N	velocity	2,98	183	13
+445	T	N N N N N	blade length Blade Pitch Average	2,97	12	1
+446	T	N	defense	2,97	12	3
+447	T	N	sec	2,97	12	1
+448	T	N N	turbine locations	2,97	12	3
+449	T	N	mph	2,97	12	5
+450	T	N	O&M	2,97	12	4
+451	T	A	viscous	2,97	12	3
+452	T	A N	Northern California	2,97	12	2
+453	T	A N	modified twist	2,97	12	1
+454	T	N N N	wind energy projects	2,97	12	8
+455	T	N N N	blade pitch angle	2,97	12	5
+456	T	A N N N	European Wind Energy Conference	2,97	12	3
+457	T	N N	safety system	2,97	12	2
+458	T	N N	wind plants	2,97	12	4
+458	V[s]	N N N	Wind Power Plant	3,76	74	9
+459	T	N C A N	Engineering and Industrial Aerodynamics	2,97	12	3
+460	T	A N N	large wind farms	2,97	12	5
+461	T	N	bathymetry	2,97	12	1
+462	T	N N	noise exposure	2,97	12	4
+463	T	N N	tip losses	2,97	12	1
+464	T	N	volt	2,97	12	7
+465	T	N P N	power of the wind	2,97	12	7
+465	V[s]+	N N	wind power	4,34	278	26
+466	T	N N	metal hydrides	2,97	12	1
+467	T	N N P N	Press Journal of American	2,97	12	1
+468	T	N	variability	2,97	12	7
+469	T	N N N	Mammoet Van Oord	2,97	12	1
+470	T	N N	DOWEC partners	2,97	12	1
+471	T	N	Orimulsion	2,97	12	1
+472	T	N	AWEA	2,97	12	3
+473	T	N	computation	2,97	12	4
+474	T	N P N	Table of Contents	2,97	12	10
+475	T	N N	energy sector	2,97	12	7
+476	T	N P N	provisions of Article	2,97	12	1
+477	T	N	functionality	2,97	12	2
+478	T	N N	Jepirachi project	2,97	12	1
+479	T	A N N	HAWT blade design	2,97	24	1
+480	T	N	Lipscomb	2,97	12	2
+481	T	N N	machine support	2,97	12	1
+482	T	A N	liquid hydrogen	2,97	12	1
+483	T	A N	upwind rotor	2,97	12	6
+484	T	N N	generator types	2,97	12	2
+485	T	N	direct-drive	2,96	70	2
+486	T	A N N	general momentum theory	2,95	23	1
+487	T	A N	aerodynamic loading	2,93	11	4
+488	T	N N	electricity system	2,93	11	3
+489	T	N	TWh	2,93	11	2
+490	T	N	rel	2,93	11	2
+491	T	N	RMS	2,93	11	1
+492	T	N N	migration routes	2,93	11	4
+493	T	A N	electrical power	2,93	11	9
+494	T	N	Sediment	2,93	11	2
+495	T	N N N	blade flow field	2,93	11	1
+496	T	N	Sadock	2,93	11	1
+497	T	A N	electric lines	2,93	11	1
+498	T	N	Guajira	2,93	11	1
+499	T	N N	design procedure	2,93	11	2
+500	T	R	dynamically	2,93	11	4
