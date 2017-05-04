@@ -73,6 +73,22 @@ module TermSuite
       end
     end
 
+    CMD_REGEX = /^java.*fr.univnantes.termsuite.tools.(\w+)/m
+    TT_REGEX = /\s+-t\s+\$TREETAGGER_HOME\s+\\\s*$/
+
+    def docker_body
+      str = body.clone
+      md = str.match CMD_REGEX
+      case md[1]
+      when "AlignerCLI" then str.gsub! CMD_REGEX, "termsuite align"
+      when "TerminologyExtractorCLI" then str.gsub! CMD_REGEX, "termsuite extract"
+      when "PreprocessorCLI"then str.gsub! CMD_REGEX, "termsuite preprocess"
+      else raise("Command not recognized: #{md[1]}")
+      end
+      str.gsub! TT_REGEX, ""
+      str
+    end
+
     def title
       front_matter["title"] || @example_path
     end
@@ -85,8 +101,45 @@ module TermSuite
       front_matter["language"] || front_matter["lang"]
     end
 
-    def tsv
-      front_matter["tsv"]
+    def tsv_path
+      @tsv_path ||= begin
+        tp = File.join @site.config['source'], "_includes", "generated", "examples", @example_path
+        tp.gsub! /\.sh$/, ".tsv"
+        File.exists?(tp) || raise("No such TSV file: #{tp}")
+        tp
+      end
     end
+
+    def tsv_lines
+      IO.readlines(tsv_path)
+    end
+
+    def tsv_interval(from, to)
+      tsv_lines[from..to].join
+    end
+
+    def tsv(slices)
+      str, index, last_to = "", 0, -1
+      slices.map! do |from, to|
+        from = tsv_lines.length + from if from < 0
+        to = tsv_lines.length + to if to < 0
+        raise("Bad slice bounds inf > sup: [#{from}, #{to}]") if from > to
+        [from,to]
+      end.sort!
+
+      slices.each do |from, to|
+        raise("Slices overlap: #{slices}") if last_to >= 0 && from <= last_to
+        if index > 0
+          str +="--- lines #{last_to + 1} to #{from - 1} ---\n"
+        end
+        str += tsv_interval(from, to)
+        last_to = to
+        index += 1
+      end
+      str+="--- END OF FILE"
+      str
+    end
+
+
   end
 end

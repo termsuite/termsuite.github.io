@@ -3,6 +3,7 @@ layout: documentation
 title: titles.data-model
 menu_title: menus.data-model
 menu: theory
+order: 10
 excerpt: excerpts.data-model
 status: draft
 permalink: /documentation/data-model/

@@ -124,10 +124,11 @@ titles:
   term-properties: Term Properties
   developers: Developers instructions (Gradle / Maven)
   support: Support
-  data-model: Terminology data model of TermSuite
+  data-model: Our Data Model for Terminologies
   about: About TermSuite
   properties: Properties
   contact: Contact
+  tsv-output: Configuring and Understanding TSV Output Terminologies.
 
 menus:
   introduction: Introduction
@@ -137,12 +138,13 @@ menus:
   java-api: Java API
   resources: Resources
   corpus: Corpus
+  tsv-output: TSV Output
   properties: Properties
   data-model: Data Model
   postprocessing: Post-Processing
   pipeline: Terminology Extraction Pipeline
   links: Links
-  data-model: Terminology
+  data-model: Data Model
   terminology-extractor-cli: TerminologyExtractorCLI
   preprocessor-cli: PreprocessorCLI
   aligner-cli: AlignerCLI
@@ -168,6 +170,7 @@ docmenu:
 
 excerpts:
   blog: Latest news about TermSuite
+
   introduction: "User manual and technical documentation for TermSuite : terminology extraction and bilingual alignment."
   getting-started: "This page guides you through the steps to get TermSuite running and extracting the terminology from a short example corpus."
   gui: "This page explains how to get running with TermSuite Graphical User Interface."
@@ -180,12 +183,13 @@ excerpts:
   properties: Documentation on all term and relation properties in TermSuite.
   developers: "Information about TermSuite for developers: Gradle, Github, Maven..."
   support: You need help with TermSuite ?
-  data-model: Terminology data model
+  data-model: Terminology Graph-Based Data Model
   changelog: "Changelog, new features, and bug fixes of TermSuite"
   contact: "Contact information of TermSuite contributors."
   terminology-extractor-cli: "Documention of command TerminologyExtractorCLI for terminology extraction."
   preprocessor-cli: "Documention of command TerminologyExtractorCLI for NLP preprocessing (tokenizing, POS-tagging, lemmatization, multi-word term spotting)."
   aligner-cli: "Documention of command AlignerCLI for bilingual alignment."
+  tsv-output: Configuring and understanding TermSuite TSV output for terminologies.
 
 authors:
   dc:

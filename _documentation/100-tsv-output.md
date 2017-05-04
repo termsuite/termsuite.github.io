@@ -1,16 +1,16 @@
 ---
 layout: documentation
-title: titles.alignment
-menu_title: menus.alignment
+title: titles.tsv-output
+menu_title: menus.tsv-output
 menu: theory
-order: 50
-excerpt: excerpts.alignment
-permalink: /documentation/alignment/
+order: 20
+excerpt: excerpts.tsv-output
+permalink: /documentation/terminology-tsv-output/
 ---
 {% if "fr" == site.lang %}
   <div class="alert alert-warning" role="alert">
   <strong>Désolé ! </strong>Cette page n'existe pas en langue française. Veuillez vous référer à la <a href="{{ page.url }}"> version anglaise</a>.
 </div>
 {% else %}
-  {% translate_file documentation/alignment.md %}
+  {% translate_file documentation/tsv-output.md %}
  {% endif %}

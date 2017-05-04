@@ -4,3 +4,6 @@ _site/
 .jekyll-metadata
 .ruby-*
 _http_cache/
+_generated/examples/**/*.log
+_generated/examples/**/*.xmi
+_generated/examples/**/*.json
