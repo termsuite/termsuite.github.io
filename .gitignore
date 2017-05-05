@@ -7,3 +7,4 @@ _http_cache/
 *.log
 *.xmi
 *.json
+.~*#
