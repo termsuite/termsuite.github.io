@@ -169,7 +169,9 @@ topmenu:
   resources: Resources
   corpus: Corpus
   support: Support
-
+  io: "Input/Output Formats"
+  theory: Theory
+  links: Links
 
 excerpt:
   blog: Latest news about TermSuite

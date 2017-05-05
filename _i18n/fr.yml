@@ -134,7 +134,7 @@ title:
   alignment: Alignement bilingue en corpus comparable avec TermSuite
   termsuite-pipelines: Chaînes de traitement de TermSuite
   terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
-  tsv-output: Comprendre et configure le format de sortie TSV pour les terminologies
+  tsv-output: Comprendre et configurer le format de sortie TSV pour les terminologies
   json: Format JSON de sérialisation des terminologies
 
 menu-title:
@@ -166,6 +166,18 @@ menu-title:
   tsv-output: Export TSV
   json: Sérialisation JSON
 
+topmenu:
+  getting-started: Démarrer
+  gui: Interface graphique
+  command-line-api: API ligne de commande
+  java-api: API Java
+  resources: Ressources
+  corpus: Corpus
+  support: Support
+  io: "Formats Entrées/Sorties"
+  theory: Théorie
+  links: Liens
+
 excerpt:
   introduction: "Manuel d'utilisation et documentation technique pour TermSuite : terminologie de l'extraction et alignement bilingue."
   getting-started: Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire la terminologie d'un petit corpus.
@@ -182,7 +194,7 @@ excerpt:
   alignment: Alignement bilingue en corpus comparable avec TermSuite
   termsuite-pipelines: Chaînes de traitement de TermSuite
   terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
-  json: Comporendre le format JSON de sérialisation des terminologies TermSuite. 
+  json: Comporendre le format JSON de sérialisation des terminologies TermSuite.
 
 authors:
   dc:

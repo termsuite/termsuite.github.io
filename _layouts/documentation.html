@@ -15,7 +15,7 @@ layout: default
     <div id="docmenu" class="col-md-3">
 
       {% for menu in site.data.menu %}
-        {% capture menukey %}menu-title.{{ menu }}{% endcapture %}
+        {% capture menukey %}topmenu.{{ menu }}{% endcapture %}
         {% assign docs = site.documentation | where_exp: "status", "status != 'draft'" | where: "menu", menu | sort : 'order' | uniq %}
 
           {% if docs.size > 0 %}
