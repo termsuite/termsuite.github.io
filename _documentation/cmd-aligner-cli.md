@@ -1,7 +1,7 @@
 ---
 layout: documentation
-title: menus.aligner-cli
-menu_title: menus.aligner-cli
+title: menu-title.aligner-cli
+menu_title: menu-title.aligner-cli
 menu: command-line-api
 excerpt: excerpt.aligner-cli
 order: 30

@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: titles.properties
-menu_title: menus.properties
+title: title.properties
+menu_title: menu-title.properties
 menu: theory
-excerpt: excerpts.properties  
+excerpt: excerpt.properties  
 permalink: /documentation/properties/
 ---
 

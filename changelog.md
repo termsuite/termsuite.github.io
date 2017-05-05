@@ -2,7 +2,7 @@
 layout: page
 title: global.changelog
 permalink: /changelog/
-excerpt: excerpts.changelog
+excerpt: excerpt.changelog
 ---
 
 ## Next version (3.0)

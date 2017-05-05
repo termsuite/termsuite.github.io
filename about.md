@@ -1,6 +1,6 @@
 ---
 layout: page
-title: titles.about
+title: title.about
 permalink: /about/
 ---
 

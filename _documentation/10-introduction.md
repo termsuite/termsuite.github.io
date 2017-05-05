@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: titles.introduction
-menu_title: docmenu.introduction
+title: title.introduction
+menu_title: menu-title.introduction
 menu: getting-started
-excerpt: excerpts.introduction
+excerpt: excerpt.introduction
 permalink: /documentation/introduction/
 order: 10
 ---

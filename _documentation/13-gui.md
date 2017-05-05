@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: titles.gui
-menu_title: menus.gui
+title: title.gui
+menu_title: menu-title.gui
 menu: gui
-excerpt: excerpts.gui
+excerpt: excerpt.gui
 permalink: /gui/
 getting_started: true
 ---

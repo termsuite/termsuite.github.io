@@ -1,10 +1,10 @@
 ---
 layout: documentation
-title: titles.data-model
-menu_title: menus.data-model
+title: title.data-model
+menu_title: menu-title.data-model
 menu: theory
 order: 10
-excerpt: excerpts.data-model
+excerpt: excerpt.data-model
 status: draft
 permalink: /documentation/data-model/
 ---

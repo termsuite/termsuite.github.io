@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: titles.term-properties
-menu_title: menus.term-properties
+title: title.term-properties
+menu_title: menu-title.term-properties
 menu: theory
-excerpt: excerpts.term-properties
+excerpt: excerpt.term-properties
 status: draft
 permalink: /documentation/term-properties/
 ---

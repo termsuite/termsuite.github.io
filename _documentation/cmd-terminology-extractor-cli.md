@@ -1,7 +1,7 @@
 ---
 layout: documentation
-title: menus.terminology-extractor-cli
-menu_title: menus.terminology-extractor-cli
+title: menu-title.terminology-extractor-cli
+menu_title: menu-title.terminology-extractor-cli
 menu: command-line-api
 excerpt: excerpt.terminology-extractor-cli
 permalink: /documentation/terminology-extractor-cli/

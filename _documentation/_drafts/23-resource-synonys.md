@@ -1,10 +1,9 @@
 ---
 layout: documentation
-title: titles.resources
+title: title.resources
 menu: resources
 status: draft
-submenu: menus.resource-synonyms
-excerpt: excerpts.resources
+excerpt: excerpt.resources
 permalink: /documentation/resources/
 ---
 

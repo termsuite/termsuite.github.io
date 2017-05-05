@@ -31,7 +31,6 @@ module Jekyll
     def render(context)
 
       @example = TermSuite::Example.new context.registers[:site], @path, @branch
-      puts "Rendering TermSUite Example: #{@path}"
       string = %{
 
 #### #{@example.title}

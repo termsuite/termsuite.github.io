@@ -114,28 +114,32 @@ filtering_properties:
   rank: Le rang du terme après que chaque terme ait reçu un score par spécificité
 
 
-titles:
+title:
   blog: "Blog & Actualités"
   introduction: Introduction à TermSuite
-  getting-started-cmd: "Débuter avec TermSuite [Tutoriel]"
-  gui: "Interface graphique"
+  getting-started-cmd: "Démarrer avec TermSuite [Tutoriel]"
+  gui: "Démarrer avec l'interface graphique de TermSuite [Tutoriel]"
   postagger: Installer l'étiquetteur grammatical et le lemmatiseur
   command-line-api: Executer l'extraction de terminologies en ligne de commande API
   java-api: API Java de TermSuite
   resources: Charger les ressources langagières de TermSuite
   corpus: Arborescence d'un corpus TermSuite
-  term-properties: Liste des propriétés de terme disponibles dans TermSuite.
-  properties: Liste des propriétés de terms et de relations de TermSuite.
+  term-properties: Liste des propriétés de terme disponibles dans TermSuite
+  properties: Liste des propriétés de terms et de relations de TermSuite
   developers: Instructions pour les développeurs (Gradle / Maven)
   support: Assistance
   data-model: Modèle de données de TermSuite
   about: À propos de TermSuite
   contact: Contact
+  alignment: Alignement bilingue en corpus comparable avec TermSuite
+  termsuite-pipelines: Chaînes de traitement de TermSuite
+  terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
+  tsv-output: Comprendre et configure le format de sortie TSV pour les terminologies
 
-menus:
+menu-title:
   introduction: Introduction
-  getting-started: "Débuter avec TermSuite [Tutoriel]"
-  gui: Guide de l'interface graphique [Tutoriel]
+  getting-started: "Démarrer"
+  gui: Interface graphique
   postagger: Installer un étiquetteur grammatical
   command-line-api: API ligne de commande
   java-api: API Java
@@ -151,10 +155,17 @@ menus:
   theory: Théorie et architecture
   properties: Propriétés
   postprocessing: Post-traitements
+  terminology-extractor-cli: TerminologyExtractorCLI
+  preprocessor-cli: PreprocessorCLI
+  aligner-cli: AlignerCLI
+  theory: Théorie et architecture
+  alignment: Alignement
+  termsuite-pipelines: Chaînes de traitement
+  terminology-extraction: Extraction terminologique
+  tsv-output: Export TSV
 
 
-
-excerpts:
+excerpt:
   introduction: "Manuel d'utilisation et documentation technique pour TermSuite : terminologie de l'extraction et alignement bilingue."
   getting-started: Cette page vous montre les étapes pour faire fonctionner TermSuite et extraire la terminologie d'un petit corpus.
   postagger: Documentation pour l'installation de l'étiqueteur arboré (TreeTagger) ou de l'étiquetteur grammatical Mate (POS tagger) pour TermSuite.
@@ -166,7 +177,10 @@ excerpts:
   properties: Liste des propriétés de termes et de relations de TermSuite.
   developers: "Informations pour les développeurs : Gradle, Github, Maven..."
   support: Obtenir de l'aide avec TermSuite
-  data-model:
+  data-model: Modèle de données de TermSuite pour la modélisation des terminologies.
+  alignment: Alignement bilingue en corpus comparable avec TermSuite
+  termsuite-pipelines: Chaînes de traitement de TermSuite
+  terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
 
 authors:
   dc:

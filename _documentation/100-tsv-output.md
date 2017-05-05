@@ -1,10 +1,10 @@
 ---
 layout: documentation
-title: titles.tsv-output
-menu_title: menus.tsv-output
+title: title.tsv-output
+menu_title: menu-title.tsv-output
 menu: theory
 order: 20
-excerpt: excerpts.tsv-output
+excerpt: excerpt.tsv-output
 permalink: /documentation/terminology-tsv-output/
 ---
 {% if "fr" == site.lang %}

@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: titles.java-api
-menu_title: menus.java-api
+title: title.java-api
+menu_title: menu-title.java-api
 menu: java-api
-excerpt: excerpts.java-api
+excerpt: excerpt.java-api
 permalink: /documentation/java-api/
 redirect_from: /documentation/java-api/
 ---

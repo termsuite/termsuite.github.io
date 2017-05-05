@@ -1,7 +1,7 @@
 ---
 layout: documentation
-title: menus.preprocessor-cli
-menu_title: menus.preprocessor-cli
+title: menu-title.preprocessor-cli
+menu_title: menu-title.preprocessor-cli
 menu: command-line-api
 excerpt: excerpt.preprocessor-cli
 permalink: /documentation/preprocessor-cli/

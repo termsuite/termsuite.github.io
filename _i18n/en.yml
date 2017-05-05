@@ -111,7 +111,7 @@ filtering_properties:
   pattern: the syntactic pattern of the term
   spottingRule: the <emph>UIMA Tokens Regex</emph> rule name that spotted the term
 
-titles:
+title:
   blog: Blog & News
   introduction: Introduction
   getting-started-cmd: "Tutorial: Getting Started with the Command Line API"
@@ -129,8 +129,11 @@ titles:
   properties: Properties
   contact: Contact
   tsv-output: Configuring and Understanding TSV Output Terminologies.
+  termsuite-pipelines: TermSuite terminology extraction and alignment pipelines
+  alignment: Bilingual alignment
+  terminology-extraction: Terminology Extraction
 
-menus:
+menu-title:
   introduction: Introduction
   getting-started: Getting Started
   gui: Graphical User Interface
@@ -151,24 +154,23 @@ menus:
   theory: Theory and Architecture
   support: Support
   developers: Developers
-
-docmenu:
-  introduction: Introduction
-  getting-started: Beginner Guide
-  gui: Graphical User Interface
+  alignment: Alignment
   postagger: Installing a POS Tagger
+  termsuite-pipelines: Pipelines
+  terminology-extraction: Termino Extraction
+
+
+topmenu:
+  getting-started: Getting Started
+  gui: Graphical User Interface
   command-line-api: Command Line API
   java-api: Java API
   resources: Resources
   corpus: Corpus
-  term-properties: Term Properties
-  properties: Properties
-  developers: Developers
   support: Support
-  data-model: Terminology
 
 
-excerpts:
+excerpt:
   blog: Latest news about TermSuite
 
   introduction: "User manual and technical documentation for TermSuite : terminology extraction and bilingual alignment."
@@ -190,6 +192,9 @@ excerpts:
   preprocessor-cli: "Documention of command TerminologyExtractorCLI for NLP preprocessing (tokenizing, POS-tagging, lemmatization, multi-word term spotting)."
   aligner-cli: "Documention of command AlignerCLI for bilingual alignment."
   tsv-output: Configuring and understanding TermSuite TSV output for terminologies.
+  termsuite-pipelines: Explanation of TermSuite pipelines for terminology extraction and multi-word term alignments.
+  alignment: Explanation on how TermSuite translates domain-specific multi-word terms in comparable corpus.
+  terminology-extraction: Explanation on how TermSuite produces a terminology out of a domain-specific textual corpus.
 
 authors:
   dc:

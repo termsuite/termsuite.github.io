@@ -322,7 +322,7 @@ You are now ready to align terms.
  * In the opened terminology viewer, select the term you need to align,
  * Right-click on the term and go to contextual menu "Align > ...". Normally, All the possible target terminology for alignment should appear in the sub-menu: (in our case, only the english `m-v-th2-contexts` terminology)
 
- ![](/img/termsuite/25-align-menu.png)
+ ![](/img/termsuite/25-align-menu-title.png)
 
 The candidate target terminologies listed in the menu are all terminologies in TermSuite matching the four conditions below: (the terminology in which we have right-clicked is denoted as the *source terminology*)
 

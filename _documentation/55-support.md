@@ -1,10 +1,10 @@
 ---
 layout: documentation
-title: titles.support
-menu_title: menus.support
+title: title.support
+menu_title: menu-title.support
 menu: links
 order: 20
-excerpt: excerpts.support
+excerpt: excerpt.support
 permalink: /documentation/support/
 ---
 
