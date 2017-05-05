@@ -65,7 +65,3 @@ See [how to interprete terminology TSV output file](/documentation/terminology-t
 end
 
 Liquid::Template.register_tag('termsuite_example', Jekyll::TermsuiteExample)
-
-
-# %{
-# }

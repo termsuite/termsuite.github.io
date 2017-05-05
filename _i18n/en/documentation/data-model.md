@@ -1,18 +1,33 @@
 * TOC
 {:toc}
 
-# TermSuite UIMA Type System
+### TermSuite UIMA Type System
+{:id="type-system"}
 
-There are three types in TermSuite's type system :
+The *Type System* is the schema of UIMA annotations contained in the CAS (*Common Abstract Structure*) passed to all analysis engines of the UIMA pipeline. This section presents the *Type System* used by [TermSuite Preprocessor pipeline](/documentation/termsuite-pipelines/#preprocessor), i.e. our data model at Step 1 of terminology extraction.
 
-###### org.apache.uima.examples.SourceDocumentInformation
+There are three annotation types in TermSuite. See [TermSuite Type System XML file](https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/TermSuite_TS.xml) for an up-to-date view of the type system.
+
+ * [`SourceDocumentInformation`](#SourceDocumentInformation): exactly one per document, i.e. per CAS, containing all metadata needed about the current textual document being processed,
+ * [`WordAnnotation`](#WordAnnotation): a word, or a punctuation element,
+ * [`TermOccAnnotation`](#TermOccAnnotation): a term occurrence detected by [Term Spotter](/documentation/termsuite-pipelines/#term-spotter).
+
+
+
+#### org.apache.uima.examples.SourceDocumentInformation
+{:id="SourceDocumentInformation"}
 
 * `uri:String`
 * `offsetInSource:Integer`
 * `lastSegment:Boolean`
 * `documentSize:Integer`
+* `corpusSize:Integer`
+* `cumulatedDocumentSize:Integer`
+* `documentIndex:Integer`
+* `nbDocuments:Integer`
 
-###### eu.project.ttc.types.WordAnnotation
+#### eu.project.ttc.types.WordAnnotation
+{:id="WordAnnotation"}
 
 * `stem:String`
 * `lemma:String`
@@ -31,31 +46,17 @@ There are three types in TermSuite's type system :
 * `labels:String`
 
 
-###### eu.project.ttc.types.TermOccAnnotation
+#### eu.project.ttc.types.TermOccAnnotation
+{:id="TermOccAnnotation"}
 
-* `category:String`
-* `frequency:Double`
-* `langset:String`
-* `lemma:String`
+* `termKey:String`
+* `word:WordAnnotation[]`
 * `pattern:StringArray` (an array of UIMA Tokens Regex labels)
-* `ruleId:String` (the name of the UIMA Tokens Regex rule that spotted this term)
-* `specifity:Double` (The Weirdness Ratio of this term @Deprecated)
+* `spottingRuleName:String` (the name of the UIMA Tokens Regex rule that spotted this term)
 
-# TermSuite Java Data Model
+### Terminology Data Model
+{:id="TerminologyDataModel"}
 
+This section presents the data model of a Terminology used by [TermSuite terminology extractor pipeline](/documentation/termsuite-pipelines/#terminology-extraction-step-2), i.e. our data model at Step 2 of [terminology extraction](/documentation/termsuite-pipelines/#terminology-extraction).
 
-TODO: draw a schema of this data model.
-
-###### TermIndex
-
-###### Term
-
-###### TermOccurrence
-
-###### Word
-
-###### TermWord
-
-###### TermProperty
-
-###### Document
+(to come)

@@ -135,6 +135,7 @@ title:
   termsuite-pipelines: Chaînes de traitement de TermSuite
   terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
   tsv-output: Comprendre et configure le format de sortie TSV pour les terminologies
+  json: Format JSON de sérialisation des terminologies
 
 menu-title:
   introduction: Introduction
@@ -163,7 +164,7 @@ menu-title:
   termsuite-pipelines: Chaînes de traitement
   terminology-extraction: Extraction terminologique
   tsv-output: Export TSV
-
+  json: Sérialisation JSON
 
 excerpt:
   introduction: "Manuel d'utilisation et documentation technique pour TermSuite : terminologie de l'extraction et alignement bilingue."
@@ -181,6 +182,7 @@ excerpt:
   alignment: Alignement bilingue en corpus comparable avec TermSuite
   termsuite-pipelines: Chaînes de traitement de TermSuite
   terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
+  json: Comporendre le format JSON de sérialisation des terminologies TermSuite. 
 
 authors:
   dc:

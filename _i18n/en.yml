@@ -132,6 +132,7 @@ title:
   termsuite-pipelines: TermSuite terminology extraction and alignment pipelines
   alignment: Bilingual alignment
   terminology-extraction: Terminology Extraction
+  json: Terminology JSON serilization
 
 menu-title:
   introduction: Introduction
@@ -158,7 +159,7 @@ menu-title:
   postagger: Installing a POS Tagger
   termsuite-pipelines: Pipelines
   terminology-extraction: Termino Extraction
-
+  json: JSON serilization
 
 topmenu:
   getting-started: Getting Started
@@ -172,7 +173,6 @@ topmenu:
 
 excerpt:
   blog: Latest news about TermSuite
-
   introduction: "User manual and technical documentation for TermSuite : terminology extraction and bilingual alignment."
   getting-started: "This page guides you through the steps to get TermSuite running and extracting the terminology from a short example corpus."
   gui: "This page explains how to get running with TermSuite Graphical User Interface."
@@ -195,6 +195,7 @@ excerpt:
   termsuite-pipelines: Explanation of TermSuite pipelines for terminology extraction and multi-word term alignments.
   alignment: Explanation on how TermSuite translates domain-specific multi-word terms in comparable corpus.
   terminology-extraction: Explanation on how TermSuite produces a terminology out of a domain-specific textual corpus.
+  json: Understanding terminology JSON serilization format
 
 authors:
   dc:
