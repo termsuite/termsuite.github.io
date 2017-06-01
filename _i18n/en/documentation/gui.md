@@ -1,3 +1,7 @@
+<div class="alert alert-warning" role="alert">
+<strong>Warning </strong>TermSuite Graphical User Interface has not migrated to version 3 of TermSuite. It current version is still 2.3. Please use [Command line API](/documentation/command-line-api) if you need last improvements of TermSuite.
+</div>
+
 * TOC
 {:toc}
 

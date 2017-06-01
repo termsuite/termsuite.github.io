@@ -66,6 +66,7 @@ A value of `V` for poperty `type` indicates a variants. This values can take one
  * **g**: indicates that the variation is **graphical**,
  * **h**: indicates that the variation is **semantic**, see values of properties `isDico` and `isDistrib` to know wether the variant has been found from dictionary or by context vector comparison (or both),
  * **d**: indicates that the variation is a **derivate**,
+ * **p**: indicates that the variation is a **prefix**,
  * **i**: indicates that the variation has been **infered** from another pair of saller-size terms. The **i** flag should always appear together with another flag.
 
  When the flad ends with +, like in `V[s]+`, it indicates that the variant also has its own variants. In other words, it means that is variation can expanded, and that the base term has order-2 variants.
@@ -109,3 +110,5 @@ Wether TermSuite should filter variant rows from TSV file, i.e. lines whose type
 #### List of properties to show
 
 The list of term or variant properties to show as columns of TSV file. Refer to [available properties](/documentation/properties/) for an exhaustive list of values allowed.
+
+When the line to display in TSV is a variation, it is now possible to specify a term property prefixed with `source:`, e.g. `source:freq`, `source:pilot`... In that case, the value displayed for that column is the value of the property for the source (base) term of the variation. This feature may be useful when it comes to keeping only variations lines (for example by filtering within Excel) and still having the base term's properties on the same line.    

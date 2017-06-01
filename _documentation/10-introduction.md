@@ -6,6 +6,7 @@ menu: getting-started
 excerpt: excerpt.introduction
 permalink: /documentation/introduction/
 order: 10
+redirect_from: /documentation/
 ---
 {% translate_file documentation/introduction.md %}
 

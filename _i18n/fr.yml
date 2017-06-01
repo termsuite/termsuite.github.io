@@ -136,6 +136,12 @@ title:
   terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
   tsv-output: Comprendre et configurer le format de sortie TSV pour les terminologies
   json: Format JSON de sérialisation des terminologies
+  resources-yaml-variants: Règles de variation YAML
+  post-processing: Post-traitements des terminologies extraites
+  java-terminology-extractor: Extraction terminologique avec l'API Java
+  java-preprocessor: Pré-traitements linguistiques avec l'API Java
+  java-aligner: Alignment bilingue avec l'API Java
+  java-io: Sérialisation/Désérialisation (IO) avec l'API Java
 
 menu-title:
   introduction: Introduction
@@ -165,6 +171,12 @@ menu-title:
   terminology-extraction: Extraction terminologique
   tsv-output: Export TSV
   json: Sérialisation JSON
+  resources-yaml-variants: Règles de variation YAML
+  post-processing: Post-traitements
+  java-terminology-extractor: TerminoExtractor
+  java-preprocessor: Preprocessor
+  java-aligner: Aligner
+  java-io: Sérialisation/Désérialisation (IO)
 
 topmenu:
   getting-started: Démarrer
@@ -195,6 +207,11 @@ excerpt:
   termsuite-pipelines: Chaînes de traitement de TermSuite
   terminology-extraction: Fonctionnement de l'extraction terminologique de TermSuite
   json: Comporendre le format JSON de sérialisation des terminologies TermSuite.
+  resources-yaml-variants: Documentation de la ressource linguistique de TermSuite pour la détection des règles de variation. (format YAML)
+  post-processing: Documentation des post-traitements (scores et filtrages) appliqués automatiquement aux terminologies extraites par TermSuite
+  java-terminology-extractor: Documentation de l'extraction terminologique avec l'API Java de TermSuite
+  java-preprocessor: Documentation des pré-traitements lingustiques avec l'API Java de TermSuite
+  java-aligner: Documentation de l'alignment bilingue avec l'API Java de TermSuite
 
 authors:
   dc:

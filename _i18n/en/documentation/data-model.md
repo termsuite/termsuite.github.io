@@ -59,4 +59,7 @@ There are three annotation types in TermSuite. See [TermSuite Type System XML fi
 
 This section presents the data model of a Terminology used by [TermSuite terminology extractor pipeline](/documentation/termsuite-pipelines/#terminology-extraction-step-2), i.e. our data model at Step 2 of [terminology extraction](/documentation/termsuite-pipelines/#terminology-extraction).
 
+#### Relation types
+{:id="RelationTypes"}
+
 (to come)

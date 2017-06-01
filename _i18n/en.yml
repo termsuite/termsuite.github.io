@@ -132,7 +132,13 @@ title:
   termsuite-pipelines: TermSuite terminology extraction and alignment pipelines
   alignment: Bilingual alignment
   terminology-extraction: Terminology Extraction
-  json: Terminology JSON serilization
+  json: Terminology JSON Serialization
+  resources-yaml-variants: YAML Variation Rules
+  post-processing: Post-processings applied to extracted terminologies
+  java-terminology-extractor: Running Terminology Extraction with Java API
+  java-preprocessor: Running NLP Preprocessing with Java API
+  java-aligner: Running Bilingual Alignment with Java API
+  java-io: Exporting and Deserializing terminologies with Java API
 
 menu-title:
   introduction: Introduction
@@ -159,7 +165,13 @@ menu-title:
   postagger: Installing a POS Tagger
   termsuite-pipelines: Pipelines
   terminology-extraction: Termino Extraction
-  json: JSON serilization
+  json: JSON Serialization
+  resources-yaml-variants: Variation Rules (YAML)
+  post-processing: Post-processings
+  java-terminology-extractor: TerminoExtractor
+  java-preprocessor: Preprocessor
+  java-aligner: Aligner
+  java-io: IO Serialization
 
 topmenu:
   getting-started: Getting Started
@@ -197,7 +209,13 @@ excerpt:
   termsuite-pipelines: Explanation of TermSuite pipelines for terminology extraction and multi-word term alignments.
   alignment: Explanation on how TermSuite translates domain-specific multi-word terms in comparable corpus.
   terminology-extraction: Explanation on how TermSuite produces a terminology out of a domain-specific textual corpus.
-  json: Understanding terminology JSON serilization format
+  json: Understanding terminology JSON serialization format
+  resources-yaml-variants: Documentation on TermSuite's linguistic resource for term variation gatherer gathering.
+  post-processing: Documentation on all post-processings (scores and filtering) applied to extracted terminologies by TermSuite
+  java-terminology-extractor: Documentation on how to run terminology extraction with TermSuite Java API
+  java-preprocessor: Documentation on how to run NLP preprocessing with TermSuite Java API
+  java-aligner: Documentation on how to run bilingual alignment with TermSuite Java API
+  java-io: Documentation on exporting and deserializing terminologies with Java API to JSON, TSV and TBX
 
 authors:
   dc:

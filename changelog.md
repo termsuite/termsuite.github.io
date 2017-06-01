@@ -5,11 +5,21 @@ permalink: /changelog/
 excerpt: excerpt.changelog
 ---
 
-## Next version (3.0)
+## 3.0
 
- * TermSuite will now require Java 8
- * Detection of synonimic variations
- * Improve multilingual alignment results for complex terms and compounds
+ * TermSuite now requires Java 8
+ * Detection of semantic variations
+ * Improve multilingual alignment results for complex terms, compounds and neoclassical terms
+ * Inner graph-based data model for terminologies
+ * Better TSV export configuration
+ * Better support for bug corpora from command line API
+ * Better support for pipeline configuration from command line API
+ * New language supported: `italian`
+ * Allow manual translations in aligner
+ * Read pipeline config from yml config file
+ * Improved time performances for graphical variation gathering
+ * Infer morphological, derivative, prefixative and semantic variations for longer terms
+
 
 ## Version 2.3
 
