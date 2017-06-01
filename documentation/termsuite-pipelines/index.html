@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>
+      
+        
+          TermSuite
+        
+
+      
+    </title>
+
+    <meta name="description" content="excerpt.termsuite-pipelines" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/documentation/termsuite-pipelines/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Fork TermSuite on GitHub."
+    src="/img/forkme.png"
+    alt="Fork TermSuite on GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <ul  class="nav navbar-nav navbar-right navright">
+        <li class="" >
+          <a class="" href="/contact">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Newsletter
+          </a>
+        </li>
+    </ul>
+
+
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/getting-started">Getting Started</a></li>
+          <li class="active"><a href="/documentation/introduction/" >Documentation</a></li>
+          <li class=""><a href="/#publications" >Publications</a></li>
+          <li id="about" class="dropdown">
+            <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/changelog">Change log</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/documentation/support">Support</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">View on Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/about">About TermSuite</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="active" ><a href="/documentation/termsuite-pipelines/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="" ><a href="/fr/documentation/termsuite-pipelines/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8">
+    <header class="page-header">
+      <h1>Documentation <small>TermSuite terminology extraction and alignment pipelines</small></h1>
+    </header>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=title.termsuite-pipelines&url=http://termsuite.github.io/documentation/termsuite-pipelines/&via=&related="
+        rel="nofollow" target="_blank" title="Share on Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/documentation/termsuite-pipelines/" rel="nofollow" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/documentation/termsuite-pipelines/" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/documentation/termsuite-pipelines/&title=title.termsuite-pipelines&summary=excerpt.termsuite-pipelines&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/documentation/termsuite-pipelines/&title=title.termsuite-pipelines" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+  </div>
+  <div class="row">
+    <div id="docmenu" class="col-md-3">
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                      Getting Started
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.introduction"
+                            class=""
+                            href="/documentation/introduction/">
+                          Introduction
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.getting-started-cmd"
+                            class=""
+                            href="/getting-started/">
+                          Getting Started
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.postagger"
+                            class=""
+                            href="/documentation/pos-tagger-lemmatizer/">
+                          Installing a POS Tagger
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                      Command Line API
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="menu-title.preprocessor-cli"
+                            class=""
+                            href="/documentation/preprocessor-cli/">
+                          PreprocessorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menu-title.terminology-extractor-cli"
+                            class=""
+                            href="/documentation/terminology-extractor-cli/">
+                          TerminologyExtractorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menu-title.aligner-cli"
+                            class=""
+                            href="/documentation/aligner-cli/">
+                          AlignerCLI
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                      Java API
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.java-preprocessor"
+                            class=""
+                            href="/documentation/java-preprocessor/">
+                          Preprocessor
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-terminology-extractor"
+                            class=""
+                            href="/documentation/java-terminology-extractor/">
+                          TerminoExtractor
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-aligner"
+                            class=""
+                            href="/documentation/java-aligner/">
+                          Aligner
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-io"
+                            class=""
+                            href="/documentation/java-io/">
+                          IO Serialization
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                      Graphical User Interface
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.gui"
+                            class=""
+                            href="/gui/">
+                          Graphical User Interface
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapseOne">
+                      Theory
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.properties"
+                            class=""
+                            href="/documentation/properties/">
+                          Properties
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.termsuite-pipelines"
+                            class="active"
+                            href="/documentation/termsuite-pipelines/">
+                          Pipelines
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.data-model"
+                            class=""
+                            href="/documentation/data-model/">
+                          Data Model
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.terminology-extraction"
+                            class=""
+                            href="/documentation/terminology-extraction/">
+                          Termino Extraction
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.alignment"
+                            class=""
+                            href="/documentation/alignment/">
+                          Alignment
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.post-processing"
+                            class=""
+                            href="/documentation/post-processing/">
+                          Post-processings
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapseOne">
+                      Input/Output Formats
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.json"
+                            class=""
+                            href="/documentation/json/">
+                          JSON Serialization
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.tsv-output"
+                            class=""
+                            href="/documentation/terminology-tsv-output/">
+                          TSV Output
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading7">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapseOne">
+                      Resources
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading7">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.resources"
+                            class=""
+                            href="/documentation/resources/">
+                          Resources
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.resources-yaml-variants"
+                            class=""
+                            href="/documentation/yaml-variants/">
+                          Variation Rules (YAML)
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading8">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapseOne">
+                      Links
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading8">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.developers"
+                            class=""
+                            href="/documentation/developers/">
+                          Developers
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.support"
+                            class=""
+                            href="/documentation/support/">
+                          Support
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8">
+
+      <article class="doc-content">
+        
+<p>TermSuite is a tool for working on domain-specific term. It implements two major features: <strong>Terminology extraction</strong> and <strong>Bilingual alignment</strong>. This page gives an overview of their architectures.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#terminology-extraction-steps-1-and-2">Terminology Extraction (Steps 1 and 2)</a>    <ul>
+      <li><a href="#step-1-preprocessor">Step 1: Preprocessor</a>        <ul>
+          <li><a href="#word-tokenizer">Word tokenizer</a></li>
+          <li><a href="#pos-tagger-and-lemmatizer">POS Tagger and Lemmatizer</a></li>
+          <li><a href="#tag-normalization">Tag normalization</a></li>
+          <li><a href="#stemmer">Stemmer</a></li>
+          <li><a href="#term-spotter">Term Spotter</a></li>
+        </ul>
+      </li>
+      <li><a href="#importation-of-spotted-terms-into-terminology">Importation of spotted terms into terminology</a></li>
+      <li><a href="#step-2-terminology-extraction">Step 2: Terminology extraction</a></li>
+    </ul>
+  </li>
+  <li><a href="#bilingual-alignment-step-3">Bilingual Alignment (Step 3)</a></li>
+</ul>
+
+<h3 id="terminology-extraction-steps-1-and-2">Terminology Extraction (Steps 1 and 2)</h3>
+
+<p>Terminology extraction is the process of producing an exhaustive list of domain-specific<br />
+terms from a corpus of textual documents dealing with this domain.</p>
+
+<p><img src="/img/flow-preprocessor-extractor.png" alt="TermSuite general data flow" /></p>
+
+<p>As show by the figure above, terminology extraction is a two-step process:</p>
+
+<ol>
+  <li><strong>Step 1. Preprocessor</strong>: every textual document of the corpus is analyzed<br />
+by an UIMA-based NLP (<em>Natural Language Processing</em>) pipeline that spots all candidate terms<br />
+in the document.</li>
+  <li><strong>Step 2. TerminologyExtractor</strong>: spotted terms are analyzed, gathered, filtered,<br />
+and ranked by specificity to the domain.</li>
+</ol>
+
+<p>The preprocessed documents produced by <em>Preprocessor</em> comes out as a corpus of <a href="http://uima.apache.org/">UIMA</a> annotations, called a <em>prepared corpus</em>,  in <a href="http://www.omg.org/spec/XMI/">XMI</a> or JSON. The <em>TerminologyExtractor</em> is a pipeline that operates on a terminology structure. The process of transforming a prepared corpus into a terminology is named <a href="#term-importation"><em>term importation</em></a> and consists in gathering all occurrences of the same term key into a single terminology structure.</p>
+
+<h4 id="step-1-preprocessor">Step 1: Preprocessor</h4>
+
+<p>Preprocessing is the process of transforming a text, i.e. a <em>String</em> data, into a list of UIMA annotations, including term occurrences. It is a mandatory step before terminology extraction, but you can reuse TermSuite natural language preprocessings in any other application context (not only on terminology extraction).</p>
+
+<p><img src="/img/pipeline-preprocessor.png" alt="TermSuite preprocessor pipeline" /></p>
+
+<p>The framework used by TermSuite for its NLP pipeline is <a href="https://uima.apache.org/">UIMA</a>. See <a href="/documentation/data-model/#type-system">TermSuite UIMA Type System</a> to get an idea on how the tokens (UIMA annotations) are modelled within TermSuite.</p>
+
+<h5 id="word-tokenizer">Word tokenizer</h5>
+
+<p>Transforms a text, i.e. a <em>String</em>, into a list of <em>tokens</em>, i.e. words and punctuations. TermSuite ships its own UIMA tokenizer.</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="UIMA tokenizer source code" href="https://github.com/JuleStar/uima-tokenizer">UIMA tokenizer</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td><a title="SegmentBank" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-segment-bank.xml">SegmentBank</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="pos-tagger-and-lemmatizer">POS Tagger and Lemmatizer</h5>
+<p>of a term,<br />
+The <em>POS Tagger</em> attributes a syntactic label to each token. The <em>Lemmatizer</em> sets the <em>lemma</em> of each word.</p>
+
+<p>POS tagging and lemmatizing are often performed together in the same module. There are two POS taggers/lemmatizers supported by TermSuite:</p>
+
+<ol>
+  <li><a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/">TreeTagger</a>, (default)</li>
+  <li><a href="http://www.ims.uni-stuttgart.de/forschung/ressourcen/werkzeuge/matetools.html">Mate</a>.</li>
+</ol>
+
+<p>These bricks need to be installed apart from TermSuite. See <a href="/documentation/postagger/">how to install POS tagger/lemmatizer</a> in TermSuite.</p>
+
+<p>For TreeTagger:</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="TreeTagger UIMA wrapper source code" href="https://github.com/JuleStar/uima-tree-tagger-wrapper">TreeTagger UIMA wrapper</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td><a title="TreeTaggerConfig" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-treetagger.xml">TreeTaggerConfig</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<p>For Mate:</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="Mate UIMA wrapper source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/uima/engines/preproc/MateLemmatizerTagger.java">Mate UIMA wrapper</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td>(No TermSuite resource required for this module)</td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="tag-normalization">Tag normalization</h5>
+
+<p><em>Normalizing</em> is the process of translating each POS tag into MULTEXT universel tag set.</p>
+
+<p>When TreeTagger is used:</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="TreeTagger UIMA normalizer source code" href="https://github.com/JuleStar/uima-mapper">TreeTagger UIMA normalizer</a></td>
+        </tr>
+        <tr>
+          <td>Resources:</td>
+          <td><a title="CategoryMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-category-mapping.xml">CategoryMapping</a>, <a title="SubCategoryMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-subcategory-mapping.xml">SubCategoryMapping</a>, <a title="TenseMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-tense-mapping.xml">TenseMapping</a>, <a title="MoodMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-mood-mapping.xml">MoodMapping</a>, <a title="GenderMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-gender-mapping.xml">GenderMapping</a>, <a title="NumberMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-number-mapping.xml">NumberMapping</a>, <a title="CaseMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-tt-case-mapping.xml">CaseMapping</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<p>When Mate is used:</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="Mate UIMA normalizer source code" href="https://github.com/JuleStar/uima-mapper">Mate UIMA normalizer</a></td>
+        </tr>
+        <tr>
+          <td>Resources:</td>
+          <td><a title="CategoryMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-category-mapping.xml">CategoryMapping</a>, <a title="SubCategoryMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-subcategory-mapping.xml">SubCategoryMapping</a>, <a title="TenseMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-tense-mapping.xml">TenseMapping</a>, <a title="MoodMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-mood-mapping.xml">MoodMapping</a>, <a title="GenderMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-gender-mapping.xml">GenderMapping</a>, <a title="NumberMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-number-mapping.xml">NumberMapping</a>, <a title="CaseMapping" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/tagging/tree-tagger/english-mate-case-mapping.xml">CaseMapping</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="stemmer">Stemmer</h5>
+
+<p><em>Stemming</em> is the process of extracting the stem form of each word. TermSuite ships its own UIMA stemmer, implementing <a href="http://snowball.tartarus.org/">Snowball</a>.</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="UIMA Snowball Stemmer source code" href="https://github.com/JuleStar/uima-stemmer">UIMA Snowball Stemmer</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td>(No TermSuite resource required for this module)</td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="term-spotter">Term Spotter</h5>
+
+<p><em>Term spotting</em> is the process of parsing a sequence of words and detecting wich subsequences are term occurrences. TermSuite performs pattern-based multi-word term spotting with the help of <a href="https://github.com/JuleStar/uima-tokens-regex">UIMA Tokens Regex</a> engine and a list of regex rules on UIMA annotations. <em>UIMA Tokens Regex</em> is a generic regex rule system for sequential UIMA annotations. It has been designed and implemented especially with the goels of TermSuite in mind.  </p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="Term Spotter source code" href="https://github.com/JuleStar/uima-tokens-regex">Term Spotter</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td><a title="MultiWordRegexRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-multi-word-rule-system.regex">MultiWordRegexRules</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<p>Multi-word term detection in TermSuite is rule-based, based on syntactic term patterns. Each supported language has its own exhaustive list of allowed term patterns. Read <a href="https://github.com/JuleStar/uima-tokens-regex">UIMA Tokens Regex documentation</a> and <a href="https://aclweb.org/anthology/P/P16/P16-4003.pdf">TermSuite demo paper at ACL</a> for more information about this process.</p>
+
+<h4 id="importation-of-spotted-terms-into-terminology">Importation of spotted terms into terminology</h4>
+
+<h4 id="step-2-terminology-extraction">Step 2: Terminology extraction</h4>
+
+<p><img src="/img/pipeline-extractor.png" alt="TermSuite terminology extractor pipeline" /></p>
+
+<h3 id="bilingual-alignment-step-3">Bilingual Alignment (Step 3)</h3>
+
+<p><img src="/img/flow-aligner.png" alt="TermSuite aligner data flow" /></p>
+
+<p><a href="/documentation/alignment/">Alignment</a></p>
+
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>About</h4>
+        <p>TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>
+          <a href="/contact">Contact</a>
+        </h4>
+        <p class="text-center">
+            <a href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+        </p>
+        Team
+        <ul>
+
+          
+            <li><a href="https://github.com/pompadour"><p>Damien Cram</p>
+</a></li>
+          
+            <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>
+</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="/contact">Newsletter</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://bintray.com/termsuite/generic/termsuite-ui">Bintray</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.4/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.4/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© University of Nantes 2015-2017</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>
