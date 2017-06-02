@@ -491,6 +491,15 @@
                         </a>
                       </div>
                     
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.bilingual-dictionary"
+                            class=""
+                            href="/documentation/bilingual-dictionary/">
+                          Bilingual Dictionary
+                        </a>
+                      </div>
+                    
                   </div>
                 </div>
               </div>
@@ -561,7 +570,16 @@
         </ul>
       </li>
       <li><a href="#importation-of-spotted-terms-into-terminology">Importation of spotted terms into terminology</a></li>
-      <li><a href="#step-2-terminology-extraction">Step 2: Terminology extraction</a></li>
+      <li><a href="#step-2-terminology-extraction">Step 2: Terminology extraction</a>        <ul>
+          <li><a href="#preparator">Preparator</a></li>
+          <li><a href="#contextualizer">Contextualizer</a></li>
+          <li><a href="#pre-gathering-cleaner">Pre-gathering cleaner</a></li>
+          <li><a href="#morphological-splitter">Morphological Splitter</a></li>
+          <li><a href="#term-gatherer">Term Gatherer</a></li>
+          <li><a href="#post-gathering-cleaner">Post-gathering cleaner</a></li>
+          <li><a href="#postprocessor">PostProcessor</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="#bilingual-alignment-step-3">Bilingual Alignment (Step 3)</a></li>
@@ -577,10 +595,10 @@ terms from a corpus of textual documents dealing with this domain.</p>
 <p>As show by the figure above, terminology extraction is a two-step process:</p>
 
 <ol>
-  <li><strong>Step 1. Preprocessor</strong>: every textual document of the corpus is analyzed<br />
-by an UIMA-based NLP (<em>Natural Language Processing</em>) pipeline that spots all candidate terms<br />
+  <li>[<strong>Step 1. Preprocessor</strong><em>*](#preprocessor): every textual document of the corpus is analyzed<br />
+by an UIMA-based NLP (</em>Natural Language Processing*) pipeline that spots all candidate terms<br />
 in the document.</li>
-  <li><strong>Step 2. TerminologyExtractor</strong>: spotted terms are analyzed, gathered, filtered,<br />
+  <li><a href="#terminology-extraction-step-2"><strong>Step 2. TerminologyExtractor</strong></a>: spotted terms are analyzed, gathered, filtered,<br />
 and ranked by specificity to the domain.</li>
 </ol>
 
@@ -726,15 +744,358 @@ The <em>POS Tagger</em> attributes a syntactic label to each token. The <em>Lemm
 
 <h4 id="importation-of-spotted-terms-into-terminology">Importation of spotted terms into terminology</h4>
 
+<p>Once the preprocessor has operated on all documents of the corpus, all their spotted term occurrences must be grouped into one single place: the terminology. This step is called <em>Importation</em>.</p>
+
+<p>The <em>importation</em> consists in iterating on all spotted term occurrences of all documents. Two different occurrences are said to belong to the same term if they share the same <em>grouping key</em>. The grouping key is defined as the concatenation of the syntactic <em>pattern</em> of the and its word <em>lemmas</em>. For example:</p>
+
+<ul>
+  <li><code>n: blade</code>: possible forms of spotted occurrences for this term could be <em>blade</em>, <em>blades</em>, <em>Blade</em>, etc.</li>
+  <li><code>nn: rotor blade</code>: possible forms of spotted occurrences for this term could be <em>rotor blade</em>, <em>rotor blades</em>, etc.</li>
+  <li><code>npn: energy of wind</code>: possible forms of spotted occurrences for this term could be <em>energy of wind</em>, <em>energy of the wind</em>. As you can see, determiners like <em>the</em> are ignored when it comes to grouping occurrences under the same term pattern.</li>
+</ul>
+
+<p>With <a href="/documentation/command-line-api">command line API</a>, this importation phase between preprocessing and terminology extraction is operated automatically either:</p>
+
+<ol>
+  <li>at the end of the preprocessing phase when the user launches the <code>PreprocessorCLI</code> script with option <code>--json PATH</code>,</li>
+  <li>or at the beginning of ther terminology extraction phase when the user launches the <code>TerminologyExtractorCLI</code> script with either option <code>--from-prepared-corpus PATH</code>, meaning that <em>PATH</em> points to a directory containing prepared documents files (<code>*.xmi</code> or <code>*.json</code>) that are the output of <code>PreprocessorCLI</code> when run with option <code>--xmi-anno PATH</code> or <code>--json-anno PATH</code>.   </li>
+  <li>Or at the middle of the preprocessing+extraction phase when the user launches the <code>TerminologyExtractorCLI</code> with option <code>--from-text-corpus PATH</code>, meaning that TermSuite first runs a preprocessor internally, then import spotted occurrences to a terminology, and finally runs the terminology extraction process on that terminology.</li>
+</ol>
+
+<p>With <a href="/documentation/java-api">Java API</a>, the importation phase can also be performed manually.</p>
+
 <h4 id="step-2-terminology-extraction">Step 2: Terminology extraction</h4>
+
+<p>The <em>terminology extraction</em> consists in taking as input an <a href="#term-importation">imported terminology</a> an applying the folowing pipeline:</p>
 
 <p><img src="/img/pipeline-extractor.png" alt="TermSuite terminology extractor pipeline" /></p>
 
+<p>This global extraction pipeline is implemented in class <a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/TerminologyExtractorEngine.java">TerminologyExtractorEngine</a>.</p>
+
+<h5 id="preparator">Preparator</h5>
+
+<p>The <em>Preparator</em> operates a series of simple actions on the terminology that are required for later steps of the terminology extraction:</p>
+
+<ul>
+  <li>validition of the input terminology,</li>
+  <li>computation of some term properties, including <em>specificity</em>, <em>lemma</em>, <em>pilot</em>, <em>document frequency</em>, <em>swtSize</em>,</li>
+  <li>computation of some term relations, including <em>extensions</em>, (see <a href="/documentation/data-model">Terminology Data Model</a>).</li>
+</ul>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="Terminology Preparator source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/prepare/TerminologyPreparator.java">Terminology Preparator</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td><a title="GeneralLanguageResource" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-general-language.txt">GeneralLanguageResource</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="contextualizer">Contextualizer</h5>
+
+<p>The <em>Contextualizer</em> produces a context vector for each single-word term. It requires no linguistic resource. Term occurrences of each term are required for contextualization.</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="Terminology Preparator source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/contextualizer/Contextualizer.java">Terminology Preparator</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td>(No TermSuite resource required for this module)</td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="pre-gathering-cleaner">Pre-gathering cleaner</h5>
+
+<p>The <em>Pre-gathering cleaner</em> is a hook allowing the user to configure a terminology filtering <strong>before</strong> the term gathering process is performed. The interest of filtering <strong>before</strong> the term variant gathering is that  </p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="TerminologyCleaner source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/cleaner/TerminologyCleaner.java">TerminologyCleaner</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td>(No TermSuite resource required for this module)</td>
+        </tr>
+    </tbody>
+  </table>
+
+<p>See <code>--pre-filter-*</code> options of <a href="/documentation/terminology-extractor-cli/">command line API</a> in order to configure the pre-gathering filter.</p>
+
+<h5 id="morphological-splitter">Morphological Splitter</h5>
+
+<p>The <strong>Morphological Splitter</strong> analyzes the morphology of every single-word term and splits it when compound. The <strong>Morphological Splitter</strong> is an aggregation of several modules.</p>
+
+<ul>
+  <li>The <em>PrefixSplitter</em> detects prefixes and splits terms accordingly.</li>
+</ul>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="PrefixSplitter source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/splitter/PrefixSplitter.java">PrefixSplitter</a></td>
+        </tr>
+        <tr>
+          <td>Resources:</td>
+          <td><a title="PrefixBank" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-prefix-bank.txt">PrefixBank</a>, <a title="PrefixExceptions" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-prefix-exceptions.txt">PrefixExceptions</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<ul>
+  <li>The <em>ManualSplitter</em> detects word composition based on a known list of word composition and splits terms accordingly.</li>
+</ul>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="ManualPrefixSetter source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/splitter/PrefixSplitter.java">ManualPrefixSetter</a></td>
+        </tr>
+        <tr>
+          <td>Resources:</td>
+          <td><a title="ManualCompositions" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-prefix-bank.txt">ManualCompositions</a>, <a title="PrefixExceptions" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-manual-composition.txt">PrefixExceptions</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<ul>
+  <li>The <em>SuffixDerivationDetecter</em> detects derivations based on list of language-specific derivation rules and splits terms accordingly:</li>
+</ul>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="PrefixSplitter source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/splitter/PrefixSplitter.java">PrefixSplitter</a></td>
+        </tr>
+        <tr>
+          <td>Resources:</td>
+          <td><a title="SuffixDerivations" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-suffix-derivation-bank.txt">SuffixDerivations</a>, <a title="SuffixDerivationExceptions" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-suffix-derivation-exceptions.txt">SuffixDerivationExceptions</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<ul>
+  <li>The <em>NativeSplitter</em> detects derivations based on list of language-specific derivation rules and splits terms accordingly. It implements the method <a href="https://hal.archives-ouvertes.fr/hal-01116134/document">ComPost</a>. The <em>NativeSplitter</em> is the one responsible for detecting neoclassical compounds.</li>
+</ul>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="NativeSplitter source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/splitter/NativeSplitter.java">NativeSplitter</a></td>
+        </tr>
+        <tr>
+          <td>Resources:</td>
+          <td><a title="CompostInflectionRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-compost-inflection-rules.txt">CompostInflectionRules</a>, <a title="CompostTransformationRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-compost-transformation-rules.txt">CompostTransformationRules</a>, <a title="NeoclassicalPrefixes" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-neoclassical-prefixes.txt">NeoclassicalPrefixes</a>, <a title="CompostStopList" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-compost-stop-list.txt">CompostStopList</a>, <a title="CompostDico" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-dico.txt">CompostDico</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<h5 id="term-gatherer">Term Gatherer</h5>
+
+<p>The <strong>Term Gatherer</strong> is in charge of grouping terms with their variants. It is based on a list of variation rules. The term gatherer is also an aggregated engine. It is composed of several subengines.</p>
+
+<ul>
+  <li>The <em>PrefixationGatherer</em> detects variations based on prefixes compositions of some terms (extracted at <em>Morphological Splitter</em> phase by <em>PrefixSplitter</em>)</li>
+</ul>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="PrefixationGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/PrefixationGatherer.java">PrefixationGatherer</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td><a title="YamlVariantionRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-variants.yaml">YamlVariantionRules</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+<ul>
+  <li>
+    <p>The <em>DerivationGatherer</em> detects variations based on derivation relations extracted by <em>DerivationSplitter</em></p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="DerivationGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/DerivationGatherer.java">DerivationGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resource:</td>
+        <td><a title="YamlVariantionRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-variants.yaml">YamlVariantionRules</a></td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+  <li>
+    <p>The <em>MorphologicalGatherer</em> detects variations based on native and neoclassical compositions (extracted at <em>Morphological Splitter</em> phase by <em>NativeSplitter</em>)</p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="MorphologicalGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/MorphologicalGatherer.java">MorphologicalGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resource:</td>
+        <td><a title="YamlVariantionRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-variants.yaml">YamlVariantionRules</a></td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+  <li>
+    <p>The <em>SyntagmaticGatherer</em> detects all other type of syntagmatic variations that do not require special processing like prefixes, derivations, synonyms, and morphological compounds.</p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="SyntagmaticGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/SyntagmaticGatherer.java">SyntagmaticGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resource:</td>
+        <td><a title="YamlVariantionRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-variants.yaml">YamlVariantionRules</a></td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+  <li>
+    <p>The <em>SemanticGatherer</em> detects semantic variants from a list of synonymic rules based on both a distributional approach and a dictionary.</p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="SemanticGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/SemanticGatherer.java">SemanticGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resources:</td>
+        <td><a title="YamlVariantionRules" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-variants.yaml">YamlVariantionRules</a>, <a title="Synonyms" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/french-synonyms.txt">Synonyms</a></td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+  <li>
+    <p>The <em>ExtensionVariantGatherer</em> gather long terms with their variants using inference on term extensions and variations for shorter terms.</p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="ExtensionVariantGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/ExtensionVariantGatherer.java">ExtensionVariantGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resource:</td>
+        <td>(No TermSuite resource required for this module)</td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+  <li>
+    <p>The <em>GraphicalGatherer</em> gathers terms having a small edition distance.</p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="GraphicalGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/GraphicalGatherer.java">GraphicalGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resource:</td>
+        <td>(No TermSuite resource required for this module)</td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+  <li>
+    <p>The <em>TermMerger</em> merges some terms with their variants each time the variation is not relevant. A variation is not relevant when its graphical similarity is 1 or when the variant’s frequency is 1 or 2.</p>
+
+    <table class="table table-bordered">
+  <tbody>
+      <tr>
+        <td>Source code:</td>
+        <td><a title="GraphicalGatherer source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/gatherer/TermMerger.java">GraphicalGatherer</a></td>
+      </tr>
+      <tr>
+        <td>Resource:</td>
+        <td>(No TermSuite resource required for this module)</td>
+      </tr>
+  </tbody>
+</table>
+  </li>
+</ul>
+
+<h5 id="post-gathering-cleaner">Post-gathering cleaner</h5>
+
+<p>The <em>Post-gathering cleaner</em> is a hook allowing the user to configure a terminology filtering <strong>after</strong> the term gathering process has been performed. The interest of filtering after term gathering is to keep terms that would not pass the filter normally but that are variants of base terms that we want to keep.</p>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+          <td>Source code:</td>
+          <td><a title="TerminologyCleaner source code" href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/cleaner/TerminologyCleaner.java">TerminologyCleaner</a></td>
+        </tr>
+        <tr>
+          <td>Resource:</td>
+          <td>(No TermSuite resource required for this module)</td>
+        </tr>
+    </tbody>
+  </table>
+
+<p>See <code>--post-filter-*</code> options of <a href="/documentation/terminology-extractor-cli/">command line API</a> in order to configure the pre-gathering filter.</p>
+
+<h5 id="postprocessor">PostProcessor</h5>
+
+<p>The <em>post-processor</em> filters terms and variations based on information derived from the gathering process. It works with no linguistic resources. It is also an aggregated engine, composed of the following subengines.</p>
+
+<ul>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/IndependanceScorer.java">IndependanceScorer</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/OrthographicScorer.java">OrthographicScorer</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/VariationScorer.java">VariationScorer</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/ThresholdExtensionFilterer.java">ThresholdExtensionFilterer</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/VariationFiltererByScore.java">VariationFiltererByScore</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/TwoOrderVariationMerger.java">TwoOrderVariationMerger</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/TermFiltererByScore.java">TermFiltererByScore</a></li>
+  <li><a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/postproc/VariationRanker.java">VariationRanker</a></li>
+</ul>
+
 <h3 id="bilingual-alignment-step-3">Bilingual Alignment (Step 3)</h3>
+
+<p>Finding the best translation of a domain-specific <em>source term</em> into a <em>target</em> language is called <em>bilingual alignement</em>. Domain-specific bilingual alignement in TermSuite requires:</p>
+
+<ul>
+  <li>a <strong>bilingual dictionary</strong> from the <em>source</em> language to the <em>target</em> language,</li>
+  <li>a <strong>source contextualized terminology</strong>, i.e. a terminology extracted from a corpus of the domain in <em>source</em> language,</li>
+  <li>a <strong>target contextualized terminology</strong>, i.e. a terminology extracted from a corpus of the domain in <em>target</em> language.</li>
+  <li>a <strong>source term</strong> that will be translated into <em>target</em> language.</li>
+</ul>
 
 <p><img src="/img/flow-aligner.png" alt="TermSuite aligner data flow" /></p>
 
-<p><a href="/documentation/alignment/">Alignment</a></p>
+<p>Bilingual alignement of <em>source term</em> in TermSuite is the result of a multi-part and hierarchical algorithm. The <em>source term</em> can be of several types: single-word term, multi-word term, compound term, neoclassical term, etc. Depending on this type, the <a href="/documentation/alignment/">alignment method</a> invoked by TermSuite is not the same.</p>
+
+<p>See also:</p>
+
+<ul>
+  <li><a href="/documentation/aligner-cli/">aligner command line API</a> to learn how to launch bilingual alignment,</li>
+  <li><a href="/documentation/terminology-extractor-cli/#extract-a-terminology-ready-for-alignment">how to extract an alignment-ready terminology with TermSuite</a>,</li>
+  <li><a href="/documentation/alignment/">theoritical insights</a> on different bilingual alignment methods used by the algorithm,</li>
+  <li>an example of <a href="/documentation/bilingual-dictionary/">bilingual dictionary</a> required for alignment.</li>
+</ul>
 
 
       </article>
