@@ -139,6 +139,7 @@ title:
   java-preprocessor: Running NLP Preprocessing with Java API
   java-aligner: Running Bilingual Alignment with Java API
   java-io: Exporting and Deserializing terminologies with Java API
+  bilingual-dictionary: Bilingual Dictionary
 
 menu-title:
   introduction: Introduction
@@ -172,6 +173,7 @@ menu-title:
   java-preprocessor: Preprocessor
   java-aligner: Aligner
   java-io: IO Serialization
+  bilingual-dictionary: Bilingual Dictionary
 
 topmenu:
   getting-started: Getting Started
@@ -216,6 +218,7 @@ excerpt:
   java-preprocessor: Documentation on how to run NLP preprocessing with TermSuite Java API
   java-aligner: Documentation on how to run bilingual alignment with TermSuite Java API
   java-io: Documentation on exporting and deserializing terminologies with Java API to JSON, TSV and TBX
+  bilingual-dictionary: Bilingual Dictionary
 
 authors:
   dc:

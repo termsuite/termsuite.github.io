@@ -142,6 +142,7 @@ title:
   java-preprocessor: Pré-traitements linguistiques avec l'API Java
   java-aligner: Alignment bilingue avec l'API Java
   java-io: Sérialisation/Désérialisation (IO) avec l'API Java
+  bilingual-dictionary: Bilingual Dictionary
 
 menu-title:
   introduction: Introduction
@@ -177,6 +178,7 @@ menu-title:
   java-preprocessor: Preprocessor
   java-aligner: Aligner
   java-io: Sérialisation/Désérialisation (IO)
+  bilingual-dictionary: Bilingual Dictionary
 
 topmenu:
   getting-started: Démarrer
@@ -212,6 +214,7 @@ excerpt:
   java-terminology-extractor: Documentation de l'extraction terminologique avec l'API Java de TermSuite
   java-preprocessor: Documentation des pré-traitements lingustiques avec l'API Java de TermSuite
   java-aligner: Documentation de l'alignment bilingue avec l'API Java de TermSuite
+  bilingual-dictionary: Bilingual Dictionary
 
 authors:
   dc:
