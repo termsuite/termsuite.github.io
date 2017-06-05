@@ -121,7 +121,7 @@
   <div class="col-md-4"></div>
   <div class="col-md-8">
     <header class="page-header">
-      <h1>Documentation <small>Tutorial: Getting Started with the Command Line API</small></h1>
+      <h1>Documentation <small>Tutorial: Getting Started with terminology extraction</small></h1>
     </header>
     <div class="share-page lead">
     <a class="btn btn-social-icon btn-twitter"
@@ -157,7 +157,7 @@
                 <div class="panel-heading active" role="tab" id="heading1">
                   <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
-                      Getting Started
+                      Introduction
                     </a>
                   </h4>
                 </div>
@@ -169,7 +169,7 @@
                         <a title="title.introduction"
                             class=""
                             href="/documentation/introduction/">
-                          Introduction
+                          Presentation
                         </a>
                       </div>
                     
@@ -178,7 +178,7 @@
                         <a title="title.getting-started-cmd"
                             class="active"
                             href="/getting-started/">
-                          Getting Started
+                          Getting started with terminology extraction
                         </a>
                       </div>
                     
@@ -466,7 +466,7 @@
                 <div class="panel-heading " role="tab" id="heading7">
                   <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapseOne">
-                      Resources
+                      Linguistic Resources
                     </a>
                   </h4>
                 </div>
@@ -478,7 +478,7 @@
                         <a title="title.resources"
                             class=""
                             href="/documentation/resources/">
-                          Resources
+                          Linguistic Resources
                         </a>
                       </div>
                     
@@ -556,28 +556,39 @@
     <div class="col-md-8">
 
       <article class="doc-content">
-        <div class="alert alert-danger" role="alert">
-  <p><strong>Warning: </strong> This documentation page is out of date. Some of its information cannot be applied to current version of TermSuite 3.0.4</p>
-</div>
-
-<p>This page guides you the steps to get TermSuite running and extracting the terminology from a short example corpus.</p>
-
+        
 <ul id="markdown-toc">
-  <li><a href="#requirements">1. Requirements</a>    <ul>
+  <li><a href="#manual-installation">Option 1: manual installation</a>    <ul>
       <li><a href="#java">Java</a></li>
+      <li><a href="#install-treetagger">Install TreeTagger</a></li>
+      <li><a href="#download-termsuite">Download TermSuite</a></li>
+      <li><a href="#prepare-corpus">Prepare your corpus</a></li>
+      <li><a href="#run-terminology-extraction">Run terminology extraction</a></li>
+      <li><a href="#understanding-tsv">Understanding the TSV output</a></li>
+      <li><a href="#enjoy-termsuite">Enjoy TermSuite</a></li>
     </ul>
   </li>
-  <li><a href="#installation-of-treetagger">2. Installation of TreeTagger</a></li>
-  <li><a href="#download-termsuite">3. Download TermSuite</a></li>
-  <li><a href="#prepare-your-corpus">4. Prepare your corpus</a></li>
-  <li><a href="#run-terminology-extraction">5. Run terminology extraction</a></li>
-  <li><a href="#understanding-the-tsv-output">6. Understanding the TSV output</a></li>
-  <li><a href="#enjoy-termsuite">8. Enjoy TermSuite</a></li>
+  <li><a href="#docker">Option 2: docker container</a>    <ul>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#clone-termsuites-docker-project">Clone TermSuite’s docker project</a></li>
+      <li><a href="#build-the-image">Build the image</a></li>
+      <li><a href="#prepare-your-corpus">Prepare your corpus</a></li>
+      <li><a href="#run-terminology-extraction-from-the-image">Run terminology extraction from the image</a></li>
+      <li><a href="#understanding-the-tsv-output">Understanding the TSV output</a></li>
+    </ul>
+  </li>
+  <li><a href="#see-also">See also</a>    <ul>
+      <li><a href="#preprocessing-and-extraction-pipelines">Preprocessing and extraction pipelines</a></li>
+      <li><a href="#bilingual-alignment">Bilingual alignment</a></li>
+      <li><a href="#the-java-api">The Java API</a></li>
+      <li><a href="#the-graphical-user-interface-gui">The graphical user interface (GUI)</a></li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="requirements">1. Requirements</h3>
+<h3 id="manual-installation">Option 1: manual installation</h3>
 
-<p>For the sake of simplicity, create a directory where you will download all files required by TermSuite. In the following sections, we refer to this directory as <code>TERMSUITE_WORKSPACE</code>.</p>
+<p>Create a directory where you will download all files required by TermSuite. In the following sections, we refer to this directory as <code>TERMSUITE_WORKSPACE</code>.</p>
 
 <h4 id="java">Java</h4>
 
@@ -588,30 +599,32 @@
 <pre><code>$ java -version
 </code></pre>
 
-<h3 id="installation-of-treetagger">2. Installation of TreeTagger</h3>
+<h4 id="install-treetagger">Install TreeTagger</h4>
 
-<p>TermSuite requires a POS Tagger and lemmatizer to run terminology extraction pipelines. In this guide, we install TreeTagger, but TermSuite also supports Mate. TreeTagger must be installed apart from TermSuite, due to license concerns.</p>
+<p>TermSuite requires a POS Tagger and lemmatizer to run terminology extraction pipelines. In this guide, we install TreeTagger, but TermSuite also supports Mate. The tagger/lemmatizer must be installed apart from TermSuite, due to license concerns.</p>
 
 <p>To install TreeTagger on your OS: (See the <a href="/documentation/pos-tagger-lemmatizer">install instructions</a> for details)<br />
-1. Download TreeTagger from the <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/">official site</a> to <code>TERMSUITE_WORKSPACE</code> and uncompress it.<br />
-2. Creates a subdirectory named <code>models</code> within the TreeTagger directory.<br />
+1. Download TreeTagger from the <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/">official site</a> and install it to <code>TERMSUITE_WORKSPACE/treetagger</code> with the help of official instructions.<br />
+2. Creates a subdirectory named <code>models</code> at <code>TERMSUITE_WORKSPACE/treetagger</code>.<br />
 3. Download to dir <code>models/</code> the english utf-8-encoded (very important) model from the <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/">official site</a> and rename it to <code>english.par</code>.</p>
 
 <div class="alert alert-warning" role="alert">
   <p>Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See <a href="/documentation/pos-tagger-lemmatizer">detailed instructions</a> for all languages.  </p>
 </div>
 
-<h3 id="download-termsuite">3. Download TermSuite</h3>
+<h4 id="download-termsuite">Download TermSuite</h4>
 
 <p>Download the last stable version of TermSuite’s jar for project <code>termsuite-core</code> from <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/">Maven Central</a> to directory <code>TERMSUITE_WORKSPACE</code>.</p>
 
 <p>Currently : <a href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/3.0.4/termsuite-core-3.0.4.jar">termsuite-core-3.0.4.jar</a></p>
 
-<h3 id="prepare-your-corpus">4. Prepare your corpus</h3>
+<h4 id="prepare-corpus">Prepare your corpus</h4>
 
-<p>Download the example multilingual corpus <a href="https://bintray.com/termsuite/generic/download_file?file_path=wind-energy.zip">Wind Energy</a> to <code>TERMSUITE_WORKSPACE</code> and uncompress it.</p>
+<p>Download the example corpus <a href="https://bintray.com/termsuite/generic/download_file?file_path=wind-energy.zip">Wind Energy</a> to <code>TERMSUITE_WORKSPACE</code> and uncompress it.</p>
 
-<h3 id="run-terminology-extraction">5. Run terminology extraction</h3>
+<p>Otherwise, you could prepare your own corpus in the form of a collection of <code>*.txt</code> files within a any directory.</p>
+
+<h4 id="run-terminology-extraction">Run terminology extraction</h4>
 
 <p>Now your <code>TERMSUITE_WORKSPACE</code> folder should look like this: (non exhaustive)</p>
 
@@ -626,7 +639,7 @@
         file38.txt
     French/
     [...]
-  tree-tagger/
+  treetagger/
     bin/
       [...]
     lib/
@@ -639,23 +652,20 @@
 
 <p>Run the terminology extraction on the <em>Wind Energy</em> corpus and language <code>en</code>:</p>
 
-<pre><code>$ java -cp termsuite-core-3.0.4.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI \
-  -t ./tree-tagger/ \
+<pre><code>$ java -cp termsuite-core-3.0.4.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+  -t ./treetagger/ \
   -c ./wind-energy/English/txt/ \
   -l en \
   --tsv ./wind-energy-en.tsv
 </code></pre>
 
-<h3 id="understanding-the-tsv-output">6. Understanding the TSV output</h3>
+<h4 id="understanding-tsv">Understanding the TSV output</h4>
 
-<p>TermSuite created the file <code>wind-energy-en.tsv</code> showed below.<br />
-* 1st column is the term id, or the base term id in case of a variant,<br />
-* 2nd column: <code>T</code> indicates a term, <code>V</code> indicates a variant,<br />
-* 3rd column: the term pilot,<br />
-* 4th column: the term frequency,<br />
-* 5th column: the term specificity (weirdness ratio logarithm).</p>
+<p>The <code>wind-energy-en.tsv</code> file produced by this command line, should look like the excerpt below. To understand the TSV format, please refer the <a href="/documentation/terminology-tsv-output/">TSV output documentation</a></p>
 
-<pre><code>baseId	type	p	pilot	wrlog	f
+<p>Two other output formats are also available: <code>tbx</code> and <code>json</code>. See command line <a href="/documentation/command-line-api">options</a>.</p>
+
+<pre><code>#	type	p	pilot	spec	f
 1	T	N N	wind turbine	5,16	1852
 1	V	N N N	horizontal-axis wind turbines	3,52	42
 1	V	A N N N	horizontal axis wind turbine	3,50	41
@@ -708,15 +718,92 @@
 ...
 </code></pre>
 
-<p>This output can be configured. <code>tbx</code> and <code>json</code> are also posssible. See command line <a href="/documentation/command-line-api">options</a>.</p>
-
-<h3 id="enjoy-termsuite">8. Enjoy TermSuite</h3>
+<h4 id="enjoy-termsuite">Enjoy TermSuite</h4>
 
 <p>You can now run TermSuite on your own corpus.</p>
 
-<p>Full documentation of available features and options from the command line: <a href="/documentation/command-line-api">command line API</a>.</p>
+<p>See the full documentation of available features and options of terminology extraction from the command line at <a href="/documentation/terminology-extractor-cli">command line API</a>, and its <a href="/documentation/terminology-extractor-cli#examples">examples</a>.</p>
 
-<p>Embed TermSuite directly to your Java project: <a href="/documentation/command-line-api">Java API</a>.</p>
+<p>You could also have chosen to run <a href="/documentation/preprocessor-cli">PreprocessorCLI</a> instead of <em>TerminologyExtractorCLI</em> and apply only TermSuite’s NLP preprocessings to your corpus without extracting the terminology. See also the  <a href="/documentation/preprocessor-cli#examples">preprocessing examples</a>.</p>
+
+<p>You can also embed TermSuite directly into your Java project with <a href="/documentation/java-terminology-extractor/">TermSuite’s Java API</a>.</p>
+
+<h3 id="docker">Option 2: docker container</h3>
+
+<p>TermSuite’s third-party dependency on <em>TreeTagger</em> or <em>Mate</em> might be discouraging, because it is one difficult step in installation process described above and also an external path to tagger’s installation directory to specify explicitely at every single run.</p>
+
+<p>To overcome this issue, we have made TermSuite work with <em>Docker</em> container technology.</p>
+
+<p>Unfortunately, we cannot publish any TermSuite pre-built container image, for the same licensing reasons. Hoever, the docker image can be easily built once for all by the user with <em>Git</em> and <em>Docker</em></p>
+
+<p>Follow the guide below to launch TermSuite tools without installing nor configuring any POS tagger.</p>
+
+<p>See <a href="https://github.com/termsuite/termsuite-docker.git">TermSuite’s Docker project</a> for more detailed instructions.</p>
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<ul>
+  <li>Docker</li>
+  <li>Git</li>
+</ul>
+
+<h4 id="clone-termsuites-docker-project">Clone TermSuite’s docker project</h4>
+
+<pre><code>$ git clone https://github.com/termsuite/termsuite-docker.git
+</code></pre>
+
+<h4 id="build-the-image">Build the image</h4>
+
+<pre><code>$ cd termsuite-docker
+$ bin/build
+</code></pre>
+
+<h4 id="prepare-your-corpus">Prepare your corpus</h4>
+
+<p>Same step as with manual installation. See <a href="#prepare-corpus">above</a>.</p>
+
+<h4 id="run-terminology-extraction-from-the-image">Run terminology extraction from the image</h4>
+
+<p>You can known run TermSuite tools (preprocessings, terminology extraction, and alignment) with <code>bin/termsuite</code> script. See <a href="https://github.com/termsuite/termsuite-docker.git">TermSuite’s Docker project</a> for more informtaion.</p>
+
+<p>To extract the terminology from the</p>
+
+<pre><code>$ bin/termsuite extract
+  -c ./wind-energy/English/txt/ \
+  -l en \
+  --tsv ./wind-energy-en.tsv
+</code></pre>
+
+<h4 id="understanding-the-tsv-output">Understanding the TSV output</h4>
+
+<p>Same TSV output as with manual installation. See <a href="#understanding-tsv">above</a> for details.</p>
+
+<h3 id="see-also">See also</h3>
+
+<h4 id="preprocessing-and-extraction-pipelines">Preprocessing and extraction pipelines</h4>
+
+<p>See the <a href="/documentation/termsuite-pipelines">exhaustive list of analysis engines and linguistic resources</a> that TermSuite uses for terminology extraction.</p>
+
+<h4 id="bilingual-alignment">Bilingual alignment</h4>
+
+<p>TermSuite also supports terminology alignment, i.e. bilingual domain-specific term translation. See <a href="/documentation/terminology-extractor-cli/#extract-a-terminology-ready-for-alignment">how to extract your <em>source</em> and <em>target</em> terminologies for alignment</a> and how to run the aligner <a href="/documentation/aligner-cli/">with command line</a> or <a href="/documentation/java-aligner/">with Java API</a>.</p>
+
+<p>See also <a href="/documentation/termsuite-pipelines#bilingual-alignment-step-3">alignment architecture overview</a> and more <a href="/documentation/alignment/">theoritical concerns on TermSuite alignment</a>.</p>
+
+<h4 id="the-java-api">The Java API</h4>
+
+<p>TermSuite is a Java software and can easily be embedded into your Java projects as a <a href="/documentation/developers/">Maven or Gradle dependency</a>. There is a Java API for: (not exhaustive)</p>
+
+<ul>
+  <li><a href="/documentation/java-preprocessor">NLP preprocessings</a> only,</li>
+  <li><a href="/documentation/java-terminology-extractor">Terminology extraction</a>,</li>
+  <li>Terminology and prepared corpus <a href="/documentation/java-io">inputs and outputs</a>,</li>
+  <li><a href="/documentation/java-aligner">bilingual alignment</a>.</li>
+</ul>
+
+<h4 id="the-graphical-user-interface-gui">The graphical user interface (GUI)</h4>
+
+<p>Another way of running TermSuite is its <a href="/gui">graphical user interface (GUI)</a>. Note that the current version of TermSuite’s GUI is <code>2.3</code>, while other API’s current version is <code>3.0</code>. Be aware that you might not benefit from last TermSuite’s features and improvements within the GUI.   </p>
 
 
       </article>
