@@ -6,6 +6,7 @@ menu: java-api
 excerpt: excerpt.java-terminology-extractor
 order: 20
 permalink: /documentation/java-terminology-extractor/
+redirect_from: /documentation/java-api
 ---
 
 {% if "fr" == site.lang %}

@@ -116,8 +116,8 @@ filtering_properties:
 
 title:
   blog: "Blog & Actualités"
-  introduction: Introduction à TermSuite
-  getting-started-cmd: "Démarrer avec TermSuite [Tutoriel]"
+  introduction: Présentation de TermSuite
+  getting-started-cmd: "Démarrer avec l'extraction terminologique [Tutoriel]"
   gui: "Démarrer avec l'interface graphique de TermSuite [Tutoriel]"
   postagger: Installer l'étiquetteur grammatical et le lemmatiseur
   command-line-api: Executer l'extraction de terminologies en ligne de commande API
@@ -145,18 +145,18 @@ title:
   bilingual-dictionary: Bilingual Dictionary
 
 menu-title:
-  introduction: Introduction
-  getting-started: "Démarrer"
+  introduction: Présentation
+  getting-started: "Introduction"
   gui: Interface graphique
   postagger: Installer un étiquetteur grammatical
   command-line-api: API ligne de commande
   java-api: API Java
-  resources: Ressources
+  resources: Ressources linguistiques
   corpus: Arborescence corpus
   developers: Développeurs (Gradle / Maven)
   data-model: Modèle de données
   support: Assistance
-  getting-started: "Débuter avec TermSuite"
+  getting-started: "Démarrer avec TermSuite"
   cmd-api: "Ligne de commande"
   links: Liens
   pipeline: Chaînes de traitement TAL

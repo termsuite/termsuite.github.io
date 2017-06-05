@@ -113,8 +113,8 @@ filtering_properties:
 
 title:
   blog: Blog & News
-  introduction: Introduction
-  getting-started-cmd: "Tutorial: Getting Started with the Command Line API"
+  introduction: Presentation
+  getting-started-cmd: "Tutorial: Getting Started with terminology extraction"
   gui: "Graphical User Interface (GUI)"
   postagger: "Installing the POS tagger and lemmatizer"
   command-line-api: Run terminology extraction from command line API
@@ -142,12 +142,12 @@ title:
   bilingual-dictionary: Bilingual Dictionary
 
 menu-title:
-  introduction: Introduction
-  getting-started: Getting Started
+  introduction: Presentation
+  getting-started: Getting started with terminology extraction
   gui: Graphical User Interface
   command-line-api: Command Line API
   java-api: Java API
-  resources: Resources
+  resources: Linguistic Resources
   corpus: Corpus
   tsv-output: TSV Output
   properties: Properties
@@ -176,11 +176,11 @@ menu-title:
   bilingual-dictionary: Bilingual Dictionary
 
 topmenu:
-  getting-started: Getting Started
+  getting-started: Introduction
   gui: Graphical User Interface
   command-line-api: Command Line API
   java-api: Java API
-  resources: Resources
+  resources: Linguistic Resources
   corpus: Corpus
   support: Support
   io: "Input/Output Formats"
