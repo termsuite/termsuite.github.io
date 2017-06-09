@@ -85,7 +85,7 @@
     <url>
       <loc>http://termsuite.github.io</loc>
       
-        <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+        <lastmod>2017-06-09T16:08:57+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -108,7 +108,7 @@
     <url>
       <loc>http://termsuite.github.io/blog/</loc>
       
-        <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+        <lastmod>2017-06-09T16:08:57+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -131,7 +131,7 @@
     <url>
       <loc>http://termsuite.github.io/contact/</loc>
       
-        <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+        <lastmod>2017-06-09T16:08:57+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -154,7 +154,7 @@
     <url>
       <loc>http://termsuite.github.io</loc>
       
-        <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+        <lastmod>2017-06-09T16:08:57+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -197,7 +197,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/introduction/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -210,7 +210,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/terminology-tsv-output/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -223,7 +223,7 @@
         <url>
           <loc>http://termsuite.github.io/getting-started/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -236,7 +236,7 @@
         <url>
           <loc>http://termsuite.github.io/gui/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -249,7 +249,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/pos-tagger-lemmatizer/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -262,7 +262,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/resources/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -275,7 +275,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/properties/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -288,7 +288,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/developers/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -301,7 +301,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/support/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -314,7 +314,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/termsuite-pipelines/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -327,7 +327,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/data-model/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -340,7 +340,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/alignment/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -353,7 +353,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/json/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -366,7 +366,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/aligner-cli/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -379,7 +379,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/preprocessor-cli/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -392,7 +392,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/terminology-extractor-cli/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -405,7 +405,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/java-aligner/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -418,7 +418,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/java-io/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -431,7 +431,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/java-preprocessor/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -444,7 +444,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/java-terminology-extractor/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -457,7 +457,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/post-processing/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -470,7 +470,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/bilingual-dictionary/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -483,7 +483,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/yaml-variants/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
@@ -496,7 +496,7 @@
         <url>
           <loc>http://termsuite.github.io/documentation/terminology-extraction/</loc>
           
-            <lastmod>2017-06-05T20:38:58+02:00</lastmod>
+            <lastmod>2017-06-09T16:08:57+02:00</lastmod>
           
           
             <changefreq>monthly</changefreq>
