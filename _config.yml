@@ -16,7 +16,7 @@ termsuite:
     bintray: https://dl.bintray.com/termsuite/termsuite-ui/
     filex: http://filex.univ-nantes.fr/get?k=S5iO0LSGt4dO0TbNxnV
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
-  version: "3.0.4"
+  version: "3.0.5"
 
 resources:
   jar: https://bintray.com/termsuite/generic/download_file?file_path=termsuite-resources.jar
