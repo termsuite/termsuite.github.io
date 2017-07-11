@@ -46,6 +46,10 @@ global:
   share_on: Share on
   library: Library
   graphical_ui: Graphical UI
+  download_gui:
+    linux: Download TermSuite Graphical User Interface for Linux
+    windows: Download TermSuite Graphical User Interface for Windows
+    macos: Download TermSuite Graphical User Interface for Mac OS X
 
 newsletter:
   subscribe: Subscribe to Newsletter

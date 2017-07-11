@@ -12,7 +12,7 @@ layout: default
         </p>
 
         <div class="row downloads text-center">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <h4>{%t global.library %}</h4>
             <p>
             <a class="btn btn-success"
@@ -23,15 +23,32 @@ layout: default
             </p>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-8">
             <h4>{%t global.graphical_ui %}</h4>
-            <p>
-              <a class="btn btn-success"
-                href="{{site.termsuite.ui.bintray}}"
-                target="blank" role="button">
-                termsuite-[your-os].zip
-              </a>
-            </p>
+            <div class="row text-center">
+              <div class="col-sm-4">
+                <a class="btn btn-default"
+                  href="{{site.termsuite.ui.bintray}}{{site.termsuite.ui.windows}}"
+                  target="blank" role="button">
+                  <img src="img/os/windows.png" alt="Windows" title="{%t global.download_gui.windows %}" width=50>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a class="btn btn-default"
+                  href="{{site.termsuite.ui.bintray}}{{site.termsuite.ui.macos}}"
+                  target="blank" role="button">
+                  <img src="img/os/mac.png" alt="Mac OS X" title="{%t global.download_gui.macos %}" width=50>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a class="btn btn-default"
+                  href="{{site.termsuite.ui.bintray}}{{site.termsuite.ui.linux}}"
+                  target="blank" role="button" title="{%t global.download_gui.linux %}">
+                  <img src="img/os/linux.png" alt="Linux" width=50>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 

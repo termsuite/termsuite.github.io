@@ -45,6 +45,10 @@ global:
   share_on: Partager sur
   library: Bibliothèque
   graphical_ui: Interface graphique
+  download_gui:
+    linux: Télécharger l'interface graphique de TermSuite pour Linux
+    windows: Télécharger l'interface graphique de TermSuite pour Windows
+    macos: Télécharger l'interface graphique de TermSuite pour Mac OS X
 
 
 newsletter:
