@@ -13,10 +13,12 @@ bintray: https://bintray.com/termsuite/generic/termsuite-ui
 
 termsuite:
   ui:
-    bintray: https://dl.bintray.com/termsuite/termsuite-ui/
-    filex: http://filex.univ-nantes.fr/get?k=S5iO0LSGt4dO0TbNxnV
+    bintray: https://dl.bintray.com/termsuite/generic/3.0.8/
+    windows: ":win32.win23.x86_64.tar.gz"
+    linux: ":linux.gtk.x86_64.tar.gz"
+    macos: ":macos.cocoa.x86_64.tar.gz"
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
-  version: "3.0.5"
+  version: "3.0.8"
 
 resources:
   jar: https://bintray.com/termsuite/generic/download_file?file_path=termsuite-resources.jar
