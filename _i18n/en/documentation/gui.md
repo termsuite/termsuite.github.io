@@ -1,6 +1,3 @@
-<div class="alert alert-warning" role="alert">
-<strong>Warning </strong>TermSuite Graphical User Interface has not migrated to version 3 of TermSuite. It current version is still 2.3. Please use [Command line API](/documentation/command-line-api) if you need last improvements of TermSuite.
-</div>
 
 * TOC
 {:toc}
@@ -127,6 +124,9 @@ You should be able to navigate documents of the imported corpus in the *Navigato
 
 
 ### Extracting terminologies
+<div class="alert alert-warning" role="warning">
+<strong>Warning: <strong> some information in this section might be valid only for version 2 of TermSuite. Current version is {{site.termsuite.version}}.
+</div>
 
 #### Creating a pipeline
 {:id="create-pipeline"}
@@ -162,6 +162,10 @@ Extracting terminologies starts with creating a pipeline.
 
 #### Filtering a terminology
 
+<div class="alert alert-warning" role="warning">
+<strong>Warning: <strong> some information in this section might be valid only for version 2 of TermSuite. Current version is {{site.termsuite.version}}.
+</div>
+
 Extracted terminologies with no filtering can result in very big terminologies (up to 100,000 terms) while only 500 to 1000 terms often are relevant in terminology extraction. You can configure your pipeline set a term filter.
 
  * Open your pipeline `m-v-th2`,
@@ -195,11 +199,6 @@ You can also configure the pipeline to export the extracted terminology in `json
 ![](/img/termsuite/29-export-section.png)
 
 Exported terminologies are located at `TERMSUITE_WORKSPACE/termsuite/workspace/output/`.
-
-<div class="alert alert-warning" role="alert">
-**Warning!** Terminology exportation will be made available from the terminology editor in the future.
-</div>
-
 
 #### Using the contextualizer
 
