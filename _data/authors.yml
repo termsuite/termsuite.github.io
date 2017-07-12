@@ -1,7 +1,7 @@
 - name: Damien Cram
   status: active
   description: authors.dc.description
-  link: "https://github.com/pompadour"
+  link: "https://github.com/dcram"
   link_type: authors.dc.link_type
   role: authors.dc.role
   mail: "[firstname.lastname]@univ-nantes.fr"
