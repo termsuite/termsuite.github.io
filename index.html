@@ -69,7 +69,11 @@ layout: default
         <div class="col-md-1"></div>
 
         <div class="col-md-5 text-center">
-          <p class="lead">{% t index.command_line_api_overview %}</p>
+
+          <p class="lead">{% t index.command_line_api_overview %}
+            <a href="{{site.baseurl}}/getting-started/">{% t index.getting_started %}</a>
+             [<a href="{{site.baseurl}}/getting-started/#docker">{% t index.getting_started_docker %}</a>]
+          </p>
 
           <div>
             <h4 class="vspace50">{% t index.downloads %}</h4>
@@ -80,7 +84,8 @@ layout: default
               termsuite-core-{{site.termsuite.version}}.jar
             </a>
 
-            <p class="vspace50">
+            <h4 class="vspace50">Documentation</h4>
+            <p>
               <a href="{{site.base_url}}/documentation/preprocessor-cli/">{% t index.nlp_preprocessings %}</a>
               -
               <a href="{{site.base_url}}/documentation/terminology-extractor-cli/">{% t index.terminology_extraction %}</a>
@@ -107,7 +112,8 @@ layout: default
               target="blank" role="button">
               termsuite-core-{{site.termsuite.version}}.jar
             </a>
-            <p class="vspace50">
+            <h4 class="vspace50">Documentation</h4>
+            <p>
               <a href="{{site.base_url}}/documentation/java-preprocessor/">{% t index.nlp_preprocessings %}</a>
               -
               <a href="{{site.base_url}}/documentation/java-terminology-extractor/">{% t index.terminology_extraction %}</a>
@@ -143,7 +149,8 @@ layout: default
 
             {% include download_gui.html %}
 
-            <p class="vspace50">
+            <h4 class="vspace50">Documentation</h4>
+            <p>
               <a href="{{site.base_url}}/documentation/gui/"
                     role="button">
                     {% t index.gui_tutorial %}

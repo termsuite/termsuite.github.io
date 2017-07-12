@@ -85,6 +85,8 @@ index:
   nlp_preprocessings: NLP Preprocessing
   terminology_extraction: Terminology Extraction
   alignment: Alignment
+  getting_started: Getting Started
+  getting_started_docker: using Docker
 
 contact:
   description: TermSuite is a research project.
