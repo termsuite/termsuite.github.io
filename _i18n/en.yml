@@ -87,6 +87,7 @@ index:
   alignment: Alignment
   getting_started: Getting Started
   getting_started_docker: using Docker
+  fallback_download_link: click here if the link above fails
 
 contact:
   description: TermSuite is a research project.
