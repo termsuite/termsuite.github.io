@@ -76,6 +76,21 @@ index:
   documentation_desc: Liste des fonctionalités de TermSuite, de ses composants et des paramètres de configuration. API Java.
   developers_desc: Construire TermSuite à partir des sources avec Gradle ou développer avec TermSuite grâce à la dépendance Maven.
   features_overview: Aperçu des fonctionalités
+  language_support: Langues supportées
+  java_api_title: API Java
+  java_api_overview: Utilisez TermSuite depuis votre code Java et accédez à toutes les fonctionalités et options de configuration
+  command_line_api_title: Ligne de commande
+  command_line_api_overview: Pré-traitements TAL, extraction terminologique et alignement multilingue depuis la ligne de commande.
+  gui_title: Interface graphique
+  gui_overview: Une interface graphique pour l'extraction terminologique, l'alignement multilingue, la visualisation des occurrences de termes en contexte et l'édition des ressources linguistiques
+  gui_tutorial: Guide de l'interface graphique
+  downloads: Téléchargement
+  nlp_preprocessings: Pré-traitements TAL
+  terminology_extraction: Extraction terminologique
+  alignment: Alignement
+  getting_started: Démarrage
+  getting_started_docker: avec Docker
+  fallback_download_link: cliquez ici si le lien ci-dessus échoue
 
 contact:
   description: TermSuite est un projet de recherche.
@@ -146,6 +161,7 @@ title:
   java-preprocessor: Pré-traitements linguistiques avec l'API Java
   java-aligner: Alignment bilingue avec l'API Java
   java-io: Sérialisation/Désérialisation (IO) avec l'API Java
+  java-navigate-model: Naviguer dans IndexedCorpus
   bilingual-dictionary: Bilingual Dictionary
 
 menu-title:
@@ -182,6 +198,7 @@ menu-title:
   java-preprocessor: Preprocessor
   java-aligner: Aligner
   java-io: Sérialisation/Désérialisation (IO)
+  java-navigate-model: Naviguer dans IndexedCorpus
   bilingual-dictionary: Bilingual Dictionary
 
 topmenu:
@@ -218,6 +235,7 @@ excerpt:
   java-terminology-extractor: Documentation de l'extraction terminologique avec l'API Java de TermSuite
   java-preprocessor: Documentation des pré-traitements lingustiques avec l'API Java de TermSuite
   java-aligner: Documentation de l'alignment bilingue avec l'API Java de TermSuite
+  java-navigate-model: Comprendre le IndexedCorpus et naviguer dans la terminology et leurs occurrences.
   bilingual-dictionary: Bilingual Dictionary
 
 authors:
