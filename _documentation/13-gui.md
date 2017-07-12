@@ -4,7 +4,8 @@ title: title.gui
 menu_title: menu-title.gui
 menu: gui
 excerpt: excerpt.gui
-permalink: /gui/
+permalink: /documentation/gui/
+redirect_from: /gui/
 getting_started: true
 ---
 {% if "fr" == site.lang %}

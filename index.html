@@ -4,84 +4,26 @@ layout: default
 <div id="home">
   <div class="row">
     <div class="container">
-      <div class="col-md-5">
-        <p class="lead">{%t site.description %} </p>
+      <div class="col-md-5 text-center">
+        <p class="lead">{% t site.description %} </p>
 
         <p>
-          {%t index.main_features %}
+          {% t index.main_features %}
         </p>
 
-        <div class="row downloads text-center">
-          <div class="col-md-4">
-            <h4>{%t global.library %}</h4>
-            <p>
-            <a class="btn btn-success"
-              href="{{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar"
-              target="blank" role="button">
-              termsuite-core-{{site.termsuite.version}}.jar
-            </a>
-            </p>
-          </div>
-
-          <div class="col-md-8">
-            <h4>{%t global.graphical_ui %}</h4>
-            <div class="row text-center">
-              <div class="col-sm-4">
-                <a class="btn btn-default"
-                  href="{{site.termsuite.ui.bintray}}{{site.termsuite.ui.windows}}"
-                  target="blank" role="button">
-                  <img src="img/os/windows.png" alt="Windows" title="{%t global.download_gui.windows %}" width=50>
-                </a>
-              </div>
-              <div class="col-sm-4">
-                <a class="btn btn-default"
-                  href="{{site.termsuite.ui.bintray}}{{site.termsuite.ui.macos}}"
-                  target="blank" role="button">
-                  <img src="img/os/mac.png" alt="Mac OS X" title="{%t global.download_gui.macos %}" width=50>
-                </a>
-              </div>
-              <div class="col-sm-4">
-                <a class="btn btn-default"
-                  href="{{site.termsuite.ui.bintray}}{{site.termsuite.ui.linux}}"
-                  target="blank" role="button" title="{%t global.download_gui.linux %}">
-                  <img src="img/os/linux.png" alt="Linux" width=50>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
+          <h4>{% t index.language_support %}</h2>
+          {% for l in site.data.languages %}
+            {% if l[1].support == 'global.good' %}
+              <img src="{{l[1].path}}" alt="{% t l[1].name %}" title="{% t l[1].name %}">
+            {% endif %}
+          {% endfor %}
 
 
-        <div class="row languages">
-          <div class="col-md-4">
-            {%t index.good_support%}:
-          </div>
-          <div class="col-md-8">
-            {% for l in site.data.languages %}
-              {% if l[1].support == 'global.good' %}
-                <img src="{{l[1].path}}" alt="{%t l[1].name %}" title="{%t l[1].name %}">
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-        <div class="row languages">
-          <div class="col-md-4">
-            {%t index.partial_support %}:
-          </div>
-          <div class="col-md-8">
-            {% for l in site.data.languages %}
-              {% if l[1].support == 'global.poor' %}
-                <img  src="{{l[1].path}}" alt="{%t l[1].name %}" title="{%t l[1].name %}">
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
+          <p>{% t index.current_version %} {{site.termsuite.version}} <a href="/changelog">{% t index.see_changelog %}</a></p>
 
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-5 text-center">
-        <p>{%t index.current_version %} {{site.termsuite.version}} <a href="/changelog">{%t index.see_changelog %}</a></p>
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Qc9ZkYZVP_0" frameborder="0" allowfullscreen></iframe>
 
@@ -92,32 +34,112 @@ layout: default
       <div class="col-md-1"></div>
     </div>
 
-  <div class="row greyed">
-    <div class="container">
-      <div class="col-md-4 text-center">
-        <h3>{%t index.get_it_running %} !</h3>
-        <p>{%t index.get_it_running_desc %}</p>
-        <p><a class="btn btn-danger btn-lg" href="{{site.baseurl}}/getting-started" role="button">{%t global.getting_started %}</a></p>
-      </div>
+    <div class="row greyed">
+      <div class="container">
+        <div class="col-md-4 text-center">
+          <h3>{% t index.get_it_running %} !</h3>
+          <p>{% t index.get_it_running_desc %}</p>
+          <p><a class="btn btn-danger btn-lg" href="{{site.baseurl}}/getting-started" role="button">{% t global.getting_started %}</a></p>
+        </div>
 
-      <div class="col-md-4 text-center">
-        <h3>{%t global.documentation %}</h3>
-        <p>{%t index.documentation_desc %}</p>
-        <p>
-          <a class="btn btn-primary btn-lg" href="{{site.baseurl}}/documentation/introduction" role="button">{%t global.user_manual %}</a>
-          <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}/" role="button">Javadoc</a>
-        </p>
-      </div>
+        <div class="col-md-4 text-center">
+          <h3>{% t global.documentation %}</h3>
+          <p>{% t index.documentation_desc %}</p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="{{site.baseurl}}/documentation/introduction" role="button">{% t global.user_manual %}</a>
+            <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/{{site.termsuite.version}}/" role="button">Javadoc</a>
+          </p>
+        </div>
 
-      <div class="col-md-4 text-center">
-        <h3>{%t global.developers %}</h3>
-        <p>{%t index.developers_desc %}</p>
-        <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">{%t global.view_on_github %}</a><a class="btn" href="{{site.baseurl}}/documentation/developers/" role="button">Maven / Gradle</a></p>
+        <div class="col-md-4 text-center">
+          <h3>{% t global.developers %}</h3>
+          <p>{% t index.developers_desc %}</p>
+          <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">{% t global.view_on_github %}</a><a class="btn" href="{{site.baseurl}}/documentation/developers/" role="button">Maven / Gradle</a></p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="publications" class="row">
+
+    <div id="command-line" class="row">
+      <div class="container">
+        <h3 class="text-center">{% t index.command_line_api_title %}</h2>
+        <div class="col-md-7 text-left">
+          {% include command-line-api-excerpt.md %}
+        </div>
+        <div class="col-md-1"></div>
+
+        <div class="col-md-4 text-center">
+          <p class="lead">{% t index.command_line_api_overview %}</p>
+
+          <div class="vspace50">
+            <a class="btn btn-success"
+              href="{{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar"
+              target="blank" role="button">
+              termsuite-core-{{site.termsuite.version}}.jar
+            </a>
+            <a href="{{site.base_url}}/documentation/terminology-extractor-cli/"
+              role="button">
+              Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="java-api" class="row">
+      <div class="container">
+        <h3 class="text-center">{% t index.java_api_title %}</h3>
+        <div class="col-md-4 text-center">
+
+          <p class="lead">{% t index.java_api_overview %}</p>
+
+          <div class="vspace50">
+            <a class="btn btn-success"
+              href="{{site.termsuite.maven}}{{site.termsuite.version}}/termsuite-core-{{site.termsuite.version}}.jar"
+              target="blank" role="button">
+              termsuite-core-{{site.termsuite.version}}.jar
+            </a>
+            <a href="{{site.base_url}}/documentation/java-preprocessor/"
+              role="button">
+              Documentation
+            </a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7 text-left">
+          {% include java-api-excerpt.md %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div id="gui" class="row">
+      <div class="container">
+        <h3 class="text-center">{% t index.gui_title %}</h2>
+        <div class="col-md-7 text-center">
+          <img width=560 alt="termsuite-ui screenshot" src="/img/termsuite-ui.png" title="A screenshot of TermSuite graphical user interface">
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="lead">
+            {% t index.gui_overview %}
+            <a href="{{site.base_url}}/documentation/gui/"
+                  role="button">
+                  {% t index.gui_tutorial %}
+                </a></p>
+
+          <h4 class="vspace50">{% t index.downloads %}</h4>
+
+            {% include download_gui.html %}
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <div id="publications" class="row greyed">
     <div class="container">
       <div class="col-md-2 text-center">
         <img alt="academics" width="200" src="/img/academics.png">
@@ -156,16 +178,15 @@ layout: default
     </div>
   </div>
 
-  <hr />
   <div class="row">
     <div class="container">
-      <h2 id="features" class="text-center">{%t index.features_overview %}</h2>
+      <h2 id="features" class="text-center">{% t index.features_overview %}</h2>
       <div id="features-block" class="">
         <table class="table table-bordered">
           <tbody>
             {% for f in site.data.features %}
               <tr>
-                <td>{%t f %}</td>
+                <td>{% t f %}</td>
                 <td><span class="glyphicon glyphicon-ok text-ok" aria-hidden="true"></span></td>
               </tr>
             {% endfor %}

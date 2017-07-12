@@ -1,6 +1,12 @@
 * TOC
 {:toc}
 
+### Prerequesites
+
+ 1. Java 8
+ 1. A [prepared corpus]({{site.baseurl}}/documentation/preprocessor-cli/) [an external POS tagger installed]({{site.baseurl}}/documentation/pos-tagger-lemmatizer/)
+
+
 {% include generated/termino-extractor-api.md %}
 
 ### Examples

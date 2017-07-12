@@ -1,6 +1,6 @@
 site:
   email: "[firstname.lastname]@univ-nantes.fr"
-  description: TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
+  description: TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.
   title: TermSuite
 
 authors:
@@ -45,7 +45,6 @@ global:
   toggle_nav: Toggle navigation
   share_on: Share on
   library: Library
-  graphical_ui: Graphical UI
   download_gui:
     linux: Download TermSuite Graphical User Interface for Linux
     windows: Download TermSuite Graphical User Interface for Windows
@@ -74,6 +73,15 @@ index:
   documentation_desc: List of all TermSuite's features, analysis engines, and configuration parameters. Java API.
   developers_desc: Build it from sources with Gradle, or use it as a maven dependency.
   features_overview: Features Overview
+  language_support: Language Support
+  java_api_title: Java API
+  java_api_overview: Embed TermSuite within your Java applications.
+  command_line_api_title: Command Line
+  command_line_api_overview: NLP preprocessing, terminology extraction, and multilingual alignment from command line.
+  gui_title: Graphical User Interface
+  gui_overview: A graphical user interface for terminology extraction, multilingual alignment, in-context term occurrence viewer, linguistic resource editor.
+  gui_tutorial: Tutorial
+  downloads: Downloads
 
 contact:
   description: TermSuite is a research project.

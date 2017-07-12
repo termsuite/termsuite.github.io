@@ -3,6 +3,13 @@ Bilingual alignment features in TermSuite are provided by class `BilingualAlignm
 * TOC
 {:toc}
 
+### Prerequesites
+
+ 1. Java 8
+ 1. two terminologies extracted with term contexts
+ 1. a bilingual dictionary
+
+
 ### Creating the aligner service
 
 

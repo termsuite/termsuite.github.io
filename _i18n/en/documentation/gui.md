@@ -70,11 +70,11 @@ wind-energy/
 
 Download the last stable version of TermSuite's Graphical User Interface and unzip the file to `TERMSUITE_WORKSPACE/`.
 
-[ ![](/img/windows1.png){:width="30"}  Download for Windows ]({{site.termsuite.ui.bintray}}fr.univnantes.termsuite-win32.win32.x86_64.zip){:class="btn btn-success"}
+[ ![](/img/windows1.png){:width="30"}  Download for Windows]({{site.termsuite.ui.bintray}}{{site.termsuite.ui.windows}}){:class="btn btn-success"}
 
-[ ![](/img/apple1.png){:width="30"} Download for Mac OS]({{site.termsuite.ui.bintray}}fr.univnantes.termsuite-macosx.cocoa.x86_64.zip){:class="btn btn-success"}
+[ ![](/img/apple1.png){:width="30"} Download for Mac OS]({{site.termsuite.ui.bintray}}{{site.termsuite.ui.macos}}){:class="btn btn-success"}
 
-[ ![](/img/linux1.png){:width="30"} Download for Linux ]({{site.termsuite.ui.bintray}}fr.univnantes.termsuite-linux.gtk.x86_64.zip){:class="btn btn-success"}
+[ ![](/img/linux1.png){:width="30"} Download for Linux ]({{site.termsuite.ui.bintray}}{{site.termsuite.ui.linux}}){:class="btn btn-success"}
 
 #### Start TermSuite
 

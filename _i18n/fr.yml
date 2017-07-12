@@ -1,6 +1,6 @@
 site:
   email: "[prenom.nom]@univ-nantes.fr"
-  description: "TermSuite est une librairie Java permettant l'<strong>extraction terminologique</strong> et l'<strong>alignment multilingue de termes</strong>."
+  description: "TermSuite est un outil d'<strong>extraction terminologique</strong> et d'<strong>alignment multilingue de termes</strong>."
   title: TermSuite
 
 authors:

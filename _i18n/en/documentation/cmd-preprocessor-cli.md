@@ -1,6 +1,11 @@
 * TOC
 {:toc}
 
+### Prerequesites
+
+ 1. Java 8
+ 1. [install an external POS tagger]({{site.baseurl}}/documentation/pos-tagger-lemmatizer/)
+
 {% include generated/preprocessor-api.md %}
 
 ### Examples

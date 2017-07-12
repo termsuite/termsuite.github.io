@@ -1,6 +1,13 @@
 * TOC
 {:toc}
 
+### Prerequesites
+
+ 1. Java 8
+ 1. two terminologies extracted with term contexts
+ 1. a bilingual dictionary
+
+
 {% include generated/aligner-api.md %}
 
 ### Examples

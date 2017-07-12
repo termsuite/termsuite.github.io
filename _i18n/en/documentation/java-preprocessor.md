@@ -3,6 +3,10 @@ Bilingual alignment features in TermSuite are provided by class `BilingualAlignm
 * TOC
 {:toc}
 
+### Prerequesites
+
+ 1. Java 8
+ 1. [install an external POS tagger]({{site.baseurl}}/documentation/pos-tagger-lemmatizer/)
 
 ### Preprocessing
 

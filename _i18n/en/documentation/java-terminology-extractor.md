@@ -1,6 +1,10 @@
 * TOC
 {:toc}
 
+### Prerequesites
+
+ 1. Java 8
+
 ### Extracting terminology
 
 Say `corpus` is the *IndexedCorpus* object produced by the [NLP preprocessings]({{site.baseurl}}/documentation/java-preprocessor/) (see [pipelines]({{site.baseurl}}/documentation/termsuite-pipelines/) for explanations), the terminology extraction pipeline can launched with Java API with:
@@ -23,7 +27,7 @@ You can create a language-independant *ExtractorOptions* object from scratch, bu
 ExtractorOptions extractorOptions = new ExtractorOptions();
 {% endhighlight %}
 
-But, it is better to creates a new *ExtractorOptions* object by cloning the language defaults: 
+But, it is better to creates a new *ExtractorOptions* object by cloning the language defaults:
 
 {% highlight java %}
 // Clones the default configuration object for given language
