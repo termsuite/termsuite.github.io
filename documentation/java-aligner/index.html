@@ -293,6 +293,15 @@
                     
                       <hr /> 
                       <div class="docitem">
+                        <a title="title.java-navigate-model"
+                            class=""
+                            href="/documentation/java-navigate-model/">
+                          Navigating the IndexedCorpus
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
                         <a title="title.java-io"
                             class=""
                             href="/documentation/java-io/">
@@ -327,7 +336,7 @@
                       <div class="docitem">
                         <a title="title.gui"
                             class=""
-                            href="/gui/">
+                            href="/documentation/gui/">
                           Graphical User Interface
                         </a>
                       </div>
@@ -560,6 +569,7 @@
 <p>Bilingual alignment features in TermSuite are provided by class <code>BilingualAlignmentService</code>. You can get an instance of that class from the <code>BilingualAligner</code> builder. See <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.8">TermSuite Javadoc</a> for more information.  </p>
 
 <ul id="markdown-toc">
+  <li><a href="#prerequesites">Prerequesites</a></li>
   <li><a href="#creating-the-aligner-service">Creating the aligner service</a></li>
   <li><a href="#running-alignment">Running alignment</a>    <ul>
       <li><a href="#single-word-term-alignment">Single-word term alignment</a></li>
@@ -570,6 +580,14 @@
   <li><a href="#configuring-the-alignment">Configuring the alignment</a></li>
   <li><a href="#alignment-methods-and-algorithms">Alignment methods and algorithms</a></li>
 </ul>
+
+<h3 id="prerequesites">Prerequesites</h3>
+
+<ol>
+  <li>Java 8</li>
+  <li>two terminologies extracted with term contexts</li>
+  <li>a bilingual dictionary</li>
+</ol>
 
 <h3 id="creating-the-aligner-service">Creating the aligner service</h3>
 
@@ -691,7 +709,7 @@
     <div class="row">
       <div class="col-sm-3">
         <h4>About</h4>
-        <p>TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+        <p>TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-4">
@@ -705,7 +723,7 @@
         <ul>
 
           
-            <li><a href="https://github.com/pompadour"><p>Damien Cram</p>
+            <li><a href="https://github.com/dcram"><p>Damien Cram</p>
 </a></li>
           
             <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>

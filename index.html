@@ -12,7 +12,7 @@
       
     </title>
 
-    <meta name="description" content="TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>." />
+    <meta name="description" content="TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>." />
     <meta name="robots" content="index,follow" />
 
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
@@ -115,8 +115,8 @@
         <div id="home">
   <div class="row">
     <div class="container">
-      <div class="col-md-5">
-        <p class="lead">TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>. </p>
+      <div class="col-md-5 text-center">
+        <p class="lead">TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>. </p>
 
         <p>
           Multiword and compound term detection, morphosyntactic analysis, term variant detection,
@@ -124,142 +124,243 @@
 
         </p>
 
-        <div class="row downloads text-center">
-          <div class="col-md-6">
-            <h4>Library</h4>
-            <p>
+          <h4 class="vspace50">Language Support</h4>
+          
+            
+              <img src="/img/flags/France.png" alt="French" title="French">
+            
+          
+            
+              <img src="/img/flags/United-Kingdom.png" alt="English" title="English">
+            
+          
+            
+              <img src="/img/flags/Russia.png" alt="Russian" title="Russian">
+            
+          
+            
+              <img src="/img/flags/Italy.png" alt="Italian" title="Italian">
+            
+          
+            
+              <img src="/img/flags/Germany.png" alt="German" title="German">
+            
+          
+            
+              <img src="/img/flags/Spain.png" alt="Spanish" title="Spanish">
+            
+          
+            
+          
+            
+          
+            
+          
+
+          <p class="vspace50">
+            <a href="#command-line">Command Line</a> - <a href="#gui">Graphical User Interface</a> - <a href="#java-api">Java API</a>
+          </p>
+
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5 text-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qc9ZkYZVP_0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <p class="text-center"><em>Current version of TermSuite is 3.0.8 </em><a href="/changelog">See Changelog</a></p>
+
+    <div class="row greyed">
+      <div class="container">
+        <div class="col-md-4 text-center">
+          <h4>Get it running !</h4>
+          <p>Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.</p>
+          <p><a class="btn btn-danger btn-lg" href="/getting-started" role="button">Getting Started</a></p>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <h4>Documentation</h4>
+          <p>List of all TermSuite's features, analysis engines, and configuration parameters. Java API.</p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button">User Manual</a>
+            <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.8/" role="button">Javadoc</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <h4>Developers</h4>
+          <p>Build it from sources with Gradle, or use it as a maven dependency.</p>
+          <p><a class="btn btn-default btn-lg" href="https://github.com/termsuite/termsuite-core" role="button">View on Github</a><a class="btn" href="/documentation/developers/" role="button">Maven / Gradle</a></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="command-line" class="row">
+      <div class="container">
+        <h3 class="text-center">Command Line</h3>
+        <div class="col-md-6 text-left">
+          <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>java -cp termsuite-core-3.0.8.jar <span class="se">\</span>
+        fr.univnantes.termsuite.tools.TerminologyExtractorCLI <span class="se">\</span>
+            -t /path/to/treetagger/ <span class="se">\</span>
+            -c /path/to/corpus/ <span class="se">\</span>
+            -l en <span class="se">\</span>
+            --tsv my-termino.tsv <span class="se">\</span></code></pre></div>
+
+        </div>
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5 text-center">
+
+          <p class="lead">NLP preprocessing, terminology extraction, and multilingual alignment from command line.
+            <a href="/getting-started/">Getting Started</a>
+             [<a href="/getting-started/#docker">using Docker</a>]
+          </p>
+
+          <div>
+            <h4 class="vspace50">Download</h4>
+
             <a class="btn btn-success"
               href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/3.0.8/termsuite-core-3.0.8.jar"
               target="blank" role="button">
               termsuite-core-3.0.8.jar
             </a>
+
+            <h4 class="vspace50">Documentation</h4>
+            <p>
+              <a href="/documentation/preprocessor-cli/">NLP Preprocessing</a>
+              -
+              <a href="/documentation/terminology-extractor-cli/">Terminology Extraction</a>
+              -
+              <a href="/documentation/aligner-cli/">Alignment</a>
             </p>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="col-md-6">
-            <h4>Graphical UI</h4>
+    <div id="java-api" class="row">
+      <div class="container">
+        <h3 class="text-center">Java API</h3>
+        <div class="col-md-5 text-center">
+
+          <p class="lead">Embed TermSuite in your Java application and get access to all functionalities and full control.</p>
+
+          <div>
+            <h4 class="vspace50">Download</h4>
+
+            <a class="btn btn-success"
+              href="http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/3.0.8/termsuite-core-3.0.8.jar"
+              target="blank" role="button">
+              termsuite-core-3.0.8.jar
+            </a>
+            <a href="/documentation/developers/"
+              target="blank" role="button">
+              Developer instructions
+            </a>
+            <h4 class="vspace50">Documentation</h4>
             <p>
-              <a class="btn btn-success"
-                href="https://dl.bintray.com/termsuite/generic/3.0.8/"
-                target="blank" role="button">
-                termsuite-[your-os].zip
+              <a href="/documentation/java-preprocessor/">NLP Preprocessing</a>
+              -
+              <a href="/documentation/java-terminology-extractor/">Terminology Extraction</a>
+              -
+              <a href="/documentation/java-aligner/">Alignment</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6 text-left">
+          <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Create the corpus object</span>
+<span class="n">TXTCorpus</span> <span class="n">corpus</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TXTCorpus</span><span class="o">(</span>
+    <span class="n">Lang</span><span class="o">.</span><span class="na">EN</span><span class="o">,</span>
+    <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;wind-energy&quot;</span><span class="o">,</span> <span class="s">&quot;documents&quot;</span><span class="o">));</span>
+
+<span class="c1">// Do the NLP preprocessings</span>
+<span class="n">IndexedCorpus</span> <span class="n">corpus</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">preprocessor</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">setTaggerPath</span><span class="o">(</span><span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;path&quot;</span><span class="o">,</span> <span class="s">&quot;to&quot;</span><span class="o">,</span> <span class="s">&quot;treetagger&quot;</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">toIndexedCorpus</span><span class="o">(</span><span class="n">corpus</span><span class="o">,</span> <span class="mi">500000</span><span class="o">);</span>
+
+<span class="c1">// Extract the terminology</span>
+<span class="n">TermSuite</span><span class="o">.</span><span class="na">terminoExtractor</span><span class="o">().</span><span class="na">execute</span><span class="o">(</span><span class="n">corpus</span><span class="o">);</span>
+
+<span class="c1">// Keep only top 1000 terms by specificity with their variants</span>
+<span class="n">TermSuite</span><span class="o">.</span><span class="na">terminologyFilterer</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">by</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">SPECIFICITY</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">keepTopN</span><span class="o">(</span><span class="mi">1000</span><span class="o">).</span><span class="na">keepVariants</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">corpus</span><span class="o">);</span>
+
+<span class="c1">// Export the terminology to TSV</span>
+<span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createTsvExporter</span><span class="o">(</span><span class="k">new</span> <span class="nf">TsvOptions</span><span class="o">())</span>
+    <span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="n">corpus</span><span class="o">,</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;my-termino.tsv&quot;</span><span class="o">));</span></code></pre></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div id="gui" class="row">
+      <div class="container">
+        <h3 class="text-center">Graphical User Interface</h3>
+        <div class="col-md-6 text-center">
+          <a href="/documentation/gui/">
+            <img width=560 alt="termsuite-ui screenshot" src="/img/termsuite-ui.png" title="A screenshot of TermSuite graphical user interface">
+          </a>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5 text-center">
+          <p class="lead">
+            A graphical user interface for terminology extraction, multilingual alignment, in-context term occurrence viewer, linguistic resource editor.
+          </p>
+
+          <h4 class="vspace50">Download</h4>
+
+            <div class="row text-center inner-row">
+<div class="col-sm-4">
+  <a class="btn btn-default"
+    href="https://dl.bintray.com/termsuite/generic/3.0.8/win32.win23.x86_64.zip"
+    target="blank" role="button">
+    <img src="/img/os/windows.png" alt="Windows" title="Download TermSuite Graphical User Interface for Windows" width=50>
+  </a>
+</div>
+<div class="col-sm-4">
+  <a class="btn btn-default"
+    href="https://dl.bintray.com/termsuite/generic/3.0.8/macosx.cocoa.x86_64.tar.gz"
+    target="blank" role="button">
+    <img src="/img/os/mac.png" alt="Mac OS X" title="Download TermSuite Graphical User Interface for Mac OS X" width=50>
+  </a>
+</div>
+<div class="col-sm-4">
+  <a class="btn btn-default"
+    href="https://dl.bintray.com/termsuite/generic/3.0.8/linux.gtk.x86_64.tar.gz"
+    target="blank" role="button" title="Download TermSuite Graphical User Interface for Linux">
+    <img src="/img/os/linux.png" alt="Linux" width=50>
+  </a>
+</div>
+</div>
+
+
+            <p>
+              (<a href="https://dl.bintray.com/termsuite/generic/3.0.8/">click here if the link above fails</a>)
+            </p>
+            <h4 class="vspace50">Documentation</h4>
+            <p>
+              <a href="/documentation/gui/"
+                    role="button">
+                    Tutorial for TermSuite Graphical User Interface
               </a>
             </p>
-          </div>
         </div>
-
-
-        <div class="row languages">
-          <div class="col-md-4">
-            Good support:
-          </div>
-          <div class="col-md-8">
-            
-              
-                <img src="/img/flags/France.png" alt="French" title="French">
-              
-            
-              
-                <img src="/img/flags/United-Kingdom.png" alt="English" title="English">
-              
-            
-              
-                <img src="/img/flags/Russia.png" alt="Russian" title="Russian">
-              
-            
-              
-                <img src="/img/flags/Italy.png" alt="Italian" title="Italian">
-              
-            
-              
-                <img src="/img/flags/Germany.png" alt="German" title="German">
-              
-            
-              
-                <img src="/img/flags/Spain.png" alt="Spanish" title="Spanish">
-              
-            
-              
-            
-              
-            
-              
-            
-          </div>
-        </div>
-        <div class="row languages">
-          <div class="col-md-4">
-            Partial support:
-          </div>
-          <div class="col-md-8">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <img  src="/img/flags/Denmark.png" alt="Danish" title="Danish">
-              
-            
-              
-                <img  src="/img/flags/China.png" alt="Chinese" title="Chinese">
-              
-            
-              
-                <img  src="/img/flags/Latvia.png" alt="Latvian" title="Latvian">
-              
-            
-          </div>
-        </div>
-
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5 text-center">
-        <p>Current version of TermSuite is 3.0.8 <a href="/changelog">See Changelog</a></p>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qc9ZkYZVP_0" frameborder="0" allowfullscreen></iframe>
-
-      </div>
-
-
-      </div>
-      <div class="col-md-1"></div>
     </div>
 
-  <div class="row greyed">
-    <div class="container">
-      <div class="col-md-4 text-center">
-        <h3>Get it running !</h3>
-        <p>Prepare your system for TermSuite, download, install and get it running on an example corpus quickly.</p>
-        <p><a class="btn btn-danger btn-lg" href="/getting-started" role="button">Getting Started</a></p>
-      </div>
 
-      <div class="col-md-4 text-center">
-        <h3>Documentation</h3>
-        <p>List of all TermSuite's features, analysis engines, and configuration parameters. Java API.</p>
-        <p>
-          <a class="btn btn-primary btn-lg" href="/documentation/introduction" role="button">User Manual</a>
-          <a class="btn" href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.8/" role="button">Javadoc</a>
-        </p>
-      </div>
 
-      <div class="col-md-4 text-center">
-        <h3>Developers</h3>
-        <p>Build it from sources with Gradle, or use it as a maven dependency.</p>
-        <p><a class="btn btn-default btn-lg" href="https://github.com/termsuite/termsuite-core" role="button">View on Github</a><a class="btn" href="/documentation/developers/" role="button">Maven / Gradle</a></p>
-      </div>
-    </div>
-  </div>
 
-  <div id="publications" class="row">
+  <div id="publications" class="row greyed">
     <div class="container">
       <div class="col-md-2 text-center">
         <img alt="academics" width="200" src="/img/academics.png">
@@ -312,7 +413,6 @@
     </div>
   </div>
 
-  <hr />
   <div class="row">
     <div class="container">
       <h2 id="features" class="text-center">Features Overview</h2>
@@ -423,8 +523,8 @@
   </div>
 
   <div class="col-md-3 text-center">
-    <a href="http://www.lina.univ-nantes.fr/">
-      <img title="LINA" alt="LINA" width="200" src="/img/lina.png" target="blank">
+    <a href="http://www.ls2n.fr/">
+      <img title="LS2N" alt="LS2N" width="300" src="/img/ls2n.png" target="blank">
     </a>
   </div>
 </div>
@@ -442,7 +542,7 @@
     <div class="row">
       <div class="col-sm-3">
         <h4>About</h4>
-        <p>TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+        <p>TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-4">
@@ -456,7 +556,7 @@
         <ul>
 
           
-            <li><a href="https://github.com/pompadour"><p>Damien Cram</p>
+            <li><a href="https://github.com/dcram"><p>Damien Cram</p>
 </a></li>
           
             <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>

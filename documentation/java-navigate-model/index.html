@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>
+      
+        
+          TermSuite
+        
+
+      
+    </title>
+
+    <meta name="description" content="excerpt.java-navigate-model" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/documentation/java-navigate-model/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Fork TermSuite on GitHub."
+    src="/img/forkme.png"
+    alt="Fork TermSuite on GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <ul  class="nav navbar-nav navbar-right navright">
+        <li class="" >
+          <a class="" href="/contact">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Newsletter
+          </a>
+        </li>
+    </ul>
+
+
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/getting-started">Getting Started</a></li>
+          <li class="active"><a href="/documentation/introduction/" >Documentation</a></li>
+          <li class=""><a href="/#publications" >Publications</a></li>
+          <li id="about" class="dropdown">
+            <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/changelog">Change log</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/documentation/support">Support</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">View on Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/about">About TermSuite</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="active" ><a href="/documentation/java-navigate-model/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="" ><a href="/fr/documentation/java-navigate-model/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8">
+    <header class="page-header">
+      <h1>Documentation <small>Navigating the IndexedCorpus</small></h1>
+    </header>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=title.java-navigate-model&url=http://termsuite.github.io/documentation/java-navigate-model/&via=&related="
+        rel="nofollow" target="_blank" title="Share on Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/documentation/java-navigate-model/" rel="nofollow" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/documentation/java-navigate-model/" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/documentation/java-navigate-model/&title=title.java-navigate-model&summary=excerpt.java-navigate-model&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Share on LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/documentation/java-navigate-model/&title=title.java-navigate-model" rel="nofollow" target="_blank" title="Share on Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+  </div>
+  <div class="row">
+    <div id="docmenu" class="col-md-3">
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                      Introduction
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.introduction"
+                            class=""
+                            href="/documentation/introduction/">
+                          Presentation
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.getting-started-cmd"
+                            class=""
+                            href="/getting-started/">
+                          Getting started with terminology extraction
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.postagger"
+                            class=""
+                            href="/documentation/pos-tagger-lemmatizer/">
+                          Installing a POS Tagger
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                      Command Line API
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="menu-title.preprocessor-cli"
+                            class=""
+                            href="/documentation/preprocessor-cli/">
+                          PreprocessorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menu-title.terminology-extractor-cli"
+                            class=""
+                            href="/documentation/terminology-extractor-cli/">
+                          TerminologyExtractorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menu-title.aligner-cli"
+                            class=""
+                            href="/documentation/aligner-cli/">
+                          AlignerCLI
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                      Java API
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.java-preprocessor"
+                            class=""
+                            href="/documentation/java-preprocessor/">
+                          Preprocessor
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-terminology-extractor"
+                            class=""
+                            href="/documentation/java-terminology-extractor/">
+                          TerminoExtractor
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-aligner"
+                            class=""
+                            href="/documentation/java-aligner/">
+                          Aligner
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-navigate-model"
+                            class="active"
+                            href="/documentation/java-navigate-model/">
+                          Navigating the IndexedCorpus
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-io"
+                            class=""
+                            href="/documentation/java-io/">
+                          IO Serialization
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                      Graphical User Interface
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.gui"
+                            class=""
+                            href="/documentation/gui/">
+                          Graphical User Interface
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapseOne">
+                      Theory
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.properties"
+                            class=""
+                            href="/documentation/properties/">
+                          Properties
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.termsuite-pipelines"
+                            class=""
+                            href="/documentation/termsuite-pipelines/">
+                          Pipelines
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.data-model"
+                            class=""
+                            href="/documentation/data-model/">
+                          Data Model
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.terminology-extraction"
+                            class=""
+                            href="/documentation/terminology-extraction/">
+                          Termino Extraction
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.alignment"
+                            class=""
+                            href="/documentation/alignment/">
+                          Alignment
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.post-processing"
+                            class=""
+                            href="/documentation/post-processing/">
+                          Post-processings
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapseOne">
+                      Input/Output Formats
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.json"
+                            class=""
+                            href="/documentation/json/">
+                          JSON Serialization
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.tsv-output"
+                            class=""
+                            href="/documentation/terminology-tsv-output/">
+                          TSV Output
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading7">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapseOne">
+                      Linguistic Resources
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading7">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.resources"
+                            class=""
+                            href="/documentation/resources/">
+                          Linguistic Resources
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.resources-yaml-variants"
+                            class=""
+                            href="/documentation/yaml-variants/">
+                          Variation Rules (YAML)
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.bilingual-dictionary"
+                            class=""
+                            href="/documentation/bilingual-dictionary/">
+                          Bilingual Dictionary
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading8">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapseOne">
+                      Links
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading8">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.developers"
+                            class=""
+                            href="/documentation/developers/">
+                          Developers
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.support"
+                            class=""
+                            href="/documentation/support/">
+                          Support
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8">
+
+      <article class="doc-content">
+        
+<ul id="markdown-toc">
+  <li><a href="#navigating-the-indexedcorpus">Navigating the <em>IndexedCorpus</em></a>    <ul>
+      <li><a href="#what-exactly-is-an-indexedcorpus-">What exactly is an <em>IndexedCorpus</em> ?</a></li>
+      <li><a href="#nativating-the-terminology-with-terminologyservice">Nativating the terminology with <code>TerminologyService</code></a></li>
+      <li><a href="#navigating-the-occurrences">Navigating the occurrences</a></li>
+    </ul>
+  </li>
+  <li><a href="#understanding-the-occurrencestore">Understanding the <em>OccurrenceStore</em></a>    <ul>
+      <li><a href="#types-of-occurrence-stores">Types of occurrence stores</a></li>
+      <li><a href="#running-pipelines-on-custom-occurrence-store">Running pipelines on custom occurrence store</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="navigating-the-indexedcorpus">Navigating the <em>IndexedCorpus</em></h3>
+
+<h4 id="what-exactly-is-an-indexedcorpus-">What exactly is an <em>IndexedCorpus</em> ?</h4>
+
+<p>One interesting feature of TermSuite is its ability to index all terms it extracts from textual corpus. All occurrences of extracted terms are part of the data model.</p>
+
+<p>The number of term occcurrences grows as the input textual corpus gets larger. Because the input corpus can be very big, term occurrences must be managed apart from the <em>Terminology</em>, in an object called the <em>OccurrenceStore</em>.  </p>
+
+<p>The <em>IndexedCorpus</em> is nothing but a container for the <em>Terminology</em> and its <em>OccurrenceStore</em>:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
+<span class="cm"> * Get the indexed corpus (either from a terminology</span>
+<span class="cm"> * extraction pipeline or from &quot;.json&quot; deserialization)</span>
+<span class="cm"> */</span>  
+<span class="n">IndexedCorpus</span> <span class="n">indexedCorpus</span> <span class="o">=</span> <span class="o">...;</span>
+
+<span class="c1">// Get the terms and their variations</span>
+<span class="n">Terminology</span> <span class="n">terminology</span> <span class="o">=</span> <span class="n">indexedCorpus</span><span class="o">.</span><span class="na">getTerminology</span><span class="o">();</span>
+
+<span class="c1">// Get the occurrences</span>
+<span class="n">OccurrenceStore</span> <span class="n">occStore</span> <span class="o">=</span> <span class="n">indexedCorpus</span><span class="o">.</span><span class="na">getOccurrenceStore</span><span class="o">();</span></code></pre>
+</div>
+
+<h4 id="nativating-the-terminology-with-terminologyservice">Nativating the terminology with <code>TerminologyService</code></h4>
+
+<p>If you try to navigate the terms of a terminology directly from the <code>Terminology</code> provided by <em>IndexedCorpus</em>, you might think it has very poor capabilities. Indeed, since version 3, <em>TermSuite</em>’s’ inner representation for terminologies is a graph, <em>ie.</em> a collection of <em>Term</em>s (the nodes) and a collection of <em>Relation</em>s (the vertices), each term and relation having of set of properties. It is very harsh to navigate the information from this raw data model:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="n">Terminology</span> <span class="n">termino</span> <span class="o">=</span> <span class="n">indexedCorpus</span><span class="o">.</span><span class="na">getTerminology</span><span class="o">();</span>
+
+<span class="c1">// Get an sort the terms</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Term</span><span class="o">&gt;</span> <span class="n">sortedTerms</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="n">sortedTerms</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">termino</span><span class="o">.</span><span class="na">getTerms</span><span class="o">().</span><span class="na">values</span><span class="o">());</span>
+<span class="n">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">sortedTerms</span><span class="o">,</span> <span class="n">TermProperty</span><span class="o">.</span><span class="na">SPECIFICITY</span><span class="o">.</span><span class="na">getComparator</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+
+<span class="c1">// navigate through the terms</span>
+<span class="k">for</span><span class="o">(</span><span class="n">Term</span> <span class="nl">term:</span><span class="n">sortedTerms</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%d. %-10s %s%n&quot;</span><span class="o">,</span>
+      <span class="n">term</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">RANK</span><span class="o">),</span>
+      <span class="n">term</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">PATTERN</span><span class="o">),</span>
+      <span class="n">term</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">PILOT</span><span class="o">));</span>
+
+  <span class="c1">// navigation through the variations</span>
+  <span class="k">for</span><span class="o">(</span><span class="n">Relation</span> <span class="nl">variation:</span><span class="n">terminology</span><span class="o">.</span><span class="na">getRelations</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">variation</span><span class="o">.</span><span class="na">getType</span><span class="o">()</span> <span class="o">!=</span> <span class="n">RelationType</span><span class="o">.</span><span class="na">VARIATION</span><span class="o">)</span>
+      <span class="k">continue</span><span class="o">;</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">variation</span><span class="o">.</span><span class="na">getFrom</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">term</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;\t%-25s%-10s %.2f %s%n&quot;</span><span class="o">,</span>
+          <span class="n">variation</span><span class="o">.</span><span class="na">getTo</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">TermProperty</span><span class="o">.</span><span class="na">GROUPING_KEY</span><span class="o">),</span>
+          <span class="n">variation</span><span class="o">.</span><span class="na">getType</span><span class="o">(),</span>
+          <span class="n">variation</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">RelationProperty</span><span class="o">.</span><span class="na">VARIANT_SCORE</span><span class="o">),</span>
+          <span class="n">variation</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">RelationProperty</span><span class="o">.</span><span class="na">VARIATION_RULES</span><span class="o">)</span>
+          <span class="o">);</span>
+
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+
+<p>It is easier and more elegant to navigate the terms and their variants with the help of a <em>TerminologyService</em>:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="n">Terminology</span> <span class="n">termino</span> <span class="o">=</span> <span class="n">indexedCorpus</span><span class="o">.</span><span class="na">getTerminology</span><span class="o">();</span>
+
+<span class="c1">// Get the service</span>
+<span class="n">TerminologyService</span> <span class="n">terminologyService</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">getTerminologyService</span><span class="o">(</span><span class="n">termino</span><span class="o">);</span>
+
+<span class="c1">// Navigate through the terms</span>
+<span class="n">terminologyService</span><span class="o">.</span><span class="na">terms</span><span class="o">(</span><span class="n">TermOrdering</span><span class="o">.</span><span class="na">natural</span><span class="o">()).</span><span class="na">forEach</span><span class="o">(</span><span class="n">t</span> <span class="o">-&gt;</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%d. %-10s %s%n&quot;</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">getRank</span><span class="o">(),</span> <span class="n">t</span><span class="o">.</span><span class="na">getPattern</span><span class="o">(),</span> <span class="n">t</span><span class="o">.</span><span class="na">getPilot</span><span class="o">());</span>
+
+    <span class="c1">// Navigate through the variations</span>
+    <span class="n">t</span><span class="o">.</span><span class="na">variations</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;\t%-25s%-10s %.2f %s%n&quot;</span><span class="o">,</span>
+            <span class="n">v</span><span class="o">.</span><span class="na">getTo</span><span class="o">().</span><span class="na">getGroupingKey</span><span class="o">(),</span>
+            <span class="n">v</span><span class="o">.</span><span class="na">getType</span><span class="o">(),</span>
+            <span class="n">v</span><span class="o">.</span><span class="na">getVariantScore</span><span class="o">(),</span>
+            <span class="n">v</span><span class="o">.</span><span class="na">getVariationRules</span><span class="o">()</span>
+            <span class="o">)</span>
+      <span class="o">);</span>
+  <span class="o">});</span></code></pre>
+</div>
+
+<h4 id="navigating-the-occurrences">Navigating the occurrences</h4>
+
+<p>The <em>OccurrenceStore</em> object provides all access methods needed to retrieve the occurrences of a term and the documents of the corpus they belong to:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="n">Term</span> <span class="n">term</span> <span class="o">=</span> <span class="n">terminology</span><span class="o">.</span><span class="na">getTerms</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;nn: wind energy&quot;</span><span class="o">);</span>
+
+<span class="c1">// Get all documents in which the term &quot;nn: wind energy&quot; occurs</span>
+<span class="n">store</span><span class="o">.</span><span class="na">getDocuments</span><span class="o">(</span><span class="n">term</span><span class="o">);</span>
+
+<span class="c1">// Get all documents in which the term &quot;nn: wind energy&quot; occurs</span>
+<span class="k">for</span><span class="o">(</span><span class="n">TermOccurrence</span> <span class="nl">o:</span><span class="n">store</span><span class="o">.</span><span class="na">getOccurrences</span><span class="o">(</span><span class="n">term</span><span class="o">))</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;Term %s has one occurrence in document %s at [%d,%d]%n&quot;</span><span class="o">,</span>
+      <span class="n">term</span><span class="o">.</span><span class="na">getGroupingKey</span><span class="o">(),</span>
+      <span class="n">o</span><span class="o">.</span><span class="na">getSourceDocument</span><span class="o">().</span><span class="na">getUrl</span><span class="o">(),</span>
+      <span class="n">o</span><span class="o">.</span><span class="na">getBegin</span><span class="o">(),</span>
+      <span class="n">o</span><span class="o">.</span><span class="na">getEnd</span><span class="o">());</span></code></pre>
+</div>
+
+<p><code>OccurrenceStore</code> also provides service method for managing all <em>forms</em> of a term:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// Get all forms of term &quot;nn: wind energy&quot;</span>
+<span class="k">for</span><span class="o">(</span><span class="n">Form</span> <span class="nl">form:</span><span class="n">store</span><span class="o">.</span><span class="na">getForms</span><span class="o">(</span><span class="n">term</span><span class="o">))</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">form</span><span class="o">.</span><span class="na">getText</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="n">form</span><span class="o">.</span><span class="na">getCount</span><span class="o">());</span></code></pre>
+</div>
+
+<h3 id="understanding-the-occurrencestore">Understanding the <em>OccurrenceStore</em></h3>
+
+<h4 id="types-of-occurrence-stores">Types of occurrence stores</h4>
+
+<p>Depending on the size of the input corpus, the number of term occurrences to manage can be too big to be kept in memory. That is why there are three different implementation of an occurrence store:</p>
+
+<ol>
+  <li><code>MemoryOccurrenceStore</code>, which keeps all occurrences in memory,</li>
+  <li><code>XodusOccurrenceStore</code>, which stores the occurrences on the file system,</li>
+  <li><code>EmptyOccurrenceStore</code>, which does not store the occurrences.</li>
+</ol>
+
+<p>The type of <em>OccurrenceStore</em> to use is set by the user at object creation from <code>TermSuiteFactory</code>:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// creates an empty occurrence store</span>
+<span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createEmptyOccurrenceStore</span><span class="o">(</span><span class="n">Lang</span><span class="o">.</span><span class="na">EN</span><span class="o">);</span>
+
+<span class="c1">// creates a memory occurrence store</span>
+<span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createMemoryOccurrenceStore</span><span class="o">(</span><span class="n">Lang</span><span class="o">.</span><span class="na">EN</span><span class="o">);</span>
+
+<span class="c1">// creates a xodus occurrence store</span>
+<span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createPersitentOccurrenceStore</span><span class="o">(</span><span class="s">&quot;my-occurrences.store&quot;</span><span class="o">,</span> <span class="n">Lang</span><span class="o">.</span><span class="na">EN</span><span class="o">);</span></code></pre>
+</div>
+
+<h4 id="running-pipelines-on-custom-occurrence-store">Running pipelines on custom occurrence store</h4>
+
+<p>By default, <a href="/documentation/java-preprocessor/">running the preprocessor</a> would create an <em>IndexedCorpus</em> with a <em>memory</em> occurrence store:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="n">IndexedCorpus</span> <span class="n">indexedCorpus</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">preprocessor</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">setTaggerPath</span><span class="o">(</span><span class="s">&quot;path/to/tagger&quot;</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">toIndexedCorpus</span><span class="o">(</span><span class="n">txtCorpus</span><span class="o">,</span> <span class="mi">500000</span><span class="o">);</span></code></pre>
+</div>
+
+<p>You can customize this behaviour and run the pipeline on a custom occurrence store as follows:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// creates an IndexedCorpus with persistent occurrence store</span>
+<span class="n">IndexedCorpus</span> <span class="n">corpus</span> <span class="o">=</span> <span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createIndexedCorpus</span><span class="o">(</span>
+    <span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createTerminology</span><span class="o">(</span><span class="n">Lang</span><span class="o">.</span><span class="na">EN</span><span class="o">,</span> <span class="s">&quot;My Termino&quot;</span><span class="o">),</span>
+    <span class="n">TermSuiteFactory</span><span class="o">.</span><span class="na">createPersitentOccurrenceStore</span><span class="o">(</span><span class="s">&quot;my-occurrences.store&quot;</span><span class="o">,</span> <span class="n">Lang</span><span class="o">.</span><span class="na">EN</span><span class="o">));</span>
+
+<span class="c1">// the corpus indexed corpus can be passed to the Preprocessor</span>
+<span class="n">IndexedCorpus</span> <span class="n">indexedCorpus</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">preprocessor</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">setTaggerPath</span><span class="o">(</span><span class="s">&quot;path/to/tagger&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">toIndexedCorpus</span><span class="o">(</span><span class="n">txtCorpus</span><span class="o">,</span> <span class="mi">500000</span><span class="o">,</span> <span class="n">corpus</span><span class="o">);</span></code></pre>
+</div>
+
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>About</h4>
+        <p>TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>
+          <a href="/contact">Contact</a>
+        </h4>
+        <p class="text-center">
+            <a href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+        </p>
+        Team
+        <ul>
+
+          
+            <li><a href="https://github.com/dcram"><p>Damien Cram</p>
+</a></li>
+          
+            <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>
+</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="/contact">Newsletter</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://bintray.com/termsuite/generic/termsuite-ui">Bintray</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.8/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.8/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© University of Nantes 2015-2017</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>

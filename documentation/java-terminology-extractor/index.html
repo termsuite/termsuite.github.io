@@ -293,6 +293,15 @@
                     
                       <hr /> 
                       <div class="docitem">
+                        <a title="title.java-navigate-model"
+                            class=""
+                            href="/documentation/java-navigate-model/">
+                          Navigating the IndexedCorpus
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
                         <a title="title.java-io"
                             class=""
                             href="/documentation/java-io/">
@@ -327,7 +336,7 @@
                       <div class="docitem">
                         <a title="title.gui"
                             class=""
-                            href="/gui/">
+                            href="/documentation/gui/">
                           Graphical User Interface
                         </a>
                       </div>
@@ -557,6 +566,93 @@
 
       <article class="doc-content">
         
+<ul id="markdown-toc">
+  <li><a href="#prerequesites">Prerequesites</a></li>
+  <li><a href="#extracting-terminology">Extracting terminology</a></li>
+  <li><a href="#configuring-terminology-extraction">Configuring terminology extraction</a></li>
+  <li><a href="#debugging-terminology-extraction">Debugging terminology extraction</a></li>
+  <li><a href="#getting-statistics-of-pipeline-executions">Getting statistics of pipeline executions</a></li>
+</ul>
+
+<h3 id="prerequesites">Prerequesites</h3>
+
+<ol>
+  <li>Java 8</li>
+</ol>
+
+<h3 id="extracting-terminology">Extracting terminology</h3>
+
+<p>Say <code>corpus</code> is the <em>IndexedCorpus</em> object produced by the <a href="/documentation/java-preprocessor/">NLP preprocessings</a> (see <a href="/documentation/termsuite-pipelines/">pipelines</a> for explanations), the terminology extraction pipeline can launched with Java API with:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="n">TermSuite</span><span class="o">.</span><span class="na">terminoExtractor</span><span class="o">().</span><span class="na">execute</span><span class="o">(</span><span class="n">corpus</span><span class="o">);</span></code></pre>
+</div>
+
+<p>The  <code>TermSuite.terminoExtractor()</code> creates a new <em>TerminoExtractor</em> object, which is a builder for the configuration of the terminology extraction pipeline. the method <code>execute()</code> runs this pipeline on the parameter corpus. After the pipeline has executed, the parameter <code>corpus</code> contains many term variations and other morphological informations and cleanings.</p>
+
+<h3 id="configuring-terminology-extraction">Configuring terminology extraction</h3>
+
+<p>The terminology extraction process can be finely tuned by passing an <em>ExtractorOptions</em> options object to <em>TerminoExtractor</em>.</p>
+
+<p>You can create a language-independant <em>ExtractorOptions</em> object from scratch, but it is not advised:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// !!! Not advised !!!</span>
+<span class="n">ExtractorOptions</span> <span class="n">extractorOptions</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ExtractorOptions</span><span class="o">();</span></code></pre>
+</div>
+
+<p>But, it is better to creates a new <em>ExtractorOptions</em> object by cloning the language defaults:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// Clones the default configuration object for given language</span>
+<span class="n">ExtractorOptions</span> <span class="n">extractorOptions</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">getDefaultExtractorConfig</span><span class="o">(</span><span class="n">lang</span><span class="o">);</span></code></pre>
+</div>
+
+<p>Full example:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// Clones the default configuration object for given language</span>
+<span class="n">ExtractorOptions</span> <span class="n">extractorOptions</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">getDefaultExtractorConfig</span><span class="o">(</span><span class="n">lang</span><span class="o">);</span>
+
+<span class="c1">// deactivates post-processing</span>
+<span class="n">extractorOptions</span><span class="o">.</span><span class="na">getPostProcessorConfig</span><span class="o">().</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+
+<span class="c1">// activates semantic variant detection</span>
+<span class="n">extractorOptions</span><span class="o">.</span><span class="na">getGathererConfig</span><span class="o">().</span><span class="na">setSemanticEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">// runs the pipeline</span>
+<span class="n">TermSuite</span><span class="o">.</span><span class="na">terminoExtractor</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">setOptions</span><span class="o">(</span><span class="n">extractorOptions</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">corpus</span><span class="o">);</span></code></pre>
+</div>
+
+<h3 id="debugging-terminology-extraction">Debugging terminology extraction</h3>
+
+<p>If you need to investigate why a term has came out of the terminology extraction process or why another term has not came out of the terminology extraction process, you can set a history to <em>TerminoExtractor</em>. The following example watch the term “wind energy”</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="n">TermHistory</span> <span class="n">history</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TermHistory</span><span class="o">();</span>
+
+<span class="c1">// runs the pipeline</span>
+<span class="n">TermSuite</span><span class="o">.</span><span class="na">terminoExtractor</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">setHistory</span><span class="o">(</span><span class="n">history</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">watch</span><span class="o">(</span><span class="s">&quot;wind energy&quot;</span><span class="o">)</span> <span class="c1">// watch the term history</span>
+      <span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">corpus</span><span class="o">);</span>
+
+<span class="c1">// Prints all events impacting term &quot;wind energy&quot;</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">history</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="s">&quot;wind energy&quot;</span><span class="o">));</span></code></pre>
+</div>
+
+<h3 id="getting-statistics-of-pipeline-executions">Getting statistics of pipeline executions</h3>
+
+<p>The <code>execute()</code> method always returns some stats about pipeline execution as an instance of type <em>PipelineStats</em>:</p>
+
+<div class="highlight">
+  <pre><code class="language-java" data-lang="java"><span class="c1">// runs the pipeline</span>
+<span class="n">PipelineStats</span> <span class="n">stats</span> <span class="o">=</span> <span class="n">TermSuite</span><span class="o">.</span><span class="na">terminoExtractor</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">corpus</span><span class="o">);</span></code></pre>
+</div>
+
 
       </article>
     </div>
@@ -574,7 +670,7 @@
     <div class="row">
       <div class="col-sm-3">
         <h4>About</h4>
-        <p>TermSuite is a Java UIMA-based toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
+        <p>TermSuite is a toolbox for <strong>terminology extraction</strong> and <strong>multilingual term alignment</strong>.</p>
       </div>
       <div class="col-sm-1"></div>
       <div class="col-sm-4">
@@ -588,7 +684,7 @@
         <ul>
 
           
-            <li><a href="https://github.com/pompadour"><p>Damien Cram</p>
+            <li><a href="https://github.com/dcram"><p>Damien Cram</p>
 </a></li>
           
             <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>

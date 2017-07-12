@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>
+      
+        
+          TermSuite
+        
+
+      
+    </title>
+
+    <meta name="description" content="excerpt.gui" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" >
+
+    <!-- Optional theme -->
+    <!-- Theme saved here: https://gist.github.com/00f325b64a30d6e4c008 -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css" >
+
+    <link rel="canonical" href="http://termsuite.github.io/documentation/gui/">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+
+
+  <body>
+    <div id="wrap">
+        <a href="https://github.com/termsuite/termsuite-core">
+  <img
+    style="position: absolute; top: 0; left: 0; border: 0;z-index: 2;"
+    title="Cloner TermSuite sur GitHub."
+    src="/img/forkme.png"
+    alt="Cloner TermSuite sur GitHub."></a>
+
+<header>
+
+  <nav class="navbar navbar-default">
+    <ul  class="nav navbar-nav navbar-right navright">
+        <li class="" >
+          <a class="" href="/fr/contact">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Lettre d'information
+          </a>
+        </li>
+    </ul>
+
+
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/fr/">
+          <img alt="Brand" height="87" src="/img/logo-termsuite-txt.png">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/fr/getting-started">Démarrer</a></li>
+          <li class=""><a href="/fr/documentation/introduction/" >Documentation</a></li>
+          <li class=""><a href="/fr/#publications" >Publications</a></li>
+          <li id="about" class="dropdown">
+            <a href="/fr/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">À propos <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/fr/changelog">Journal des mises à jour</a></li>
+              <li><a href="/fr/contact">Contact</a></li>
+              <li><a href="/fr/documentation/support">Assistance</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/termsuite/termsuite-core" target="blank">Voir sur Github</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/fr/about">À propos de TermSuite</a></li>
+              <li><a href="/fr/blog">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul  class="nav navbar-nav navbar-right">
+            <li class="" ><a href="/documentation/gui/" >
+            <img class="flag" src="/img/flags/United-Kingdom.png" alt="English" title="Visit site in english">
+            </a></li>
+            <li class="active" ><a href="/fr/documentation/gui/" >
+            <img class="flag" src="/img/flags/France.png" alt="Français" title="Visiter le site en français">
+            </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+        <div class="container">
+
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8">
+    <header class="page-header">
+      <h1>Documentation <small>Démarrer avec l'interface graphique de TermSuite [Tutoriel]</small></h1>
+    </header>
+    <div class="share-page lead">
+    <a class="btn btn-social-icon btn-twitter"
+        href="https://twitter.com/intent/tweet?text=title.gui&url=http://termsuite.github.io/documentation/gui/&via=&related="
+        rel="nofollow" target="_blank" title="Partager sur Twitter">
+      <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook"
+      href="https://facebook.com/sharer.php?u=http://termsuite.github.io/documentation/gui/" rel="nofollow" target="_blank" title="Partager sur Facebook"><span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-google"
+      href="https://plus.google.com/share?url=http://termsuite.github.io/documentation/gui/" rel="nofollow" target="_blank" title="Partager sur Google+"><span class="fa fa-google"></span>
+    </a>
+    <a class="btn btn-social-icon btn-linkedin"
+      href="http://www.linkedin.com/shareArticle?mini=true&url=http://termsuite.github.io/documentation/gui/&title=title.gui&summary=excerpt.gui&source=http://termsuite.github.io" rel="nofollow" target="_blank" title="Partager sur LinkedIn"><span class="fa fa-linkedin"></span>
+    </a>
+    <a class="btn btn-social-icon btn-reddit"
+      href="http://www.reddit.com/submit?url=http://termsuite.github.io/documentation/gui/&title=title.gui" rel="nofollow" target="_blank" title="Partager sur Reddit"><span class="fa fa-reddit"></span>
+    </a>
+</div>
+
+  </div>
+  <div class="row">
+    <div id="docmenu" class="col-md-3">
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                      Démarrer
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.introduction"
+                            class=""
+                            href="/fr/documentation/introduction/">
+                          Présentation
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.getting-started-cmd"
+                            class=""
+                            href="/fr/getting-started/">
+                          Démarrer avec TermSuite
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.postagger"
+                            class=""
+                            href="/fr/documentation/pos-tagger-lemmatizer/">
+                          Installer un étiquetteur grammatical
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                      API ligne de commande
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="menu-title.preprocessor-cli"
+                            class=""
+                            href="/fr/documentation/preprocessor-cli/">
+                          PreprocessorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menu-title.terminology-extractor-cli"
+                            class=""
+                            href="/fr/documentation/terminology-extractor-cli/">
+                          TerminologyExtractorCLI
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="menu-title.aligner-cli"
+                            class=""
+                            href="/fr/documentation/aligner-cli/">
+                          AlignerCLI
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                      API Java
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.java-preprocessor"
+                            class=""
+                            href="/fr/documentation/java-preprocessor/">
+                          Preprocessor
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-terminology-extractor"
+                            class=""
+                            href="/fr/documentation/java-terminology-extractor/">
+                          TerminoExtractor
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-aligner"
+                            class=""
+                            href="/fr/documentation/java-aligner/">
+                          Aligner
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-navigate-model"
+                            class=""
+                            href="/fr/documentation/java-navigate-model/">
+                          Naviguer dans IndexedCorpus
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.java-io"
+                            class=""
+                            href="/fr/documentation/java-io/">
+                          Sérialisation/Désérialisation (IO)
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                      Interface graphique
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.gui"
+                            class="active"
+                            href="/fr/documentation/gui/">
+                          Interface graphique
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapseOne">
+                      Théorie
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.properties"
+                            class=""
+                            href="/fr/documentation/properties/">
+                          Propriétés
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.termsuite-pipelines"
+                            class=""
+                            href="/fr/documentation/termsuite-pipelines/">
+                          Chaînes de traitement
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.data-model"
+                            class=""
+                            href="/fr/documentation/data-model/">
+                          Modèle de données
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.terminology-extraction"
+                            class=""
+                            href="/fr/documentation/terminology-extraction/">
+                          Extraction terminologique
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.alignment"
+                            class=""
+                            href="/fr/documentation/alignment/">
+                          Alignement
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.post-processing"
+                            class=""
+                            href="/fr/documentation/post-processing/">
+                          Post-traitements
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapseOne">
+                      Formats Entrées/Sorties
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.json"
+                            class=""
+                            href="/fr/documentation/json/">
+                          Sérialisation JSON
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.tsv-output"
+                            class=""
+                            href="/fr/documentation/terminology-tsv-output/">
+                          Export TSV
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading7">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapseOne">
+                      Ressources
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading7">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.resources"
+                            class=""
+                            href="/fr/documentation/resources/">
+                          Ressources linguistiques
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.resources-yaml-variants"
+                            class=""
+                            href="/fr/documentation/yaml-variants/">
+                          Règles de variation YAML
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.bilingual-dictionary"
+                            class=""
+                            href="/fr/documentation/bilingual-dictionary/">
+                          Bilingual Dictionary
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+        
+        
+
+          
+            
+              <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="heading8">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapseOne">
+                      Liens
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading8">
+                  <div class="panel-body">
+                    
+                      
+                      <div class="docitem">
+                        <a title="title.developers"
+                            class=""
+                            href="/fr/documentation/developers/">
+                          Développeurs (Gradle / Maven)
+                        </a>
+                      </div>
+                    
+                      <hr /> 
+                      <div class="docitem">
+                        <a title="title.support"
+                            class=""
+                            href="/fr/documentation/support/">
+                          Assistance
+                        </a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+      
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-8">
+
+      <article class="doc-content">
+        
+<div class="alert alert-warning" role="alert">
+  <p><strong>Désolé ! </strong>Cette page n’existe pas en langue française. Veuillez vous référer à la <a href="/documentation/gui/"> version anglaise</a>.</p>
+</div>
+
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+    <div id="footer">
+      <footer>
+<hr />
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <h4>À propos</h4>
+        <p>TermSuite est un outil d'<strong>extraction terminologique</strong> et d'<strong>alignment multilingue de termes</strong>.</p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+        <h4>
+          <a href="/fr/contact">Contact</a>
+        </h4>
+        <p class="text-center">
+            <a href="mailto:termsuite@univ-nantes.fr">termsuite@univ-nantes.fr</a>
+        </p>
+        Équipe
+        <ul>
+
+          
+            <li><a href="https://github.com/dcram"><p>Damien Cram</p>
+</a></li>
+          
+            <li><a href="http://bdaille.com/"><p>Béatrice Daille</p>
+</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>Liens</h4>
+        <ul>
+          <li>
+            <a href="/fr/contact">Lettre d'information</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core">Github</a>
+          </li>
+          <li>
+            <a href="https://bintray.com/termsuite/generic/termsuite-ui">Bintray</a>
+          </li>
+          <li>
+            <a href="https://github.com/termsuite/termsuite-core/issues">Github issues</a>
+          </li>
+          <li>
+            <a href="http://www.javadoc.io/doc/fr.univ-nantes.termsuite/termsuite-core/3.0.8/">Javadoc</a>
+          </li>
+          <li>
+            <a href="https://repo1.maven.org/maven2/fr/univ-nantes/termsuite/termsuite-core/3.0.8/">Maven</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="copyright" class="row">
+      <p class="text-center">© Université de Nantes 2015-2017</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>
