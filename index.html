@@ -11,39 +11,39 @@ layout: default
           {% t index.main_features %}
         </p>
 
-          <h4>{% t index.language_support %}</h2>
+          <h4 class="vspace50">{% t index.language_support %}</h4>
           {% for l in site.data.languages %}
             {% if l[1].support == 'global.good' %}
               <img src="{{l[1].path}}" alt="{% t l[1].name %}" title="{% t l[1].name %}">
             {% endif %}
           {% endfor %}
 
-
-          <p>{% t index.current_version %} {{site.termsuite.version}} <a href="/changelog">{% t index.see_changelog %}</a></p>
+          <p class="vspace50">
+            <a href="#command-line">{% t index.command_line_api_title %}</a> - <a href="#gui">{% t index.gui_title %}</a> - <a href="#java-api">{% t index.java_api_title %}</a>
+          </p>
 
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-5 text-center">
-
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Qc9ZkYZVP_0" frameborder="0" allowfullscreen></iframe>
-
       </div>
 
 
       </div>
       <div class="col-md-1"></div>
     </div>
+    <p class="text-center"><em>{% t index.current_version %} {{site.termsuite.version}} </em><a href="/changelog">{% t index.see_changelog %}</a></p>
 
     <div class="row greyed">
       <div class="container">
         <div class="col-md-4 text-center">
-          <h3>{% t index.get_it_running %} !</h3>
+          <h4>{% t index.get_it_running %} !</h4>
           <p>{% t index.get_it_running_desc %}</p>
           <p><a class="btn btn-danger btn-lg" href="{{site.baseurl}}/getting-started" role="button">{% t global.getting_started %}</a></p>
         </div>
 
         <div class="col-md-4 text-center">
-          <h3>{% t global.documentation %}</h3>
+          <h4>{% t global.documentation %}</h4>
           <p>{% t index.documentation_desc %}</p>
           <p>
             <a class="btn btn-primary btn-lg" href="{{site.baseurl}}/documentation/introduction" role="button">{% t global.user_manual %}</a>
@@ -52,7 +52,7 @@ layout: default
         </div>
 
         <div class="col-md-4 text-center">
-          <h3>{% t global.developers %}</h3>
+          <h4>{% t global.developers %}</h4>
           <p>{% t index.developers_desc %}</p>
           <p><a class="btn btn-default btn-lg" href="{{site.github}}" role="button">{% t global.view_on_github %}</a><a class="btn" href="{{site.baseurl}}/documentation/developers/" role="button">Maven / Gradle</a></p>
         </div>
