@@ -75,7 +75,7 @@ index:
   features_overview: Features Overview
   language_support: Language Support
   java_api_title: Java API
-  java_api_overview: Embed TermSuite within your Java applications.
+  java_api_overview: Embed TermSuite in your Java application and get access to all functionalities and full control.
   command_line_api_title: Command Line
   command_line_api_overview: NLP preprocessing, terminology extraction, and multilingual alignment from command line.
   gui_title: Graphical User Interface
