@@ -62,13 +62,13 @@ layout: default
 
     <div id="command-line" class="row">
       <div class="container">
-        <h3 class="text-center">{% t index.command_line_api_title %}</h2>
-        <div class="col-md-7 text-left">
+        <h3 class="text-center">{% t index.command_line_api_title %}</h3>
+        <div class="col-md-6 text-left">
           {% include command-line-api-excerpt.md %}
         </div>
         <div class="col-md-1"></div>
 
-        <div class="col-md-4 text-center">
+        <div class="col-md-5 text-center">
           <p class="lead">{% t index.command_line_api_overview %}</p>
 
           <div class="vspace50">
@@ -77,10 +77,14 @@ layout: default
               target="blank" role="button">
               termsuite-core-{{site.termsuite.version}}.jar
             </a>
-            <a href="{{site.base_url}}/documentation/terminology-extractor-cli/"
-              role="button">
-              Documentation
-            </a>
+
+            <p class="vspace50">
+              <a href="{{site.base_url}}/documentation/preprocessor-cli/">{% t index.nlp_preprocessings %}</a>
+              -
+              <a href="{{site.base_url}}/documentation/terminology-extractor-cli/">{% t index.terminology_extraction %}</a>
+              -
+              <a href="{{site.base_url}}/documentation/aligner-cli/">{% t index.alignment %}</a>
+            </p>
           </div>
         </div>
       </div>
@@ -89,7 +93,7 @@ layout: default
     <div id="java-api" class="row">
       <div class="container">
         <h3 class="text-center">{% t index.java_api_title %}</h3>
-        <div class="col-md-4 text-center">
+        <div class="col-md-5 text-center">
 
           <p class="lead">{% t index.java_api_overview %}</p>
 
@@ -99,14 +103,17 @@ layout: default
               target="blank" role="button">
               termsuite-core-{{site.termsuite.version}}.jar
             </a>
-            <a href="{{site.base_url}}/documentation/java-preprocessor/"
-              role="button">
-              Documentation
-            </a>
+            <p class="vspace50">
+              <a href="{{site.base_url}}/documentation/java-preprocessor/">{% t index.nlp_preprocessings %}</a>
+              -
+              <a href="{{site.base_url}}/documentation/java-terminology-extractor/">{% t index.terminology_extraction %}</a>
+              -
+              <a href="{{site.base_url}}/documentation/java-aligner/">{% t index.alignment %}</a>
+            </p>
           </div>
         </div>
         <div class="col-md-1"></div>
-        <div class="col-md-7 text-left">
+        <div class="col-md-6 text-left">
           {% include java-api-excerpt.md %}
         </div>
       </div>
@@ -116,22 +123,28 @@ layout: default
 
     <div id="gui" class="row">
       <div class="container">
-        <h3 class="text-center">{% t index.gui_title %}</h2>
-        <div class="col-md-7 text-center">
-          <img width=560 alt="termsuite-ui screenshot" src="/img/termsuite-ui.png" title="A screenshot of TermSuite graphical user interface">
+        <h3 class="text-center">{% t index.gui_title %}</h3>
+        <div class="col-md-6 text-center">
+          <a href="{{site.base_url}}/documentation/gui/">
+            <img width=560 alt="termsuite-ui screenshot" src="/img/termsuite-ui.png" title="A screenshot of TermSuite graphical user interface">
+          </a>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 text-center">
           <p class="lead">
             {% t index.gui_overview %}
-            <a href="{{site.base_url}}/documentation/gui/"
-                  role="button">
-                  {% t index.gui_tutorial %}
-                </a></p>
+          </p>
 
           <h4 class="vspace50">{% t index.downloads %}</h4>
 
             {% include download_gui.html %}
 
+            <p class="vspace50">
+              <a href="{{site.base_url}}/documentation/gui/"
+                    role="button">
+                    {% t index.gui_tutorial %}
+              </a>
+            </p>
         </div>
       </div>
     </div>

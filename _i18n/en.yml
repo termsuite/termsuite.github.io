@@ -80,8 +80,11 @@ index:
   command_line_api_overview: NLP preprocessing, terminology extraction, and multilingual alignment from command line.
   gui_title: Graphical User Interface
   gui_overview: A graphical user interface for terminology extraction, multilingual alignment, in-context term occurrence viewer, linguistic resource editor.
-  gui_tutorial: Tutorial
+  gui_tutorial: Tutorial for TermSuite Graphical User Interface
   downloads: Download
+  nlp_preprocessings: NLP Preprocessing
+  terminology_extraction: Terminology Extraction
+  alignment: Alignment
 
 contact:
   description: TermSuite is a research project.
