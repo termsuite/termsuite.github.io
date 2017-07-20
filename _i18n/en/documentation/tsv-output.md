@@ -1,14 +1,21 @@
 
-TSV (Tab-Separated Values) is a human-readable and easy to reuse format (Calc, Excel, R, or any program supporting CSV import) for terminology export. The terminology TSV output file produced by TermSuite contains all relevant information contained in a terminology:
+TSV (Tab-Separated Values) is a human-readable format that is easy to reuse (Calc, Excel, R, or any program supporting CSV import) for terminology exportation. The terminology TSV output file produced by TermSuite contains all relevant information contained in a terminology:
 
  * the sorted list of all terms it contains,
  * the sorted list of variants of each terms,
  * the values of [terms' and variants' properties](/documentation/properties/).  
 
-
-
 * TOC
 {:toc}
+
+### Exporting a terminology to TSV
+
+To produce a `tsv` file out of a terminology with TermSuite, use:
+
+ * option [`--tsv`](/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-tsv) if you are operating with the [command line](/documentation/terminology-extractor-cli/),
+ * *TsvExporter* if you are operating  with the [Java API](/java-io/#tsv),
+ * *Export to TSV...* from the menu of the terminology editor if you are operating  with the [graphical user interface of TermSuite](/documentation/gui/),
+
 
 ### Understanding TSV output
 
