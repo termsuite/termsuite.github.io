@@ -30,7 +30,7 @@ Preprocessing is the process of transforming a text, i.e. a *String* data, into 
 
 ![TermSuite preprocessor pipeline](/img/pipeline-preprocessor.png)
 
-The framework used by TermSuite for its NLP pipeline is [UIMA](https://uima.apache.org/). See [TermSuite UIMA Type System](/documentation/data-model/#type-system) to get an idea on how the tokens (UIMA annotations) are modelled within TermSuite.
+The framework used by TermSuite for its NLP pipeline is [UIMA](https://uima.apache.org/). See [TermSuite UIMA Type System]({{site.baseurl}}/documentation/data-model/#type-system) to get an idea on how the tokens (UIMA annotations) are modelled within TermSuite.
 
 
 ##### Word tokenizer
@@ -48,7 +48,7 @@ POS tagging and lemmatizing are often performed together in the same module. The
  1. [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/), (default)
  2. [Mate](http://www.ims.uni-stuttgart.de/forschung/ressourcen/werkzeuge/matetools.html).
 
-These bricks need to be installed apart from TermSuite. See [how to install POS tagger/lemmatizer](/documentation/postagger/) in TermSuite.
+These bricks need to be installed apart from TermSuite. See [how to install POS tagger/lemmatizer]({{site.baseurl}}/documentation/postagger/) in TermSuite.
 
 For TreeTagger:
 
@@ -98,13 +98,13 @@ The *importation* consists in iterating on all spotted term occurrences of all d
  * `nn: rotor blade`: possible forms of spotted occurrences for this term could be *rotor blade*, *rotor blades*, etc.
  * `npn: energy of wind`: possible forms of spotted occurrences for this term could be *energy of wind*, *energy of the wind*. As you can see, determiners like *the* are ignored when it comes to grouping occurrences under the same term pattern.
 
-With [command line API](/documentation/command-line-api), this importation phase between preprocessing and terminology extraction is operated automatically either:
+With [command line API]({{site.baseurl}}/documentation/command-line-api), this importation phase between preprocessing and terminology extraction is operated automatically either:
 
  1. at the end of the preprocessing phase when the user launches the `PreprocessorCLI` script with option `--json PATH`,
  2. or at the beginning of ther terminology extraction phase when the user launches the `TerminologyExtractorCLI` script with either option `--from-prepared-corpus PATH`, meaning that *PATH* points to a directory containing prepared documents files (`*.xmi` or `*.json`) that are the output of `PreprocessorCLI` when run with option `--xmi-anno PATH` or `--json-anno PATH`.   
  3. Or at the middle of the preprocessing+extraction phase when the user launches the `TerminologyExtractorCLI` with option `--from-text-corpus PATH`, meaning that TermSuite first runs a preprocessor internally, then import spotted occurrences to a terminology, and finally runs the terminology extraction process on that terminology.
 
-With [Java API](/documentation/java-api), the importation phase can also be performed manually.
+With [Java API]({{site.baseurl}}/documentation/java-api), the importation phase can also be performed manually.
 
 
 #### Step 2: Terminology extraction
@@ -123,7 +123,7 @@ The *Preparator* operates a series of simple actions on the terminology that are
 
  * validition of the input terminology,
  * computation of some term properties, including *specificity*, *lemma*, *pilot*, *document frequency*, *swtSize*,
- * computation of some term relations, including *extensions*, (see [Terminology Data Model](/documentation/data-model)).
+ * computation of some term relations, including *extensions*, (see [Terminology Data Model]({{site.baseurl}}/documentation/data-model)).
 
 {% termsuite_module title: "Terminology Preparator", source: "https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/prepare/TerminologyPreparator.java", GeneralLanguageResource: "https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-general-language.txt" %}
 
@@ -141,7 +141,7 @@ The *Pre-gathering cleaner* is a hook allowing the user to configure a terminolo
 
 {% termsuite_module title: "TerminologyCleaner", source: "https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/cleaner/TerminologyCleaner.java" %}
 
-See `--pre-filter-*` options of [command line API](/documentation/terminology-extractor-cli/) in order to configure the pre-gathering filter.
+See `--pre-filter-*` options of [command line API]({{site.baseurl}}/documentation/terminology-extractor-cli/) in order to configure the pre-gathering filter.
 
 ##### Morphological Splitter
 {:id=morphological-splitter}
@@ -211,7 +211,7 @@ The *Post-gathering cleaner* is a hook allowing the user to configure a terminol
 
 {% termsuite_module title: "TerminologyCleaner", source: "https://github.com/termsuite/termsuite-core/blob/master/src/main/java/fr/univnantes/termsuite/engines/cleaner/TerminologyCleaner.java" %}
 
-See `--post-filter-*` options of [command line API](/documentation/terminology-extractor-cli/) in order to configure the pre-gathering filter.
+See `--post-filter-*` options of [command line API]({{site.baseurl}}/documentation/terminology-extractor-cli/) in order to configure the pre-gathering filter.
 
 ##### PostProcessor
 {:id=post-processor}
@@ -240,11 +240,11 @@ Finding the best translation of a domain-specific *source term* into a *target* 
 
 ![TermSuite aligner data flow](/img/flow-aligner.png)
 
-Bilingual alignement of *source term* in TermSuite is the result of a multi-part and hierarchical algorithm. The *source term* can be of several types: single-word term, multi-word term, compound term, neoclassical term, etc. Depending on this type, the [alignment method](/documentation/alignment/) invoked by TermSuite is not the same.
+Bilingual alignement of *source term* in TermSuite is the result of a multi-part and hierarchical algorithm. The *source term* can be of several types: single-word term, multi-word term, compound term, neoclassical term, etc. Depending on this type, the [alignment method]({{site.baseurl}}/documentation/alignment/) invoked by TermSuite is not the same.
 
 See also:
 
- * [aligner command line API](/documentation/aligner-cli/) to learn how to launch bilingual alignment,
- * [how to extract an alignment-ready terminology with TermSuite](/documentation/terminology-extractor-cli/#extract-a-terminology-ready-for-alignment),
- * [theoritical insights](/documentation/alignment/) on different bilingual alignment methods used by the algorithm,
- * an example of [bilingual dictionary](/documentation/bilingual-dictionary/) required for alignment.
+ * [aligner command line API]({{site.baseurl}}/documentation/aligner-cli/) to learn how to launch bilingual alignment,
+ * [how to extract an alignment-ready terminology with TermSuite]({{site.baseurl}}/documentation/terminology-extractor-cli/#extract-a-terminology-ready-for-alignment),
+ * [theoritical insights]({{site.baseurl}}/documentation/alignment/) on different bilingual alignment methods used by the algorithm,
+ * an example of [bilingual dictionary]({{site.baseurl}}/documentation/bilingual-dictionary/) required for alignment.

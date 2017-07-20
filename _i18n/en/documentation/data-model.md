@@ -4,13 +4,13 @@
 ### TermSuite UIMA Type System
 {:id="type-system"}
 
-The *Type System* is the schema of UIMA annotations contained in the CAS (*Common Abstract Structure*) passed to all analysis engines of the UIMA pipeline. This section presents the *Type System* used by [TermSuite Preprocessor pipeline](/documentation/termsuite-pipelines/#preprocessor), i.e. our data model at Step 1 of terminology extraction.
+The *Type System* is the schema of UIMA annotations contained in the CAS (*Common Abstract Structure*) passed to all analysis engines of the UIMA pipeline. This section presents the *Type System* used by [TermSuite Preprocessor pipeline]({{site.baseurl}}/documentation/termsuite-pipelines/#preprocessor), i.e. our data model at Step 1 of terminology extraction.
 
 There are three annotation types in TermSuite. See [TermSuite Type System XML file](https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/TermSuite_TS.xml) for an up-to-date view of the type system.
 
  * [`SourceDocumentInformation`](#SourceDocumentInformation): exactly one per document, i.e. per CAS, containing all metadata needed about the current textual document being processed,
  * [`WordAnnotation`](#WordAnnotation): a word, or a punctuation element,
- * [`TermOccAnnotation`](#TermOccAnnotation): a term occurrence detected by [Term Spotter](/documentation/termsuite-pipelines/#term-spotter).
+ * [`TermOccAnnotation`](#TermOccAnnotation): a term occurrence detected by [Term Spotter]({{site.baseurl}}/documentation/termsuite-pipelines/#term-spotter).
 
 
 
@@ -57,7 +57,15 @@ There are three annotation types in TermSuite. See [TermSuite Type System XML fi
 ### Terminology Data Model
 {:id="TerminologyDataModel"}
 
-This section presents the data model of a Terminology used by [TermSuite terminology extractor pipeline](/documentation/termsuite-pipelines/#terminology-extraction-step-2), i.e. our data model at Step 2 of [terminology extraction](/documentation/termsuite-pipelines/#terminology-extraction).
+This section presents the data model used by [TermSuite terminology extractor pipeline]({{site.baseurl}}/documentation/termsuite-pipelines/#terminology-extraction-step-2) and [TermSuite Java API]({{site.baseurl}}/documentation/java-preprocessor/), i.e. our data model at Step 2 of [terminology extraction]({{site.baseurl}}/documentation/termsuite-pipelines/#terminology-extraction).
+
+#### Class diagram
+
+![Terminology class diagram](/img/data-model/class-diagram.png)
+
+As any graph, a *Terminology* is a container for a collection of *Terms* (the nodes) and a collection of *Relations* (the edges). Both *Terms* and *Relations* are *PropertyHolders*, *ie.* every term and relation has a set of [properties]({{site.baseurl}}/documentation/properties/) held in a *key-value* store. 
+
+
 
 #### Relation types
 {:id="RelationTypes"}
