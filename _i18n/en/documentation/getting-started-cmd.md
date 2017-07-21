@@ -21,13 +21,13 @@ $ java -version
 
 TermSuite requires a POS Tagger and lemmatizer to run terminology extraction pipelines. In this guide, we install TreeTagger, but TermSuite also supports Mate. The tagger/lemmatizer must be installed apart from TermSuite, due to license concerns.
 
-To install TreeTagger on your OS: (See the [install instructions](/documentation/pos-tagger-lemmatizer) for details)
+To install TreeTagger on your OS: (See the [install instructions]({{site.baseurl}}/documentation/pos-tagger-lemmatizer) for details)
 1. Download TreeTagger from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and install it to `TERMSUITE_WORKSPACE/treetagger` with the help of official instructions.
 2. Creates a subdirectory named `models` at `TERMSUITE_WORKSPACE/treetagger`.
 3. Download to dir `models/` the english utf-8-encoded (very important) model from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and rename it to `english.par`.
 
 <div class="alert alert-warning" role="alert">
-Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See [detailed instructions](/documentation/pos-tagger-lemmatizer) for all languages.  
+Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See [detailed instructions]({{site.baseurl}}/documentation/pos-tagger-lemmatizer) for all languages.  
 </div>
 
 #### Download TermSuite
@@ -83,7 +83,7 @@ $ java -cp termsuite-core-{{site.termsuite.version}}.jar fr.univnantes.termsuite
 #### Understanding the TSV output
 {:id="understanding-tsv"}
 
-The `wind-energy-en.tsv` file produced by this command line, should look like the excerpt below. To understand the TSV format, please refer the [TSV output documentation](/documentation/terminology-tsv-output/)
+The `wind-energy-en.tsv` file produced by this command line, should look like the excerpt below. To understand the TSV format, please refer the [TSV output documentation]({{site.baseurl}}/documentation/terminology-tsv-output/)
 
 Two other output formats are also available: `tbx` and `json`. See command line [options]({{site.production_url}}/documentation/command-line-api).
 
@@ -147,9 +147,9 @@ You can now run TermSuite on your own corpus.
 
 See the full documentation of available features and options of terminology extraction from the command line at [command line API]({{site.production_url}}/documentation/terminology-extractor-cli), and its [examples]({{site.production_url}}/documentation/terminology-extractor-cli#examples).
 
-You could also have chosen to run [PreprocessorCLI](/documentation/preprocessor-cli) instead of *TerminologyExtractorCLI* and apply only TermSuite's NLP preprocessings to your corpus without extracting the terminology. See also the  [preprocessing examples](/documentation/preprocessor-cli#examples).
+You could also have chosen to run [PreprocessorCLI]({{site.baseurl}}/documentation/preprocessor-cli) instead of *TerminologyExtractorCLI* and apply only TermSuite's NLP preprocessings to your corpus without extracting the terminology. See also the  [preprocessing examples]({{site.baseurl}}/documentation/preprocessor-cli#examples).
 
-You can also embed TermSuite directly into your Java project with [TermSuite's Java API](/documentation/java-terminology-extractor/).
+You can also embed TermSuite directly into your Java project with [TermSuite's Java API]({{site.baseurl}}/documentation/java-terminology-extractor/).
 
 
 ### Option 2: docker container
@@ -208,22 +208,22 @@ Same TSV output as with manual installation. See [above](#understanding-tsv) for
 
 #### Preprocessing and extraction pipelines
 
-See the [exhaustive list of analysis engines and linguistic resources](/documentation/termsuite-pipelines) that TermSuite uses for terminology extraction.
+See the [exhaustive list of analysis engines and linguistic resources]({{site.baseurl}}/documentation/termsuite-pipelines) that TermSuite uses for terminology extraction.
 
 #### Bilingual alignment
 
-TermSuite also supports terminology alignment, i.e. bilingual domain-specific term translation. See [how to extract your *source* and *target* terminologies for alignment](/documentation/terminology-extractor-cli/#extract-a-terminology-ready-for-alignment) and how to run the aligner [with command line](/documentation/aligner-cli/) or [with Java API](/documentation/java-aligner/).
+TermSuite also supports terminology alignment, i.e. bilingual domain-specific term translation. See [how to extract your *source* and *target* terminologies for alignment]({{site.baseurl}}/documentation/terminology-extractor-cli/#extract-a-terminology-ready-for-alignment) and how to run the aligner [with command line]({{site.baseurl}}/documentation/aligner-cli/) or [with Java API]({{site.baseurl}}/documentation/java-aligner/).
 
-See also [alignment architecture overview](/documentation/termsuite-pipelines#bilingual-alignment-step-3) and more [theoritical concerns on TermSuite alignment](/documentation/alignment/).
+See also [alignment architecture overview]({{site.baseurl}}/documentation/termsuite-pipelines#bilingual-alignment-step-3) and more [theoritical concerns on TermSuite alignment]({{site.baseurl}}/documentation/alignment/).
 
 #### The Java API
 
-TermSuite is a Java software and can easily be embedded into your Java projects as a [Maven or Gradle dependency](/documentation/developers/). There is a Java API for: (not exhaustive)
+TermSuite is a Java software and can easily be embedded into your Java projects as a [Maven or Gradle dependency]({{site.baseurl}}/documentation/developers/). There is a Java API for: (not exhaustive)
 
- * [NLP preprocessings](/documentation/java-preprocessor) only,
- * [Terminology extraction](/documentation/java-terminology-extractor),
- * Terminology and prepared corpus [inputs and outputs](/documentation/java-io),
- * [bilingual alignment](/documentation/java-aligner).
+ * [NLP preprocessings]({{site.baseurl}}/documentation/java-preprocessor) only,
+ * [Terminology extraction]({{site.baseurl}}/documentation/java-terminology-extractor),
+ * Terminology and prepared corpus [inputs and outputs]({{site.baseurl}}/documentation/java-io),
+ * [bilingual alignment]({{site.baseurl}}/documentation/java-aligner).
 
 
 #### The graphical user interface (GUI)

@@ -27,13 +27,13 @@ $ java -version
 #### Installation of TreeTagger
 {:id="install-treetagger"}
 
-To install TreeTagger on your OS: (See the [install instructions](/documentation/pos-tagger-lemmatizer) for details)
+To install TreeTagger on your OS: (See the [install instructions]({{site.baseurl}}/documentation/pos-tagger-lemmatizer) for details)
 1. Download TreeTagger from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) to `TERMSUITE_WORKSPACE` and uncompress it.
 2. Creates a subdirectory named `models` within the TreeTagger directory.
 3. Download to dir `models/` the english utf-8-encoded (very important) model from the [official site](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) and rename it to `english.par`.
 
 <div class="alert alert-warning" role="alert">
-Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See [detailed instructions](/documentation/pos-tagger-lemmatizer) for all languages.  
+Encoding and naming of TreeTagger models is important for TermSuite to run correctly. See [detailed instructions]({{site.baseurl}}/documentation/pos-tagger-lemmatizer) for all languages.  
 </div>
 
 
@@ -382,4 +382,4 @@ You can now run TermSuite on your own corpora.
 
 Full documentation of available features and options from the command line: [command line API]({{site.production_url}}/documentation/command-line-api).
 
-Embed TermSuite directly to your Java project: [Java API](/documentation/command-line-api).
+Embed TermSuite directly to your Java project: [Java API]({{site.baseurl}}/documentation/command-line-api).

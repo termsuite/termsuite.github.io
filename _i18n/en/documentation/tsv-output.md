@@ -3,7 +3,7 @@ TSV (Tab-Separated Values) is a human-readable format that is easy to reuse (Cal
 
  * the sorted list of all terms it contains,
  * the sorted list of variants of each terms,
- * the values of [terms' and variants' properties](/documentation/properties/).  
+ * the values of [terms' and variants' properties]({{site.baseurl}}/documentation/properties/).  
 
 * TOC
 {:toc}
@@ -12,9 +12,9 @@ TSV (Tab-Separated Values) is a human-readable format that is easy to reuse (Cal
 
 To produce a `tsv` file out of a terminology with TermSuite, use:
 
- * option [`--tsv`](/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-tsv) if you are operating with the [command line](/documentation/terminology-extractor-cli/),
+ * option [`--tsv`]({{site.baseurl}}/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-tsv) if you are operating with the [command line]({{site.baseurl}}/documentation/terminology-extractor-cli/),
  * *TsvExporter* if you are operating  with the [Java API](/java-io/#tsv),
- * *Export to TSV...* from the menu of the terminology editor if you are operating  with the [graphical user interface of TermSuite](/documentation/gui/),
+ * *Export to TSV...* from the menu of the terminology editor if you are operating  with the [graphical user interface of TermSuite]({{site.baseurl}}/documentation/gui/),
 
 
 ### Understanding TSV output
@@ -104,7 +104,7 @@ The line `V[h]+	turbine noise` indicates that `turbine noise` is a semantic vari
 
 ### Configuring TSV output
 
-TermSuite APIs allow to customize the TSV output file. Refer to the [documentation](/documentation/command-line-api/) of the API you are using.
+TermSuite APIs allow to customize the TSV output file. Refer to the [documentation]({{site.baseurl}}/documentation/command-line-api/) of the API you are using.
 
 #### Show/Hide headers
 
@@ -116,6 +116,6 @@ Wether TermSuite should filter variant rows from TSV file, i.e. lines whose type
 
 #### List of properties to show
 
-The list of term or variant properties to show as columns of TSV file. Refer to [available properties](/documentation/properties/) for an exhaustive list of values allowed.
+The list of term or variant properties to show as columns of TSV file. Refer to [available properties]({{site.baseurl}}/documentation/properties/) for an exhaustive list of values allowed.
 
 When the line to display in TSV is a variation, it is now possible to specify a term property prefixed with `source:`, e.g. `source:freq`, `source:pilot`... In that case, the value displayed for that column is the value of the property for the source (base) term of the variation. This feature may be useful when it comes to keeping only variations lines (for example by filtering within Excel) and still having the base term's properties on the same line.    

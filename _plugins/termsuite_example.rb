@@ -53,7 +53,7 @@ module Jekyll
       string+=%{
 **Output TSV file (#{@example.tsv_lines.length} lines)**
 
-See [how to interprete terminology TSV output file](/documentation/terminology-tsv-output).
+See [how to interprete terminology TSV output file]({{site.baseurl}}/documentation/terminology-tsv-output).
 
 ```
 #{@example.tsv(@tsv_slices)}

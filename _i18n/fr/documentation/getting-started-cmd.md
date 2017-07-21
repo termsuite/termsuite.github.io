@@ -26,14 +26,14 @@ $ java -version
 
 TermSuite a besoin d'un étiquetteur grammatical (POS Tagger) et d'un lemmatiseur pour executer les chaînes de traitement (pipelines). Dans ce manuel, nous installons TreeTagger, mais TermSuite peut également gérer Mate. TreeTagger doit être installé séparément de TermSuite, du fait de leurs licences.
 
-Pour installer TreeTagger sur votre système d'exploitation : (Voir les [Instructions d'installation](/documentation/fr/pos-tagger-lemmatizer)).
+Pour installer TreeTagger sur votre système d'exploitation : (Voir les [Instructions d'installation]({{site.baseurl}}/documentation/fr/pos-tagger-lemmatizer)).
 
 1. Téléchargez TreeTagger depuis le [site officiel]((http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) vers "TERMSUITE_WORKSPACE" et décompressez-le.
 2. Créez un sous-répertoire nommé "models" dans le répertoire TreeTagger.
 3. Téléchargez le modèle anglais utf-8-encoded (très important) depuis le [site officiel]((http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/)) et renommez-le par "english.par".
 
 <div class="alert alert-warning" role="alert">
-Enconder et nommer les modèles de TreeTagger est important pour le bon fonctionnement de TermSuite. Voir les [instructions détaillées] (/documentation/fr/pos-tagger-lemmatizer) pour toutes les langues.
+Enconder et nommer les modèles de TreeTagger est important pour le bon fonctionnement de TermSuite. Voir les [instructions détaillées] ({{site.baseurl}}/documentation/fr/pos-tagger-lemmatizer) pour toutes les langues.
 </div>
 
 ### 3. Téléchargez TermSuite
@@ -153,4 +153,4 @@ Vous pouvez désormais executer TermSuite sur votre propre corpus.
 
 La documentation complète des options et possibilités des lignes de commandes : [command line API]({{site.production_url}}/documentation/fr/command-line-api).
 
-Pour intégrer TermSuite directement à votre projet Java : [Java API](/documentation/fr/command-line-api).
+Pour intégrer TermSuite directement à votre projet Java : [Java API]({{site.baseurl}}/documentation/fr/command-line-api).

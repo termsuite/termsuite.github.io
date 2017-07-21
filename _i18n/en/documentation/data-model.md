@@ -26,7 +26,7 @@ There are three annotation types in TermSuite. See [TermSuite Type System XML fi
 * `documentIndex:Integer`
 * `nbDocuments:Integer`
 
-#### eu.project.ttc.types.WordAnnotation
+#### fr.univnantes.termsuite.types.WordAnnotation
 {:id="WordAnnotation"}
 
 * `stem:String`
@@ -46,7 +46,7 @@ There are three annotation types in TermSuite. See [TermSuite Type System XML fi
 * `labels:String`
 
 
-#### eu.project.ttc.types.TermOccAnnotation
+#### fr.univnantes.termsuite.types.TermOccAnnotation
 {:id="TermOccAnnotation"}
 
 * `termKey:String`
@@ -63,11 +63,19 @@ This section presents the data model used by [TermSuite terminology extractor pi
 
 ![Terminology class diagram](/img/data-model/class-diagram.png)
 
-As any graph, a *Terminology* is a container for a collection of *Terms* (the nodes) and a collection of *Relations* (the edges). Both *Terms* and *Relations* are *PropertyHolders*, *ie.* every term and relation has a set of [properties]({{site.baseurl}}/documentation/properties/) held in a *key-value* store. 
+As any graph structure, a *Terminology* is a container for a collection of *Terms* (the nodes) and a collection of *Relations* (the edges). Both *Terms* and *Relations* are *PropertyHolders*, *ie.* every term and relation has a set of [properties]({{site.baseurl}}/documentation/properties/) held in a *key-value* store.
 
+As *TermSuite* has the ability to keep track of all terms occurrences while they are spotted and gathered. This is the purpose of the *OccurrenceStore*, which holds a collection of *Documents* and *TermOccurrences*.
+
+The *IndexedCorpus* simply is a container for the *Terminology* and  its *OccurrenceStore*.
 
 
 #### Relation types
 {:id="RelationTypes"}
 
-(to come)
+As illustrated in class diagram above, *relations* are typed. There are currently four types of relation:
+
+ * `VARIATION`: this is the most probably the only relation type interesting for terminology explotation. At the time of writing, all other relation types are mostly intended to analysis engines of the terminology extraction process. For example, information about term derivation, term prefixation, and term extensions are reified in relations of type *VARIATION* as properties (see [isDeriv]({{site.baseurl}}/documentation/properties/#RelationProperty-isDeriv), [isPref]({{site.baseurl}}/documentation/properties/#RelationProperty-isPref), and [isExt]({{site.baseurl}}/documentation/properties/#RelationProperty-isExt))
+ * `DERIVES_INTO`: This relation is set between two single-word terms whenever an atomic derivation has been detected by the *DerivationGatherer* (see [term gatherer]({{site.baseurl}}/documentation/termsuite-pipelines/#term-gatherer)).
+ * `IS_PREFIX_OF`: This relation is set between two single-word terms whenever an atomic prefixation has been detected by the *PrefixationGatherer* (see [term gatherer]({{site.baseurl}}/documentation/termsuite-pipelines/#term-gatherer)).
+ * `HAS_EXTENSION`: This relation is set between two terms whenever an extension has been detected by the *DerivationGatherer* (see [preparator]({{site.baseurl}}/documentation/termsuite-pipelines/#preparator)). The `HAS_EXTENSION` is purely an inclusion of sequences (the sequence of term's words) between two terms. It is "*variant agnostic*" in the sense there can be a *HAS_EXTENSION* relation between two terms even though there are not variants.

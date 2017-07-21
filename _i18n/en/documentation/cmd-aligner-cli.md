@@ -28,4 +28,4 @@ Example launcher scripts can be found at:
 5	énergie éolienne	Wind-Energy	0,150	COMPOSITIONAL
 ```
 
-The output shows that the first translation candidate is `wind energy`. The flag `COMPOSITIONAL` indicates that it has been found by [compositional method](/documentation/alignment#compositional).
+The output shows that the first translation candidate is `wind energy`. The flag `COMPOSITIONAL` indicates that it has been found by [compositional method]({{site.baseurl}}/documentation/alignment#compositional).

@@ -20,7 +20,7 @@ Pour plus d'informations sur les ressources TermSuite, voir la page du projet Gi
 
 Pour un alignement multilingue, vous avez besoin :
 
-* de deux terminologies TermSuite (comme les fichiers 'json', la source termino et la cible termino). De telles terminologies sont celles sorties par TermSuite [chaîne de traitement d'exctraction de terminologie](/documentation/fr/command-line-api/#termino)
+* de deux terminologies TermSuite (comme les fichiers 'json', la source termino et la cible termino). De telles terminologies sont celles sorties par TermSuite [chaîne de traitement d'exctraction de terminologie]({{site.baseurl}}/documentation/fr/command-line-api/#termino)
 * un dictionnaire bilingue
 
 

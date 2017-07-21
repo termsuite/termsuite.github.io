@@ -4,7 +4,7 @@
 
 
 
-TermSuite offers a convenient way of running terminology extraction and multilingual terminology alignment from its Java API. As expected, this way of running TermSuite allows a deeper control over the components than the [command line API](/documentation/command-line-api/) and the [graphical UI]().
+TermSuite offers a convenient way of running terminology extraction and multilingual terminology alignment from its Java API. As expected, this way of running TermSuite allows a deeper control over the components than the [command line API]({{site.baseurl}}/documentation/command-line-api/) and the [graphical UI]().
 
 * TOC
 {:toc}
@@ -579,7 +579,7 @@ Requirements:
 
  * a source terminology with context vectors computed,
  * a target terminology with context vectors computed,
- * a [bilingual dictionary](/documentation/resources/#dictionary).
+ * a [bilingual dictionary]({{site.baseurl}}/documentation/resources/#dictionary).
 
 #### Producing terminologies with context vectors
 

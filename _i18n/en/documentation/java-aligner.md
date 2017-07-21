@@ -118,4 +118,4 @@ Yan can configure with similarity measure to use for context vector alignment wi
 
 ### Alignment methods and algorithms
 
-For more theoritical information about bilingual alignment in TermSuite, refer to the [alignment pipeline](/documentation/termsuite-pipelines/#bilingual-alignment-step-3).
+For more theoritical information about bilingual alignment in TermSuite, refer to the [alignment pipeline]({{site.baseurl}}/documentation/termsuite-pipelines/#bilingual-alignment-step-3).

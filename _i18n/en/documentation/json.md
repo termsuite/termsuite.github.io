@@ -8,9 +8,9 @@
 
 To produce a `json` file out of a terminology with TermSuite, use:
 
- * option [`--json`](/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-json) if you are operating with the [command line](/documentation/terminology-extractor-cli/),
+ * option [`--json`]({{site.baseurl}}/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-json) if you are operating with the [command line]({{site.baseurl}}/documentation/terminology-extractor-cli/),
  * *JsonExporter* if you are operating  with the [Java API](/java-io/#json),
- * *Export to JSON...* from the menu of the terminology editor if you are operating  with the [graphical user interface of TermSuite](/documentation/gui/),
+ * *Export to JSON...* from the menu of the terminology editor if you are operating  with the [graphical user interface of TermSuite]({{site.baseurl}}/documentation/gui/),
 
 ### File structure
 
@@ -69,7 +69,7 @@ Example:
 
 #### `words`
 
-The key `words` is an array that contains all morphological information about words contained in *terms*. Words are identified with the unique key `lemma`. See [TermSuite data model](/documentation/data-model/#TerminologyDataModel) for more information on how *words* interact with *terms*.
+The key `words` is an array that contains all morphological information about words contained in *terms*. Words are identified with the unique key `lemma`. See [TermSuite data model]({{site.baseurl}}/documentation/data-model/#TerminologyDataModel) for more information on how *words* interact with *terms*.
 
 Example with a word that is not a compound:
 
