@@ -566,7 +566,256 @@
 
       <article class="doc-content">
         
-<p>(to come)</p>
+<ul id="markdown-toc">
+  <li><a href="#exporting-a-terminology-to-json">Exporting a terminology to JSON</a></li>
+  <li><a href="#file-structure">File structure</a>    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#metadata"><code>metadata</code></a>        <ul>
+          <li><a href="#occurrencestorage"><code>occurrence_storage</code></a></li>
+        </ul>
+      </li>
+      <li><a href="#inputsources"><code>input_sources</code></a></li>
+      <li><a href="#words"><code>words</code></a></li>
+      <li><a href="#terms"><code>terms</code></a></li>
+      <li><a href="#relations"><code>relations</code></a></li>
+      <li><a href="#occurrences"><code>occurrences</code></a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="exporting-a-terminology-to-json">Exporting a terminology to JSON</h3>
+
+<p>To produce a <code>json</code> file out of a terminology with TermSuite, use:</p>
+
+<ul>
+  <li>option <a href="/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-json"><code>--json</code></a> if you are operating with the <a href="/documentation/terminology-extractor-cli/">command line</a>,</li>
+  <li><em>JsonExporter</em> if you are operating  with the <a href="/java-io/#json">Java API</a>,</li>
+  <li><em>Export to JSON…</em> from the menu of the terminology editor if you are operating  with the <a href="/documentation/gui/">graphical user interface of TermSuite</a>,</li>
+</ul>
+
+<h3 id="file-structure">File structure</h3>
+
+<h4 id="overview">Overview</h4>
+
+<pre><code class="language-json">{
+  "metadata" : { ... },
+  "input_sources" : { ... },
+  "words" : [ ... ],
+  "terms" : [ ... ],
+  "relations" : [ ... ],
+  "occurrences" : [ ... ]
+}
+</code></pre>
+
+<h4 id="metadata"><code>metadata</code></h4>
+
+<p>The key <code>metadata</code> holds general information about the current terminology:</p>
+
+<pre><code class="language-json">"metadata" : {
+  "name" : "txt-en-2017-07-19_14-14-22",
+  "lang" : "en",
+  "occurrence_storage" : "embedded",
+  "wordsNum" : 368322,
+  "spottedTermsNum" : 226145
+}
+</code></pre>
+
+<h5 id="occurrencestorage"><code>occurrence_storage</code></h5>
+
+<p>Two possible values:</p>
+
+<ul>
+  <li><em>embedded</em>: means that the term occurrences are contained in the current JSON file at the key <a href="#occurrences"><code>occurrences</code></a>,</li>
+  <li><em>disk</em>: means that the term occurrences are contained in a separate file of the file system. The path to this path is given by the key <code>persistent_store_path</code>.</li>
+</ul>
+
+<h4 id="inputsources"><code>input_sources</code></h4>
+
+<p>The key <code>input_sources</code> maps all documents’ pathes of the input corpus with a <em>id</em>:</p>
+
+<p>Example:</p>
+
+<pre><code class="language-json">"input_sources" : {
+  "1" : "/home/cram-d/Corpora/TS/wind-energy/English/txt/file-1.txt",
+  "2" : "/home/cram-d/Corpora/TS/wind-energy/English/txt/file-2.txt",
+  "3" : "/home/cram-d/Corpora/TS/wind-energy/English/txt/file-3.txt",
+  "4" : "/home/cram-d/Corpora/TS/wind-energy/English/txt/file-4.txt",
+  "5" : "/home/cram-d/Corpora/TS/wind-energy/English/txt/file-5.txt",
+  ...
+}
+</code></pre>
+
+<h4 id="words"><code>words</code></h4>
+
+<p>The key <code>words</code> is an array that contains all morphological information about words contained in <em>terms</em>. Words are identified with the unique key <code>lemma</code>. See <a href="/documentation/data-model/#TerminologyDataModel">TermSuite data model</a> for more information on how <em>words</em> interact with <em>terms</em>.</p>
+
+<p>Example with a word that is not a compound:</p>
+
+<pre><code class="language-json">{
+  "lemma" : "energy",
+  "stem" : "energi"
+}
+</code></pre>
+
+<p>Example with a compound word:</p>
+
+<pre><code class="language-json">{
+  "lemma" : "highspeed",
+  "stem" : "highspe",
+  "compound_type" : "NATIVE",
+  "components" : [ {
+    "lemma" : "high",
+    "begin" : 0,
+    "end" : 5,
+    "substring" : "highs",
+    "neoAffix" : false
+  }, {
+    "lemma" : "pe",
+    "begin" : 5,
+    "end" : 9,
+    "substring" : "peed",
+    "neoAffix" : false
+  } ]
+}
+</code></pre>
+
+<h4 id="terms"><code>terms</code></h4>
+
+<p>The key <code>terms</code> is an array that holds all terms contained in the terminology. Terms are identified by their unique key <code>props.key</code>.</p>
+
+<p>Example with term <code>nn: wind energy</code>:</p>
+
+<pre><code class="language-json">{
+  "props" : {
+    "rank" : 3,
+    "dFreq" : 32,
+    "fNorm" : 1.1240164855751218,
+    "gfNorm" : 3.477238863707884E-5,
+    "spec" : 4.509551591070845,
+    "freq" : 414,
+    "ortho" : 1.0,
+    "iFreq" : 87,
+    "ind" : 0.21014492753623187,
+    "pilot" : "wind energy",
+    "lemma" : "wind energy",
+    "tfIdf" : 12.9375,
+    "key" : "nn: wind energy",
+    "pattern" : "N N",
+    "rule" : "nn",
+    "swtSize" : 2,
+    "depth" : 2
+  },
+  "words" : [ {
+    "syn" : "N",
+    "swt" : true,
+    "lemma" : "wind"
+  }, {
+    "syn" : "N",
+    "swt" : true,
+    "lemma" : "energy"
+  } ]
+}
+</code></pre>
+
+<ul>
+  <li>The key <code>props</code> holds in an array all <a href="/documentation/properties/#term-properties">properties</a> of the current term.</li>
+  <li>The key <code>words</code> give the sequence of words that the current term is made of.
+    <ul>
+      <li>The sub key <code>lemma</code> points to the word object in the <a href="#words">list of <em>words</em></a> and allows to retrieve the <em>stem</em> and the morphological composition of the word.</li>
+      <li>The sub key <code>syn</code> gives the syntactic label of the word for this term.</li>
+      <li>The sub key <code>swt</code> is <em>true</em> when the word taken with its syntactic label is a <em>single-word term</em>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example 1: the entry <code>{"syn" : "N", "swt" : true, "lemma" : "wind"}</code> is also a single-word term because there is a entry <code>n: wind</code> in the terminology.</p>
+
+<p>Example 2: the term <code>npn: storage of hydrogen</code> has the following words:</p>
+
+<pre><code class="language-json">"words" : [ {
+    "syn" : "N",
+    "swt" : true,
+    "lemma" : "storage"
+  }, {
+    "syn" : "P",
+    "swt" : false,
+    "lemma" : "of"
+  }, {
+    "syn" : "N",
+    "swt" : true,
+    "lemma" : "hydrogen"
+  }
+]
+</code></pre>
+
+<h4 id="relations"><code>relations</code></h4>
+
+<p>The key <code>terms</code> is an array that holds all type of links between terms. All relations are directed.</p>
+
+<p>Here is an example of relation:</p>
+
+<pre><code class="language-json">{
+  "from" : "nn: pressure decrease",
+  "to" : "npan: decrease of total pressure",
+  "type" : "var",
+  "props" : {
+    "vRank" : 1,
+    "vRules" : [ "S-PI-NN-PN" ],
+    "vScore" : 0.99,
+    "isExt" : false,
+    "vBagFreq" : 2,
+    "srcGain" : 0.0,
+    "nSrcGain" : 1.0,
+    "isInfered" : false,
+    "isGraph" : false,
+    "isDeriv" : false,
+    "isPref" : false,
+    "isSyntag" : true,
+    "isMorph" : false,
+    "isSem" : false
+  }
+}
+</code></pre>
+
+<ul>
+  <li>the keys <code>from</code> and <code>to</code> are the term keys of the relation boundaries. They indicate that the relation starts from term <code>nn: pressure decrease</code> and goes to term <code>npan: decrease of total pressure</code>.</li>
+  <li>the key <code>type</code> gives the relation type. There are as many allowed values as there exists <a href="/documentation/data-model/#RelationTypes">relation types</a> in the data model.</li>
+  <li>the key <code>props</code> holds in an array all <a href="/documentation/properties/#relation-properties">properties</a> of the current relation.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Note:</strong> among all relations set by TermSuite between terms, the most interesting type of relations are the <em>variations</em>, <em>ie.</em> those relations having <code>type = "var"</code>.</p>
+</blockquote>
+
+<h4 id="occurrences"><code>occurrences</code></h4>
+
+<p>The key <code>occurrences</code>, when set (see key <code>occurrence_storage</code> in <a href="#metadata">metadata</a>) holds the list of occurrences of all terms.</p>
+
+<pre><code class="language-json">"occurrences" : [ {
+    "tid" : "nnn: turbine generator connection",
+    "begin" : 2397,
+    "end" : 2425,
+    "file" : 17,
+    "text" : "Turbine generator connection"
+  }, {
+    "tid" : "nnn: turbine generator connection",
+    "begin" : 23234,
+    "end" : 23262,
+    "file" : 17,
+    "text" : "Turbine generator connection"
+  },
+  ...
+]
+</code></pre>
+
+<p>Each <em>occurrence</em> entry has five keys:</p>
+
+<ul>
+  <li><code>tid</code>: the <em>term id</em> pointing to the value of <em>props.key</em> in the <a href="#terms">term</a>’s entry,</li>
+  <li><code>file</code>: the <em>file id</em> where the the occurrence has been spotted. See <a href="#inputsources">input sources</a> to get the file url from the <em>file id</em>,</li>
+  <li><code>begin</code>, <code>end</code>: the offsets of the occurrence within the file,</li>
+  <li><code>text</code>: (optional) the plain text covered by the occurrence. It can be retrieved directly from the file url, <em>begin</em> and <em>end</em>.</li>
+</ul>
 
 
       </article>

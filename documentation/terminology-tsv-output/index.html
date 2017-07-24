@@ -566,9 +566,10 @@
 
       <article class="doc-content">
         
-<p>TSV (Tab-Separated Values) is a human-readable and easy to reuse format (Calc, Excel, R, or any program supporting CSV import) for terminology export. The terminology TSV output file produced by TermSuite contains all relevant information contained in a terminology:</p>
+<p>TSV (Tab-Separated Values) is a human-readable format that is easy to reuse (Calc, Excel, R, or any program supporting CSV import) for terminology exportation. The terminology TSV output file produced by TermSuite contains all relevant information contained in a terminology:</p>
 
 <ul id="markdown-toc">
+  <li><a href="#exporting-a-terminology-to-tsv">Exporting a terminology to TSV</a></li>
   <li><a href="#understanding-tsv-output">Understanding TSV output</a>    <ul>
       <li><a href="#row-type-t-or-v">Row type (T or V)</a></li>
       <li><a href="#type-of-variants-v">Type of variants V[*]</a>        <ul>
@@ -584,6 +585,16 @@
       <li><a href="#list-of-properties-to-show">List of properties to show</a></li>
     </ul>
   </li>
+</ul>
+
+<h3 id="exporting-a-terminology-to-tsv">Exporting a terminology to TSV</h3>
+
+<p>To produce a <code>tsv</code> file out of a terminology with TermSuite, use:</p>
+
+<ul>
+  <li>option <a href="/documentation/terminology-extractor-cli/#TerminologyExtractorCLI-tsv"><code>--tsv</code></a> if you are operating with the <a href="/documentation/terminology-extractor-cli/">command line</a>,</li>
+  <li><em>TsvExporter</em> if you are operating  with the <a href="/java-io/#tsv">Java API</a>,</li>
+  <li><em>Export to TSV…</em> from the menu of the terminology editor if you are operating  with the <a href="/documentation/gui/">graphical user interface of TermSuite</a>,</li>
 </ul>
 
 <h3 id="understanding-tsv-output">Understanding TSV output</h3>

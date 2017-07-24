@@ -566,39 +566,419 @@
 
       <article class="doc-content">
         
+<p>In TermSuite, alignment is the process of grouping together terms that share the most similar contexts. There exist two sorts of alignment in TermSuite:</p>
+
 <ul id="markdown-toc">
-  <li><a href="#alignment-methods">Alignment methods</a>    <ul>
-      <li><a href="#compositional">Compositional</a></li>
-      <li><a href="#semi-distributional">Semi-distributional</a></li>
-      <li><a href="#distributional">Distributional</a></li>
+  <li><a href="#contextualization">Contextualization: building context vectors</a>    <ul>
+      <li><a href="#context-scope">Context scope</a></li>
+      <li><a href="#normalization">Normalization of context vectors</a></li>
     </ul>
   </li>
-  <li><a href="#contextualization">Contextualization: building context vectors</a>    <ul>
-      <li><a href="#context-size">Context size</a></li>
-      <li><a href="#normalization-of-context-vectors">Normalization of context vectors</a></li>
+  <li><a href="#general-alignment">General alignment methods</a>    <ul>
+      <li><a href="#distributional">Distributional alignment</a></li>
+      <li><a href="#compositional">Compositional alignment</a></li>
+      <li><a href="#semi-distributional">Semi-distributional alignment</a></li>
+      <li><a href="#length-n">Aligning longer terms (length &gt; 2)</a></li>
+      <li><a href="#compounds">Aligning compound terms</a>        <ul>
+          <li><a href="#size-2-compounds">Size-2 compounds</a></li>
+          <li><a href="#size-n-compounds">Size-n compounds, n&gt;2</a></li>
+        </ul>
+      </li>
+      <li><a href="#generalization-to-all-types-of-terms-of-all-lengthes">Generalization to all types of terms of all lengthes</a></li>
+    </ul>
+  </li>
+  <li><a href="#bilingual-alignment">Bilingual alignment methods (term translation)</a>    <ul>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#translation-of-source-terms-context-vector">Translation of source term’s context vector</a></li>
+    </ul>
+  </li>
+  <li><a href="#monolingual-alignment">Monolingual alignment methods (synonym detection)</a>    <ul>
+      <li><a href="#requirements-1">Requirements</a></li>
+      <li><a href="#synonym-detection-algorithm">Synonym detection algorithm</a></li>
     </ul>
   </li>
 </ul>
 
-<h3 id="alignment-methods">Alignment methods</h3>
-
-<h4 id="compositional">Compositional</h4>
-
-<p>(to come)</p>
-
-<h4 id="semi-distributional">Semi-distributional</h4>
-
-<p>(to come)</p>
-
-<h4 id="distributional">Distributional</h4>
-
-<p>(to come)</p>
-
 <h3 id="contextualization">Contextualization: building context vectors</h3>
 
-<h4 id="context-size">Context size</h4>
+<h4 id="context-scope">Context scope</h4>
 
-<h4 id="normalization-of-context-vectors">Normalization of context vectors</h4>
+<p>The <em>scope</em> of a context for a term <em>T</em> is the number of words occurring just before <em>T</em> left and just after <em>T</em>.</p>
+
+<p>Example with the following sentence:</p>
+
+<blockquote>
+  <p><em>Data were acquired with the blades rotating at zero yaw, for a range of wind speeds.</em></p>
+</blockquote>
+
+<p>When the <em>scope</em> is <em>1</em>, the context of term “<em>wind</em>” is {range: 1, speed: 1}.</p>
+
+<p>When the <em>scope</em> is <em>2</em>, the context of term “<em>wind</em>” is {yaw: 1, range: 1, speed: 1}.</p>
+
+<p><strong>Note 1:</strong> co-terms in context vector are lemmatized.</p>
+
+<p><strong>Note 2:</strong> determiners and propositions are skipped when computed context’s scope.</p>
+
+<h4 id="normalization">Normalization of context vectors</h4>
+
+<p>The idea behind normalization is two lower the impact of co-terms that appear in multiple context vectors.</p>
+
+<p>Given two terms <em>T1</em> and <em>T2</em>, having respectively <em>{co-term1: 2, co-term2: 1, co-term3: 2}</em> and <em>{co-term1: 1, co-term2: 1, co-term4: 3}</em> as their context vectors, we can observe that:</p>
+
+<ul>
+  <li><em>co-term2</em> is not very specific to either <em>T1</em> nor <em>T2</em> as it appears in both contexts with the same distribution (<em>frequency=1</em>),</li>
+  <li><em>co-term1</em> is a bit more specific to <em>T1</em> than <em>T2</em> as it appears twice in <em>T1</em>’s context and only once in <em>T2</em>’s,</li>
+  <li><em>co-term3</em> is very specific to <em>T1</em> as it appears twice in its context and is absent of <em>T2</em>’s,</li>
+  <li><em>co-term4</em> is even more specific to <em>T2</em> as it appears three times in its context and is absent of <em>T1</em>’s.</li>
+</ul>
+
+<p>Two normalization algorithms are available in TermSuite for context vector normalization:</p>
+
+<ol>
+  <li><em>LogLikelyhood</em></li>
+  <li><em>MutualInformation</em></li>
+</ol>
+
+<h3 id="general-alignment">General alignment methods</h3>
+
+<p>Methods described in this section applies on <a href="#bilingual-alignment">bilingual alignment</a> and <a href="#monolingual-alignment">monolingual alignment</a>.</p>
+
+<p>In general, alignment requires:</p>
+
+<ul>
+  <li>at least one <em>terminology</em> where terms have been contextualized, (in the case of <a href="#bilingual-alignment">bilingual alignment</a>, there must be two terminologies)</li>
+  <li>a <em>dictionary</em> (a synonym dictionary for <a href="#monolingual-alignment">monolingual alignment</a>, a bilingual dictionary for <a href="#bilingual-alignment">bilingual alignment</a>).</li>
+</ul>
+
+<h4 id="distributional">Distributional alignment</h4>
+
+<p><em>Distributional alignment</em> is the process of computing the closeness of two terms based on the similarity of their <a href="#normalization">normalized</a> context vectors.</p>
+
+<p><em>Distributional alignment</em> applies on single-word terms only, <em>ie.</em> on <em>length-1 terms</em>.</p>
+
+<p>There are two context vector similarity measures currently implemented in TermSuite:</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Jaccard_index"><strong>Jaccard</strong></a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Cosine_similarity"><strong>Cosine</strong></a></li>
+</ul>
+
+<h4 id="compositional">Compositional alignment</h4>
+
+<p><em>Compositional alignment</em> applies on <em>length-2 terms</em>, <em>ie.</em> on terms composed of two words, like <em>wind energy</em>, <em>breast cancer</em>, <em>chemotherapy</em> (<em>chemo</em> + <em>therapy</em>, see the special case of <a href="#compounds">compound words</a>), etc.</p>
+
+<p><strong>Note:</strong> Determiners and propositions are ignored when computing the term’s length. For example, the term <em>energy of the wind</em> is length-2 because <em>of</em> and <em>the</em> are ignored.</p>
+
+<p>Say the term to align is made of <em>word1</em> and <em>word2</em>. In TermSuite’s compositional alignment algorithm:</p>
+
+<ol>
+  <li>TermSuite gets <em>C1</em>, the set of all length-1 alignment candidates for <em>word1</em> from dictionary,</li>
+  <li>TermSuite gets <em>C2</em>, the set of all length-1 alignment candidates for <em>word2</em> from dictionary,</li>
+  <li>TermSuite combines all length-1 candidates from <em>C1</em> and <em>C2</em> to produce the set <em>C=C1xC2</em> of all length-2 alignment candidates that occur in target terminology,</li>
+  <li>TermSuite scores and ranks the candidates in <em>C</em>.</li>
+</ol>
+
+<table>
+  <tbody>
+    <tr>
+      <td>The maximum number of alignment candidates is *</td>
+      <td>C1</td>
+      <td>x</td>
+      <td>C2</td>
+      <td><em>. If any of *word1</em> or <em>word2</em> has no entry in dictionary, then there can be no alignment candidate and the compositional method fails.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>** Example: ** Translation of term <em>wind power</em> from english to french with compositional method.</p>
+
+<ol>
+  <li>word1=<em>wind</em>, C1={<em>vent</em>, <em>souffle</em>, <em>gaz</em>}</li>
+  <li>word2=<em>power</em>, C2={<em>énergie</em>, <em>puissance</em>, <em>vertu</em>}</li>
+  <li>The combination of <em>C1</em> and <em>C2</em> give <em>9</em> candidates but only <em>énergie du vent</em> and <em>puissance du vent</em> exist in target terminology. C={<em>énergie du vent</em>, <em>puissance du vent</em>}</li>
+  <li>If candidates are ranked according to their target <a href="/documentation/properties/#TermProperty-freq">frequency</a> or <a href="/documentation/properties/#TermProperty-spec">specificity</a>, then the best candidate is <em>énergie du vent</em>.</li>
+</ol>
+
+<p>About target candidates ranking, see <a href="http://atala.org/Methode-semi-compositionnelle-pour">this publication</a>. Currently, the default target candidate ranking strategy is by <em>decreasing <a href="/documentation/properties/#TermProperty-spec">specificity</a></em>.  </p>
+
+<h4 id="semi-distributional">Semi-distributional alignment</h4>
+
+<p>Like <a href="#compositional">compositional alignment</a>, <em>semi-distributional alignment</em> applies on <em>length-2 terms</em> only. Semi-distributional alignment works in a very similar manner to <em>compositional alignment</em>.</p>
+
+<p>The only difference lies at step 2, where alignment candidates for <em>word2</em> are computed with the <a href="#distributional">distributional</a> method instead of from the dictionary. Step 1 (<em>word1</em> candidates computation), step 3 (combination), and step 4 (ranking) stay unchanged. Symmetrically, we could apply the <em>distributional</em> alignment on <em>word1</em> and leave steps 2, 3, and 4 unchanged.  </p>
+
+<p>Usually, the distributionnal method has lower performances in terms of precision than the compositional method. It is invoked in TermSuite as a fallback when one of the two words is missing from the dictionary. When both term’s words are missing from dictionary, it would be theoriticallay feasible to apply a <em>pure distributionnal</em> alignment, but the precision is too low. It is not implemented.  </p>
+
+<h4 id="length-n">Aligning longer terms (length &gt; 2)</h4>
+
+<p>Longer terms are aligned recursively.</p>
+
+<p>If <strong>length is n</strong>, the term is of the form <em>T=word1 word2 … wordn</em>. There are n-1 alternatives for splitting T in two smaller-size terms:<br />
+  * alternative 1: <em>T’=word1</em> and <em>T”=word2 … wordn</em>  <br />
+  * alternative 2: <em>T’=word1 word2</em> and <em>T”=word3 … wordn</em>  <br />
+  * …<br />
+  * alternative n-1: <em>T’=word1 word2 … wordn-1</em> and <em>T”=wordn</em>.</p>
+
+<p>For each splitting alternative <em>i</em>:<br />
+ 1. TermSuite produces:<br />
+   * candidate set <em>C’</em> by aligning <em>T’</em> with the <a href="#compositional">compositional method</a> or with the <a href="#semi-distributional">semi-distributional method</a> if the compositional is not appliable.<br />
+   * candidate set <em>C”</em> from <em>T”</em> likewise.<br />
+ 2. TermSuite produces candidate set <em>Ci</em> by combining <em>C’</em> and <em>C”</em> in a similar manner than <a href="#compositional">step 3 of compositional method</a>.</p>
+
+<p>Finally, TermSuite produce the final candidate set <em>C = C1 U C1 U … U Cn-1</em> and ranks <em>C</em> in a similar manner than <a href="#compositional">step 4 of compositional method</a>.</p>
+
+<h4 id="compounds">Aligning compound terms</h4>
+
+<p>A <em>compound term</em> is a single-word term composed of at least two different words. For example, the term <em>windpower</em> is composed of <em>wind+power</em>.</p>
+
+<h5 id="size-2-compounds">Size-2 compounds</h5>
+
+<p>Aligning a size-2 compound term like <em>windpower</em> is a four-step process:</p>
+
+<ol>
+  <li>producing the candidate set <em>C1</em> by aligning <em>windpower</em> as a regular single-word term (ignoring its composition) with the help of the dictionary or with the [distributional][#distributional] method,</li>
+  <li>producing the candidate set <em>C2</em> by aligning <em>windpower</em> as a length-2 term with word1=wind and word2=power, with the <a href="#compositional">compositional method</a> or with the <a href="#semi-distributional">semi-distributional method</a> as fallback.</li>
+  <li>producing the candidate set <em>C=C1 U C2</em>,</li>
+  <li>ranking <em>C</em> (cf. <a href="#compositional">step 4 of compositional method</a>).</li>
+</ol>
+
+<h5 id="size-n-compounds">Size-n compounds, n&gt;2</h5>
+
+<p>If the compound term is made of at least three words, as it often happens in german (<em>eg.</em> <em>windenergienutzung=wind+energie+nutzung</em>), the same principle applies on four different candidate set. For the sake of simplicity, we denote <em>T=A+B+C</em>, where <em>A</em>, <em>B</em>, and <em>C</em> are the sub-words:</p>
+
+<ol>
+  <li>Candidate set <em>C1</em> obtained by aligning the term <em>T</em> as a single-word term.</li>
+  <li>Candidate sets <em>C2’</em> and <em>C2”</em> obtained by aligning the term <em>ABC</em> as a size-2 compound as in previous section. <em>C2’</em> is obtained by assuming that T is made of the two words <em>A+BC</em>, <em>C2”</em> is obtained by assuming that T is made of the two words <em>AB+C</em>.</li>
+  <li>Candidate set <em>C3</em> obtained by aligning the term <em>T</em> as a size-3 compound <em>A+B+C</em>, by applying the <a href="#length-n">alignment algorithm for <em>length-n</em> terms</a> on word1=A, word2=B, and word3=C.</li>
+</ol>
+
+<p>Finally, We make the union candidate set <em>C = C1 U C2’ U C2” U C3</em> and rank it as usual.</p>
+
+<p>The table below gives all the possible composition patterns for alignment depending on the actual composition size.  </p>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Composition size</th>
+			<th>Actual composition pattern</th>
+			<th>List of candidate composition patterns</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>	1	</td>
+		<td>	A	</td>
+		<td>	{A}	</td>
+	</tr>
+  <tr>
+		<td>	2	</td>
+		<td>	AB	</td>
+		<td>	{AB, A+B}	</td>
+	</tr>
+  <tr>
+		<td>	3	</td>
+		<td>	ABC	</td>
+		<td>	{ABC, AB+C, A+BC, A+B+C}	</td>
+	</tr>
+  <tr>
+		<td>	4	</td>
+		<td>	ABCD	</td>
+		<td>	{ABCD, ABC+D, AB+CD, A+BCD, AB+C+D, A+BC+D, A+B+CD, A+B+C+D}	</td>
+	</tr>
+	</tbody>
+</table>
+
+<h4 id="generalization-to-all-types-of-terms-of-all-lengthes">Generalization to all types of terms of all lengthes</h4>
+
+<p>The most general and most difficult situation to handle is the case when the term to align has a length &gt; 1 and at least of its words is a compound. For example <em>offshore windpower</em> is a length-2 term made of simple word <em>offshore</em> and compound word <em>wind+power</em>.</p>
+
+<p>Suppose we have a length-3 term <em>A+B C D+E+F</em>, <em>ie</em> word1 is the compound <em>A+B</em>, word2 is the simple word <em>C</em>, and word3 is the compound word <em>D+E+F</em>.</p>
+
+<p>As illustrated in the <a href="#size-n-compounds">table of candidates composition patterns</a>, we have to consider the following composition alternatives:</p>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+      <th>#</th>
+			<th>word1</th>
+      <th>word2</th>
+      <th>word3</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+    <td>	1	</td>
+		<td>	AB	</td>
+		<td>	C	</td>
+		<td>	DEF	</td>
+	</tr>
+  <tr>
+  <td>	2	</td>
+		<td>	AB	</td>
+		<td>	C	</td>
+		<td>	DE+F	</td>
+	</tr>
+  <tr>
+  <td>	3	</td>
+		<td>	AB	</td>
+		<td>	C	</td>
+		<td>	D+EF	</td>
+	</tr>
+  <tr>
+  <td>	4	</td>
+		<td>	C	</td>
+    <td>	AB	</td>
+		<td>	D+E+F	</td>
+	</tr>
+  <tr>
+  <td>	5	</td>
+		<td>	A+B	</td>
+		<td>	C	</td>
+		<td>	DEF	</td>
+	</tr>
+  <tr>
+  <td>	6	</td>
+  <td>	A+B	</td>
+		<td>	C	</td>
+		<td>	DE+F	</td>
+	</tr>
+  <tr>
+  <td>	7	</td>
+		<td>	A+B	</td>
+		<td>	C	</td>
+		<td>	D+EF	</td>
+	</tr>
+  <tr>
+  <td>	8	</td>
+		<td>	A+B	</td>
+		<td>	C	</td>
+		<td>	D+E+F	</td>
+	</tr>
+	</tbody>
+</table>
+
+<p>For each of these composition alternatives, we get all its components and apply [length-n algorithm][#length-n] on them, as if they would all form one regular length-n term (<em>ie.</em> having no compound words).</p>
+
+<p>For example, with alternative 7, we consider we a length-5 term <em>T=A B C D EF</em>.</p>
+
+<p><strong>Note:</strong> The resulting complexity of this overall algorithm might look very expensive but in practice:</p>
+
+<ol>
+  <li>every exepensive sub-alignment invocation can be cached and reused very quickly for other combinations,</li>
+  <li>there are very few terms of interest with such length and complexity of composition.</li>
+</ol>
+
+<h3 id="bilingual-alignment">Bilingual alignment methods (term translation)</h3>
+
+<p>Bilingual alignment is the process of finding the best translation candidates of a source term in a target language.</p>
+
+<h4 id="requirements">Requirements</h4>
+
+<p>It requires:</p>
+
+<ul>
+  <li>a <em>source terminology</em> where terms have been contextualized,</li>
+  <li>a <em>target terminology</em> where terms have been contextualized,</li>
+  <li>a <em>bilingual dictionary</em> from source language to target language.</li>
+</ul>
+
+<h4 id="translation-of-source-terms-context-vector">Translation of source term’s context vector</h4>
+
+<p>The translation of a source term into a target language works as <a href="#general-alignment">described in the general case</a>, but the similarity of the source and target vectors is not an easy problem since they contain words from different languages.</p>
+
+<p>Let’s denote:<br />
+ * <em>Ts</em> the source term to translate,<br />
+ * <em>V={co-term1: 2, co-term2: 5, co-term3: 1}</em> its context vector.</p>
+
+<p>In order to be able to apply our <a href="#distributional">similarity measures</a> on context vectors, we translate the source context vector <em>V</em> into <em>V’</em> as follows. For each co-term <em>t</em> in <em>V</em>, we get the set of all candidate translations <em>C</em> for <em>t</em> from the dictionary.</p>
+
+<ul>
+  <li>If <em>C</em> is empty, then the co-term could not be found in the dictionary and we skip it in <em>V’</em>.</li>
+  <li>If <em>C</em> has exactly one element <em>ct’</em>, we put <em>ct’</em> with the same frequency in <em>V’</em>.</li>
+  <li>If <em>C</em> has several elements, we use the <a href="/documentation/properties/#TermProperty-freq">frequency</a> to distribute the original frequency of co-term <em>ct</em> among all candidate translations for this co-term.</li>
+</ul>
+
+<p><strong>Example</strong> Let’s suppose that:</p>
+
+<ul>
+  <li>the source language is <strong>en</strong>,</li>
+  <li>the target language is <strong>fr</strong>,</li>
+  <li>the source context vector is <em>{wind: 3, blade:1, darius:2}</em></li>
+  <li>the dictionary contains the following entries:</li>
+</ul>
+
+<pre><code>wind  vent
+wind  gaz
+wind  air
+blade pâle
+</code></pre>
+
+<ul>
+  <li>the frequencies in target terminology are:</li>
+</ul>
+
+<pre><code>vent: 17
+gaz:2
+air:5
+pâle: 12
+</code></pre>
+
+<p>Then the translation of context vector gives:</p>
+
+<ul>
+  <li>for co-term <strong>wind</strong>: <em>{vent: 3*17/24, air: 3*5/24, gaz: 3*2/24}</em></li>
+  <li>for co-term <strong>blade</strong>: <em>{pâle: 1*12/12}</em></li>
+  <li>for co-term <strong>darius</strong>: <em>{}</em></li>
+</ul>
+
+<p>The final translated source context vector is <em>{vent: 2.13, air: 0.25, gaz: 0.63, pâle: 1}</em></p>
+
+<h3 id="monolingual-alignment">Monolingual alignment methods (synonym detection)</h3>
+
+<p>Monolingual alignment is the process of finding the best candidate synonyms of a term in a terminology.</p>
+
+<h4 id="requirements-1">Requirements</h4>
+
+<p>It requires:</p>
+
+<ul>
+  <li>a <em>source terminology</em> where terms have been contextualized,</li>
+  <li>a dictionary of synonyms.</li>
+</ul>
+
+<h4 id="synonym-detection-algorithm">Synonym detection algorithm</h4>
+
+<p>Every methods <a href="#general-alignment">described in the general case</a> could be applied on synonym detection but in order to reduce the time computation and increase the precision, we limit the search for synonyms to:</p>
+
+<ul>
+  <li>length-2 terms,</li>
+  <li>having the same syntactic pattern,</li>
+  <li>sharing at least one term in common.</li>
+</ul>
+
+<p>To configure this process so as it adapts the best to each supported language, a language-specific list of <a href="/documentation/yaml-variants/#synonyms">synonymic variant rules</a> is defined.</p>
+
+<p><strong>Example:</strong> The following rule finds length-2 synonyms having the pattern <code>A N</code> by fixing the first word (<code>s[0]==t[0]</code>) and looking for synonyms between the two second words (<code>synonym(t[1],s[1])</code>). The <code>A</code> is called the <strong><em>fixed part</em></strong> of the synonimic rule because it must be the same in the two terms and the <code>N</code> is called the <strong><em>synonimic part</em></strong>.</p>
+
+<pre><code class="language-yaml">"AN-AsynN":
+  source: A N
+  target: A N
+  rule: s[0]==t[0] &amp;&amp; synonym(t[1],s[1])
+</code></pre>
+
+<p>For each synonymic rule defined, TermSuite applies the following algorithm:</p>
+
+<ul>
+  <li>select all terms having the syntactic pattern required (here: <code>A N</code>) into a set named <em>C1</em>,</li>
+  <li>group terms in <em>C1</em> by their <em>fixed part</em> (here we group the terms whenever they have the same first word because we have <code>s[0]==t[0]</code>),</li>
+  <li>in each group, <em>ie</em> set a synonym score to every pair of terms <em>(t1,t2)</em> in the group based on the <em>synonimic part</em>. In the example rule above, the synonimic part of the rule is the second word, so we compare for each pair their second words (their <code>N</code>). Let’s name <em>w1</em> the second word of <em>t1</em> and <em>w2</em> the second word of <em>t2</em>:
+    <ul>
+      <li>compute the <a href="#distributional">distributional similarity</a> between the context vector of <em>w1</em> and the context vector of <em>w2</em>,</li>
+      <li>add <em>0.5</em> to that score if the pair <em>w1-w2</em> is present in the dictionary.</li>
+    </ul>
+  </li>
+  <li>finally, for all pairs in the group having a score above given threshold that depends on the language (see <a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-extractor-config.json">language configuration file</a>), set a semantic variation.</li>
+</ul>
 
 
       </article>

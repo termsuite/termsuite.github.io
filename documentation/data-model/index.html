@@ -569,11 +569,12 @@
 <ul id="markdown-toc">
   <li><a href="#type-system">TermSuite UIMA Type System</a>    <ul>
       <li><a href="#SourceDocumentInformation">org.apache.uima.examples.SourceDocumentInformation</a></li>
-      <li><a href="#WordAnnotation">eu.project.ttc.types.WordAnnotation</a></li>
-      <li><a href="#TermOccAnnotation">eu.project.ttc.types.TermOccAnnotation</a></li>
+      <li><a href="#WordAnnotation">fr.univnantes.termsuite.types.WordAnnotation</a></li>
+      <li><a href="#TermOccAnnotation">fr.univnantes.termsuite.types.TermOccAnnotation</a></li>
     </ul>
   </li>
   <li><a href="#TerminologyDataModel">Terminology Data Model</a>    <ul>
+      <li><a href="#class-diagram">Class diagram</a></li>
       <li><a href="#RelationTypes">Relation types</a></li>
     </ul>
   </li>
@@ -604,7 +605,7 @@
   <li><code>nbDocuments:Integer</code></li>
 </ul>
 
-<h4 id="WordAnnotation">eu.project.ttc.types.WordAnnotation</h4>
+<h4 id="WordAnnotation">fr.univnantes.termsuite.types.WordAnnotation</h4>
 
 <ul>
   <li><code>stem:String</code></li>
@@ -624,7 +625,7 @@
   <li><code>labels:String</code></li>
 </ul>
 
-<h4 id="TermOccAnnotation">eu.project.ttc.types.TermOccAnnotation</h4>
+<h4 id="TermOccAnnotation">fr.univnantes.termsuite.types.TermOccAnnotation</h4>
 
 <ul>
   <li><code>termKey:String</code></li>
@@ -635,11 +636,28 @@
 
 <h3 id="TerminologyDataModel">Terminology Data Model</h3>
 
-<p>This section presents the data model of a Terminology used by <a href="/documentation/termsuite-pipelines/#terminology-extraction-step-2">TermSuite terminology extractor pipeline</a>, i.e. our data model at Step 2 of <a href="/documentation/termsuite-pipelines/#terminology-extraction">terminology extraction</a>.</p>
+<p>This section presents the data model used by <a href="/documentation/termsuite-pipelines/#terminology-extraction-step-2">TermSuite terminology extractor pipeline</a> and <a href="/documentation/java-preprocessor/">TermSuite Java API</a>, i.e. our data model at Step 2 of <a href="/documentation/termsuite-pipelines/#terminology-extraction">terminology extraction</a>.</p>
+
+<h4 id="class-diagram">Class diagram</h4>
+
+<p><img src="/img/data-model/class-diagram.png" alt="Terminology class diagram" /></p>
+
+<p>As any graph structure, a <em>Terminology</em> is a container for a collection of <em>Terms</em> (the nodes) and a collection of <em>Relations</em> (the edges). Both <em>Terms</em> and <em>Relations</em> are <em>PropertyHolders</em>, <em>ie.</em> every term and relation has a set of <a href="/documentation/properties/">properties</a> held in a <em>key-value</em> store.</p>
+
+<p>As <em>TermSuite</em> has the ability to keep track of all terms occurrences while they are spotted and gathered. This is the purpose of the <em>OccurrenceStore</em>, which holds a collection of <em>Documents</em> and <em>TermOccurrences</em>.</p>
+
+<p>The <em>IndexedCorpus</em> simply is a container for the <em>Terminology</em> and  its <em>OccurrenceStore</em>.</p>
 
 <h4 id="RelationTypes">Relation types</h4>
 
-<p>(to come)</p>
+<p>As illustrated in class diagram above, <em>relations</em> are typed. There are currently four types of relation:</p>
+
+<ul>
+  <li><code>VARIATION</code>: this is the most probably the only relation type interesting for terminology explotation. At the time of writing, all other relation types are mostly intended to analysis engines of the terminology extraction process. For example, information about term derivation, term prefixation, and term extensions are reified in relations of type <em>VARIATION</em> as properties (see <a href="/documentation/properties/#RelationProperty-isDeriv">isDeriv</a>, <a href="/documentation/properties/#RelationProperty-isPref">isPref</a>, and <a href="/documentation/properties/#RelationProperty-isExt">isExt</a>)</li>
+  <li><code>DERIVES_INTO</code>: This relation is set between two single-word terms whenever an atomic derivation has been detected by the <em>DerivationGatherer</em> (see <a href="/documentation/termsuite-pipelines/#term-gatherer">term gatherer</a>).</li>
+  <li><code>IS_PREFIX_OF</code>: This relation is set between two single-word terms whenever an atomic prefixation has been detected by the <em>PrefixationGatherer</em> (see <a href="/documentation/termsuite-pipelines/#term-gatherer">term gatherer</a>).</li>
+  <li><code>HAS_EXTENSION</code>: This relation is set between two terms whenever an extension has been detected by the <em>DerivationGatherer</em> (see <a href="/documentation/termsuite-pipelines/#preparator">preparator</a>). The <code>HAS_EXTENSION</code> is purely an inclusion of sequences (the sequence of term’s words) between two terms. It is “<em>variant agnostic</em>” in the sense there can be a <em>HAS_EXTENSION</em> relation between two terms even though there are not variants.</li>
+</ul>
 
 
       </article>
