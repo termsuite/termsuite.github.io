@@ -1,4 +1,6 @@
 
+
+
 * TOC
 {:toc}
 
@@ -68,3 +70,5 @@ You can download and adapt the existing list of variant rules embedded in TermSu
 
 ### Customizing the list of variant rules
 {:id="customizing"}
+
+Depending on what 

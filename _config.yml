@@ -13,20 +13,21 @@ bintray: https://bintray.com/termsuite/generic/termsuite-ui
 
 termsuite:
   ui:
-    bintray: https://dl.bintray.com/termsuite/generic/3.0.8/
-    windows: "win32.win23.x86_64.zip"
-    linux: "linux.gtk.x86_64.tar.gz"
-    macos: "macosx.cocoa.x86_64.tar.gz"
+    bintray: https://dl.bintray.com/termsuite/generic/3.0.9/
+    windows: "termsuite-win32-x86_64-3.0.9.zip"
+    linux: "termsuite-linux-x86_64-3.0.9.tar.gz"
+    macos: "termsuite-macosx-cocoa-3.0.9.tar.gz"
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
-  version: "3.0.8"
+  version: "3.0.9"
 
 resources:
   jar: https://bintray.com/termsuite/generic/download_file?file_path=termsuite-resources.jar
   filename: termsuite-resources.jar
 
 dicos:
-  zip: https://bintray.com/termsuite/generic/download_file?file_path=dictionaries-free.zip
-  filename: dictionaries-free.zip
+  bilingual:
+    zip: https://bintray.com/termsuite/generic/download_file?file_path=dictionaries-free.zip
+    filename: dictionaries-free.zip
 
 corpus:
   we: https://bintray.com/termsuite/generic/download_file?file_path=wind-energy.zip
