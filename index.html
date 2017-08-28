@@ -192,8 +192,8 @@ layout: default
                     <span>{{p.authors}}.</span><br>
                     <span class=""><em>{{p.title}}.</em></span><br>
                     <span>{{p.proceedings}}.</span><br>
-                    <a href="{{p.pdf}}" >
-                    <span class="lead glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF
+                    <a href="{{p.link.url}}" >
+                    {% if 'PDF' == p.link.label %}<span class="lead glyphicon glyphicon-download-alt" aria-hidden="true"></span> {% endif %}{{p.link.label}}
                     </a>
                   </p>
                 </td>
