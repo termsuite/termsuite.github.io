@@ -567,43 +567,238 @@
       <article class="doc-content">
         
 <ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
   <li><a href="#syntax">Syntax of a variant rule</a>    <ul>
-      <li><a href="#source">The source pattern <code>source</code></a></li>
-      <li><a href="#target">The source pattern <code>target</code></a></li>
-      <li><a href="#rule">The source pattern <code>rule</code></a></li>
+      <li><a href="#patterns">The syntactic patterns: <code>source</code>, <code>target</code></a></li>
+      <li><a href="#compound">The tag <code>[compound]</code></a></li>
+      <li><a href="#rule">The expression <code>rule</code></a></li>
     </ul>
   </li>
   <li><a href="#rule-types">Types of variant rule</a>    <ul>
       <li><a href="#basic-rule">Basic rule</a></li>
       <li><a href="#morphological">Morphological rules</a></li>
-      <li><a href="#prefixative">Prefixative rules</a></li>
-      <li><a href="#derivative">Derivative rules</a></li>
+      <li><a href="#prefixation">Prefixation rules</a></li>
+      <li><a href="#derivation">Derivation rules</a></li>
       <li><a href="#synonyms">Synonymic rules</a></li>
     </ul>
   </li>
   <li><a href="#examples">Examples of variant rules</a></li>
-  <li><a href="#customizing">Customizing the list of variant rules</a></li>
 </ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The list of variation rules is the linguistic resource used by the <a href="/documentation/termsuite-pipelines/#term-gatherer">TermGatherer</a> engine. The <em>TermGatherer</em> is composed of several sub-engines, each specialized in the gathering a special king of term variation: morphological variations, prefixations, etc.</p>
+
+<p>All sub-engines used the same list of gathering rules as input, but each one selects in this list only the rules it is able to process. For example, the <em>PrefixationGatherer</em> takes as input only the <a href="#prefixation">prefixation rules</a>.</p>
 
 <h3 id="syntax">Syntax of a variant rule</h3>
 
-<h4 id="source">The source pattern <code>source</code></h4>
+<p>A <em>variant rule</em> is always composed of four parts:</p>
 
-<h4 id="target">The source pattern <code>target</code></h4>
+<ol>
+  <li>the <em>rule name</em>,</li>
+  <li>the <em>source</em> pattern,</li>
+  <li>the <em>target</em> pattern,</li>
+  <li>the rule <em>expression</em>.</li>
+</ol>
 
-<h4 id="rule">The source pattern <code>rule</code></h4>
+<p>It must be written in <a href="http://yaml.org/">YAML</a>, <em>i.e.</em> as key-value tree structure using a sequence of two escape characters `  ` as nesting syntax. The variantion rule must use the following template:</p>
+
+<pre><code class="language-yaml">"rule name":
+  source: ...
+  target: ...
+  rule: ...
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code class="language-yaml">"S-R1Eg-AN-N":
+  source: A N
+  target: N N
+  rule: s[0].stem==t[0].stem &amp;&amp; s[1]==t[1]
+</code></pre>
+
+<p>The rule above is named <code>S-R1Eg-AN-N</code>. It describes the gathering of two terms whenever:</p>
+
+<ul>
+  <li>the first term (the <em>source</em> term) has the syntactic pattern <em>A N</em>, <em>i.e.</em> it must be an adjective followed by a noun. (See <a href="#patterns">patterns</a> for more information about patterns)</li>
+  <li>The second term (the <em>target</em> term) has the pattern <em>N N</em>, <em>i.e.</em> it must be a noun followed by a noun.(See <a href="#patterns">patterns</a> for more information about patterns)</li>
+  <li>the first words (<code>s[0]</code> and <code>t[0]</code>) of both terms have the same stem, and the second words of both terms (<code>s[1]</code> and <code>t[1]</code>) have the same lemma.</li>
+</ul>
+
+<p>For example, this rule gathers the source term <em>thyroïdal cancer</em> with the target term <em>tyroid cancer</em>.</p>
+
+<h4 id="patterns">The syntactic patterns: <code>source</code>, <code>target</code></h4>
+
+<p>The <code>source</code> (resp. <code>target</code>) key gives the list of syntactic patterns allowed for the source term (resp. target term). A syntactic pattern is a sequence of syntactic <em>labels</em> separated with a space. For example:</p>
+
+<ul>
+  <li>the pattern <code>A N</code> stands for a <em>adjective</em> followed by a <em>noun</em>, like in <em>thyroïdal cancer</em>.</li>
+  <li>the pattern <code>N</code> stands for just one <em>noun</em>, like <em>cancer</em>, <em>energy</em>.</li>
+  <li>the pattern <code>N P A N</code> stands for one <em>noun</em>, followed by one <em>preprosition</em>, followed by one <em>adjective</em>, followed by one <em>noun</em>, like <em>level of environmental noise</em>.</li>
+  <li>…</li>
+</ul>
+
+<p>In the case several <em>pattern</em> alternatives are allowed, they must be separated with a <code>,</code>. For example, <code>source: A N, N N</code> indicates that the source term can be either a <em>noun</em> or or an <em>adjective</em>, followed by a <em>noun</em>.</p>
+
+<p>The list of <em>syntactic labels</em> (<code>N</code>, <code>A</code>, <code>P</code>…) allowed in <em>pattern</em> definition is directly dependent on the <a href="/documentation/termsuite-pipelines/#term-spotter">muti-word term detection engine</a>, which operates before variant gathering in the <a href="/documentation/termsuite-pipelines/">terminology extraction pipeline</a>, and more precisely on the linguistic resource used as input of this engine: the <a href="https://github.com/nantesnlp/uima-tokens-regex#the-uima-tokens-regex-resource-file"><em>UIMA Tokens Regex</em> resource file</a>. the list of available syntactic labels as the <code>matcher</code> names in this resource. For example in english (see the <a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-multi-word-rule-system.regex">english term spotting rules</a>), the allowed labels are: <code>Prep</code>, <code>P1</code>, <code>P</code>, <code>A</code>, <code>N</code>, <code>C</code>, <code>R</code>, <code>D</code>.</p>
+
+<p>Although the allowed labels can be different for each language, we tried to obey these conventions:</p>
+
+<ul>
+  <li><code>P</code> stands for a <em>preposition</em>,</li>
+  <li><code>A</code> stands for an <em>adjective</em>,</li>
+  <li><code>N</code> stands for a <em>noun</em>,</li>
+  <li><code>C</code> stands for a <em>coordination</em>, (<em>and</em>, <em>or</em>)</li>
+  <li><code>R</code> stands for an <em>adverb</em>,</li>
+  <li><code>D</code> stands for a <em>determiner</em>.</li>
+</ul>
+
+<h4 id="compound">The tag <code>[compound]</code></h4>
+
+<p>The tag <code>[compound]</code> can be appended to the source (resp. target) pattern definition of <a href="#morphological">morphological rules</a>. This tag gives an indication to the gathering engine that the source term has to be a <em>compound</em>.</p>
+
+<p>Appending this tag is optional in the sense that the gathering engine would do the job anyway, but it is strongly advised to append it whenever possible because it reduces the source search space to <em>compound</em> terms  only, which greatly improves the performance. It is almost mandatory for single-word terms because there are a lot of them.</p>
+
+<p>For example:</p>
+
+<pre><code>"M-S-NN":
+  source: N [compound]
+  target: N N, A N
+  rule: s[0][0]==t[0] &amp;&amp; s[0][1]==t[1]
+</code></pre>
+
+<p>The rule above gathers <code>n: windmill</code> with <code>nn: wind mill</code>, <code>n: horizontal-axis</code> with <code>an: horizontal-axis</code>. See <a href="#morphological">Morphological rules</a> for more information.</p>
+
+<h4 id="rule">The expression <code>rule</code></h4>
+
+<p>The key <code>rule</code> defines a boolean expression that words in source and target terms must satisfy.</p>
+
+<ul>
+  <li><code>s[i]</code> denotes the (i+1)th word in the source term. <code>t[i]</code> denotes the (i+1)th word in the target term.</li>
+  <li>When is a compound word, <code>s[i][j]</code> denotes the (j+1)th component of word <em>s[i]</em>. When <em>s[i]</em> is not a compound, invoking <code>s[i][j]</code> would just make the expression return <em>false</em>. Idem with <code>t[i][j]</code>.</li>
+  <li>The <em>lemma</em> of the word <em>s[i]</em> is denoted as <code>s[i].lemma</code>, but <code>s[i]</code> alone returns the value of <em>s[i].lemma</em> by default. Idem with <code>t[i].lemma</code>, but <code>t[i]</code>.</li>
+  <li>The <em>stem</em> of the word <em>s[i]</em> is denoted as <code>s[i].stem</code>, idem with <code>t[i].stem</code>.</li>
+  <li><code>s[i].compound</code> returns <em>true</em> if <em>s[i]</em> is compound, idem with <code>t[i].compound</code>.</li>
+</ul>
+
+<p>Expression operators allowed are <code>==</code> (string equality) and <code>!=</code> (string inequality). Members of equality/inequality operators can ben either words (eg. s[i]), or words compounds (eg. s[i][j]), or pure string (eg. <code>"foo"</code>).</p>
+
+<p>Boolean operators allowed are <code>&amp;&amp;</code> and <code>||</code>. Expressions can be composed with the help of parentheses <code>(</code> and <code>)</code>.</p>
+
+<p><strong>Examples</strong></p>
+
+<p>A rule gathering <code>Savonius rotor</code> with <code>rotor of type Savonius</code>:</p>
+
+<pre><code>"S-PI-NN-PN":
+  source: N N
+  target: N P N N, N P A N
+  rule: s[0]==t[3] &amp;&amp; ( s[1]==t[0] || s[1]==t[2] )
+  ```
+
+
+A rule gathering `generator voltage` with `voltage and frequency of generator`:
+
+</code></pre>
+<p>“S-PI-NN-CNP”:<br />
+  source: N N<br />
+  target: N C N P N<br />
+  rule: s[0]==t[4] &amp;&amp; s[1]==t[0] &amp;&amp; t[3]==”of”<br />
+  ```</p>
+
+<p>A rule gathering <code>thyroïdal cancer</code> with <code>thyroid cancer</code>:</p>
+
+<pre><code>"S-R1Eg-AN-N":
+  source: A N
+  target: N N
+  rule: s[0].stem==t[0].stem &amp;&amp; s[1]==t[1]
+</code></pre>
 
 <h3 id="rule-types">Types of variant rule</h3>
 
 <h4 id="basic-rule">Basic rule</h4>
 
+<p>A <em>basic rule</em>, or <em>syntagmatic rule</em>, is such a rule defining constrains on the source and target terms with no other specific linguistics features.</p>
+
 <h4 id="morphological">Morphological rules</h4>
 
-<h4 id="prefixative">Prefixative rules</h4>
+<p>A <em>morphological rule</em> is a rule that makes use of either:</p>
 
-<h4 id="derivative">Derivative rules</h4>
+<ul>
+  <li>the tag <a href="#compound"><code>[compound]</code></a>,</li>
+  <li>or any component’s lemma with <code>s[i][j]</code> or <code>t[i][j]</code>.</li>
+</ul>
+
+<p>Morphological rules are gathered by the <a href="/documentation/termsuite-pipelines/#term-gatherer">MorphologicalGatherer</a> sub-engine.</p>
+
+<p><strong>Example</strong></p>
+
+<p>This rule gathers <code>n: windmill</code> with <code>nn: wind mill</code>:</p>
+
+<pre><code>"M-S-NN":
+  source: N [compound]
+  target: N N, A N
+  rule: s[0][0]==t[0] &amp;&amp; s[0][1]==t[1]
+</code></pre>
+
+<h4 id="prefixation">Prefixation rules</h4>
+
+<p>A <em>prefixation rule</em> is a rule that makes use of the method <code>prefix(a,b)</code>. This method returns <em>true</em> if word <em>a</em> is a prefixation of word <em>b</em>.</p>
+
+<p>Prefixation rules are gathered by the <a href="/documentation/termsuite-pipelines/#term-gatherer">PrefixationGatherer</a> sub-engine.</p>
+
+<p><strong>Example</strong></p>
+
+<p>This rule gathers <code>an: synchronous machine</code> with <code>an: asynchronous machine</code>:</p>
+
+<pre><code>"AN-prefAN":
+  source: A N
+  target: A N
+  rule: s[1]==t[1] &amp;&amp; prefix(t[0], s[0])
+</code></pre>
+
+<h4 id="derivation">Derivation rules</h4>
+
+<p>A <em>derivation rule</em> is a rule that makes use of the method <code>deriv(drule, a, b)</code>. This method returns <em>true</em> if word <em>a</em> derives into <em>b</em> according to derivation rule <em>drule</em>.</p>
+
+<p>The derivation rule <em>drule</em> is a string made of two <a href="#patterns">syntactic labels</a>, <em>e.g.</em> <code>"A N"</code>, meaning the word <em>a</em> is an <em>adjective</em> that is derived into a <em>noun</em>. For each supported language, TermSuite knows that a word is a derivation of another word thanks to a list of suffix derivation rules. See the <a href="https://github.com/termsuite/termsuite-core/blob/master/src/main/resources/fr/univnantes/termsuite/resources/fr/morphology/french-suffix-derivation-bank.txt">list for french</a>. Such <em>atomic derivations</em>, <em>i.e.</em> derivations between simple words (not terms), are detected before the  <a href="/documentation/termsuite-pipelines/#term-gatherer"><em>TermGatherer</em></a> in the pipeline, by the <a href="/documentation/termsuite-pipelines/#morphological-splitter">MorphologicalSplitter</a>.</p>
+
+<p>Derivation (between terms) are gathered by the <a href="/documentation/termsuite-pipelines/#term-gatherer">DerivationGatherer</a> sub-engine.</p>
+
+<p><strong>Example</strong></p>
+
+<p>In french, the following rule gathers <code>npn: phase du stator</code> with <code>na: phase statorique</code>:</p>
+
+<pre><code>"S-R2D-NPN":
+  source: N P N
+  target: N A
+  rule: s[0]==t[0] &amp;&amp; deriv("N A", s[2], t[1])
+</code></pre>
 
 <h4 id="synonyms">Synonymic rules</h4>
+
+<p>A <em>synonymic rule</em> is a rule that makes use of the method <code>synonym(a, b)</code>. This method returns <em>true</em> if word <em>a</em> is detected to be a synonym of word <em>b</em>.</p>
+
+<p>A <em>synonymic rule</em> must satisfy the following structural constraints:</p>
+
+<ol>
+  <li>the <code>source</code> pattern and <code>target</code> pattern’s length must be <em>2</em>,</li>
+  <li>the <code>source</code> pattern must be equal to the <code>target</code> pattern,</li>
+  <li>the <code>rule</code> expression must have exactly one fixed part, <em>i.e.</em> <code>s[0]==t[0]</code> or <code>s[1]==t[1]</code>,</li>
+  <li>the <code>rule</code> expression must have exactly one synonym part, <em>i.e.</em> <code>synonym(s[0],t[0])</code> or <code>synonym(s[1],t[1])</code>,</li>
+</ol>
+
+<p>Semantic variations between terms are gathered by the <a href="/documentation/termsuite-pipelines/#term-gatherer">SemanticGatherer</a> sub-engine.</p>
+
+<p>Example:</p>
+
+<p>This rule gathers <code>an: rotational speed</code> with <code>an: rotational velocity</code>:</p>
+
+<pre><code class="language-yaml">"AN-AsynN":
+  source: A N
+  target: A N
+  rule: s[0]==t[0] &amp;&amp; synonym(t[1],s[1])
+</code></pre>
 
 <h3 id="examples">Examples of variant rules</h3>
 
@@ -637,10 +832,6 @@
 	</tr>
 </tbody>
 </table>
-
-<h3 id="customizing">Customizing the list of variant rules</h3>
-
-<p>Depending on what </p>
 
 
       </article>
