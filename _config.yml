@@ -13,12 +13,12 @@ bintray: https://bintray.com/termsuite/generic/termsuite-ui
 
 termsuite:
   ui:
-    bintray: https://dl.bintray.com/termsuite/generic/3.0.9/
-    windows: "termsuite-win32-x86_64-3.0.9.zip"
-    linux: "termsuite-linux-x86_64-3.0.9.tar.gz"
-    macos: "termsuite-macosx-cocoa-3.0.9.tar.gz"
+    bintray: https://dl.bintray.com/termsuite/generic/
+    windows: "termsuite-win32-x86_64-3.0.10.zip"
+    linux: "termsuite-linux-x86_64-3.0.10.tar.gz"
+    macos: "termsuite-macosx-cocoa-3.0.10.tar.gz"
   maven: http://search.maven.org/remotecontent?filepath=fr/univ-nantes/termsuite/termsuite-core/
-  version: "3.0.9"
+  version: "3.0.10"
 
 resources:
   jar: https://bintray.com/termsuite/generic/download_file?file_path=termsuite-resources.jar
